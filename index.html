@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomenclature</title>
+    <link rel="stylesheet" href="resources/style.css">
+    <link rel="shortcut icon" href="resources/Nomenclature.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <img src="resources/Nomenclature.png" alt="logo" class="logo">
+        <form id="fileForm">
+            <input type="text" name="directory" id="directory" placeholder="Directory Name" class="names">
+            <input type="text" name="name" id="name" placeholder="Question No. and Title" class="names">
+            <select id="language" name="language">
+                <option value="C++">C++</option>
+                <option value="Python">Python</option>
+                <option value="SQL">SQL</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="C">C</option>
+                <option value="Java">Java</option>
+            </select>
+            <button type="button" id="run" class="btn" onclick="runAlgorithm()">Generate & Copy Code</button>
+            <button type="button" id="submit" class="btn" onclick="fileNameFunction()">Copy File Name</button>
+        </form>
+    </nav>
+    <div id="result">Generated File Name: </div>
+    <div class="code">
+        <textarea id="input_code" class="codes" placeholder="Input Code"></textarea>
+        <textarea  id="output_code" class="codes" placeholder="Output Code" readonly></textarea>
+    </div>
+    <script src="resources/script.js"></script>
+</body>
+</html>
