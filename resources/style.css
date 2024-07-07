@@ -6,6 +6,7 @@ body{
     overflow: hidden;
     font-family: consolas;
     background-color: rgba(0, 0, 0, 0.888);
+    transition-duration: 0.5s;
 }
 
 ::-webkit-scrollbar {
@@ -22,6 +23,7 @@ body{
 .logo{
     height: 40px;
     margin: 5px;
+    transition-duration: 0.5s;
 }
 nav{
     display: flex;
@@ -119,4 +121,17 @@ textarea:focus{
 
 option{
     background-color:rgba(0, 0, 0, 0.888);
+}
+
+#theme{
+    top:20px;
+    right:20px;
+    position: absolute;
+    background-color: #00000000;
+    border: none;
+    cursor: pointer;
+}
+.moon{
+    height: 30px;
+    filter: invert(1);
 }

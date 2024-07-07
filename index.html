@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nomenclature</title>
+    <title>Coedit</title>
     <link rel="stylesheet" href="resources/style.css">
     <link rel="shortcut icon" href="resources/Nomenclature.png" type="image/x-icon">
 </head>
-<body>
+<body id="body">
     <nav>
-        <img src="resources/Nomenclature.png" alt="logo" class="logo">
+        <a href=""><img src="resources/Nomenclature.png" alt="logo" class="logo" id="logo"></a>
         <form id="fileForm">
             <input type="text" name="directory" id="directory" placeholder="Directory Name" class="names">
             <input type="text" name="name" id="name" placeholder="Question No. and Title" class="names">
@@ -24,6 +24,7 @@
             </select>
             <button type="button" id="run" class="btn" onclick="runAlgorithm()">Generate & Copy Code</button>
             <button type="button" id="submit" class="btn" onclick="fileNameFunction()">Copy File Name</button>
+            <button type="button" id="theme" onclick="light()"><img src="https://static.thenounproject.com/png/4066359-200.png" class="moon"></button>
         </form>
     </nav>
     <div id="result">Generated File Name: </div>

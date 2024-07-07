@@ -7,7 +7,6 @@ function adjustTextAreas() {
 
     outputCode.style.width = (totalWidth - inputWidth) + 'px';
 }
-
 document.addEventListener("DOMContentLoaded", function () {
     adjustTextAreas();
 
@@ -50,7 +49,7 @@ function fileNameFunction() {
     const result = generateFileName(directory, name, language);
 
     document.getElementById('result').textContent = 'Generated File Name: ' + result;
-    copyToClipboard(result,'submit');
+    copyToClipboard(result, 'submit');
 };
 
 function updateFileName() {
@@ -102,7 +101,7 @@ function isalnum(char) {
     return /^[a-z0-9]+$/i.test(char);
 }
 
-function copyToClipboard(text,id) {
+function copyToClipboard(text, id) {
     navigator.clipboard.writeText(text).then(function () {
         const submitButton = document.getElementById(id);
         submitButton.textContent = 'Copied!';
@@ -159,7 +158,7 @@ function runAlgorithm() {
     // Append 5 indented blank lines for user's code
     outputCode += "\n";
     for (var j = 0; j < 5; j++) {
-        outputCode += "\t".repeat(indent/2) + "\n";
+        outputCode += "\t".repeat(indent / 2) + "\n";
     }
 
     // Append test case and object creation without colon
@@ -171,6 +170,21 @@ function runAlgorithm() {
 
     // Update output textarea with generated output code
     document.getElementById('output_code').value = outputCode.trim();
-    copyToClipboard(outputCode.trim(),'run');
+    copyToClipboard(outputCode.trim(), 'run');
 }
 
+function light() {
+  document.getElementById("body").style.filter = "invert(1)";
+  document.getElementById("logo").style.filter = "invert(1)";
+  document.getElementById("body").style.backgroundColor="rgba(0,0,0,0.2)";
+  const button = document.getElementById('theme');
+  button.onclick = dark;
+}
+
+function dark() {
+    document.getElementById("body").style.filter = "invert(0)";
+    document.getElementById("logo").style.filter = "invert(0)";
+    document.getElementById("body").style.backgroundColor="rgba(0, 0, 0, 0.888)";
+    const button = document.getElementById('theme');
+    button.onclick = light;
+  }
