@@ -22,12 +22,12 @@
                 <option value="C">C</option>
                 <option value="Java">Java</option>
             </select>
-            <button type="button" id="run" class="btn" onclick="runAlgorithm()">Generate & Copy Code</button>
-            <button type="button" id="submit" class="btn" onclick="fileNameFunction()">Copy File Name</button>
-            <button type="button" id="theme" onclick="light()"><img src="https://static.thenounproject.com/png/4066359-200.png" class="moon"></button>
+            <button type="button" id="run" class="btn" onclick="runAlgorithm()">Generate Code</button>
+            <button type="button" id="copy" class="btn" onclick="copyCode()">Copy Code</button>
         </form>
     </nav>
-    <div id="result">Generated File Name: </div>
+    <button type="button" id="theme" onclick="light()"><img src="https://static.thenounproject.com/png/4066359-200.png" class="moon"></button>
+    <div class="container"><button type="button" id="submit" onclick="fileNameFunction()"><img src="https://cdn.icon-icons.com/icons2/629/PNG/512/copy-two-paper-sheets-stroke-symbol-of-interface_icon-icons.com_57868.png" alt="" class="copy" id="copy_image"></button><div id="result">Generated File Name: </div></div>
     <div class="code">
         <textarea id="input_code" class="codes" placeholder="Input Code"></textarea>
         <textarea  id="output_code" class="codes" placeholder="Output Code" readonly></textarea>

@@ -1,3 +1,5 @@
+console.log("Tejas' Codes :D");
+let width = screen.width;
 function adjustTextAreas() {
     var inputCode = document.getElementById("input_code");
     var outputCode = document.getElementById("output_code");
@@ -7,12 +9,13 @@ function adjustTextAreas() {
 
     outputCode.style.width = (totalWidth - inputWidth) + 'px';
 }
-document.addEventListener("DOMContentLoaded", function () {
-    adjustTextAreas();
+if (width > 480) {
+    document.addEventListener("DOMContentLoaded", function () {
+        adjustTextAreas();
 
-    window.addEventListener('resize', adjustTextAreas);
-});
-
+        window.addEventListener('resize', adjustTextAreas);
+    });
+}
 // Optional: If you want to allow dragging to resize the areas
 var isResizing = false;
 var startX;
@@ -104,7 +107,14 @@ function isalnum(char) {
 function copyToClipboard(text, id) {
     navigator.clipboard.writeText(text).then(function () {
         const submitButton = document.getElementById(id);
-        submitButton.textContent = 'Copied!';
+        if (id=='copy'){
+            submitButton.textContent = 'Copied!';
+        }
+        else{
+            document.getElementById('copy_image').src="https://www.freeiconspng.com/thumbs/check-tick-icon/tick-icon-44.png";
+            document.getElementById('copy_image').style.filter="invert(0)";
+        }
+        
         submitButton.classList.add('success');
     }, function (err) {
         alert('Could not copy text: ', err);
@@ -112,7 +122,7 @@ function copyToClipboard(text, id) {
 }
 
 
-
+var ans=""
 function runAlgorithm() {
     var inputCode = document.getElementById('input_code').value;
     var lines = inputCode.split('\n');
@@ -169,22 +179,25 @@ function runAlgorithm() {
     }
 
     // Update output textarea with generated output code
-    document.getElementById('output_code').value = outputCode.trim();
-    copyToClipboard(outputCode.trim(), 'run');
+    ans= document.getElementById('output_code').value = outputCode.trim();
+}
+
+function copyCode() {
+    copyToClipboard(ans, 'copy');
 }
 
 function light() {
-  document.getElementById("body").style.filter = "invert(1)";
-  document.getElementById("logo").style.filter = "invert(1)";
-  document.getElementById("body").style.backgroundColor="rgba(0,0,0,0.2)";
-  const button = document.getElementById('theme');
-  button.onclick = dark;
+    document.getElementById("body").style.filter = "invert(1)";
+    document.getElementById("logo").style.filter = "invert(1)";
+    document.getElementById("body").style.backgroundColor = "rgba(0,0,0,0.2)";
+    const button = document.getElementById('theme');
+    button.onclick = dark;
 }
 
 function dark() {
     document.getElementById("body").style.filter = "invert(0)";
     document.getElementById("logo").style.filter = "invert(0)";
-    document.getElementById("body").style.backgroundColor="rgba(0, 0, 0, 0.888)";
+    document.getElementById("body").style.backgroundColor = "rgba(0, 0, 0, 0.888)";
     const button = document.getElementById('theme');
     button.onclick = light;
-  }
+}

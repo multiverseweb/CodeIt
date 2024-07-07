@@ -9,6 +9,9 @@ body{
     transition-duration: 0.5s;
 }
 
+nav{
+    width: calc(100vw - 60px);
+}
 ::-webkit-scrollbar {
     width: 4px;
   }
@@ -115,8 +118,7 @@ textarea:focus{
 }
 #result{
     color: grey;
-    margin-top: 10px;
-    margin-left: 80px;
+    margin-left: 10px;
 }
 
 option{
@@ -134,4 +136,49 @@ option{
 .moon{
     height: 30px;
     filter: invert(1);
+}
+
+@media screen and (max-width: 480px){
+    .code{
+        flex-direction: column;
+    }
+    #input_code{
+        width: calc(100vw - 20px)
+    }
+    #ouput_code{
+        width: calc(100vw - 20px)
+    }
+    .codes{
+        min-height: 30vh;
+    }
+}
+.container{
+    margin-left: 80px;
+    display: flex;
+    margin-top: 10px;
+}
+.copy{
+    height: 25px;
+    filter: invert(1);
+}
+#submit{
+    background-color: #00000000;
+    border: none;
+    cursor: pointer;
+}
+#run:hover{
+    outline: 1px solid gold;
+    box-shadow: 0px 0px 20px gold;
+    animation: hue;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes hue{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
 }
