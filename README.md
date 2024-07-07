@@ -27,6 +27,10 @@ Coedit is a tool designed to streamline the process of converting default code p
   | C ||✔|
   | SQL ||✔|
 
+## Preview
+
+![]('resources/Screenshot 2024-07-07 122033.png')
+
 ## Benefits
 
   - Save Time: Eliminate the repetitive task of manually converting code templates, freeing up more time to focus on solving the problem at hand.
