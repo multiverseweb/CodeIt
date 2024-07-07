@@ -201,3 +201,7 @@ function dark() {
     const button = document.getElementById('theme');
     button.onclick = light;
 }
+function copylink() {
+    navigator.clipboard.writeText("https://coedittool.netlify.app/");
+    document.getElementById("link").innerHTML = "✓";
+}

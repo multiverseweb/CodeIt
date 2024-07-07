@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: consolas;
     background-color: rgba(0, 0, 0, 0.888);
     transition-duration: 0.5s;
@@ -82,7 +82,7 @@ nav{
 .codes{
     font-size: 1rem;
     resize: horizontal;
-    min-height: 80vh;
+    min-height: 77vh;
     margin: 10px;
     background-color: #00000000;
     border: none;
@@ -151,7 +151,10 @@ option{
         width: calc(100vw - 20px)
     }
     .codes{
-        min-height: 30vh;
+        min-height: 25vh;
+    }
+    footer{
+        flex-direction: column;
     }
 }
 .container{
@@ -189,4 +192,22 @@ option{
     color:grey;
     font-size: 14px;
     margin-top: 5px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.footer_logo{
+    border: none;
+    background-color: #00000000;
+}
+.footer_logo img{
+    height: 20px;
+    filter: invert(1);
+}
+#link{
+    color: white;
+    font-size: 20px;
 }

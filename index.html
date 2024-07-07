@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="resources/style.css">
     <link rel="shortcut icon" href="resources/Nomenclature.png" type="image/x-icon">
 </head>
+
 <body id="body">
     <nav>
         <a href=""><img src="resources/Nomenclature.png" alt="logo" class="logo" id="logo"></a>
@@ -26,13 +27,25 @@
             <button type="button" id="copy" class="btn" onclick="copyCode()">Copy Code</button>
         </form>
     </nav>
-    <button type="button" id="theme" onclick="light()"><img src="https://static.thenounproject.com/png/4066359-200.png" class="moon"></button>
-    <div class="container"><button type="button" id="submit" onclick="fileNameFunction()"><img src="https://cdn.icon-icons.com/icons2/629/PNG/512/copy-two-paper-sheets-stroke-symbol-of-interface_icon-icons.com_57868.png" alt="" class="copy" id="copy_image"></button><div id="result">Generated File Name: </div></div>
+    <button type="button" id="theme" onclick="light()"><img src="https://static.thenounproject.com/png/4066359-200.png"
+            class="moon"></button>
+    <div class="container"><button type="button" id="submit" onclick="fileNameFunction()"><img
+                src="https://cdn.icon-icons.com/icons2/629/PNG/512/copy-two-paper-sheets-stroke-symbol-of-interface_icon-icons.com_57868.png"
+                alt="" class="copy" id="copy_image"></button>
+        <div id="result">Generated File Name: </div>
+    </div>
     <div class="code">
         <textarea id="input_code" class="codes" placeholder="Input Code"></textarea>
-        <textarea  id="output_code" class="codes" placeholder="Output Code" readonly></textarea>
+        <textarea id="output_code" class="codes" placeholder="Output Code" readonly></textarea>
     </div>
-    <p class="mistakes">Coedit can make mistakes. Check the code before implementing the algorithm.</p>
+    <footer>
+        <p class="mistakes">Coedit can make mistakes. Check the code before implementing the algorithm.</p>
+        <div class="links">
+            <button class="footer_logo" onclick="copylink()" id="link"><img src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt=""></button>
+            <a href="https://github.com/multiverseweb/Coedit" class="footer_logo"><img src="https://pngimg.com/d/github_PNG83.png" alt=""></a>
+        </div>
+    </footer>
     <script src="resources/script.js"></script>
 </body>
+
 </html>
