@@ -29,7 +29,7 @@ Coedit is a tool designed to streamline the process of converting default code p
 
 ## Preview
 
-![]('resources/Screenshot 2024-07-07 122033.png')
+![](resources/Screenshot 2024-07-07 122033.png)
 
 ## Benefits
 
