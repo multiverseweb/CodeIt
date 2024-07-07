@@ -1,5 +1,11 @@
 # Coedit | <a href="https://multiverseweb.github.io/Coedit/">Tool<img src="resources/Nomenclature.png" height=40px align=right></a>
 
+### Table of Contents
+
+| [About Coedit](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Use Coedit](#use-coedit) |
+|:--:|:--:|:--:|:--:|:--:|
+
+## About
 Coedit is a tool designed to streamline the process of converting default code provided by coding platforms, such as LeetCode, into fully functional code that can be used to directly write the algorithm and run test cases.
 
 ## Key Features
@@ -28,6 +34,10 @@ Coedit is a tool designed to streamline the process of converting default code p
   - Enhance Productivity: Speed up your coding process with streamlined workflows and intuitive tools.
  
 ## Use Coedit
+Deployed on
+
+<img height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Netlify_logo_%282%29.svg/1200px-Netlify_logo_%282%29.svg.png">
+
 <a href="https://multiverseweb.github.io/Coedit/">Visit website</a>
   
   
