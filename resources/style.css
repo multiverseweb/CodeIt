@@ -182,3 +182,9 @@ option{
         filter: hue-rotate(360deg);
     }
 }
+.mistakes{
+    text-align: center;
+    color:grey;
+    font-size: 14px;
+    margin-top: 5px;
+}
