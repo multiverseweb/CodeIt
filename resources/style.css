@@ -92,9 +92,11 @@ nav{
     box-sizing: border-box;
 }
 #input_code{
+    color:rgba(255, 170, 0, 0.756);
     width: 50vw;
 }
 #output_code{
+    color: rgba(0, 255, 204, 0.619);
     resize: none;
 }
 textarea{
