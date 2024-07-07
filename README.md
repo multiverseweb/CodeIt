@@ -17,7 +17,8 @@ Coedit is a tool designed to streamline the process of converting default code p
 
 - User-Friendly Interface: With a clean and straightforward UI, Coedit ensures even beginners can navigate and utilize the tool effectively.
 - Multi-Language Support: Whether you’re coding in Python, Java, C++, or any other popular programming language, Coedit has got you covered.
-  Languages Supported
+  
+  Languages Supported:
   | Language | Code Conversion | Nomenclature |
   |-|-|-|
   | Python | ✔ | ✔|
