@@ -189,7 +189,8 @@ function copyCode() {
 function light() {
     document.getElementById("body").style.filter = "invert(1)";
     document.getElementById("logo").style.filter = "invert(1)";
-    document.getElementById("body").style.backgroundColor = "rgba(0,0,0,0.2)";
+    document.getElementById("submit").style.filter = "invert(1)";
+    document.getElementById("body").style.backgroundColor = "rgba(0,0,0,0.1)";
     const button = document.getElementById('theme');
     button.onclick = dark;
 }
@@ -197,6 +198,7 @@ function light() {
 function dark() {
     document.getElementById("body").style.filter = "invert(0)";
     document.getElementById("logo").style.filter = "invert(0)";
+    document.getElementById("submit").style.filter = "invert(0)";
     document.getElementById("body").style.backgroundColor = "rgba(0, 0, 0, 0.888)";
     const button = document.getElementById('theme');
     button.onclick = light;
