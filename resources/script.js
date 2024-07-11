@@ -144,6 +144,9 @@ function runAlgorithm() {
         if (flag = true && line.includes('"""')) {
             flag = false;
         }
+        if (line.trim().startsWith('#')){
+            continue;
+        }
 
         // Find function definition
         if (line.trim().startsWith('def ')) {
@@ -166,14 +169,13 @@ function runAlgorithm() {
     }
     console.log(indent);
     // Append 5 indented blank lines for user's code
-    outputCode += "\n";
-    for (var j = 0; j < 5; j++) {
-        outputCode += "\t".repeat(indent / 2) + "\n";
+    for (var j = 0; j < 3; j++) {
+        outputCode += "    ".repeat(indent / 2) + "\n";
     }
 
     // Append test case and object creation without colon
     if (definition) {
-        outputCode += "\t".repeat(minIndent) + "#testCase\n\n";
+        outputCode += "\t".repeat(minIndent) + "#paste testCase here\n\n";
         outputCode += "\t".repeat(minIndent) + "obj = Solution()\n";
         outputCode += "\t".repeat(minIndent) + "print(obj." + definition + ")\n";
     }
