@@ -231,8 +231,8 @@ footer{
 .checkmark {
     margin-left: -17px;
     position: absolute;
-    height: 17px;
-    width: 17px;
+    height: 19px;
+    width: 19px;
     border-radius: 5px;
     background-color: #eee;
   }
