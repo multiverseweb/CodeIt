@@ -167,7 +167,6 @@ function runAlgorithm() {
         // Append trimmed line to output code
         outputCode += line.trimRight() + "\n";
     }
-    console.log(indent);
     // Append 5 indented blank lines for user's code
     for (var j = 0; j < 3; j++) {
         outputCode += "    ".repeat(indent / 2) + "\n";
@@ -182,8 +181,8 @@ function runAlgorithm() {
 
     // Update output textarea with generated output code
     ans= document.getElementById('output_code').value = outputCode.trim();
+    document.getElementById("copy").style.animationPlayState="running";
 }
-
 function copyCode() {
     copyToClipboard(ans, 'copy');
 }

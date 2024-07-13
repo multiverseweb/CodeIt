@@ -4,7 +4,7 @@
 }
 body{
     overflow-x: hidden;
-    font-family: consolas;
+    font-family: "Sometype Mono", monospace;
     background-color: rgba(0, 0, 0, 0.888);
     transition-duration: 0.5s;
 }
@@ -100,6 +100,7 @@ nav{
     resize: none;
 }
 textarea{
+    font-family: "Sometype Mono", monospace;
     color: rgba(255, 255, 255, 0.866);
 }
 input:focus {
@@ -211,4 +212,23 @@ footer{
     color: white;
     font-size: 20px;
     cursor: pointer;
+}
+#copy{
+    animation-name: blink;
+    animation-duration: 0.3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 2;
+    animation-play-state:paused;
+}
+@keyframes blink{
+    0%{
+        box-shadow: 0 0 0px white;
+    }
+    50%{
+        box-shadow: 0 0 20px white;
+        outline: 1px solid white;
+    }
+    100%{
+        box-shadow: 0 0 0px white;
+    }
 }

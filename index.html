@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coedit</title>
     <link rel="stylesheet" href="resources/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="resources/Nomenclature.png" type="image/x-icon">
 </head>
 
@@ -35,14 +39,16 @@
         <div id="result">Generated File Name: </div>
     </div>
     <div class="code">
-        <textarea id="input_code" class="codes" placeholder="Input Code"></textarea>
+        <textarea id="input_code" class="codes" placeholder="Input Code" spellcheck="false"></textarea>
         <textarea id="output_code" class="codes" placeholder="Output Code" readonly></textarea>
     </div>
     <footer>
         <p class="mistakes">Coedit can make mistakes. Check the code before implementing the algorithm.</p>
         <div class="links">
-            <button class="footer_logo" onclick="copylink()" id="link"><img src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt=""></button>
-            <a href="https://github.com/multiverseweb/Coedit" class="footer_logo"><img src="https://pngimg.com/d/github_PNG83.png" alt=""></a>
+            <button class="footer_logo" onclick="copylink()" id="link"><img
+                    src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt=""></button>
+            <a href="https://github.com/multiverseweb/Coedit" class="footer_logo"><img
+                    src="https://pngimg.com/d/github_PNG83.png" alt=""></a>
         </div>
     </footer>
     <script src="resources/script.js"></script>
