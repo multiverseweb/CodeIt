@@ -28,7 +28,7 @@ Coedit is a tool designed to streamline the process of converting default code p
   | C ||✔|
   | SQL ||✔|
 
->[!IMPORTANT]
+>[!NOTE]
 > As of now, This tool generates code according to [LeetCode](https://leetcode.com/) only. I'll be adding more coding platforms to it soon.
 
 ## Preview
