@@ -65,6 +65,7 @@ function updateFileName() {
 }
 
 function generateFileName(directory, name, language) {
+    var checkbox = document.getElementById("revisit");
     name = name.split(' ');
     for (let i = 0; i < name.length; i++) {
         for (let j = 0; j < name[i].length; j++) {
@@ -74,7 +75,10 @@ function generateFileName(directory, name, language) {
         }
     }
     name = name.join('-');
-
+    
+    if (checkbox.checked) {
+        name=name+"-(revisit)";
+    }
     switch (language) {
         case "Python":
             name += ".py";

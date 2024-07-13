@@ -222,6 +222,30 @@ footer{
     margin-top: 10px;
     height: fit-content;
 }
+.revisit{
+    margin-top: 20px;
+    margin-left: 20px;
+    color:grey;
+    margin-bottom: 10px;
+}
+.checkmark {
+    margin-left: -17px;
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    border-radius: 5px;
+    background-color: #eee;
+  }
+
+  .revisit:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .revisit input:checked ~ .checkmark {
+    background-color: red;
+  }
+  
 @media screen and (max-width: 480px){
     #name{
         width: calc(100vw - 40px)
