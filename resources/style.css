@@ -141,23 +141,6 @@ option{
     filter: invert(1);
 }
 
-@media screen and (max-width: 480px){
-    .code{
-        flex-direction: column;
-    }
-    #input_code{
-        width: calc(100vw - 20px)
-    }
-    #ouput_code{
-        width: calc(100vw - 20px)
-    }
-    .codes{
-        min-height: 25vh;
-    }
-    footer{
-        flex-direction: column;
-    }
-}
 .container{
     margin-left: 80px;
     display: flex;
@@ -230,5 +213,53 @@ footer{
     }
     100%{
         box-shadow: 0 0 0px white;
+    }
+}
+.buttons{
+    display: flex;
+    margin-left: 10px;
+    width:fit-content;
+    margin-top: 10px;
+    height: fit-content;
+}
+@media screen and (max-width: 480px){
+    #name{
+        width: calc(100vw - 40px)
+    }
+    #directory{
+        width: calc(100vw - 40px)
+    }
+    #language{
+        width: calc(100vw - 30px)
+    }
+    #run{
+        width: calc(50vw - 20px)
+    }
+    #copy{
+        width: calc(50vw - 20px)
+    }
+    #fileForm{
+        margin-left: 10px;
+    }
+    .code{
+        flex-direction: column;
+    }
+    #input_code{
+        width: calc(100vw - 20px)
+    }
+    #ouput_code{
+        width: calc(100vw - 20px)
+    }
+    .codes{
+        min-height: 25vh;
+    }
+    footer{
+        flex-direction: column;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .container{
+        margin-left: 10px;
     }
 }
