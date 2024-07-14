@@ -235,6 +235,7 @@ footer{
     width: 19px;
     border-radius: 5px;
     background-color: #eee;
+    box-shadow: 0 0 5px black;
   }
 
   .revisit:hover input ~ .checkmark {
