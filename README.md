@@ -10,7 +10,7 @@ Coedit is a tool designed to streamline the process of converting default code p
 
 ## Key Features
 
-- Automatic Conversion: CodePrep intelligently parses the default code templates and transforms them into executable scripts ready for testing. No more manual adjustments needed.
+- Automatic Conversion: Coedit intelligently parses the default code templates and transforms them into executable scripts ready for testing. No more manual adjustments needed.
 - Nomenclature: Provides user with an option to generate the file name efficiently in the following manner:
   
   `directoryName/questionNumber-question-title.extention`
