@@ -25,9 +25,6 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 - Time Complexity Analyzer:
 > Performance Evaluation: Analyzes the time complexity of algorithms to help developers optimize performance and make informed decisions about algorithmic efficiency.
 
-- Test Case Management:
-> Seamless Testing: Simplifies the creation and execution of test cases, integrating them into the development workflow to ensure code correctness and compliance with requirements.
-
 - User-Friendly Interface
 > With a clean and straightforward UI, CodeIt ensures even beginners can navigate and utilize the tool effectively.
 
