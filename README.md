@@ -1,9 +1,9 @@
-# Coedit | <a href="https://multiverseweb.github.io/Coedit/">Tool<img src="resources/Nomenclature.png" height=40px align=right></a>
+# CodeIt | <a href="https://multiverseweb.github.io/CodeIt/">Tool<img src="resources/Nomenclature.png" height=40px align=right></a>
 #### Developing for the Developers
 
 ### Table of Contents
 
-| [About Coedit](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Use Coedit](#use-coedit) |
+| [About CodeIt](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Use CodeIt](#use-codeit) |
 |:--:|:--:|:--:|:--:|:--:|
 
 ## About
@@ -29,13 +29,13 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 > Seamless Testing: Simplifies the creation and execution of test cases, integrating them into the development workflow to ensure code correctness and compliance with requirements.
 
 - User-Friendly Interface
-> With a clean and straightforward UI, Coedit ensures even beginners can navigate and utilize the tool effectively.
+> With a clean and straightforward UI, CodeIt ensures even beginners can navigate and utilize the tool effectively.
 
 - Multi-Language Support
-> Whether you’re coding in Python, Java, C++, or any other popular programming language, Coedit has got you covered.
+> Whether you’re coding in Python, Java, C++, or any other popular programming language, CodeIt has got you covered.
   
   Supported Features:
-  | Language | Code Refinement | Code Obfuscation | Time Completixty Analyser | Nomenclature |
+  | Language | Code Refinement | Code Obfuscation | Time Complexity Analyzer | Nomenclature |
   |-|-|-|-|-|
   | Python |✔|✔|✔|✔|
   | C++ |✔|✘|✔|✔|
@@ -57,11 +57,9 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
   - Increase Accuracy: Reduce the risk of errors that can occur during manual code adjustments.
   - Enhance Productivity: Speed up your coding process with streamlined workflows and intuitive tools.
  
-## Use Coedit
+## Use CodeIt
 Deployed on
 
 <img height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Netlify_logo_%282%29.svg/1200px-Netlify_logo_%282%29.svg.png">
 
-<a href="https://coedittool.netlify.app/">Visit website</a>
-  
-  
+<a href="https://codeittool.netlify.app/">Visit website</a>
