@@ -1,4 +1,5 @@
 # Coedit | <a href="https://multiverseweb.github.io/Coedit/">Tool<img src="resources/Nomenclature.png" height=40px align=right></a>
+#### Developing for the Developers
 
 ### Table of Contents
 
