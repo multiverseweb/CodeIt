@@ -172,7 +172,10 @@ option{
     }
 }
 .mistakes{
+    margin-left: 50vw;
     text-align: center;
+    width: 90%;
+    transform: translate(-50%);
     color:grey;
     font-size: 14px;
     margin-top: 5px;

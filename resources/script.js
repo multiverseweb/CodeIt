@@ -211,6 +211,6 @@ function dark() {
     button.onclick = light;
 }
 function copylink() {
-    navigator.clipboard.writeText("https://coedittool.netlify.app/");
+    navigator.clipboard.writeText("https://codeittool.netlify.app/");
     document.getElementById("link").innerHTML = "✓";
 }
