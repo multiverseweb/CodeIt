@@ -1,59 +1,116 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     overflow-x: hidden;
     font-family: "Sometype Mono", monospace;
     background-color: rgba(0, 0, 0, 0.888);
     transition-duration: 0.5s;
 }
 
-nav{
-    width: calc(100vw - 60px);
+.top-elements {
+    width: calc(100vw - 100px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.top-link {
+    display: flex;
+    color: rgb(124, 124, 124);
+    text-decoration: none;
+}
+
+.top-link p {
+    margin-left: 3px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+table {
+    margin-top: 15px;
+    border: 1px solid rgba(124, 124, 124);
+    border-radius: 20px;
+}
+
+td {
+    color: rgb(124, 124, 124);
+    padding: 5px 20px 5px 20px;
+    transition-duration: 0.5s;
+    border-radius: 20px;
+
+}
+
+td a {
+    text-decoration: none;
+    color: rgb(121, 121, 121);
+}
+
+td:hover {
+    background-color: white;
+}
+
+td:hover>a {
+    color: black;
+}
+
+td:active {
+    background-color: white;
+}
+
+.options {
+    width: calc(100vw);
+    display: flex;
+}
+
 ::-webkit-scrollbar {
     width: 4px;
-  }
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.504); 
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.504);
     border-radius: 2px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgba(255, 217, 0, 0.693); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 217, 0, 0.693);
     border-radius: 10px;
-  }
-.logo{
+}
+
+.logo {
     height: 40px;
     margin: 5px;
     transition-duration: 0.5s;
 }
-nav{
-    display: flex;
-}
-#fileForm{
-    margin-left: 20px;
+
+#fileForm {
+    margin-left: 5px;
     margin-top: 10px;
 }
-.names{
+
+.names {
     background-color: #00000000;
-    border:none;
+    border: none;
     box-shadow: 0px 0px 10px black;
     border-radius: 3px;
     margin: 5px;
     font-size: 1rem;
     padding: 5px;
     width: 30vw;
-    color:rgba(255, 255, 255, 0.886);
+    color: rgba(255, 255, 255, 0.886);
     transition-duration: 0.2s;
 }
-#directory{
+
+#directory {
     width: 10vw;
 }
-#language{
+
+select {
     background-color: #00000000;
     color: grey;
-    border:none;
+    border: none;
     box-shadow: 0px 0px 10px black;
     border-radius: 3px;
     margin: 5px;
@@ -62,10 +119,11 @@ nav{
     cursor: grab;
     transition-duration: 0.2s;
 }
-.btn{
+
+.btn {
     background-color: #00000000;
     color: grey;
-    border:none;
+    border: none;
     box-shadow: 0px 0px 10px black;
     border-radius: 3px;
     margin: 5px;
@@ -74,15 +132,17 @@ nav{
     cursor: pointer;
     transition-duration: 0.2s;
 }
-.code{
+
+.code {
     display: flex;
     flex-direction: row;
     margin-top: 5px;
 }
-.codes{
+
+.codes {
     font-size: 1rem;
     resize: horizontal;
-    min-height: 77vh;
+    min-height: 70vh;
     margin: 10px;
     background-color: #00000000;
     border: none;
@@ -91,71 +151,85 @@ nav{
     box-shadow: 0px 0px 10px black;
     box-sizing: border-box;
 }
-#input_code{
-    color:rgba(255, 170, 0, 0.756);
+
+#input_code {
+    color: rgba(255, 170, 0, 0.756);
     width: 50vw;
 }
-#output_code{
+
+#output_code {
     color: rgba(0, 255, 204, 0.619);
     resize: none;
 }
-textarea{
+
+textarea {
     font-family: "Sometype Mono", monospace;
     color: rgba(255, 255, 255, 0.866);
 }
+
 input:focus {
     outline: none;
 }
-#name:hover{
+
+#name:hover {
     box-shadow: 0px 0px 0px black;
     background-color: #00000000;
 }
-#language:hover{
+
+#language:hover {
     box-shadow: 0px 0px 0px black;
 }
-.btn:hover{
+
+.btn:hover {
     box-shadow: 0px 0px 0px black;
 }
-textarea:focus{
+
+textarea:focus {
     outline: none;
 }
-#result{
+
+#result {
     color: grey;
     margin-left: 10px;
 }
 
-option{
-    background-color:rgba(0, 0, 0, 0.888);
+option {
+    background-color: rgba(0, 0, 0, 0.888);
 }
 
-#theme{
-    top:20px;
-    right:20px;
+#theme {
+    top: 20px;
+    right: 20px;
     position: absolute;
     background-color: #00000000;
     border: none;
     cursor: pointer;
 }
-.moon{
+
+#themeLogo {
+    transition-duration: 0.5s;
     height: 30px;
     filter: invert(1);
 }
 
-.container{
-    margin-left: 80px;
+.container {
+    margin-left: 10px;
     display: flex;
     margin-top: 10px;
 }
-.copy{
+
+.copy {
     height: 25px;
     filter: invert(1);
 }
-#submit{
+
+#submit {
     background-color: #00000000;
     border: none;
     cursor: pointer;
 }
-#run:hover{
+
+#run:hover {
     outline: 1px solid gold;
     box-shadow: 0px 0px 20px gold;
     animation: hue;
@@ -163,74 +237,92 @@ option{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-@keyframes hue{
-    0%{
+
+@keyframes hue {
+    0% {
         filter: hue-rotate(0deg);
     }
-    100%{
+
+    100% {
         filter: hue-rotate(360deg);
     }
 }
-.mistakes{
+
+.mistakes {
     margin-left: 50vw;
     text-align: center;
     width: 90%;
     transform: translate(-50%);
-    color:grey;
+    color: grey;
     font-size: 14px;
     margin-top: 5px;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
-.footer_logo{
+
+.footer_logo {
     border: none;
     background-color: #00000000;
 }
-.footer_logo img{
+
+.footer_logo img {
+    margin-right: 10px;
     height: 20px;
     filter: invert(1);
 }
-#link{
+
+#link {
     color: white;
     font-size: 20px;
     cursor: pointer;
 }
-#copy{
+
+.links {
+    display: flex;
+}
+
+#copy {
     animation-name: blink;
     animation-duration: 0.3s;
     animation-delay: 0.5s;
     animation-iteration-count: 2;
-    animation-play-state:paused;
+    animation-play-state: paused;
 }
-@keyframes blink{
-    0%{
+
+@keyframes blink {
+    0% {
         box-shadow: 0 0 0px white;
     }
-    50%{
+
+    50% {
         box-shadow: 0 0 20px white;
         outline: 1px solid white;
     }
-    100%{
+
+    100% {
         box-shadow: 0 0 0px white;
     }
 }
-.buttons{
+
+.buttons {
     display: flex;
     margin-left: 10px;
-    width:fit-content;
+    width: fit-content;
     margin-top: 10px;
     height: fit-content;
 }
-.revisit{
+
+.revisit {
     margin-top: 20px;
     margin-left: 20px;
-    color:grey;
+    color: grey;
     margin-bottom: 10px;
 }
+
 .checkmark {
     margin-left: -17px;
     position: absolute;
@@ -239,55 +331,81 @@ footer{
     border-radius: 5px;
     background-color: #eee;
     box-shadow: 0 0 5px black;
-  }
+}
 
-  .revisit:hover input ~ .checkmark {
+.revisit:hover input~.checkmark {
     background-color: #ccc;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .revisit input:checked ~ .checkmark {
+}
+
+/* When the checkbox is checked, add a blue background */
+.revisit input:checked~.checkmark {
     background-color: red;
-  }
-  
-@media screen and (max-width: 480px){
-    #name{
+}
+
+@media screen and (max-width: 830px) {
+    .top-elements {
+        flex-direction: column;
+    }
+
+    table {
+        width: 100%;
+        margin-left: 10px;
+        overflow-x: scroll;
+    }
+
+    td {
+        white-space: nowrap;
+    }
+
+    #name {
         width: calc(100vw - 40px)
     }
-    #directory{
+
+    #directory {
         width: calc(100vw - 40px)
     }
-    #language{
+
+    #language {
         width: calc(100vw - 30px)
     }
-    #run{
+
+    #run {
         width: calc(50vw - 20px)
     }
-    #copy{
+
+    #copy {
         width: calc(50vw - 20px)
     }
-    #fileForm{
+
+    #fileForm {
         margin-left: 10px;
     }
-    .code{
+
+    .code {
         flex-direction: column;
     }
-    #input_code{
+
+    #input_code {
         width: calc(100vw - 20px)
     }
-    #ouput_code{
+
+    #ouput_code {
         width: calc(100vw - 20px)
     }
-    .codes{
+
+    .codes {
         min-height: 25vh;
     }
-    footer{
+
+    footer {
         flex-direction: column;
     }
-    nav{
+
+    .options {
         flex-direction: column;
     }
-    .container{
+
+    .container {
         margin-left: 10px;
     }
 }

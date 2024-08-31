@@ -192,20 +192,26 @@ function copyCode() {
 }
 
 function light() {
-    document.getElementById("body").style.filter = "invert(1)";
-    document.getElementById("logo").style.filter = "invert(1)";
+    document.getElementById("themeLogo").src="resources/sun.png";
+    document.getElementById("themeLogo").style.filter = "invert(0)";
+    document.getElementById("input_code").style.color="#0b6100";
+    document.getElementById("output_code").style.color="#002d8f";
+    document.getElementById("link").style.filter = "invert(1)";
+    document.getElementById("link2").style.filter = "invert(0)";
     document.getElementById("submit").style.filter = "invert(1)";
-    document.getElementById("checkmark").style.filter = "invert(1)";
     document.getElementById("body").style.backgroundColor = "rgba(0,0,0,0.1)";
     const button = document.getElementById('theme');
     button.onclick = dark;
 }
 
 function dark() {
-    document.getElementById("body").style.filter = "invert(0)";
-    document.getElementById("logo").style.filter = "invert(0)";
+    document.getElementById("themeLogo").src="resources/moon.png";
+    document.getElementById("themeLogo").style.filter = "invert(1)";
+    document.getElementById("input_code").style.color="rgba(255, 170, 0, 0.756)";
+    document.getElementById("output_code").style.color="rgba(0, 255, 204, 0.619)";
+    document.getElementById("link").style.filter = "invert(0)";
+    document.getElementById("link2").style.filter = "invert(1)";
     document.getElementById("submit").style.filter = "invert(0)";
-    document.getElementById("checkmark").style.filter = "invert(0)";
     document.getElementById("body").style.backgroundColor = "rgba(0, 0, 0, 0.888)";
     const button = document.getElementById('theme');
     button.onclick = light;
