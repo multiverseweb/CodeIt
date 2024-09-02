@@ -28,38 +28,57 @@ body {
     margin-top: 15px;
     font-size: 20px;
 }
+.navbar-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of table cells */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+}
 
 table {
     margin-top: 15px;
     border: 1px solid rgba(124, 124, 124);
     border-radius: 20px;
+    display: inline-table; /* Ensures table is displayed inline for scrolling */
+    min-width: 100%;
 }
 
+.navbar{
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Ensures content does not overflow the navbar */
+}
+.highlight {
+    position: absolute;
+    height: 28px;
+    margin-top: 16px;
+    width: 0;
+    background-color: #787878;
+    transition: all 0.3s ease;
+    z-index: -2;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+}
+.nav-item {
+    position: relative; /* Positions the cell relative to the table */
+}
+.nav-item a{
+    mix-blend-mode: difference; /* This inverts the text color */
+}
 td {
     color: rgb(124, 124, 124);
     padding: 5px 20px 5px 20px;
     transition-duration: 0.5s;
     border-radius: 20px;
-
 }
 
 td a {
     text-decoration: none;
     color: rgb(121, 121, 121);
 }
-
-td:hover {
-    background-color: white;
+#current{
+    background-color: #787878;
 }
-
-td:hover>a {
-    color: black;
-}
-
-td:active {
-    background-color: white;
-}
-
 .options {
     width: calc(100vw);
     display: flex;
@@ -67,15 +86,16 @@ td:active {
 
 ::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.504);
-    border-radius: 2px;
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.327);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 217, 0, 0.693);
+    background: rgba(96, 96, 96, 0.693);
     border-radius: 10px;
 }
 
@@ -344,6 +364,7 @@ footer {
 
 @media screen and (max-width: 830px) {
     .top-elements {
+        width: calc(100vw - 0px);
         flex-direction: column;
     }
 

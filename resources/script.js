@@ -1,4 +1,27 @@
 console.log("Tejas' Codes :D");
+
+const highlight = document.querySelector('.highlight');
+const navItems = document.querySelectorAll('.nav-item');
+
+navItems.forEach(item => {
+    item.addEventListener('mouseover', function() {
+        const itemRect = item.getBoundingClientRect();
+        const tableRect = item.closest('table').getBoundingClientRect(); // Get the table's bounding box
+
+        // Adjust the highlight position and width based on the table's position
+        highlight.style.width = `${itemRect.width}px`;
+        highlight.style.left = `${itemRect.left - tableRect.left}px`;
+        highlight.style.top = `${itemRect.top - tableRect.top}px`;
+    });
+});
+
+document.querySelector('.navbar').addEventListener('mouseleave', () => {
+    highlight.style.width = '0';
+});
+
+
+
+
 let width = screen.width;
 function adjustTextAreas() {
     var inputCode = document.getElementById("input_code");
@@ -199,7 +222,7 @@ function light() {
     document.getElementById("link").style.filter = "invert(1)";
     document.getElementById("link2").style.filter = "invert(0)";
     document.getElementById("submit").style.filter = "invert(1)";
-    document.getElementById("body").style.backgroundColor = "rgba(0,0,0,0.1)";
+    document.getElementById("body").style.backgroundColor = "rgb(190, 190, 190)";
     const button = document.getElementById('theme');
     button.onclick = dark;
 }
