@@ -53,7 +53,7 @@ table {
     margin-top: 16px;
     width: 0;
     background-color: #787878;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     z-index: -2;
     border-radius: 30px;
     top: 0;
@@ -79,6 +79,11 @@ td a {
 #current{
     background-color: #787878;
 }
+
+.navbar-container:hover #current{
+    background-color: #00000000;
+}
+
 .options {
     width: calc(100vw);
     display: flex;
