@@ -28,7 +28,7 @@ function light() {
         input_code.style.color = "#0b6100";
         document.getElementById("output_code").style.color = "#002d8f";
         document.getElementById("submit").style.filter = "invert(1)";
-    }else {
+    } else {
         const normal_code = document.getElementById("normal_code");
         if (normal_code) {
             normal_code.style.color = "#0b6100";
@@ -87,4 +87,12 @@ function copied(elementId) {
         element.innerHTML = originalText;
         element.style.width = '';
     }, 1500);
+}
+
+function clearText() {
+    const normal_code = document.getElementById("normal_code");
+    if (normal_code) {
+        normal_code.value = "";
+        obfuscated_code.value = "";
+    }
 }
