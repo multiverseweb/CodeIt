@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeIt</title>
+    <link rel="stylesheet" href="../resources/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../images/Nomenclature.png" type="image/x-icon">
+</head>
+
+<body id="body">
+    <div class="top-elements">
+        <a href="../index.html" class="top-link"><img src="../images/Nomenclature.png" alt="logo" class="logo" id="logo">
+            <p class="codeit">CodeIt</p>
+        </a>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <table>
+                    <tr>
+                        <td class="nav-item"><a href="../index.html" class="home">Home</a></td>
+                        <td class="nav-item" id="current"><a href="" class="competitive">Code Refiner</a></td>
+                        <td class="nav-item"><a href="obfuscation.html" class="obfuscation">Code Obfuscator</a></td>
+                        <td class="nav-item"><a href="timeComplexity.html" class="time">Time Complexity Analyser</a></td>
+                        <td class="nav-item"><a href="infinity.html" class="ai">Infinity AI</a></td>
+                        <div class="highlight"></div>
+                    </tr>
+                </table>
+            </div>
+        </nav>
+
+    </div>
+    <div class="options">
+        <form id="fileForm">
+            <select id="platform" name="platform">
+                <option value="Coding Platform">Coding Platform</option>
+                <option value="LeetCode">LeetCode</option>
+                <option value="HackerRank">HackerRank</option>
+                <option value="CodeForces">CodeForces</option>
+                <option value="AtCoder">AtCoder</option>
+            </select>
+            <input type="text" name="directory" id="directory" placeholder="Directory Name" class="names">
+            <input type="text" name="name" id="name" placeholder="Question No. and Title" class="names">
+            <select id="language" name="language">
+                <option value="Language">Language</option>
+                <option value="C++">C++</option>
+                <option value="Python">Python</option>
+                <option value="SQL">SQL</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="C">C</option>
+                <option value="Java">Java</option>
+            </select>
+        </form>
+        <div class="buttons">
+            <button type="button" id="run" class="btn" onclick="runAlgorithm()">Generate Code</button>
+            <button type="button" id="copy" class="btn" onclick="copyCode()">Copy Code</button>
+            <button onclick="clearText()" class="btn">Clear Code</button>
+        </div>
+        <label class="revisit">Mark for revisit&nbsp;
+            <input type="checkbox" id="revisit">
+            <span class="checkmark" id="checkmark"></span>
+        </label>
+    </div>
+    <button type="button" id="theme" onclick="light()"><img src="../images/moon.png" class="moon"
+            id="themeLogo"></button>
+    <div class="container"><button type="button" id="submit" onclick="fileNameFunction()"><img
+                src="https://cdn.icon-icons.com/icons2/629/PNG/512/copy-two-paper-sheets-stroke-symbol-of-interface_icon-icons.com_57868.png"
+                alt="" class="copy" id="copy_image"></button>
+        <div id="result">Generated File Name: </div>
+    </div>
+    <div class="code">
+        <textarea id="input_code" class="codes" placeholder="Input Code" spellcheck="false"></textarea>
+        <textarea id="output_code" class="codes" placeholder="Output Code" readonly></textarea>
+    </div>
+    <footer>
+        <p class="mistakes">CodeIt can make mistakes. Check the code before implementing the algorithm.</p>
+        <div class="links">
+            <button class="footer_logo" onclick="copylink()" id="link"><img
+                    src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt=""></button>
+            <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"><img
+                    src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2"></a>
+        </div>
+    </footer>
+    <script src="../resources/common_functions.js" defer></script>
+    <script src="../resources/refine.js"></script>
+</body>
+
+</html>

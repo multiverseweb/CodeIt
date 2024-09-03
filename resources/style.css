@@ -384,7 +384,7 @@ footer {
     }
 
     #name {
-        width: calc(100vw - 40px)
+        width: calc(50vw - 0px)
     }
 
     #directory {
@@ -392,15 +392,15 @@ footer {
     }
 
     #language {
-        width: calc(100vw - 30px)
+        width: calc(50vw - 60px);
     }
 
     #run {
-        width: calc(50vw - 20px)
+        width: calc(50vw - 50px)
     }
 
     #copy {
-        width: calc(50vw - 20px)
+        width: calc(50vw - 90px)
     }
 
     #fileForm {

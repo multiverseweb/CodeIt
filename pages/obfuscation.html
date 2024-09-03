@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeIt</title>
+    <link rel="stylesheet" href="../resources/obfuscate-style.css">
     <link rel="stylesheet" href="../resources/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="../resources/Nomenclature.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/Nomenclature.png" type="image/x-icon">
 </head>
 
 <body id="body">
-    <button type="button" id="theme" onclick="light()"><img src="../resources/moon.png" class="moon"
-    id="themeLogo"></button>
+    <button type="button" id="theme" onclick="light()"><img src="../images/moon.png" class="moon"
+            id="themeLogo"></button>
     <div class="top-elements">
-        <a href="" class="top-link"><img src="../resources/Nomenclature.png" alt="logo" class="logo" id="logo">
+        <a href="../index.html" class="top-link"><img src="../images/Nomenclature.png" alt="logo" class="logo" id="logo">
             <p class="codeit">CodeIt</p>
         </a>
         <nav class="navbar">
             <div class="navbar-container">
                 <table>
                     <tr>
-                        <td class="nav-item"><a href="../index.html" class="competitive">Code Refiner</a></td>
+                        <td class="nav-item"><a href="../index.html" class="home">Home</a></td>
+                        <td class="nav-item"><a href="refine.html" class="competitive">Code Refiner</a></td>
                         <td class="nav-item" id="current"><a href="" class="obfuscation">Code Obfuscator</a></td>
-                        <td class="nav-item"><a href="timeComplexity.html" class="time">Time Complexity Analyser</a></td>
+                        <td class="nav-item"><a href="timeComplexity.html" class="time">Time Complexity Analyser</a>
+                        </td>
                         <td class="nav-item"><a href="infinity.html" class="ai">Infinity AI</a></td>
                         <div class="highlight"></div>
                     </tr>
@@ -35,9 +38,22 @@
             </div>
         </nav>
     </div>
-    
+    <div class="ObfuscateButtons">
+        <button id="obfuscateButton" class="btn">Obfuscate</button>
+        <button id="deobfuscateButton" class="btn">Deobfuscate</button>
+        <button type="button" id="copyNormal" class="btn">Copy Normal Code</button>
+        <button type="button" id="copyObfuscated" class="btn">Copy Obfuscated Code</button>
+        <button onclick="clearText()" class="btn">Clear Code</button>
+    </div>
+    <div class="note"><font style="color: rgb(255, 68, 68);">IMPORTANT: </font><br>- Avoid using <font style="background-color: rgb(255, 221, 0); color: black;">'eval'</font> with untrusted content, as it can be a security risk.<br>- Incase some modifications are required in the code later</div>
+
+    <div class="code">
+        <textarea id="normal_code" class="codes" placeholder="Obfuscated code goes here..." spellcheck="false"></textarea>
+        <textarea id="obfuscated_code" class="codes" placeholder="Deobfuscated code goes here..." spellcheck="false"></textarea>
+    </div>
+
     <footer>
-        <p class="mistakes">CodeIt can make mistakes. Check the code before implementing the algorithm.</p>
+        <p class="mistakes">CodeIt can make mistakes. Check the code before implementing it.</p>
         <div class="links">
             <button class="footer_logo" onclick="copylink()" id="link"><img
                     src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt=""></button>
@@ -45,7 +61,8 @@
                     src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2"></a>
         </div>
     </footer>
-    <script src="../resources/script.js"></script>
+    <script src="../resources/obfuscate-script.js" defer></script>
+    <script src="../resources/common_functions.js"></script>
 </body>
 
 </html>

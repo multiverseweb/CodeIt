@@ -1,0 +1,22 @@
+.codes {
+    font-size: 1rem;
+    resize: horizontal;
+    min-height: 70vh;
+    margin: 10px;
+    background-color: #00000000;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+    box-sizing: border-box;
+}
+
+#normal_code {
+    color: rgba(255, 170, 0, 0.756);
+    width: 50vw;
+}
+
+#obfuscated_code {
+    color: rgba(0, 255, 204, 0.619);
+    resize: none;
+}
