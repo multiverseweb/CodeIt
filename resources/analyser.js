@@ -1,3 +1,92 @@
+// Initialize the chart with all time complexities displayed
+function initializeComplexityChart() {
+    const ctx = document.getElementById('complexityChart').getContext('2d');
+
+    const n = Array.from({ length: 100 }, (_, i) => i + 1); // X-axis values (n)
+    const complexities = {
+        "O(1)": n.map(() => 1),
+        "O(log n)": n.map(x => Math.log2(x)),
+        "O(n)": n,
+        "O(n log n)": n.map(x => x * Math.log2(x)),
+        "O(n^2)": n.map(x => x * x),
+        "O(2^n)": n.map(x => Math.pow(2, x))
+    };
+
+    const datasets = Object.keys(complexities).map((key) => ({
+        label: key,
+        data: complexities[key],
+        borderColor: 'white', // All lines set to white initially
+        borderWidth: 1,
+        fill: false
+    }));
+
+    window.complexityChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: n,
+            datasets: datasets
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    type: 'linear',
+                    beginAtZero: true,
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)'
+                    },
+                    ticks: {
+                        color: 'white'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'n',
+                        color: 'white'
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)'
+                    },
+                    ticks: {
+                        color: 'white'
+                    }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Time Complexities',
+                    color: 'white'
+                },
+                legend: {
+                    labels: {
+                        color: 'white'
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Function to update the chart with the highlighted line
+function highlightComplexityLine(complexityType) {
+    const datasets = window.complexityChart.data.datasets;
+    datasets.forEach((dataset) => {
+        dataset.borderColor = 'white'; // Reset all lines to white
+        dataset.borderWidth = 1; // Reset all lines to normal width
+
+        if (dataset.label === complexityType) {
+            dataset.borderColor = 'rgba(255, 170, 0, 0.756)'; // Highlight the selected line
+            dataset.borderWidth = 2; // Make the highlighted line thicker
+        }
+    });
+
+    window.complexityChart.update(); // Update the chart to apply changes
+}
+
+// Function to analyze time complexity and highlight the line
 function analyzeTimeComplexity() {
     const code = document.getElementById("time_code").value;
     const codeLines = code.split('\n');
@@ -65,83 +154,8 @@ function analyzeTimeComplexity() {
     }
 
     document.getElementById("result").innerText = `Estimated Time Complexity: ${result}`;
-    displayComplexityChart(complexityType);
+    highlightComplexityLine(complexityType); // Highlight the selected line
 }
 
-
-function displayComplexityChart(complexityType) {
-    const ctx = document.getElementById('complexityChart').getContext('2d');
-
-    const n = Array.from({ length: 100 }, (_, i) => i + 1); // X-axis values (n)
-    const complexities = {
-        "O(1)": n.map(() => 1),
-        "O(log n)": n.map(x => Math.log2(x)),
-        "O(n)": n,
-        "O(n log n)": n.map(x => x * Math.log2(x)),
-        "O(n^2)": n.map(x => x * x),
-        "O(2^n)": n.map(x => Math.pow(2, x))
-    };
-
-    const datasets = Object.keys(complexities).map((key) => ({
-        label: key,
-        data: complexities[key],
-        borderColor: key === complexityType ? 'rgba(255, 170, 0, 0.756)' : 'white', // Line colors set to white
-        borderWidth: key === complexityType ? 2 : 1,
-        fill: false
-    }));
-
-    // Check if a chart already exists and destroy it
-    if (window.complexityChart instanceof Chart) {
-        window.complexityChart.destroy();
-    }
-
-    // Create a new chart
-    window.complexityChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: n,
-            datasets: datasets
-        },
-        options: {
-            responsive: false, // Disable automatic resizing
-            maintainAspectRatio: false, // Disable maintaining aspect ratio
-            scales: {
-                y: {
-                    type: 'linear',
-                    beginAtZero: true,
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.1)' // Grid line color set to white
-                    },
-                    ticks: {
-                        color: 'white' // Y-axis tick labels set to white
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'n',
-                        color: 'white' // X-axis title set to white
-                    },
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.1)' // Grid line color set to white
-                    },
-                    ticks: {
-                        color: 'white' // X-axis tick labels set to white
-                    }
-                }
-            },
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Time Complexities',
-                    color: 'white' // Title color set to white
-                },
-                legend: {
-                    labels: {
-                        color: 'white' // Legend labels color set to white
-                    }
-                }
-            }
-        }
-    });
-}
+// Initialize the chart on page load
+window.onload = initializeComplexityChart;
