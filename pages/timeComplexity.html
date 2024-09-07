@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeIt</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../resources/analyser-style.css">
     <link rel="stylesheet" href="../resources/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,11 +37,20 @@
                 </table>
             </div>
         </nav>
-
     </div>
+    <div class="analyseButtons">
+        <button onclick="analyzeTimeComplexity()" id="analyse" class="btn">Analyze Complexity</button>
+        <button onclick="clearText()" class="btn">Clear Code</button>
+    </div>
+
+    <div class="code">
+        <textarea id="time_code" class="codes" placeholder="Input Code" spellcheck="false"></textarea>
+        <canvas id="complexityChart" style="height:70vh; width: 100%"></canvas>
+    </div>
+    <p id="result">Estimated Time Complexity: NA</p>
     
     <footer>
-        <p class="mistakes">CodeIt can make mistakes. Check the code before implementing the algorithm.</p>
+        <p class="mistakes">CodeIt can make mistakes. Check important information.</p>
         <div class="links">
             <button class="footer_logo" onclick="copylink()" id="link"><img
                     src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt=""></button>
@@ -47,6 +58,7 @@
                     src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2"></a>
         </div>
     </footer>
+    <script src="../resources/analyser.js" defer></script>
     <script src="../resources/common_functions.js"></script>
 </body>
 

@@ -35,6 +35,10 @@ function light() {
             document.getElementById("obfuscated_code").style.color = "#002d8f";
         }
     }
+    const time_code = document.getElementById("time_code");
+    if (time_code) {
+        time_code.style.color = "#0b6100";
+    }
     document.getElementById("link").style.filter = "invert(1)";
     document.getElementById("link2").style.filter = "invert(0)";
     document.getElementById("body").style.backgroundColor = "rgb(190, 190, 190)";
@@ -56,6 +60,10 @@ function dark() {
             normal_code.style.color = "rgba(255, 170, 0, 0.756)";
             document.getElementById("obfuscated_code").style.color = "rgba(0, 255, 204, 0.619)";
         }
+    }
+    const time_code = document.getElementById("time_code");
+    if (time_code) {
+        time_code.style.color = "rgba(255, 170, 0, 0.756)";
     }
     document.getElementById("link").style.filter = "invert(0)";
     document.getElementById("link2").style.filter = "invert(1)";
@@ -94,5 +102,9 @@ function clearText() {
     if (normal_code) {
         normal_code.value = "";
         obfuscated_code.value = "";
+    }
+    const time_code = document.getElementById("time_code");
+    if (time_code) {
+        time_code.value = "";
     }
 }

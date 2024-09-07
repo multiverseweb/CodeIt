@@ -176,6 +176,9 @@ select {
     box-shadow: 0px 0px 10px black;
     box-sizing: border-box;
 }
+#time_code{
+    color: rgba(0, 255, 204, 0.619);
+}
 
 #input_code {
     color: rgba(255, 170, 0, 0.756);
