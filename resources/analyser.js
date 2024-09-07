@@ -1,4 +1,4 @@
-// Initialize the chart with all time complexities displayed
+// Initialize the chart with all lines displayed and markers hidden
 function initializeComplexityChart() {
     const ctx = document.getElementById('complexityChart').getContext('2d');
 
@@ -17,7 +17,8 @@ function initializeComplexityChart() {
         data: complexities[key],
         borderColor: 'white', // All lines set to white initially
         borderWidth: 1,
-        fill: false
+        fill: false,
+        pointRadius: 0 // Hide the markers
     }));
 
     window.complexityChart = new Chart(ctx, {
@@ -70,12 +71,13 @@ function initializeComplexityChart() {
     });
 }
 
-// Function to update the chart with the highlighted line
+// Function to update the chart with the highlighted line and hide markers
 function highlightComplexityLine(complexityType) {
     const datasets = window.complexityChart.data.datasets;
     datasets.forEach((dataset) => {
         dataset.borderColor = 'white'; // Reset all lines to white
         dataset.borderWidth = 1; // Reset all lines to normal width
+        dataset.pointRadius = 0; // Hide the markers
 
         if (dataset.label === complexityType) {
             dataset.borderColor = 'rgba(255, 170, 0, 0.756)'; // Highlight the selected line
@@ -85,6 +87,7 @@ function highlightComplexityLine(complexityType) {
 
     window.complexityChart.update(); // Update the chart to apply changes
 }
+
 
 // Function to analyze time complexity and highlight the line
 function analyzeTimeComplexity() {
