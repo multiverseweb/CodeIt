@@ -1,4 +1,4 @@
-# CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="resources/Nomenclature.png" height=40px align=right></a>
+# CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="images/Nomenclature.png" height=40px align=right></a>
 #### Developing for the Developers
 
 ### Table of Contents
