@@ -178,6 +178,10 @@ select {
 }
 #time_code{
     color: rgba(0, 255, 204, 0.619);
+    width: 40vw;
+}
+#complexityChart{
+    width: calc(60% - 10px)
 }
 
 #input_code {
@@ -416,6 +420,12 @@ footer {
 
     #input_code {
         width: calc(100vw - 20px)
+    }
+    #time_code{
+        width: calc(100vw - 20px)
+    }
+    #complexityChart{
+        width: calc(100% - 20px)
     }
 
     #ouput_code {
