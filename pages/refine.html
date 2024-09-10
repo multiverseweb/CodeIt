@@ -15,25 +15,28 @@
 </head>
 
 <body id="body">
+    <button type="button" id="theme" onclick="light()"><img src="../images/moon.png" class="moon" id="themeLogo"></button>
     <div class="top-elements">
         <a href="../index.html" class="top-link"><img src="../images/Nomenclature.png" alt="logo" class="logo" id="logo">
             <p class="codeit">CodeIt</p>
         </a>
         <nav class="navbar">
             <div class="navbar-container">
-                <table>
+                <table id="navbar_table">
                     <tr>
                         <td class="nav-item"><a href="../index.html" class="home">Home</a></td>
-                        <td class="nav-item" id="current"><a href="" class="competitive">Code Refiner</a></td>
-                        <td class="nav-item"><a href="obfuscation.html" class="obfuscation">Code Obfuscator</a></td>
-                        <td class="nav-item"><a href="timeComplexity.html" class="time">Time Complexity Analyser</a></td>
+                        <td class="nav-item" id="current"><a href="refine.html" class="competitive">Code Refiner</a></td>
+                        <td class="nav-item"><a href="obfuscation.html" class="obfuscation">Code Obfuscator</a>
+                        </td>
+                        <td class="nav-item"><a href="timeComplexity.html" class="time">Time Complexity
+                                Analyser</a></td>
                         <td class="nav-item"><a href="infinity.html" class="ai">Infinity AI</a></td>
                         <div class="highlight"></div>
                     </tr>
                 </table>
             </div>
         </nav>
-
+        <div class="gap"></div>
     </div>
     <div class="options">
         <form id="fileForm">
