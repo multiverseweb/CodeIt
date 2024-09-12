@@ -98,6 +98,13 @@ body{
 .preview{
     width: 40vw;
     margin: 60px;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+    z-index: 0;
+}
+.preview:hover{
+    scale: 1.01;
+    box-shadow: 0 0 10px black;
 }
 .section-l{
     display: flex;
@@ -119,6 +126,9 @@ body{
 }
 .right{
     max-width: calc(50vw - 120px);
+}
+.right p{
+    margin-left: 100px;
 }
 #scroll_icon{
     position: fixed;
@@ -153,9 +163,13 @@ body{
 }
 .heading{
     font-size: xx-large;
+    background-color: rgba(228, 175, 0, 0.514);
+    display: inline;
+    padding: 2px 5px 0px 5px;
 }
 .subheading{
     font-size: x-large;
+    margin-top: 10px;
 }
 .text{
     margin-top: 10px;

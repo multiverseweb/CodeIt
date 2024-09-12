@@ -21,6 +21,7 @@ body {
     justify-content: space-between;
     box-shadow: 0 0 10px black;
     width: 100vw;
+    z-index: 100;
 }
 .gap{
     width: 80px;
@@ -239,7 +240,7 @@ option {
 }
 
 #theme {
-    z-index: 100;
+    z-index: 105;
     top: 20px;
     right: 20px;
     position: fixed;
