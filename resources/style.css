@@ -29,7 +29,7 @@ body {
 
 .top-link {
     display: flex;
-    color: rgb(124, 124, 124);
+    color: rgba(124, 124, 124);
     text-decoration: none;
 }
 
