@@ -177,7 +177,8 @@ body{
 .heading{
     font-size: xx-large;
     background-color: rgba(228, 175, 0, 0.514);
-    display: inline;
+    display: block;
+    max-width: fit-content;
     padding: 2px 5px 0px 5px;
 }
 .subheading{
