@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="resources/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="images/Nomenclature.png" type="image/x-icon">
@@ -32,7 +33,6 @@
                         </td>
                         <td class="nav-item"><a href="pages/timeComplexity.html" class="time">Time Complexity
                                 Analyser</a></td>
-                        <td class="nav-item"><a href="pages/infinity.html" class="ai">Infinity AI</a></td>
                         <div class="highlight"></div>
                     </tr>
                 </table>
@@ -50,12 +50,17 @@
             </div>
             <div class="typewriter">
                 <p>Developing for the Developers.</p>
-        </div><br>
+            </div><br>
             <p class="text">CodeIt helps developers like you write, analyze, and protect your code—all in one place.
                 Whether you're just starting out or a pro, CodeIt makes coding easy, fast, and secure.</p><br>
             <p class="text">The adjoining map shows people who are using or contributing to CodeIt.</p>
 
 
+        </div>
+
+        
+        <div class="right">
+            <div id="map"></div>
         </div>
         <div class="scroll_icon" id="scroll_icon">SCROLL TO KNOW MORE
             <div class="shadow" id="shadow"></div>
@@ -64,9 +69,10 @@
     </div>
     <div class="section-r" id="refine">
         <div class="left">
-            <p class="heading">Key Features</p>
+            <p class="heading" id="heading">Key Features</p>
             <p class="subheading">Code Refinement</p>
-            <p class="text">Quickly convert your code from one format to another with just a click. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, repellendus.
+            <p class="text">Quickly convert your code from one format to another with just a click. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Animi, repellendus.
                 <br>
             </p>
         </div>
@@ -80,13 +86,15 @@
         </div>
         <div class="right">
             <p class="subheading">Code Obfuscation</p>
-            <p class="text">Make your code harder to read to keep it safe from unauthorized access. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, repellendus.</p>
+            <p class="text">Make your code harder to read to keep it safe from unauthorized access. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Animi, repellendus.</p>
         </div>
     </div>
     <div class="section-r" id="nomenclature">
         <div class="left">
             <p class="subheading">Smart File Naming</p>
-            <p class="text">Automatically generate file names with the correct extensions. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, repellendus.
+            <p class="text">Automatically generate file names with the correct extensions. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Animi, repellendus.
                 <br>
             </p>
         </div>
@@ -100,12 +108,13 @@
         </div>
         <div class="right">
             <p class="subheading">Time Complexity Analysis</p>
-            <p class="text">Understand how fast your code runs and optimize it for better performance. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, repellendus.</p>
+            <p class="text">Understand how fast your code runs and optimize it for better performance. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Animi, repellendus.</p>
         </div>
     </div>
 
     <div class="section-r" id="working">
-        <div class="right">
+        <div class="left">
             <p class="heading">How CodeIt Works?</p>
             <p class="subheading">I. Choose Your Task</p>
             <p class="text">Select from code conversion, obfuscation, file naming, or analysis.</p>
@@ -150,7 +159,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="resources/common_functions.js"></script>
     <script src="resources/homeScript.js"></script>
 </body>

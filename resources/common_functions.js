@@ -39,9 +39,14 @@ function light() {
     if (time_code) {
         time_code.style.color = "#0b6100";
     }
+    const heading = document.getElementById("heading");
+    if (heading) {
+        document.getElementById("body").style.color="rgba(0,0,0, 0.866)";
+        document.getElementById("shadow").style.backgroundImage="linear-gradient(115deg, #00000000,rgb(220, 220, 220),#00000000)";
+    }
     document.getElementById("link").style.filter = "invert(1)";
     document.getElementById("link2").style.filter = "invert(0)";
-    document.getElementById("body").style.backgroundColor = "rgb(190, 190, 190)";
+    document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
     const button = document.getElementById('theme');
     button.onclick = dark;
 }
@@ -52,7 +57,7 @@ function dark() {
     const input_code = document.getElementById("input_code");
     if (input_code) {
         input_code.style.color = "rgba(255, 170, 0, 0.756)";
-        document.getElementById("output_code").style.color = "rgba(0, 255, 204, 0.619)";
+        document.getElementById("output_code").style.color = "rgba(0,0,0,1)";
         document.getElementById("submit").style.filter = "invert(0)";
     } else {
         const normal_code = document.getElementById("normal_code");
@@ -64,6 +69,11 @@ function dark() {
     const time_code = document.getElementById("time_code");
     if (time_code) {
         time_code.style.color = "rgba(255, 170, 0, 0.756)";
+    }
+    const heading = document.getElementById("heading");
+    if (heading) {
+        document.getElementById("body").style.color="rgba(255, 255, 255, 0.866)";
+        document.getElementById("shadow").style.backgroundImage="linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000)";
     }
     document.getElementById("link").style.filter = "invert(0)";
     document.getElementById("link2").style.filter = "invert(1)";
