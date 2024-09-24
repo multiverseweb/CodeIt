@@ -46,7 +46,7 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 
 ## Preview
 
-![](resources/coedit.png)
+![](images/coedit.png)
 
 ## Benefits
 
