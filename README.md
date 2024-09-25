@@ -1,10 +1,10 @@
 # CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="images/Nomenclature.png" height=40px align=right></a>
 #### Developing for the Developers
-
+[![License: MIT](https://cdn.prod.website-files.com/5e0f1144930a8bc8aace526c/65dd9eb5aaca434fac4f1c34_License-MIT-blue.svg)](/LICENSE)
 ### Table of Contents
 
-| [About CodeIt](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Use CodeIt](#use-codeit) |
-|:--:|:--:|:--:|:--:|:--:|
+| [About CodeIt](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Use CodeIt](#use-codeit) | [Contribute](#contribute) |
+|:--:|:--:|:--:|:--:|:--:|:--:|
 
 ## About
 CodeIt is a software solution tool designed to streamline and enhance the coding experience for developers. It addresses several common challenges faced when working with coding platforms, such as LeetCode, and offers a range of features to improve code management, security, and performance analysis.
@@ -46,7 +46,12 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 
 ## Preview
 
+#### Code Refiner
 ![](images/coedit.png)
+#### Time Complexity Analyser
+![](images/complexity.png)
+#### Code Obfuscator
+![](images/obfuscation.png)
 
 ## Benefits
 
@@ -59,4 +64,14 @@ Deployed on
 
 <img height="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Netlify_logo_%282%29.svg/1200px-Netlify_logo_%282%29.svg.png">
 
-<a href="https://codeittool.netlify.app/">Visit website</a>
+<a href="https://codeittool.netlify.app/">Visit Website</a>
+
+## Contribute
+
+- Check out [issues](https://github.com/multiverseweb/Dataverse/issues) and resolve the one that you can.
+- Go to [`line no. 1` in homeScript.js](https://github.com/multiverseweb/CodeIt/blob/main/resources/homeScript.js#L1-L2) and append the name of your city to the `cities` array to show your location on the contributions map. (Optional)
+- Create a `pull-request` so I can review and merge it.
+
+
+<sup><a href="#table-of-contents" align="right">Back to top</a></sup>
+
