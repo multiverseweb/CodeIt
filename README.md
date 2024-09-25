@@ -48,10 +48,13 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 
 #### Code Refiner
 ![](images/coedit.png)
+<details> 
+ <summary align=left><H4>View More</H4></summary><br>
 #### Time Complexity Analyser
 ![](images/complexity.png)
 #### Code Obfuscator
 ![](images/obfuscation.png)
+</details>
 
 ## Benefits
 
@@ -68,7 +71,7 @@ Deployed on
 
 ## Contribute
 
-- Check out [issues](https://github.com/multiverseweb/Dataverse/issues) and resolve the one that you can.
+- Check out [issues](https://github.com/multiverseweb/CodeIt/issues) and resolve the one that you can.
 - Go to [`line no. 1` in homeScript.js](https://github.com/multiverseweb/CodeIt/blob/main/resources/homeScript.js#L1-L2) and append the name of your city to the `cities` array to show your location on the contributions map. (Optional)
 - Create a `pull-request` so I can review and merge it.
 
