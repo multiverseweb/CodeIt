@@ -72,6 +72,7 @@ Deployed on
 
 ## Contribute
 **💬 Got ideas?**
+
 Get involved! We’d love to hear your ideas. Drop your feature suggestions in the [Discussions](https://github.com/multiverseweb/CodeIt/discussions).
 
 **💻 Want to solve issues?**
