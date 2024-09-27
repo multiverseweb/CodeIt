@@ -58,6 +58,7 @@ body {
     overflow: hidden; /* Ensures content does not overflow the navbar */
 }
 .highlight {
+    margin-left: 272px;
     position: absolute;
     height: 28px;
     margin-top: 16px;
