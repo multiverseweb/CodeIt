@@ -1,165 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CodeIt</title>
-    <link rel="stylesheet" href="resources/home-style.css">
-    <link rel="stylesheet" href="resources/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="images/Nomenclature.png" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="resources/home-style.css" />
+    <link rel="stylesheet" href="resources/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/Nomenclature.png"
+      type="image/x-icon"
+    />
+  </head>
 
-<body id="body">
-    <button class="top" id="top" onclick="topFunction()"><img src="images/top.png" alt=""></button>
-    <button type="button" id="theme" onclick="light()"><img src="images/moon.png" class="moon" id="themeLogo"></button>
+  <body id="body">
+    <button class="top" id="top" onclick="topFunction()">
+      <img src="images/top.png" alt="" />
+    </button>
+    <button type="button" id="theme" onclick="light()">
+      <img src="images/moon.png" class="moon" id="themeLogo" />
+    </button>
     <div class="top-elements">
-        <a href="index.html" class="top-link"><img src="images/Nomenclature.png" alt="logo" class="logo" id="logo">
-            <p class="codeit">CodeIt</p>
-        </a>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <table id="navbar_table">
-                    <tr>
-                        <td class="nav-item" id="current"><a href="" class="home">Home</a></td>
-                        <td class="nav-item"><a href="pages/refine.html" class="competitive">Code Refiner</a></td>
-                        <td class="nav-item"><a href="pages/obfuscation.html" class="obfuscation">Code Obfuscator</a></td>
-                        <td class="nav-item"><a href="pages/timeComplexity.html" class="time">Time Complexity Analyser</a></td>
-                        <td class="nav-item"><a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">License</a></td>
-                        <td class="nav-item"><a href="https://github.com/multiverseweb/CodeIt">Join Us!</a></td>
-                        <td class="nav-item"><a href="#feedback">Give Feedback!</a></td>
-                        <div class="highlight"></div>
-                    </tr>
-                </table>
-            </div>
-        </nav>
-        <div class="gap"></div>
+      <a href="index.html" class="top-link"
+        ><img src="images/Nomenclature.png" alt="logo" class="logo" id="logo" />
+        <p class="codeit">CodeIt</p>
+      </a>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <table id="navbar_table">
+            <tr>
+              <td class="nav-item" id="current">
+                <a href="" class="home">Home</a>
+              </td>
+              <td class="nav-item">
+                <a href="pages/refine.html" class="competitive">Code Refiner</a>
+              </td>
+              <td class="nav-item">
+                <a href="pages/obfuscation.html" class="obfuscation"
+                  >Code Obfuscator</a
+                >
+              </td>
+              <td class="nav-item">
+                <a href="pages/timeComplexity.html" class="time"
+                  >Time Complexity Analyser</a
+                >
+              </td>
+              <td class="nav-item">
+                <a
+                  href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
+                  >License</a
+                >
+              </td>
+              <td class="nav-item">
+                <a href="https://github.com/multiverseweb/CodeIt">Join Us!</a>
+              </td>
+              <td class="nav-item"><a href="#feedback">Give Feedback!</a></td>
+              <div class="highlight"></div>
+            </tr>
+          </table>
+        </div>
+      </nav>
+      <div class="gap"></div>
     </div>
 
     <div class="section-l" id="intro">
-
-        <div class="left">
-            <div class="top_codeit">
-                <p id="code">Code</p>
-                <p>It</p>
-            </div>
-            <div class="typewriter">
-                <p>Developed for the Developers.</p>
-            </div><br>
-            <p class="text">CodeIt helps developers like you write, analyze, and protect your code—all in one place.
-                Whether you're just starting out or a pro, CodeIt makes coding easy, fast, and secure.</p><br>
-            <p class="text">The adjoining map shows people who are using or contributing to CodeIt.</p>
-
-
+      <div class="left">
+        <div class="top_codeit">
+          <p id="code">Code</p>
+          <p>It</p>
         </div>
-
-
-        <div class="right">
-            <div id="map"></div>
+        <div class="typewriter">
+          <p>Developed for the Developers.</p>
         </div>
-        <div class="scroll_icon" id="scroll_icon">SCROLL TO KNOW MORE
-            <div class="shadow" id="shadow"></div>
-            <div class="scroll_animation"></div>
-        </div>
+        <br />
+        <p class="text">
+          CodeIt helps developers like you write, analyze, and protect your
+          code—all in one place. Whether you're just starting out or a pro,
+          CodeIt makes coding easy, fast, and secure.
+        </p>
+        <br />
+        <p class="text">
+          The adjoining map shows people who are using or contributing to
+          CodeIt.
+        </p>
+      </div>
+
+      <div class="right">
+        <div id="map"></div>
+      </div>
+      <div class="scroll_icon" id="scroll_icon">
+        SCROLL TO KNOW MORE
+        <div class="shadow" id="shadow"></div>
+        <div class="scroll_animation"></div>
+      </div>
     </div>
     <div class="section-r" id="refine">
-        <div class="left">
-            <p class="heading" id="heading">Key Features</p>
-            <p class="subheading">Code Refinement</p>
-            <p class="text">Quickly convert your default / boilerplate code to a more useful and executable code in one click! <br><br>It reduces repetitive tasks, manual mistakes and saves time.
-                <br>
-            </p>
-        </div>
-        <div class="right">
-            <img src="images/coedit.png" class="preview">
-        </div>
+      <div class="left">
+        <p class="heading" id="heading">Key Features</p>
+        <p class="subheading">Code Refinement</p>
+        <p class="text">
+          Quickly convert your default / boilerplate code to a more useful and
+          executable code in one click! <br /><br />It reduces repetitive tasks,
+          manual mistakes and saves time.
+          <br />
+        </p>
+      </div>
+      <div class="right">
+        <img src="images/coedit.png" class="preview" />
+      </div>
     </div>
     <div class="section-l" id="obfuscate">
-        <div class="left" id="zoom">
-            <img src="images/obfuscation.png" class="preview">
-        </div>
-        <div class="right">
-            <p class="subheading">Code Obfuscation</p>
-            <p class="text">Make your code harder to read and understand but still executable. It adds an extra layer of security, protecting your code from plagiarism. <br><br>This feature is of great importance when you're working on innovative projects.</p>
-        </div>
+      <div class="left" id="zoom">
+        <img src="images/obfuscation.png" class="preview" />
+      </div>
+      <div class="right">
+        <p class="subheading">Code Obfuscation</p>
+        <p class="text">
+          Make your code harder to read and understand but still executable. It
+          adds an extra layer of security, protecting your code from plagiarism.
+          <br /><br />This feature is of great importance when you're working on
+          innovative projects.
+        </p>
+      </div>
     </div>
     <div class="section-r" id="nomenclature">
-        <div class="left">
-            <p class="subheading">Smart File Naming</p>
-            <p class="text">Follow a fixed file naming convention, which helps reducing the overhead of manual file management. <br><br>It is useful for the developers working on large and collaborative projects.
-                <br>
-            </p>
-        </div>
-        <div class="right">
-            <img src="images/naming.png" class="preview">
-        </div>
+      <div class="left">
+        <p class="subheading">Smart File Naming</p>
+        <p class="text">
+          Follow a fixed file naming convention, which helps reducing the
+          overhead of manual file management. <br /><br />It is useful for the
+          developers working on large and collaborative projects.
+          <br />
+        </p>
+      </div>
+      <div class="right">
+        <img src="images/naming.png" class="preview" />
+      </div>
     </div>
     <div class="section-l" id="complexity">
-        <div class="left">
-            <img src="images/complexity.png" class="preview">
-        </div>
-        <div class="right">
-            <p class="subheading">Time Complexity Analysis</p>
-            <p class="text">Understand how fast your code runs and optimize it for better performance. CodeIt also visualises the time complexity on a line-chart for better understanding.</p>
-        </div>
+      <div class="left">
+        <img src="images/complexity.png" class="preview" />
+      </div>
+      <div class="right">
+        <p class="subheading">Time Complexity Analysis</p>
+        <p class="text">
+          Understand how fast your code runs and optimize it for better
+          performance. CodeIt also visualises the time complexity on a
+          line-chart for better understanding.
+        </p>
+      </div>
     </div>
 
     <div class="section-r" id="working">
-        <div class="left">
-            <p class="heading">How CodeIt Works?</p>
-            <p class="subheading">I. Choose Your Task...</p>
-            <p class="text">Select from code conversion, obfuscation, file naming, or analysis.</p>
-            <br>
-            <p class="subheading">II. Upload Your Code...</p>
-            <p class="text">Paste your code into the tool.</p>
-            <br>
-            <p class="subheading">III. Get Instant Results!</p>
-            <p class="text">See the results immediately and copy them if needed.</p>
-            <br>
-        </div>
-        <div class="right">
-            <img src="images/working.png" class="preview">
-        </div>
+      <div class="left">
+        <p class="heading">How CodeIt Works?</p>
+        <p class="subheading">I. Choose Your Task...</p>
+        <p class="text">
+          Select from code conversion, obfuscation, file naming, or analysis.
+        </p>
+        <br />
+        <p class="subheading">II. Upload Your Code...</p>
+        <p class="text">Paste your code into the tool.</p>
+        <br />
+        <p class="subheading">III. Get Instant Results!</p>
+        <p class="text">See the results immediately and copy them if needed.</p>
+        <br />
+      </div>
+      <div class="right">
+        <img src="images/working.png" class="preview" />
+      </div>
     </div>
 
     <div class="design_line"></div>
     <footer>
-        <div class="left_last">
-            <div class="contact">
-                <div class="name">
-                    <img src="images/Nomenclature.png" alt="" class="end-logo">
-                    <a class="subheading" href="index.html" id="last_link">CodeIt</a>
-                </div>
-            </div>
-            <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback">
-                <p>Let Us Know Your Thoughts!</p>
-                <input type="text" name="Name" placeholder="&nbsp;&nbsp;Your Name">
-                <input type="email" name="Email" placeholder="&nbsp;&nbsp;Your Email ID">
-                <input type="text" name="Message" placeholder="&nbsp;&nbsp;Your Message">
-                <input type="submit" value="Send" id="send">
-            </form>
+      <div class="left_last">
+        <div class="contact">
+          <div class="name">
+            <img src="images/Nomenclature.png" alt="" class="end-logo" />
+            <a class="subheading" href="index.html" id="last_link">CodeIt</a>
+          </div>
         </div>
-        <div class="last">
-            <p>Designed & Developed by D'BOT<br><a
-                    href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; 2024 Tejas</a></p>
-            <div class="links">
-                <button class="footer_logo" onclick="copylink()" id="link"><img
-                        src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png"
-                        alt=""></button>
-                <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"><img
-                        src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2"></a>
-            </div>
+        <form
+          name="CodeIt Reviews"
+          action="POST"
+          data-netlify="true"
+          id="feedback"
+        >
+          <p>Let Us Know Your Thoughts!</p>
+          <input type="text" name="Name" placeholder="&nbsp;&nbsp;Your Name" />
+          <input
+            type="email"
+            name="Email"
+            placeholder="&nbsp;&nbsp;Your Email ID"
+          />
+          <input
+            type="text"
+            name="Message"
+            placeholder="&nbsp;&nbsp;Your Message"
+          />
+          <input type="submit" value="Send" id="send" />
+        </form>
+      </div>
+      <div class="last">
+        <p>
+          Designed & Developed by D'BOT<br /><a
+            href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE"
+            >&copy; 2024 Tejas</a
+          >
+        </p>
+        <div class="links">
+          <button class="footer_logo" onclick="copylink()" id="link">
+            <img
+              src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png"
+              alt=""
+            />
+          </button>
+          <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"
+            ><img src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2"
+          /></a>
         </div>
+      </div>
     </footer>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="resources/common_functions.js"></script>
     <script src="resources/homeScript.js"></script>
-</body>
-
+  </body>
 </html>
