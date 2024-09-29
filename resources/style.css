@@ -43,11 +43,8 @@ body {
 
 .navbar-container {
     overflow-x: auto;
-    /* Enable horizontal scrolling */
     white-space: nowrap;
-    /* Prevent wrapping of table cells */
     -webkit-overflow-scrolling: touch;
-    /* Smooth scrolling for touch devices */
 }
 
 #navbar_table {
@@ -55,14 +52,12 @@ body {
     border: 1px solid rgba(124, 124, 124);
     border-radius: 20px;
     display: inline-table;
-    /* Ensures table is displayed inline for scrolling */
     min-width: 100%;
 }
 
 .navbar {
     display: inline-block;
     overflow: hidden;
-    /* Ensures content does not overflow the navbar */
 }
 
 .highlight {
@@ -80,12 +75,10 @@ body {
 
 .nav-item {
     position: relative;
-    /* Positions the cell relative to the table */
 }
 
 .nav-item a {
     mix-blend-mode: difference;
-    /* This inverts the text color */
 }
 
 td {
@@ -414,7 +407,7 @@ footer {
     .highlight {
         position: absolute;
         margin-top: 6px;
-
+        margin-left: 12px;
     }
 
     #navbar_table {
