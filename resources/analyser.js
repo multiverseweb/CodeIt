@@ -9,7 +9,8 @@ function initializeComplexityChart() {
         "O(n)": n,
         "O(n log n)": n.map(x => x * Math.log2(x)),
         "O(n^2)": n.map(x => x * x),
-        "O(2^n)": n.map(x => Math.pow(2, x))
+        "O(2^n)": n.map(x => Math.pow(2, x)),
+        "O(n^x)": n.map(() => null) // Symbolic complexity, no actual values
     };
 
     const datasets = Object.keys(complexities).map((key) => ({
@@ -71,16 +72,16 @@ function initializeComplexityChart() {
     });
 }
 
-// Function to update the chart with the highlighted line and hide markers
+// Function to highlight the selected line and display the result
 function highlightComplexityLine(complexityType) {
     const datasets = window.complexityChart.data.datasets;
     datasets.forEach((dataset) => {
         dataset.borderColor = 'white'; // Reset all lines to white
         dataset.borderWidth = 1; // Reset all lines to normal width
-        dataset.pointRadius = 0; // Hide the markers
+        dataset.pointRadius = 0; // Hide markers
 
         if (dataset.label === complexityType) {
-            dataset.borderColor = 'rgba(255, 170, 0, 0.756)'; // Highlight the selected line
+            dataset.borderColor = 'rgba(255, 170, 0, 0.756)'; // Highlight selected line
             dataset.borderWidth = 2; // Make the highlighted line thicker
         }
     });
@@ -88,8 +89,7 @@ function highlightComplexityLine(complexityType) {
     window.complexityChart.update(); // Update the chart to apply changes
 }
 
-
-// Function to analyze time complexity and highlight the line
+// Function to analyze time complexity and display symbolic O(n^x)
 function analyzeTimeComplexity() {
     const code = document.getElementById("time_code").value;
     const codeLines = code.split('\n');
@@ -150,8 +150,8 @@ function analyzeTimeComplexity() {
         result = "O(n^2) due to nested loops";
         complexityType = "O(n^2)";
     } else if (nestedLoopDepth > 2) {
-        result = `O(n^${nestedLoopDepth}) due to deeply nested loops`;
-        complexityType = `O(n^${nestedLoopDepth})`;
+        result = `O(n^x) where x = ${nestedLoopDepth} due to deeply nested loops`;
+        complexityType = "O(n^x)"; // Symbolic representation
     } else {
         result = "O(1) - No significant loops, recursion, or complex operations detected";
     }
