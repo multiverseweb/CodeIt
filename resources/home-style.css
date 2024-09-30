@@ -107,8 +107,20 @@ body{
     scale: 1.03;
 }
 
+#flowchart{
+    box-shadow: none;
+    width: 45vw;
+    margin-left: -2.5vw;
+    -webkit-filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+}
+#obfuscatePreview{
+    margin-top: 10px;
+}
+
 #zoom{
     max-width: calc(50vw - 80px);
+    max-height: 330px;
     overflow: hidden;
     border-radius: 10px;
     transition-duration: 0.5s;
@@ -204,6 +216,41 @@ body{
 #working{
     margin-top: 10vh;
 }
+
+#contributeSection{
+    margin-top: 100px;
+}
+.contributeBtn{
+    text-decoration: none;
+    width:min-content;
+    margin-top: 30px;
+    margin-left: 100px;
+    background-color: #00000000;
+    border: 1px solid white;
+    border-radius: 2px;
+    color: white;
+    font-size: 20px;
+    font-family: consolas;
+    display: flex;
+    padding: 12px 10px 5px 10px;
+    transition-duration: 0.3s;
+}
+#github{
+    height: 28px;
+    margin: 5px;
+    margin-top: -3px;
+    filter: invert(1);
+    transition-duration: 0.3s;
+}
+
+.contributeBtn:hover{
+    background-color: white;
+    color: black;
+}
+.contributeBtn:hover #github{
+    filter: invert(0);
+}
+
 .design_line {
     height: 1px;
     width: 50vw;
@@ -242,6 +289,8 @@ form {
 }
 
 input {
+    padding-left: 10px;
+    color: white;
     background-color: #76767639;
     border: 0.1px solid rgba(255, 255, 255, 0.193);
     width: 100%;
@@ -251,6 +300,7 @@ input {
 }
 
 #send {
+    padding-left: 0;
     margin-left: 80%;
     width: 20%;
     background-color: rgba(0, 123, 121, 0.364);
@@ -261,7 +311,7 @@ input {
 
 #send:hover{
     color: black;
-    background-color: rgba(0, 240, 236, 0.867);
+    background-color: rgba(0, 240, 236, 0.715);
     box-shadow: 0px 0px 10px cyan;
 }
 
@@ -353,6 +403,10 @@ footer a{
         margin: 0px;
         margin-top: 20px;
     }
+    #flowchart{
+        width: calc(100vw - 40px);
+        margin: 0px;
+    }
     #zoom{
         margin-top: 30px;
         max-width: calc(100vw - 40px);
@@ -375,6 +429,17 @@ footer a{
     .text{
         font-size: 15px;
         line-height: 20px;
+    }
+    #contributeSection{
+        margin-top: 50px;
+    }
+    .contributeBtn{
+        font-size: 15px;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+    #github{
+        height:20px;
     }
     .left_last{
         flex-direction: column;
