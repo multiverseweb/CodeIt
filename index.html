@@ -189,13 +189,31 @@
           <a class="subheading" href="index.html" id="last_link">CodeIt</a>
         </div>
       </div>
-      <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback">
-        <p>Let Us Know Your Thoughts!</p>
-        <input type="text" name="Name" placeholder="Your Name" />
-        <input type="email" name="Email" placeholder="Your Email ID" />
-        <input type="text" name="Message" placeholder="Your Message" />
-        <input type="submit" value="Send" id="send" />
-      </form>
+      <div>
+        <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback" onsubmit="return validateForm()">
+          <p>Let Us Know Your Thoughts!</p>
+          <input type="text" name="Name" placeholder="Your Name" id="name" required />
+          <input type="email" name="Email" placeholder="Your Email ID" id="email" required />
+          <input type="text" name="Message" placeholder="Your Message" id="message" required />
+          <input type="submit" value="Send" id="send" />
+        </form>
+      </div>
+      
+      <script>
+        function validateForm() {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+      
+          if (name === "" || email === "" || message === "") {
+            alert("Please fill in all fields.");
+            return false; // Prevent form submission
+          }
+      
+          return true; // Allow form submission if all fields are filled
+        }
+      </script>
+      
     </div>
     <div class="last">
       <p>
