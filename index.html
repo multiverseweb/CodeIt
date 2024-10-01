@@ -28,7 +28,7 @@
     />
   </head>
 
-  <body id="body">
+  <body id="body" onload="feedbackVerify()">
     <button class="top" id="top" onclick="topFunction()">
       <img src="images/top.png" alt="" />
     </button>
@@ -36,8 +36,8 @@
       <img src="images/moon.png" class="moon" id="themeLogo" />
     </button>
     <div class="top-elements">
-      <a href="index.html" class="top-link"
-        ><img src="images/Nomenclature.png" alt="logo" class="logo" id="logo" />
+      <a href="index.html" class="top-link">
+        <img src="images/Nomenclature.png" alt="logo" class="logo" id="logo" />
         <p class="codeit">CodeIt</p>
       </a>
       <nav class="navbar">
@@ -218,30 +218,28 @@
       <div class="right">
         <p class="heading">Want to contribute to this Project?</p>
         <p class="text">
-          As this is an Open-Source Software, contributions are always welcome.
-          Whether you're interested in adding new features, fixing bugs, or
-          improving documentation, your contributions are valuable. You can
-          contribute to the project by visiting the link to the GitHub
-          repository provided below. Join me in making CodeIt even better for
-          everyone!
+          As this is an Open-Source Software, your contributions are
+          appreciated! <br />
+          Please read the license instructions carefully before contributing.
         </p>
-        <a class="contributeBtn" href="https://github.com/multiverseweb/CodeIt"
-          >Contribute<img
-            src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png"
-            id="github"
-        /></a>
+        <a
+          href="https://github.com/multiverseweb/CodeIt"
+          target="_blank"
+          class="button"
+          >Contribute</a
+        >
       </div>
     </div>
 
-    <div class="design_line"></div>
-    <footer>
+    <footer class="footer">
       <div class="left_last">
-        <div class="contact">
-          <div class="name">
-            <img src="images/Nomenclature.png" alt="" class="end-logo" />
-            <a class="subheading" href="index.html" id="last_link">CodeIt</a>
-          </div>
-        </div>
+        <h2>CodeIt</h2>
+        <p class="subheading">
+          Enhance your coding experience with CodeIt today.
+        </p>
+      </div>
+
+      <div class="right_last">
         <form
           name="CodeIt Reviews"
           action="POST"
@@ -249,37 +247,32 @@
           id="feedback"
         >
           <p>Let Us Know Your Thoughts!</p>
-          <input type="text" name="Name" placeholder="Your Name" />
-          <input type="email" name="Email" placeholder="Your Email ID" />
-          <input type="text" name="Message" placeholder="Your Message" />
-          <input type="submit" value="Send" id="send" />
+          <input type="text" name="Name" placeholder="Your Name" required />
+          <input
+            type="email"
+            name="Email"
+            placeholder="Your Email ID"
+            required
+          />
+          <textarea
+            name="Feedback"
+            placeholder="Your Feedback"
+            required
+          ></textarea>
+          <button type="submit">Submit</button>
         </form>
       </div>
-      <div class="last">
-        <p>
-          Designed & Developed by Tejas Gupta<br /><a
-            href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE"
-            >&copy; 2024 Tejas Gupta</a
-          >
-        </p>
-        <div class="links">
-          <button class="footer_logo" onclick="copylink()" id="link">
-            <img
-              src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png"
-              alt=""
-            />
-          </button>
-          <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"
-            ><img src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2"
-          /></a>
+
+      <div class="right_last">
+        <p>Follow us on:</p>
+        <div class="social-links">
+          <a href="https://github.com/multiverseweb/CodeIt">
+            <img src="images/github-icon.png" alt="GitHub" class="social-icon" />
+          </a>
+          <!-- Add other social media links here -->
         </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="resources/common_functions.js"></script>
-    <script src="resources/homeScript.js"></script>
-   
+    <script src="resources/script.js"></script>
   </body>
-
-
 </html>

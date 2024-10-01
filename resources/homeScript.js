@@ -50,7 +50,41 @@ function addMarker(city) {
     })
     .catch(error => console.error("Error fetching coordinates for " + city + ": " + error));
 }
+function feedbackVerify(){
+  document.getElementById('feedback').addEventListener('submit',(event)=>{
+     
+    event.preventDefault()
 
+
+    document.getElementById('nameError').textContent = '';
+    document.getElementById('emailError').textContent='';
+    document.getElementById('messageError').textContent = '';
+
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    let isValid = true;
+
+    if(name === ''){
+      document.getElementById('nameError').textContent ="Name is required";
+      isValid = false;
+    }
+    if(email === ''){
+      document.getElementById('emailError').textContent ="Email is required";
+      isValid = false;
+    }
+    if(message === ''){
+      document.getElementById('messageError').textContent ="Message is required";
+      isValid = false;
+    }
+
+    if(isValid){
+      alert('Form submitted successfully!');
+    }
+  })
+}
 // Add markers for each city
 cities.forEach(city => addMarker(city));
   
