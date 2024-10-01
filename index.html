@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="images/Nomenclature.png" type="image/x-icon" />
 </head>
 
-<body id="body">
+<body id="body" onload="feedbackVerify()">
   <button class="top" id="top" onclick="topFunction()">
     <img src="images/top.png" alt="" />
   </button>
@@ -191,9 +191,12 @@
       </div>
       <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback">
         <p>Let Us Know Your Thoughts!</p>
-        <input type="text" name="Name" placeholder="Your Name" />
-        <input type="email" name="Email" placeholder="Your Email ID" />
-        <input type="text" name="Message" placeholder="Your Message" />
+        <input type="text" id="name" name="Name" placeholder="Your Name" />
+        <span id="nameError" class="error"></span><br><br>
+        <input type="email" id="email" name="Email" placeholder="Your Email ID" />
+        <span id="emailError" class="error"></span><br><br>
+        <input type="text" id="message" name="Message" placeholder="Your Message" />
+        <span id="messageError" class="error"></span><br><br>
         <input type="submit" value="Send" id="send" />
       </form>
     </div>
