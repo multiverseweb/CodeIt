@@ -225,7 +225,25 @@ input:focus {
 #name:hover {
     box-shadow: 0px 0px 0px black;
     background-color: #00000000;
+    
+border-radius: 2px;
 }
+
+#email:hover {
+    box-shadow: 0px 0px 0px black;
+    background-color: #00000000;
+}
+
+#message:hover {
+    box-shadow: 0px 0px 0px black;
+    background-color: #00000000;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4ecdc4;
+}
+
 
 #language:hover {
     box-shadow: 0px 0px 0px black;
