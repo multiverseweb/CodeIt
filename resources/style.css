@@ -534,7 +534,7 @@ footer {
   overflow-x: hidden;
   transition: top 0.3s ease;
   z-index: 1000;
-  padding-top: 60px;
+  padding-top: 90px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 .sidebar.light {
@@ -549,7 +549,7 @@ footer {
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 23px;
+  font-size: 19px;
   color: #818181;
   display: block;
   transition: background-color 0.3s, box-shadow 0.3s;

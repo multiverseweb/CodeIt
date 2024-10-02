@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet" />
     <link
@@ -226,15 +228,16 @@
             placeholder="Your Email ID"
             required
           />
-          <textarea
+          <input
             name="Feedback"
             placeholder="Your Feedback"
             required
-          ></textarea>
-          <button type="submit">Submit</button>
+          ></input>
+          <button type="submit" id="send">Send</button>
         </form>
 
     </div>
+    </footer>
     <div class="last">
       <p>
         Designed & Developed by Tejas Gupta<br /><a
@@ -248,7 +251,6 @@
             src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2" /></a>
 
       </div>
-    </footer>
     <script src="resources/homeScript.js"></script>
     <script src="resources/common_functions.js"></script> 
   </body>
