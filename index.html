@@ -12,13 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet" />
-    <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-  />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="shortcut icon" href="images/Nomenclature.png" type="image/x-icon" />
 </head>
 
@@ -61,23 +59,21 @@
         </table>
       </div>
     </nav>
- <!-- Hamburger for smaller screens -->
- <div class="hamburger" onclick="toggleSidebar()">
-  <span class="material-symbols-outlined"> unfold_more </span>
-</div>
-<!-- Sidebar structure -->
-<div id="sidebar" class="sidebar">
-  <span class="close-btn" onclick="toggleSidebar()">&times;</span>
-  <a href="" class="home">Home</a>
-  <a href="pages/refine.html" class="competitive">Code Refiner</a>
-  <a href="pages/obfuscation.html" class="obfuscation">Code Obfuscator</a>
-  <a href="pages/timeComplexity.html" class="time">Time Complexity Analyser</a>
-  <a href="../index.html#contributeSection">Contribute!</a>
-  <a href="../index.html#feedback">Give Feedback!</a>
-  <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
-    >License</a
-  >
-  </div>
+    <!-- Hamburger for smaller screens -->
+    <div class="hamburger" onclick="toggleSidebar()">
+      <span class="material-symbols-outlined"> unfold_more </span>
+    </div>
+    <!-- Sidebar structure -->
+    <div id="sidebar" class="sidebar">
+      <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+      <a href="" class="home">Home</a>
+      <a href="pages/refine.html" class="competitive">Code Refiner</a>
+      <a href="pages/obfuscation.html" class="obfuscation">Code Obfuscator</a>
+      <a href="pages/timeComplexity.html" class="time">Time Complexity Analyser</a>
+      <a href="../index.html#contributeSection">Contribute!</a>
+      <a href="../index.html#feedback">Give Feedback!</a>
+      <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">License</a>
+    </div>
     <div class="gap"></div>
   </div>
 
@@ -196,10 +192,13 @@
     <div class="right">
       <p class="heading">Want to contribute to this Project?</p>
       <p class="text">
-        As this is an Open-Source Software, contributions are always welcome. Whether you're interested in adding new features, fixing bugs, or improving documentation, your contributions are valuable. You can contribute to the project by visiting the link to the GitHub repository provided below. Join me in making CodeIt even better for everyone!
+        As this is an Open-Source Software, contributions are always welcome. Whether you're interested in adding new
+        features, fixing bugs, or improving documentation, your contributions are valuable. You can contribute to the
+        project by visiting the link to the GitHub repository provided below. Join me in making CodeIt even better for
+        everyone!
       </p>
       <a class="contributeBtn" href="https://github.com/multiverseweb/CodeIt">Contribute<img
-        src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png" id="github"></a>
+          src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png" id="github"></a>
     </div>
   </div>
 
@@ -214,44 +213,31 @@
       </div>
 
       <div class="right_last">
-        <form
-          name="CodeIt Reviews"
-          action="POST"
-          data-netlify="true"
-          id="feedback"
-        >
+        <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback">
           <p>Let Us Know Your Thoughts!</p>
           <input type="text" name="Name" placeholder="Your Name" required />
-          <input
-            type="email"
-            name="Email"
-            placeholder="Your Email ID"
-            required
-          />
-          <input
-            name="Feedback"
-            placeholder="Your Feedback"
-            required
-          ></input>
+          <input type="email" name="Email" placeholder="Your Email ID" required />
+          <input name="Feedback" placeholder="Your Feedback" required></input>
           <button type="submit" id="send">Send</button>
         </form>
 
-    </div>
-    </footer>
-    <div class="last">
-      <p>
-        Designed & Developed by Tejas Gupta<br /><a
-          href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; 2024 Tejas Gupta</a>
-      </p>
-      <div class="links">
-        <button class="footer_logo" onclick="copylink()" id="link">
-          <img src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt="" />
-        </button>
-        <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"><img
-            src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2" /></a>
-
       </div>
+  </footer>
+  <div class="last">
+    <p>
+      Designed & Developed by Tejas Gupta<br /><a
+        href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; 2024 Tejas Gupta</a>
+    </p>
+    <div class="links">
+      <button class="footer_logo" onclick="copylink()" id="link">
+        <img src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt="" />
+      </button>
+      <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"><img
+          src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2" /></a>
+
+    </div>
     <script src="resources/homeScript.js"></script>
-    <script src="resources/common_functions.js"></script> 
-  </body>
+    <script src="resources/common_functions.js"></script>
+</body>
+
 </html>
