@@ -1,5 +1,5 @@
 //list of cities
-var cities = ["Pune", "Moradabad", "Dehradun","Ujjain","Vijaywada","Rampur","Sydney","Aligarh"];
+var cities = ["Pune", "Moradabad", "Dehradun","Ujjain","Vijaywada","Rampur","Sydney","Aligarh","Delhi"];
 
 function topFunction() {
     document.body.scrollTop = 0;
@@ -50,6 +50,11 @@ function addMarker(city) {
     })
     .catch(error => console.error("Error fetching coordinates for " + city + ": " + error));
 }
+
+// Add markers for each city
+cities.forEach(city => addMarker(city));
+
+
 function feedbackVerify(){
   document.getElementById('feedback').addEventListener('submit',(event)=>{
      
@@ -85,6 +90,3 @@ function feedbackVerify(){
     }
   })
 }
-// Add markers for each city
-cities.forEach(city => addMarker(city));
-  
