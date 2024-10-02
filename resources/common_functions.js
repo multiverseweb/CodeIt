@@ -18,7 +18,6 @@ navItems.forEach((item) => {
 document.querySelector(".navbar").addEventListener("mouseleave", () => {
   highlight.style.width = "0";
 });
-
 function light() {
   document.getElementById("themeLogo").src = "../images/sun.png";
   document.getElementById("themeLogo").style.filter = "invert(0)";
@@ -48,7 +47,9 @@ function light() {
   document.getElementById("link2").style.filter = "invert(0)";
   document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
   const button = document.getElementById("theme");
+  saveTheme('light')
   button.onclick = dark;
+  updateChartColors(false);
 }
 
 function dark() {
@@ -81,9 +82,45 @@ function dark() {
   document.getElementById("link2").style.filter = "invert(1)";
   document.getElementById("body").style.backgroundColor =
     "rgba(0, 0, 0, 0.888)";
+  saveTheme('dark')
   const button = document.getElementById("theme");
   button.onclick = light;
+  updateChartColors(true);
 }
+
+function saveTheme(theme){
+  localStorage.setItem('theme', theme);
+  document.documentElement.setAttribute('data-theme', theme)
+}
+
+function applyTheme(){
+  const savedTheme = localStorage.getItem('theme');
+  console.log(savedTheme)
+  if(savedTheme){
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    if(savedTheme === 'dark'){
+      dark();
+    }else{
+      light();
+    }
+  }
+}
+
+function updateChartColors(isDark) {
+  if (typeof Chart !== 'undefined' && Chart.instances[0]) {
+    const chart = Chart.instances[0];
+    const textColor = isDark ? 'white' : 'black';
+    
+    chart.options.scales.x.ticks.color = textColor;
+    chart.options.scales.y.ticks.color = textColor;
+    chart.options.plugins.legend.labels.color = textColor;
+    chart.update();
+  }
+}
+
+window.onload = applyTheme;
+
+
 function copylink() {
   navigator.clipboard
     .writeText("https://codeittool.netlify.app/")
