@@ -130,6 +130,7 @@ body{
 }
 #zoom:hover img{
     scale:3;
+    padding-right: 250px;
 }
 .section-l{
     display: flex;
