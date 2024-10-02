@@ -101,6 +101,9 @@ Get involved! We’d love to hear your ideas. Drop your feature suggestions in t
 - Go to [`line no. 1` in homeScript.js](https://github.com/multiverseweb/CodeIt/blob/main/resources/homeScript.js#L1-L2) and append the name of your city to the `cities` array to show your location on the contributions map. (Optional)
 - Create a `pull-request` so I can review and merge it.
 
+### Our Valuable Contributors ❤️✨
 
+[![Contributors](https://contrib.rocks/image?repo=multiverseweb/Dataverse)](https://github.com/multiverseweb/Dataverse/graphs/contributors)
+ 
 <sup><a href="#codeit--tool" align="right">Back to top</a></sup>
 
