@@ -73,23 +73,6 @@ body{
       border-color: rgb(255, 255, 255);
     }
 }
-@keyframes borderAnimation {
-    0% {
-        border-color: red;
-    }
-    25% {
-        border-color: orange;
-    }
-    50% {
-        border-color: yellow;
-    }
-    75% {
-        border-color: green;
-    }
-    100% {
-        border-color: red;
-    }
-}
 .top{
     background-color: #3333337b;
     padding: 10px 7px 10px 7px;
@@ -169,24 +152,16 @@ body{
 .right{
     max-width: calc(50vw - 120px);
 }
-
 .right p{
     margin-left: 100px;
 }
 #scroll_icon{
     position: fixed;
-    background-color: white;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding:4px;
-    border-radius: 8px;
-    border: 2px solid red; /* Initial border color */
     bottom: 25px;
-    left: 50vw;
+    left:50vw;
     transform: translate(-50%);
     font-size: small;
-    color: black;
-    animation: borderAnimation 3s linear infinite; 
+    transition-duration: 0.3s;
 }
 
 .shadow{
@@ -212,8 +187,6 @@ body{
     margin-top: 20vh;
 }
 .heading{
-    border-radius: 10px;
-    padding: 5px;
     font-size: xx-large;
     background-color: rgba(228, 175, 0, 0.514);
     display: block;
@@ -221,8 +194,6 @@ body{
     padding: 2px 5px 0px 5px;
 }
 .subheading{
-    border-radius: 8px;
-    padding: 8px;
     background-color: rgba(0, 198, 228, 0.463);
     display: inline-block;
     font-size: x-large;
@@ -256,7 +227,7 @@ body{
     margin-left: 100px;
     background-color: #00000000;
     border: 1px solid white;
-    border-radius: 8px;
+    border-radius: 2px;
     color: white;
     font-size: 20px;
     font-family: consolas;
