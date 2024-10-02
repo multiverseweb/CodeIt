@@ -88,6 +88,10 @@ Deployed on
 Get involved! We’d love to hear your ideas. Drop your feature suggestions in the [Discussions](https://github.com/multiverseweb/CodeIt/discussions).
 
 **💻 Want to solve issues?**
+
+> [!IMPORTANT]
+> Create a new branch `gssoc-yourName` before sending the Pull Request.
+
 - Check out [issues](https://github.com/multiverseweb/CodeIt/issues), resolve the one that you can or create a new issue.
 - Go to [`line no. 1` in homeScript.js](https://github.com/multiverseweb/CodeIt/blob/main/resources/homeScript.js#L1-L2) and append the name of your city to the `cities` array to show your location on the contributions map. (Optional)
 - Create a `pull-request` so I can review and merge it.
