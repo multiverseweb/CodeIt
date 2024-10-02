@@ -227,6 +227,22 @@ input:focus {
   background-color: #00000000;
 }
 
+#email:hover {
+    box-shadow: 0px 0px 0px black;
+    background-color: #00000000;
+}
+
+#message:hover {
+    box-shadow: 0px 0px 0px black;
+    background-color: #00000000;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4ecdc4;
+}
+
+
 #language:hover {
   box-shadow: 0px 0px 0px black;
 }

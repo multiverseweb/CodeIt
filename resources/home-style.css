@@ -301,9 +301,9 @@ input {
 
 #send {
     padding-left: 0;
-    margin-left: 80%;
+    margin-left: 0%;
     width: 20%;
-    background-color: rgba(0, 123, 121, 0.364);
+    background-color: #248e87;
     cursor: pointer;
     color:rgba(255, 255, 255, 0.63);
     transition-duration: 0.3s;
