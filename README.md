@@ -12,7 +12,9 @@
 
 # CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="images/Nomenclature.png" height=40px align=right></a>
 #### Developing for the Developers
-[![License: MIT](https://cdn.prod.website-files.com/5e0f1144930a8bc8aace526c/65dd9eb5aaca434fac4f1c34_License-MIT-blue.svg)](/LICENSE#L3)
+![License](https://cdn.prod.website-files.com/5e0f1144930a8bc8aace526c/65dd9eb5aaca434fac4f1c34_License-MIT-blue.svg)
+![GitHub Issues](https://img.shields.io/github/issues/multiverseweb/CodeIt)
+![GitHub Pull Requests](https://img.shields.io/github/issues-pr/multiverseweb/CodeIt)
 ### Table of Contents
 
 | [About CodeIt](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Use CodeIt](#use-codeit) | [Contribute](#contribute) |
