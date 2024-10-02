@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
   <link rel="shortcut icon" href="images/Nomenclature.png" type="image/x-icon" />
 </head>
 
@@ -55,6 +59,23 @@
         </table>
       </div>
     </nav>
+ <!-- Hamburger for smaller screens -->
+ <div class="hamburger" onclick="toggleSidebar()">
+  <span class="material-symbols-outlined"> unfold_more </span>
+</div>
+<!-- Sidebar structure -->
+<div id="sidebar" class="sidebar">
+  <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+  <a href="" class="home">Home</a>
+  <a href="pages/refine.html" class="competitive">Code Refiner</a>
+  <a href="pages/obfuscation.html" class="obfuscation">Code Obfuscator</a>
+  <a href="pages/timeComplexity.html" class="time">Time Complexity Analyser</a>
+  <a href="../index.html#contributeSection">Contribute!</a>
+  <a href="../index.html#feedback">Give Feedback!</a>
+  <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
+    >License</a
+  >
+  </div>
     <div class="gap"></div>
   </div>
 
@@ -189,31 +210,42 @@
           <a class="subheading" href="index.html" id="last_link">CodeIt</a>
         </div>
       </div>
-      <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback">
-        <p>Let Us Know Your Thoughts!</p>
-        <input type="text" name="Name" placeholder="Your Name" />
-        <input type="email" name="Email" placeholder="Your Email ID" />
-        <input type="text" name="Message" placeholder="Your Message" />
-        <input type="submit" value="Send" id="send" />
-      </form>
-    </div>
-    <div class="last">
-      <p>
-        Designed & Developed by Tejas Gupta<br /><a
-          href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; 2024 Tejas Gupta</a>
-      </p>
-      <div class="links">
-        <button class="footer_logo" onclick="copylink()" id="link">
-          <img src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt="" />
-        </button>
-        <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"><img
-            src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2" /></a>
-      </div>
-    </div>
-  </footer>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="resources/common_functions.js"></script>
-  <script src="resources/homeScript.js"></script>
-</body>
 
+      <div class="right_last">
+        <form
+          name="CodeIt Reviews"
+          action="POST"
+          data-netlify="true"
+          id="feedback"
+        >
+          <p>Let Us Know Your Thoughts!</p>
+          <input type="text" name="Name" placeholder="Your Name" required />
+          <input
+            type="email"
+            name="Email"
+            placeholder="Your Email ID"
+            required
+          />
+          <textarea
+            name="Feedback"
+            placeholder="Your Feedback"
+            required
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="right_last">
+        <p>Follow us on:</p>
+        <div class="social-links">
+          <a href="https://github.com/multiverseweb/CodeIt">
+            <img src="images/github-icon.png" alt="GitHub" class="social-icon" />
+          </a>
+          <!-- Add other social media links here -->
+        </div>
+      </div>
+    </footer>
+    <script src="resources/script.js"></script>
+    <script src="resources/common_functions.js"></script> 
+  </body>
 </html>

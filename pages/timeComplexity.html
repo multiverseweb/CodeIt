@@ -1,69 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CodeIt</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="../resources/analyser-style.css">
-    <link rel="stylesheet" href="../resources/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="../images/Nomenclature.png" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="../resources/analyser-style.css" />
+    <link rel="stylesheet" href="../resources/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
 
-<body id="body">
-    <button type="button" id="theme" onclick="light()"><img src="../images/moon.png" class="moon" id="themeLogo"></button>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="shortcut icon"
+      href="../images/Nomenclature.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body id="body">
+    <button type="button" id="theme" onclick="light()">
+      <img src="../images/moon.png" class="moon" id="themeLogo" />
+    </button>
     <div class="top-elements">
-        <a href="../index.html" class="top-link"><img src="../images/Nomenclature.png" alt="logo" class="logo" id="logo">
-            <p class="codeit">CodeIt</p>
-        </a>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <table id="navbar_table">
-                    <tr>
-                        <td class="nav-item"><a href="../index.html" class="home">Home</a></td>
-                        <td class="nav-item"><a href="refine.html" class="competitive">Code Refiner</a></td>
-                        <td class="nav-item"><a href="obfuscation.html" class="obfuscation">Code Obfuscator</a>
-                        </td>
-                        <td class="nav-item" id="current"><a href="timeComplexity.html" class="time">Time Complexity
-                                Analyser</a></td>
-                                <td class="nav-item"><a href="../index.html#contributeSection">Contribute!</a></td>
-                                <td class="nav-item"><a href="../index.html#feedback">Give Feedback!</a></td>
-                                <td class="nav-item"><a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">License</a></td>
-                        <div class="highlight"></div>
-                    </tr>
-                </table>
-            </div>
-        </nav>
-        <div class="gap"></div>
+      <a href="../index.html" class="top-link"
+        ><img
+          src="../images/Nomenclature.png"
+          alt="logo"
+          class="logo"
+          id="logo"
+        />
+        <p class="codeit">CodeIt</p>
+      </a>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <table id="navbar_table">
+            <tr>
+              <td class="nav-item">
+                <a href="../index.html" class="home">Home</a>
+              </td>
+              <td class="nav-item">
+                <a href="refine.html" class="competitive">Code Refiner</a>
+              </td>
+              <td class="nav-item">
+                <a href="obfuscation.html" class="obfuscation"
+                  >Code Obfuscator</a
+                >
+              </td>
+              <td class="nav-item" id="current">
+                <a href="timeComplexity.html" class="time"
+                  >Time Complexity Analyser</a
+                >
+              </td>
+              <td class="nav-item">
+                <a href="../index.html#contributeSection">Contribute!</a>
+              </td>
+              <td class="nav-item">
+                <a href="../index.html#feedback">Give Feedback!</a>
+              </td>
+              <td class="nav-item">
+                <a
+                  href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
+                  >License</a
+                >
+              </td>
+              <div class="highlight"></div>
+            </tr>
+          </table>
+        </div>
+      </nav>
+      <!-- Hamburger for smaller screens -->
+      <div class="hamburger" onclick="toggleSidebar()">
+        <span class="material-symbols-outlined"> unfold_more </span>
+      </div>
+      <!-- Sidebar structure -->
+      <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <a href="../index.html" class="home">Home</a>
+        <a href="refine.html" class="competitive">Code Refiner</a>
+        <a href="obfuscation.html" class="obfuscation">Code Obfuscator</a>
+        <a href="timeComplexity.html" class="time">Time Complexity Analyser</a>
+        <a href="../index.html#contributeSection">Contribute!</a>
+        <a href="../index.html#feedback">Give Feedback!</a>
+        <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
+          >License</a
+        >
+      </div>
+      <div class="gap"></div>
     </div>
     <div class="analyseButtons">
-        <button onclick="analyzeTimeComplexity()" id="analyse" class="btn">Analyze Complexity</button>
-        <button onclick="clearText()" class="btn">Clear Code</button>
+      <button onclick="analyzeTimeComplexity()" id="analyse" class="btn">
+        Analyze Complexity
+      </button>
+      <button onclick="clearText()" class="btn">Clear Code</button>
     </div>
 
     <div class="code">
-        <textarea id="time_code" class="codes" placeholder="Input Code" spellcheck="false"></textarea>
-        <canvas id="complexityChart" style="height:70vh; margin:10px;"></canvas>
+      <textarea
+        id="time_code"
+        class="codes"
+        placeholder="Input Code"
+        spellcheck="false"
+      ></textarea>
+      <canvas id="complexityChart" style="height: 70vh; margin: 10px"></canvas>
     </div>
     <p id="result">Estimated Time Complexity: NA</p>
-    
+
     <footer>
-        <p class="mistakes">CodeIt can make mistakes. Check important information.</p>
-        <div class="links">
-            <button class="footer_logo" onclick="copylink()" id="link"><img
-                    src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt=""></button>
-            <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"><img
-                    src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2"></a>
-        </div>
+      <p class="mistakes">
+        CodeIt can make mistakes. Check important information.
+      </p>
+      <div class="links">
+        <button class="footer_logo" onclick="copylink()" id="link">
+          <img
+            src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png"
+            alt=""
+          />
+        </button>
+        <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"
+          ><img src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2"
+        /></a>
+      </div>
     </footer>
     <script src="../resources/analyser.js" defer></script>
     <script src="../resources/common_functions.js"></script>
-</body>
-
+  </body>
 </html>
