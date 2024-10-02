@@ -103,7 +103,7 @@ Get involved! We’d love to hear your ideas. Drop your feature suggestions in t
 
 ### Our Valuable Contributors ❤️✨
 
-[![Contributors](https://contrib.rocks/image?repo=multiverseweb/Dataverse)](https://github.com/multiverseweb/CodeIt/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/graphs/contributors)
  
 <sup><a href="#codeit--tool" align="right">Back to top</a></sup>
 
