@@ -132,7 +132,10 @@ function runAlgorithm() {
 
         if (isSQL) {
             if (line.trim().startsWith("--")) continue;
-        } else {
+        }else if (language === "Python") {
+            if (line.trim().startsWith("#")) continue; 
+        }
+        else {
             if (line.trim().startsWith('//') || line.trim().startsWith('/*')) continue;
         }
 
@@ -153,13 +156,17 @@ function runAlgorithm() {
     }
 
     if (language === "C" || language === "C++") {
-        outputCode += "int main() {\n    // Add your code here\n    return 0;\n}\n";
-    } else if (language === "JavaScript") {
-        outputCode += ` // Add your code here\n console.log("Hello world")`;
+        outputCode += "";
+    } 
+    else if(language === "Python"){
+        outputCode += "";
+    }
+    else if (language === "JavaScript") {
+        outputCode += "";
     } else if (language === "SQL") {
-        outputCode += "-- Write your SQL query here\nSELECT * FROM table_name;\n";
+        outputCode += "";
     }else if(language==="Java"){
-        outputCode += ` // Add your code here\n public static void main(){}`;
+        outputCode +="";
     }
 
 
