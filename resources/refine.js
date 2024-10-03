@@ -84,6 +84,9 @@ function generateFileName(directory, name, language) {
         case "SQL":
             name += ".sql";
             break;
+        case "Java":
+            name+= ".java.txt";
+            break;
         default:
             name += ".txt"; // Default if language is not specified
     }
