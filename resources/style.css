@@ -576,6 +576,59 @@ footer {
   transition: transform 0.3s;
   color: #acacac !important;
 }
+
+.section-l, .section-r {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #09020f, #1a102e); /* Modern purple-black gradient */
+  transition: all 0.5s ease;
+  overflow: hidden;
+  border: 1px solid transparent; /* Base border */
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg); /* Default */
+}
+
+/* Mouse tracking effect */
+.section-l::before, .section-r::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05));
+  transition: background 0.3s ease-out;
+  pointer-events: none;
+}
+
+/* Section L hover effects */
+.section-l:hover {
+  border-color: #39ddbd; /* Green border for Section L */
+  border-width: 3px;
+}
+
+.section-l:hover::before {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 255, 204, 0.2), rgba(0, 0, 0, 0.05));
+}
+
+/* Section R hover effects */
+.section-r:hover {
+  border-color: #d75ed7; /* Purple border for Section R */
+  border-width: 3px;
+}
+
+.section-r:hover::before {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 0, 255, 0.2), rgba(0, 0, 0, 0.05));
+}
+
+/* Reset gradient position on mouse leave */
+.section-l:hover::before, .section-r:hover::before {
+  background-position: 50% 50%;
+}
+
 .close-btn:hover {
   transform: rotate(180deg);
   color: #7c7c7c !important;
