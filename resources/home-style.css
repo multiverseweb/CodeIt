@@ -251,7 +251,23 @@ body{
 .contributeBtn:hover #github{
     filter: invert(0);
 }
+[data-theme="light"] .contributeBtn {
+    background-color: transparent; /* Button background for light mode */
+    border: 1px solid #000; /* Border color for light mode */
+    color: black; /* Text color for light mode */
+}
 
+[data-theme="light"]  #github {
+    filter: invert(0); /* Black icon for light mode */
+}
+
+[data-theme="light"]  .contributeBtn:hover {
+    background-color: #000; 
+    color: #fff; }
+
+[data-theme="light"] .contributeBtn:hover #github {
+    filter: invert(1); /* White icon on hover for light mode */
+}
 .design_line {
     height: 1px;
     width: 50vw;
