@@ -155,11 +155,11 @@ function runAlgorithm() {
     if (language === "C" || language === "C++") {
         outputCode += "int main() {\n    // Add your code here\n    return 0;\n}\n";
     } else if (language === "JavaScript") {
-        outputCode += "";
+        outputCode += ` // Add your code here\n console.log("Hello world")`;
     } else if (language === "SQL") {
         outputCode += "-- Write your SQL query here\nSELECT * FROM table_name;\n";
     }else if(language==="Java"){
-        outputCode += ""
+        outputCode += ` // Add your code here\n public static void main(){}`;
     }
 
 
