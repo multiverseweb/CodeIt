@@ -98,7 +98,7 @@ Get involved! We’d love to hear your ideas. Drop your feature suggestions in t
 - Go to [issues](https://github.com/multiverseweb/CodeIt/issues), find an issue that you can solve or create a new issue.
 - Fork the repository.
 - Create a new branch (`git checkout -b feature-branch`).
-- Go to `line no. 1` in [homeScript.js](https://github.com/multiverseweb/CodeIt/blob/main/resources/homeScript.js#L1-L2) and append the name of your city to the `cities` array. (optional)
+- Go to [`line no. 1` in homeScript.js](https://github.com/multiverseweb/CodeIt/blob/main/resources/homeScript.js#L1-L2) and append the name of your city to the `cities` array. (optional)
 - Make your contributions and commit them (`git commit -m 'Add feature'`).
 - Push to the branch (`git push origin feature-branch`).
 - Create a Pull Request, so I can review and merge it.
