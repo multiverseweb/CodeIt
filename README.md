@@ -90,7 +90,8 @@ Deployed on
 ## Contribute
 **💬 Got ideas?**
 
-Get involved! We’d love to hear your ideas. Drop your feature suggestions in the [Discussions](https://github.com/multiverseweb/CodeIt/discussions).
+- Get involved! We’d love to hear your ideas. Drop your feature suggestions in the [Discussions](https://github.com/multiverseweb/CodeIt/discussions).
+- You can also use [Discussions](https://github.com/multiverseweb/CodeIt/discussions) to look for answers to your doubts regarding any feature of this project.
 
 **💻 Want to solve issues?**
 
