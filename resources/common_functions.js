@@ -18,6 +18,7 @@ navItems.forEach((item) => {
 document.querySelector(".navbar").addEventListener("mouseleave", () => {
   highlight.style.width = "0";
 });
+
 function light() {
   document.getElementById("themeLogo").src = "../images/sun.png";
   document.getElementById("themeLogo").style.filter = "invert(0)";
