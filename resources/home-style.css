@@ -130,6 +130,7 @@ body{
 }
 #zoom:hover img{
     scale:3;
+    padding-right: 250px;
 }
 .section-l{
     display: flex;
@@ -250,7 +251,23 @@ body{
 .contributeBtn:hover #github{
     filter: invert(0);
 }
+[data-theme="light"] .contributeBtn {
+    background-color: transparent; /* Button background for light mode */
+    border: 1px solid #000; /* Border color for light mode */
+    color: black; /* Text color for light mode */
+}
 
+[data-theme="light"]  #github {
+    filter: invert(0); /* Black icon for light mode */
+}
+
+[data-theme="light"]  .contributeBtn:hover {
+    background-color: #000; 
+    color: #fff; }
+
+[data-theme="light"] .contributeBtn:hover #github {
+    filter: invert(1); /* White icon on hover for light mode */
+}
 .design_line {
     height: 1px;
     width: 50vw;
@@ -293,17 +310,21 @@ input {
     color: white;
     background-color: #76767639;
     border: 0.1px solid rgba(255, 255, 255, 0.193);
-    width: 100%;
+    width: calc(100% - 10px);
     height: 30px;
     margin-top: 20px;
     border-radius: 5px;
 }
 
 #send {
-    padding-left: 0;
-    margin-left: 80%;
-    width: 20%;
-    background-color: rgba(0, 123, 121, 0.364);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 100%;
+    margin-top: 20px;
+    transform: translate(calc(-100% - 0px));
+    width: min-content;
+    background-color: #248e87;
     cursor: pointer;
     color:rgba(255, 255, 255, 0.63);
     transition-duration: 0.3s;
@@ -342,11 +363,14 @@ input {
 .links p {
     color: rgba(255, 255, 255, 0.433);
 }
+.last{
+    padding: 10px;
+}
 .last p{
     text-align: center;
     margin-top: 30px;
 }
-footer a{
+a{
     text-decoration: none;
     color: white;
 }

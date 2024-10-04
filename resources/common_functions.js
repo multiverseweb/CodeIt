@@ -18,7 +18,6 @@ navItems.forEach((item) => {
 document.querySelector(".navbar").addEventListener("mouseleave", () => {
   highlight.style.width = "0";
 });
-
 function light() {
   document.getElementById("themeLogo").src = "../images/sun.png";
   document.getElementById("themeLogo").style.filter = "invert(0)";
@@ -38,16 +37,21 @@ function light() {
   if (time_code) {
     time_code.style.color = "#0b6100";
   }
-    // changing color of graph
+
+
+  const complexityCharts = document.getElementById('complexityChart');
+  if(complexityCharts){
     const newcolor = '#000000';
     complexityChart.options.scales.y.grid.color = newcolor;
     complexityChart.options.scales.x.grid.color = newcolor;
     complexityChart.options.plugins.title.color = newcolor;
-
+  
     const datasets = window.complexityChart.data.datasets;
     datasets.forEach((dataset) => {
       dataset.borderColor ='black'
     });
+  }
+ 
 
   const heading = document.getElementById("heading");
   if (heading) {
@@ -58,6 +62,14 @@ function light() {
   document.getElementById("link").style.filter = "invert(1)";
   document.getElementById("link2").style.filter = "invert(0)";
   document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
+  const sidebar = document.getElementById("sidebar");
+  document.querySelector(".material-symbols-outlined").classList.add("light-theme");
+  sidebar.classList.remove("dark");
+  sidebar.classList.add("light");
+  const closeButton = sidebar.querySelector(".close-btn");
+  if (closeButton) {
+    closeButton.style.color = "#000000";
+  }
   const button = document.getElementById("theme");
   saveTheme('light')
   button.onclick = dark;
@@ -84,9 +96,9 @@ function dark() {
   if (time_code) {
     time_code.style.color = "rgba(255, 170, 0, 0.756)";
   }
-
-  // changing color of graph
-  const newcolor = 'rgba(255, 255, 255, 0.1)';
+  const complexityCharts = document.getElementById('complexityChart');
+  if(complexityCharts){
+    const newcolor = 'rgba(255, 255, 255, 0.1)';
   complexityChart.options.scales.y.grid.color = newcolor;
   complexityChart.options.scales.x.grid.color = newcolor;
   complexityChart.options.plugins.title.color = "#FFFFFF";
@@ -95,7 +107,8 @@ function dark() {
     datasets.forEach((dataset) => {
       dataset.borderColor ='white'
     });
-
+  }
+  
   const heading = document.getElementById("heading");
   if (heading) {
     document.getElementById("body").style.color = "rgba(255, 255, 255, 0.866)";
@@ -106,7 +119,20 @@ function dark() {
   document.getElementById("link2").style.filter = "invert(1)";
   document.getElementById("body").style.backgroundColor =
     "rgba(0, 0, 0, 0.888)";
+
   saveTheme('dark')
+
+  document
+    .querySelector(".material-symbols-outlined")
+    .classList.remove("light-theme");
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.remove("light");
+  sidebar.classList.add("dark");
+  const closeButton = sidebar.querySelector(".close-btn");
+  if (closeButton) {
+    closeButton.style.color = "#ffffff";
+  }
+
   const button = document.getElementById("theme");
   button.onclick = light;
   updateChartColors(true);
@@ -185,3 +211,58 @@ function clearText() {
     time_code.value = "";
   }
 }
+
+let sidebarOpen = false;
+
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const navbar = document.querySelector(".navbar");
+
+  if (!sidebar) {
+    console.error("Sidebar element not found.");
+    return;
+  }
+
+  if (!navbar) {
+    console.error("Navbar element not found.");
+    return;
+  }
+
+  sidebarOpen = !sidebarOpen;
+  if (sidebarOpen) {
+    sidebar.classList.add("show");
+    sidebar.style.width = "250px";
+    navbar.style.display = "none";
+    document.querySelector(".hamburger").style.display = "none";
+  } else {
+    sidebar.style.width = "0";
+    navbar.style.display = "block";
+    document.querySelector(".hamburger").style.display = "block";
+    sidebar.classList.remove("show");
+  }
+}
+
+const sidebarLinks = document.querySelectorAll("#sidebar a");
+sidebarLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    sidebarOpen = false;
+    document.getElementById("sidebar").style.width = "0";
+    document.querySelector(".hamburger").style.display = "block";
+  });
+});
+function checkScreenSize() {
+  const sidebar = document.getElementById("sidebar");
+  if (window.innerWidth > 400) {
+    sidebar.style.width = "0";
+    sidebarOpen = false;
+    document.querySelector(".navbar").style.display = "block";
+    document.querySelector(".hamburger").style.display = "none";
+  } else {
+    document.querySelector(".hamburger").style.display = "block";
+  }
+}
+
+window.addEventListener("resize", checkScreenSize);
+window.addEventListener("load", checkScreenSize);
+
+checkScreenSize();
