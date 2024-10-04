@@ -152,7 +152,21 @@ body{
     margin-left: 90px;
     margin-right: 90px;
 }
+@media screen and (max-width: 768px) {
+    .faq-section {
+        padding-top: 50px;  
+        margin-left: 20px;  
+        margin-right: 20px; 
+    }
 
+    .faq-answer {
+        padding: 10px; 
+    }
+
+    .faq-question {
+        font-size: 1em; 
+    }
+}
 .faq-item {
     margin-bottom: 15px;
     margin-top: 40px;
