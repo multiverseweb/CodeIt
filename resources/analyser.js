@@ -72,7 +72,6 @@ function initializeComplexityChart() {
     });
 }
 
-// Function to highlight the selected line and display the result
 function highlightComplexityLine(complexityType) {
     const datasets = window.complexityChart.data.datasets;
     datasets.forEach((dataset) => {
