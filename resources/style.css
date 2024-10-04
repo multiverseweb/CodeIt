@@ -277,9 +277,14 @@ option {
 .themeLogo {
   transition-duration: 0.5s;
   height: 30px;
-  filter: invert(1);
 }
 
+#darkThemeBtn img{
+  filter: invert(0);
+}
+#lightThemeBtn img{
+  filter: invert(1);
+}
 .container {
   margin-left: 10px;
   display: flex;
