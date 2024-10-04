@@ -144,6 +144,41 @@ body{
     margin-left: 100px;
     margin-right: 100px;
 }
+.faq-section {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    padding-top: 100px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.faq-question {
+    font-weight:100;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+}
+
+.faq-answer {
+    margin-left: 15px;
+    padding: 20px 0;
+    border-left: 2px solid rgb(0, 141, 141);
+    background-color: rgba(29, 28, 28, 0.888);
+    display: none; 
+    font-size: 20px;
+}
+
+details[open] .faq-answer {
+    display: block; 
+    padding: 10px 20px;
+}
+
 #intro{
     margin-top: 100px;
 }
