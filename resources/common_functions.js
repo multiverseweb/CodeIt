@@ -1,7 +1,13 @@
 console.log("Tejas' Codes :D");
-
 const highlight = document.querySelector(".highlight");
 const navItems = document.querySelectorAll(".nav-item");
+
+document
+  .getElementById("darkThemeBtn")
+  .addEventListener("click", enableDarkTheme);
+document
+  .getElementById("lightThemeBtn")
+  .addEventListener("click", enableLightTheme);
 
 navItems.forEach((item) => {
   item.addEventListener("mouseover", function () {
@@ -18,9 +24,10 @@ navItems.forEach((item) => {
 document.querySelector(".navbar").addEventListener("mouseleave", () => {
   highlight.style.width = "0";
 });
-function light() {
-  document.getElementById("themeLogo").src = "../images/sun.png";
-  document.getElementById("themeLogo").style.filter = "invert(0)";
+function enableLightTheme() {
+  console.log("in light");
+  saveTheme("light");
+
   const input_code = document.getElementById("input_code");
   if (input_code) {
     input_code.style.color = "#0b6100";
@@ -47,22 +54,36 @@ function light() {
   document.getElementById("link2").style.filter = "invert(0)";
   document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
   const sidebar = document.getElementById("sidebar");
-  document.querySelector(".material-symbols-outlined").classList.add("light-theme");
+  document
+    .querySelector(".material-symbols-outlined")
+    .classList.add("light-theme");
   sidebar.classList.remove("dark");
   sidebar.classList.add("light");
   const closeButton = sidebar.querySelector(".close-btn");
   if (closeButton) {
     closeButton.style.color = "#000000";
   }
-  const button = document.getElementById("theme");
-  saveTheme('light')
-  button.onclick = dark;
+  toggleThemeBtn("light");
   updateChartColors(false);
 }
 
-function dark() {
-  document.getElementById("themeLogo").src = "../images/moon.png";
-  document.getElementById("themeLogo").style.filter = "invert(1)";
+function toggleThemeBtn(currentTheme) {
+  const darkThemeBtn = document.getElementById("darkThemeBtn");
+  const lightThemeBtn = document.getElementById("lightThemeBtn");
+
+  if (currentTheme === "dark") {
+    darkThemeBtn.style.display = "none";
+    lightThemeBtn.style.display = "block";
+  } else {
+    darkThemeBtn.style.display = "block";
+    lightThemeBtn.style.display = "none";
+  }
+}
+
+function enableDarkTheme() {
+  console.log("inDark");
+  saveTheme("dark");
+
   const input_code = document.getElementById("input_code");
   if (input_code) {
     input_code.style.color = "rgba(255, 170, 0, 0.756)";
@@ -91,8 +112,6 @@ function dark() {
   document.getElementById("body").style.backgroundColor =
     "rgba(0, 0, 0, 0.888)";
 
-  saveTheme('dark')
-
   document
     .querySelector(".material-symbols-outlined")
     .classList.remove("light-theme");
@@ -104,34 +123,33 @@ function dark() {
     closeButton.style.color = "#ffffff";
   }
 
-  const button = document.getElementById("theme");
-  button.onclick = light;
+  toggleThemeBtn("dark");
   updateChartColors(true);
 }
 
-function saveTheme(theme){
-  localStorage.setItem('theme', theme);
-  document.documentElement.setAttribute('data-theme', theme)
+function saveTheme(theme) {
+  localStorage.setItem("theme", theme);
+  document.documentElement.setAttribute("data-theme", theme);
 }
 
-function applyTheme(){
-  const savedTheme = localStorage.getItem('theme');
-  console.log(savedTheme)
-  if(savedTheme){
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    if(savedTheme === 'dark'){
-      dark();
-    }else{
-      light();
+function applyTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  console.log(savedTheme);
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    if (savedTheme === "dark") {
+      enableDarkTheme();
+    } else {
+      enableLightTheme();
     }
   }
 }
 
 function updateChartColors(isDark) {
-  if (typeof Chart !== 'undefined' && Chart.instances[0]) {
+  if (typeof Chart !== "undefined" && Chart.instances[0]) {
     const chart = Chart.instances[0];
-    const textColor = isDark ? 'white' : 'black';
-    
+    const textColor = isDark ? "white" : "black";
+
     chart.options.scales.x.ticks.color = textColor;
     chart.options.scales.y.ticks.color = textColor;
     chart.options.plugins.legend.labels.color = textColor;
@@ -140,7 +158,6 @@ function updateChartColors(isDark) {
 }
 
 window.onload = applyTheme;
-
 
 function copylink() {
   navigator.clipboard

@@ -228,20 +228,20 @@ input:focus {
 }
 
 #email:hover {
-    box-shadow: 0px 0px 0px black;
-    background-color: #00000000;
+  box-shadow: 0px 0px 0px black;
+  background-color: #00000000;
 }
 
 #message:hover {
-    box-shadow: 0px 0px 0px black;
-    background-color: #00000000;
+  box-shadow: 0px 0px 0px black;
+  background-color: #00000000;
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #4ecdc4;
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4ecdc4;
 }
-
 
 #language:hover {
   box-shadow: 0px 0px 0px black;
@@ -264,7 +264,7 @@ option {
   background-color: rgba(0, 0, 0, 0.888);
 }
 
-#theme {
+.theme {
   z-index: 105;
   top: 20px;
   right: 20px;
@@ -274,7 +274,7 @@ option {
   cursor: pointer;
 }
 
-#themeLogo {
+.themeLogo {
   transition-duration: 0.5s;
   height: 30px;
   filter: invert(1);
