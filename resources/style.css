@@ -27,7 +27,9 @@ body {
 .gap {
   width: 80px;
 }
-
+i:hover{
+  color: #7c7c7c;
+}
 .top-link {
   display: flex;
   color: rgba(124, 124, 124);
