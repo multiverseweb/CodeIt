@@ -221,7 +221,7 @@ body{
 #contributeSection{
     margin-top: 100px;
 }
-.contributeBtn{
+.contributeBtn , .licBtn{
     text-decoration: none;
     width:min-content;
     margin-top: 30px;
@@ -236,7 +236,7 @@ body{
     padding: 12px 10px 5px 10px;
     transition-duration: 0.3s;
 }
-#github{
+#github , #lic-logo{
     height: 28px;
     margin: 5px;
     margin-top: -3px;
@@ -244,30 +244,32 @@ body{
     transition-duration: 0.3s;
 }
 
-.contributeBtn:hover{
+.contributeBtn:hover , .licBtn:hover{
     background-color: white;
     color: black;
 }
-.contributeBtn:hover #github{
+.contributeBtn:hover #github , .licBtn:hover #lic-logo{
     filter: invert(0);
 }
-[data-theme="light"] .contributeBtn {
+
+[data-theme="light"] .contributeBtn ,[data-theme="light"] .licBtn{
     background-color: transparent; /* Button background for light mode */
     border: 1px solid #000; /* Border color for light mode */
     color: black; /* Text color for light mode */
 }
 
-[data-theme="light"]  #github {
+[data-theme="light"]  #github ,[data-theme="light"] #lic-logo {
     filter: invert(0); /* Black icon for light mode */
 }
 
-[data-theme="light"]  .contributeBtn:hover {
+[data-theme="light"]  .contributeBtn:hover ,[data-theme="light"] .licBtn:hover {
     background-color: #000; 
     color: #fff; }
 
-[data-theme="light"] .contributeBtn:hover #github {
+[data-theme="light"] .contributeBtn:hover #github ,[data-theme="light"] .licBtn:hover #lic-logo{
     filter: invert(1); /* White icon on hover for light mode */
 }
+
 .design_line {
     height: 1px;
     width: 50vw;
@@ -375,6 +377,33 @@ a{
     color: white;
 }
 
+.license{
+    display: flex ;
+    flex-direction: row ;
+    width: 90% ;
+    padding : 2%;
+    justify-content: space-evenly;
+}
+
+.lic-left{
+    display : flex ;
+    flex-direction : column ;
+    padding : 2%;
+    justify-content: space-between;
+}
+
+.lic-right{
+    display : flex ;
+    flex-direction : column  ;
+    padding : 2%;
+}
+
+.lic-right-vals{
+    display : flex ;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
 #map {
     width: 45vw;
     margin-left: 30px;
@@ -457,14 +486,19 @@ a{
     #contributeSection{
         margin-top: 50px;
     }
-    .contributeBtn{
+    .contributeBtn , .licBtn{
         font-size: 15px;
         margin-left: 50%;
         transform: translate(-50%);
     }
-    #github{
+    #github , #lic-logo{
         height:20px;
     }
+
+    .license{
+        flex-direction:column;
+    }
+
     .left_last{
         flex-direction: column;
     }
