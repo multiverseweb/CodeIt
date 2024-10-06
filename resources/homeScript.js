@@ -1,5 +1,5 @@
 //list of cities
-var cities = ["Pune", "Moradabad", "Dehradun","Ujjain","Vijaywada","Rampur","Sydney","Aligarh","Delhi","Coimbatore","Dibrugarh"];
+var cities = ["Pune", "Moradabad", "Dehradun","Ujjain","Vijaywada","Rampur","Sydney","Aligarh","Delhi","Coimbatore","Dibrugarh","Varanasi"];
 
 function topFunction() {
     document.body.scrollTop = 0;
