@@ -224,13 +224,15 @@
       </div>
 
       <div class="right_last">
-        <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback">
+        <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback" onsubmit="return validateFeedback()">
           <p>Let Us Know Your Thoughts!</p>
           <input type="text" name="Name" placeholder="Your Name" required />
           <input type="email" name="Email" placeholder="Your Email ID" required />
-          <input name="Feedback" placeholder="Your Feedback" required></input>
+          <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)" required oninput="checkFeedbackLength(this)" />
+          <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters long.</span>
           <button type="submit" id="send">Send</button>
         </form>
+      </div>
 
       </div>
   </footer>
@@ -249,6 +251,24 @@
     </div>
     <script src="resources/homeScript.js"></script>
     <script src="resources/common_functions.js"></script>
+    <script>
+      function checkFeedbackLength(input) {
+        var errorSpan = document.getElementById('feedbackError');
+        if (input.value.length < 10) {
+          errorSpan.style.display = 'block';
+          input.setCustomValidity('Feedback must be at least 10 characters long.');
+        } else {
+          errorSpan.style.display = 'none';
+          input.setCustomValidity('');
+        }
+      }
+      
+      function validateFeedback() {
+        var feedback = document.forms["CodeIt Reviews"]["Feedback"];
+        checkFeedbackLength(feedback);
+        return feedback.value.length >= 10;
+      }
+    </script>
 </body>
 
 </html>
