@@ -117,7 +117,7 @@ Deployed on
 
 ### Our Valuable Contributors ❤️✨
 
-![Contributors](https://contrib.rocks/image?repo=multiverseweb/CodeIt)
+[![Contributors](https://contrib.rocks/image?repo=multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/graphs/contributors)
  
 <sup><a href="#codeit--tool" align="right">Back to top</a></sup>
 
