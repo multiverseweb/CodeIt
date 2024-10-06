@@ -2,17 +2,21 @@
     margin: 0;
     padding: 0;
 }
+
 html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     color: rgba(255, 255, 255, 0.866);
 }
+
 .top_codeit {
     font-size: xxx-large;
     display: flex;
 }
-::selection{
+
+::selection {
     background-color: rgba(0, 255, 255, 0.263);
     color: black;
 }
@@ -30,7 +34,6 @@ body{
     0% {
         filter: hue-rotate(0deg);
     }
-
     100% {
         filter: hue-rotate(360deg);
     }
@@ -43,59 +46,61 @@ body{
     white-space: nowrap;
     border-right: .01em solid pink;
     animation: typing 5.5s steps(30, end) infinite, blinking-cursor 1s step-end infinite;
-  }
-  
-  @keyframes typing {
+}
+
+@keyframes typing {
     0% {
         margin-left: 0.5ch;
-      width: 0;
+        width: 0;
     }
     60% {
         margin-left: 0.5ch;
-      width: 31ch;
+        width: 31ch;
     }
-    75%{
+    75% {
         margin-left: 0.5ch;
-        width:31ch
+        width: 31ch
     }
-    100%{
+    100% {
         margin-left: 0.5ch;
         width: 0%;
     }
-  }
-  
-  @keyframes blinking-cursor {
+}
+
+@keyframes blinking-cursor {
     from,
     to {
-      border-color: transparent
+        border-color: transparent
     }
     50% {
-      border-color: rgb(255, 255, 255);
+        border-color: rgb(255, 255, 255);
     }
 }
-.top{
+
+.top {
     background-color: #3333337b;
     padding: 10px 7px 10px 7px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    position:fixed;
+    position: fixed;
     bottom: 10px;
     right: 10px;
     backdrop-filter: blur(7px);
     box-shadow: 5px 5px 10px black;
     z-index: 50;
-    
 }
-#top{
+
+#top {
     opacity: 0;
     transition-duration: 0.3s;
 }
-.top img{
+
+.top img {
     height: 20px;
 }
 
-.preview{
+.preview {
     width: 40vw;
     margin: 60px;
     transition-duration: 0.3s;
@@ -103,127 +108,163 @@ body{
     z-index: 0;
     box-shadow: 0 0 10px black;
 }
-.preview:hover{
+
+.preview:hover {
     scale: 1.03;
 }
 
-#flowchart{
+#flowchart {
     box-shadow: none;
     width: 45vw;
-    margin-left: -2.5vw;
+    margin-left: 10px;
+    margin-top: 100px;
     -webkit-filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
     filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
 }
-#obfuscatePreview{
+
+#obfuscatePreview {
     margin-top: 10px;
 }
 
-#zoom{
+#zoom {
     max-width: calc(50vw - 80px);
     max-height: 330px;
     overflow: hidden;
     border-radius: 10px;
     transition-duration: 0.5s;
 }
-#zoom:hover{
+
+#zoom:hover {
     box-shadow: 0 0 10px black;
 }
-#zoom:hover img{
-    scale:3;
+
+#zoom:hover img {
+    scale: 3;
     padding-right: 250px;
 }
-.section-l{
+
+.section-l {
     display: flex;
     flex-direction: row;
     margin-left: 100px;
     margin-right: 100px;
 }
-.section-r{
+
+.section-r {
     display: flex;
     flex-direction: row;
     margin-left: 100px;
     margin-right: 100px;
 }
-#intro{
+
+#intro {
     margin-top: 100px;
 }
-.left{
+
+.left {
     max-width: calc(50vw - 120px);
 }
-.right{
+
+.right {
     max-width: calc(50vw - 120px);
 }
-.right p{
+
+.right p {
     margin-left: 100px;
 }
-#scroll_icon{
+
+#scroll_icon {
     position: fixed;
     bottom: 25px;
-    left:50vw;
+    left: 50vw;
     transform: translate(-50%);
     font-size: small;
     transition-duration: 0.3s;
 }
 
-.shadow{
+.shadow {
     height: 20px;
     width: 180px;
-    background-image: linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000);
+    background-image: linear-gradient(115deg, #00000000, rgba(30, 30, 30, 0.888), rgba(30, 30, 30, 0.888), #00000000);
     position: absolute;
     margin-top: -20px;
     animation-name: wave;
     animation-duration: 2s;
-    animation-iteration-count:infinite;
+    animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
-@keyframes wave{
-    0%{
+
+@keyframes wave {
+    0% {
         margin-left: -180px;
     }
-    100%{
+    100% {
         margin-left: 7rem;
     }
 }
-#refine{
+
+#refine {
     margin-top: 20vh;
 }
-.heading{
+
+.heading {
     font-size: xx-large;
     background-color: rgba(228, 175, 0, 0.514);
     display: block;
     max-width: fit-content;
     padding: 2px 5px 0px 5px;
+    margin-top: 60px;
 }
-.subheading{
+
+.right_last {
+    margin-left: 200px;
+}
+
+#one {
+    margin-top: 40px;
+}
+
+#two {
+    margin-top: 80px;
+}
+
+.subheading {
     background-color: rgba(0, 198, 228, 0.463);
     display: inline-block;
     font-size: x-large;
     margin-top: 10px;
 }
-.text{
+
+.text {
     margin-top: 10px;
     font-size: larger;
     line-height: 25px;
 }
-#obfuscate{
-    margin-top: 10vh;
-}
-#nomenclature{
-    margin-top: 10vh;
-}
-#complexity{
-    margin-top: 10vh;
-}
-#working{
+
+#obfuscate {
     margin-top: 10vh;
 }
 
-#contributeSection{
+#nomenclature {
+    margin-top: 10vh;
+}
+
+#complexity {
+    margin-top: 10vh;
+}
+
+#working {
+    margin-top: 1px;
+}
+
+#contributeSection {
     margin-top: 100px;
 }
-.contributeBtn , .licBtn{
+
+.contributeBtn,
+.licBtn {
     text-decoration: none;
-    width:min-content;
+    width: min-content;
     margin-top: 30px;
     margin-left: 100px;
     background-color: #00000000;
@@ -236,7 +277,9 @@ body{
     padding: 12px 10px 5px 10px;
     transition-duration: 0.3s;
 }
-#github , #lic-logo{
+
+#github,
+#lic-logo {
     height: 28px;
     margin: 5px;
     margin-top: -3px;
@@ -244,30 +287,43 @@ body{
     transition-duration: 0.3s;
 }
 
-.contributeBtn:hover , .licBtn:hover{
+.contributeBtn:hover,
+.licBtn:hover {
     background-color: white;
     color: black;
 }
-.contributeBtn:hover #github , .licBtn:hover #lic-logo{
+
+.contributeBtn:hover #github,
+.licBtn:hover #lic-logo {
     filter: invert(0);
 }
 
-[data-theme="light"] .contributeBtn ,[data-theme="light"] .licBtn{
-    background-color: transparent; /* Button background for light mode */
-    border: 1px solid #000; /* Border color for light mode */
-    color: black; /* Text color for light mode */
+[data-theme="light"] .contributeBtn,
+[data-theme="light"] .licBtn {
+    background-color: transparent;
+    /* Button background for light mode */
+    border: 1px solid #000;
+    /* Border color for light mode */
+    color: black;
+    /* Text color for light mode */
 }
 
-[data-theme="light"]  #github ,[data-theme="light"] #lic-logo {
-    filter: invert(0); /* Black icon for light mode */
+[data-theme="light"] #github,
+[data-theme="light"] #lic-logo {
+    filter: invert(0);
+    /* Black icon for light mode */
 }
 
-[data-theme="light"]  .contributeBtn:hover ,[data-theme="light"] .licBtn:hover {
-    background-color: #000; 
-    color: #fff; }
+[data-theme="light"] .contributeBtn:hover,
+[data-theme="light"] .licBtn:hover {
+    background-color: #000;
+    color: #fff;
+}
 
-[data-theme="light"] .contributeBtn:hover #github ,[data-theme="light"] .licBtn:hover #lic-logo{
-    filter: invert(1); /* White icon on hover for light mode */
+[data-theme="light"] .contributeBtn:hover #github,
+[data-theme="light"] .licBtn:hover #lic-logo {
+    filter: invert(1);
+    /* White icon on hover for light mode */
 }
 
 .design_line {
@@ -277,9 +333,8 @@ body{
     transform: translate(-50%);
     margin-bottom: 20px;
     margin-top: 50px;
-    background-image: linear-gradient(to right,rgba(0, 0, 0, 0),rgb(255, 255, 255),rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
 }
-
 
 footer {
     display: flex;
@@ -287,15 +342,18 @@ footer {
     padding-left: 10vw;
     padding-right: 10vw;
 }
-.left_last{
+
+.left_last {
     display: flex;
     flex-direction: row;
 }
-#last_link{
+
+#last_link {
     background-color: #00000000;
-    margin-top:16px;
+    margin-top: 16px;
     margin-left: 150px;
 }
+
 form {
     background-color: #4c4c4c2a;
     backdrop-filter: blur(7px);
@@ -328,11 +386,11 @@ input {
     width: min-content;
     background-color: #248e87;
     cursor: pointer;
-    color:rgba(255, 255, 255, 0.63);
+    color: rgba(255, 255, 255, 0.63);
     transition-duration: 0.3s;
 }
 
-#send:hover{
+#send:hover {
     color: black;
     background-color: rgba(0, 240, 236, 0.715);
     box-shadow: 0px 0px 10px cyan;
@@ -362,45 +420,49 @@ input {
 .links a {
     color: rgba(255, 255, 255, 0.433);
 }
+
 .links p {
     color: rgba(255, 255, 255, 0.433);
 }
-.last{
+
+.last {
     padding: 10px;
 }
-.last p{
+
+.last p {
     text-align: center;
     margin-top: 30px;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
 
-.license{
-    display: flex ;
-    flex-direction: row ;
-    width: 90% ;
-    padding : 2%;
+.license {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding: 2%;
     justify-content: space-evenly;
 }
 
-.lic-left{
-    display : flex ;
-    flex-direction : column ;
-    padding : 2%;
+.lic-left {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
     justify-content: space-between;
 }
 
-.lic-right{
-    display : flex ;
-    flex-direction : column  ;
-    padding : 2%;
+.lic-right {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
 }
 
-.lic-right-vals{
-    display : flex ;
-    flex-direction : row;
+.lic-right-vals {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -413,100 +475,102 @@ a{
     filter: invert(1) hue-rotate(180deg) brightness(1.5);
     border-radius: 7px;
 }
+
+
 /*=====================hiding map watermark=================*/
+
 .leaflet-control-attribution {
     display: none !important;
 }
 
-
 @media screen and (max-width: 830px) {
-    #map{
+    #map {
         margin-left: 0px;
         width: calc(100vw - 40px);
         height: 30vh;
         margin-top: 20px;
     }
-    .section-r{
+    .section-r {
         margin-left: 20px;
         margin-right: 20px;
         flex-direction: column;
     }
-    .section-l{
+    .section-l {
         margin-left: 20px;
         margin-right: 20px;
         flex-direction: column-reverse;
     }
-    #intro{
+    #intro {
         flex-direction: column;
     }
-    #scroll_icon{
+    #scroll_icon {
         bottom: 10px;
     }
-    .left{
+    .left {
         max-width: calc(100vw - 40px);
     }
-    .right{
+    .right {
         max-width: calc(100vw - 40px);
     }
-    .right p{
+    .right p {
         margin-left: 0px;
     }
-    .preview{
+    .preview {
         width: calc(100vw - 40px);
         margin: 0px;
         margin-top: 20px;
     }
-    #flowchart{
+    #flowchart {
         width: calc(100vw - 40px);
         margin: 0px;
     }
-    #zoom{
+    #zoom {
         margin-top: 30px;
         max-width: calc(100vw - 40px);
     }
-    #intro{
+    #intro {
         margin-top: 20px;
     }
-    .top_codeit{
+    .top_codeit {
         font-size: xx-large;
     }
-    .typewriter{
+    .typewriter {
         font-size: small;
     }
-    .heading{
+    .heading {
         font-size: x-large;
     }
-    .subheading{
+    .subheading {
         font-size: large;
     }
-    .text{
+    .text {
         font-size: 15px;
         line-height: 20px;
     }
-    #contributeSection{
+    #contributeSection {
         margin-top: 50px;
     }
-    .contributeBtn , .licBtn{
+    .contributeBtn,
+    .licBtn {
         font-size: 15px;
         margin-left: 50%;
         transform: translate(-50%);
     }
-    #github , #lic-logo{
-        height:20px;
+    #github,
+    #lic-logo {
+        height: 20px;
     }
-
-    .license{
-        flex-direction:column;
-    }
-
-    .left_last{
+    .license {
         flex-direction: column;
     }
-    form{
+    .left_last {
+        flex-direction: column;
+    }
+    form {
         width: calc(100vw - 90px);
         margin-top: 40px;
     }
-    .links{
+    .links {
         margin-top: 10px;
     }
 }
