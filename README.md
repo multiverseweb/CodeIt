@@ -7,16 +7,26 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) 
 ![DSA](https://img.shields.io/badge/Data_Structures_&_Algorithms-000000?style=for-the-badge) 
 
+### Project Mentor
+[J VENKATA LAKSHMI SAI ROHITH](https://github.com/Rohith2201)
+
 #### Read the description below and [start contributing](#contribute) now! If you like the project, show some love ❤️ and star the repo! ⭐
 ---
 
 # CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="images/Nomenclature.png" height=40px align=right></a>
 #### Developing for the Developers
 
-![License](https://cdn.prod.website-files.com/5e0f1144930a8bc8aace526c/65dd9eb5aaca434fac4f1c34_License-MIT-blue.svg)
-![GitHub Issues](https://img.shields.io/github/issues/multiverseweb/CodeIt)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/multiverseweb/CodeIt)
-![Stars](https://img.shields.io/github/stars/multiverseweb/CodeIt)
+![Github](https://img.shields.io/github/license/multiverseweb/CodeIt?style=for-the-badge)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb/CodeIt%20&countColor=%2523263759&style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/multiverseweb/CodeIt?style=for-the-badge)
 
 ### Table of Contents
 
