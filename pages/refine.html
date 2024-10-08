@@ -23,9 +23,13 @@
     />
   </head>
 
-
-<body id="body">
-    <button type="button" id="theme" onclick="dark()"><img src="../images/moon.png" class="moon" id="themeLogo"></button>
+  <body id="body">
+    <button type="button" class="theme" id="darkThemeBtn" style="display: none">
+      <img src="../images/moon.png" class="themeLogo" />
+    </button>
+    <button type="button" class="theme" id="lightThemeBtn">
+      <img src="../images/sun.png" class="themeLogo" />
+    </button>
 
     <div class="top-elements">
       <a href="../index.html" class="top-link"
@@ -141,8 +145,7 @@
         <span class="checkmark" id="checkmark"></span>
       </label>
     </div>
-    <button type="button" id="theme" onclick="light()">
-      <img src="../images/moon.png" class="moon" id="themeLogo" />
+
     </button>
     <div class="container">
       <button type="button" id="submit" onclick="fileNameFunction()">
