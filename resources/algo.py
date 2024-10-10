@@ -1,6 +1,8 @@
 lines = []
 while True:
     line = input()
+    if line[-1]==":":
+        line.append("\t")
     if line.strip() == "":
         break
     lines.append(line)
