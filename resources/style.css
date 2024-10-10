@@ -47,12 +47,73 @@ i:hover{
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+  position: relative;
+   /* Add mask for fade effect */
+   -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }
+
+.navbar-container::after {
+  display: none;
+}
+
+/* Right fade effect */
+.fade-wrapper-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 140px;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(28, 28, 28, 0),
+    rgba(28, 28, 28, 0.7) 75%,
+    rgba(28, 28, 28, 1) 100%
+    
+  );
+  z-index: 1;
+  transition: right 0.2s ease;
+}
+
+/* Left Fade Effect */
+.fade-wrapper-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 140px;
+  pointer-events: none;
+  background: linear-gradient(
+    to left,
+    rgba(28, 28, 28, 0),
+    rgba(28, 28, 28, 0.7) 75%,
+    rgba(28, 28, 28, 1) 100%
+  );
+  z-index: 1;
+  transition: left 0.2s ease;
+}
+
+.navbar-container.show-fade::after {
+  opacity: 1;
+} 
 
 #navbar_table {
   margin-top: 15px;
   border: 1px solid rgba(124, 124, 124);
-  border-radius: 20px;
+  border-radius: 0px; 
   display: inline-table;
   min-width: 100%;
 }
@@ -63,7 +124,7 @@ i:hover{
 }
 
 .highlight {
-  position: absolute;
+  position: fixed;
   height: 28px;
   margin-top: 16px;
   width: 0;
@@ -93,6 +154,7 @@ td {
 td a {
   text-decoration: none;
   color: rgb(121, 121, 121);
+  
 }
 
 #current {
@@ -101,6 +163,17 @@ td a {
 
 .navbar-container:hover #current {
   background-color: #00000000;
+}
+
+/* If you have a light theme, you might want to add a media query for light mode */
+@media (prefers-color-scheme: light) {
+  .navbar-container::after {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1) 90%
+    );
+  }
 }
 
 .options {
