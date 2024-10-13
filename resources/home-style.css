@@ -299,12 +299,16 @@ footer {
 form {
     background-color: #4c4c4c2a;
     backdrop-filter: blur(7px);
-    width: 30vw;
-    margin-left: 5vw;
+    width: 25vw;
+    margin-left: 18vw;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0px 0px 10px black;
+    transition: all 0.4s ease;
+}
+.right_last form:hover{
+    transform: scale(0.95);
 }
 
 input {
@@ -340,6 +344,7 @@ input {
 
 .contact {
     width: 40vw;
+    margin-left: 25vh;
 }
 
 .end-logo {
