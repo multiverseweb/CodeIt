@@ -55,7 +55,9 @@
             <td class="nav-item">
               <a href="#contributeSection">Contribute!</a>
             </td>
-            <td class="nav-item"><a href="#feedback">Give Feedback!</a></td>
+            <td class="nav-item">
+              <a href="#feedback">Give Feedback!</a>
+            </td>
             <td class="nav-item">
               <a href="#licenseSection">License</a>
             </td>
@@ -64,6 +66,73 @@
         </table>
       </div>
     </nav>
+    
+    <style>
+      /* Navigation Bar Styling */
+      .navbar {
+        background-color: #333; /* Dark background for clarity */
+        padding: 10px 0;
+        font-family: Arial, sans-serif;
+      }
+    
+      .navbar-container {
+        width: 100%;
+        text-align: center;
+      }
+    
+      #navbar_table {
+        width: 100%;
+        margin: 0 auto;
+      }
+    
+      .nav-item {
+        padding: 10px 15px;
+      }
+    
+      .nav-item a {
+        color: white; /* Change font color to white */
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s ease, font-weight 0.3s ease;
+      }
+    
+      .nav-item a:hover {
+        background-color: #555; /* Darker shade on hover */
+        border-radius: 5px;
+      }
+    
+      /* Highlight current item */
+      #current a {
+        font-weight: bold; /* Bold text for "Home" */
+        color: white;
+        background: none; /* Remove background for "Home" */
+      }
+    
+      /* Highlight for all other items on hover */
+      .highlight {
+        display: none;
+      }
+    
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .navbar-container {
+          width: 100%;
+          padding: 0;
+        }
+    
+        .nav-item {
+          display: block;
+          text-align: center;
+          padding: 10px 0;
+        }
+    
+        #navbar_table {
+          display: block;
+          width: 100%;
+        }
+      }
+    </style>
+    
     <!-- Hamburger for smaller screens -->
     <div class="hamburger" onclick="toggleSidebar()">
       <span class="material-symbols-outlined"> unfold_more </span>
