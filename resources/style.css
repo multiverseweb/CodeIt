@@ -27,9 +27,11 @@ body {
 .gap {
   width: 80px;
 }
-i:hover{
+
+i:hover {
   color: #7c7c7c;
 }
+
 .top-link {
   display: flex;
   color: rgba(124, 124, 124);
@@ -43,12 +45,14 @@ i:hover{
   margin-right: 30px;
 }
 
+/* Container for the navbar */
 .navbar-container {
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
 
+/* Table for the navbar */
 #navbar_table {
   margin-top: 15px;
   border: 1px solid rgba(124, 124, 124);
@@ -57,17 +61,20 @@ i:hover{
   min-width: 100%;
 }
 
+/* Navbar styles */
 .navbar {
   display: inline-block;
   overflow: hidden;
 }
 
+/* Highlight effect */
 .highlight {
   position: absolute;
   height: 28px;
   margin-top: 16px;
   width: 0;
   background-color: #787878;
+  /* Adjust this for better visibility in dark mode */
   transition: all 0.4s ease;
   z-index: -2;
   border-radius: 30px;
@@ -75,33 +82,76 @@ i:hover{
   left: 0;
 }
 
+/* Navigation item styles */
 .nav-item {
   position: relative;
 }
 
+/* Link styles for navigation items */
 .nav-item a {
   mix-blend-mode: difference;
 }
 
+/* Table cell styles */
 td {
   color: rgb(124, 124, 124);
-  padding: 5px 20px 5px 20px;
+  /* Change this to appropriate color for dark mode */
+  padding: 5px 20px;
   transition-duration: 0.5s;
   border-radius: 20px;
 }
 
+/* Link styles for table cells */
 td a {
   text-decoration: none;
   color: rgb(121, 121, 121);
+  /* Change this to appropriate color for dark mode */
 }
 
+/* Current active tab style */
 #current {
   background-color: #787878;
+  /* Adjust this for better visibility */
 }
 
+/* Hover effect for current tab */
 .navbar-container:hover #current {
   background-color: #00000000;
+  /* Keep it transparent or adjust as needed */
 }
+
+/* Dark mode styles */
+.dark-mode .navbar {
+  background-color: #ededed;
+  /* Change navbar background color for dark mode */
+}
+
+.dark-mode td {
+  color: #121212;
+  /* Adjust text color for visibility in dark mode */
+}
+
+.dark-mode td a {
+  color: #121212;
+  /* Adjust link color for visibility in dark mode */
+}
+
+/* Light mode styles */
+.light-mode .navbar {
+  background-color: #121212;
+  /* Change navbar background color for light mode */
+}
+
+.light-mode td {
+  color: #ededed;
+  /* Adjust text color for visibility in light mode */
+}
+
+.light-mode td a {
+  color: #ededed;
+  /* Adjust link color for visibility in light mode */
+}
+
 
 .options {
   width: calc(100vw);
@@ -281,12 +331,14 @@ option {
   height: 30px;
 }
 
-#darkThemeBtn img{
+#darkThemeBtn img {
   filter: invert(0);
 }
-#lightThemeBtn img{
+
+#lightThemeBtn img {
   filter: invert(1);
 }
+
 .container {
   margin-left: 10px;
   display: flex;
@@ -408,12 +460,12 @@ footer {
   box-shadow: 0 0 5px black;
 }
 
-.revisit:hover input ~ .checkmark {
+.revisit:hover input~.checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.revisit input:checked ~ .checkmark {
+.revisit input:checked~.checkmark {
   background-color: red;
 }
 
@@ -504,6 +556,7 @@ footer {
     margin-left: 10px;
   }
 }
+
 /* Hamburger  for smaller screens */
 .hamburger {
   display: none;
@@ -511,26 +564,32 @@ footer {
   top: 15px;
   left: 130px;
 }
+
 .hamburger:hover {
   cursor: pointer;
   color: #ffffff;
 }
+
 .material-symbols-outlined.light-theme {
   color: #555555;
 }
+
 .material-symbols-outlined.light-theme:hover {
   color: #0c0c0c;
 }
+
 .material-symbols-outlined {
   font-size: 30px !important;
   cursor: pointer;
   color: #ebebebb7;
 }
+
 .material-symbols-outlined:hover {
   font-size: 35px;
   cursor: pointer;
   color: #ffffff;
 }
+
 /* Sidebar styling */
 .sidebar {
   top: -100%;
@@ -544,15 +603,19 @@ footer {
   padding-top: 90px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
+
 .sidebar.light {
   background-color: #ffffff;
 }
+
 .sidebar {
   background-color: #111;
 }
+
 .sidebar.show {
   top: 0;
 }
+
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -562,18 +625,21 @@ footer {
   transition: background-color 0.3s, box-shadow 0.3s;
   padding-bottom: 20px;
 }
+
 .sidebar.light a:hover {
   color: #020202;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 8px;
 }
+
 .sidebar a:hover {
   color: #f1f1f1;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 8px;
 }
+
 .sidebar .close-btn {
   position: absolute;
   top: 10px;
@@ -583,22 +649,27 @@ footer {
   transition: transform 0.3s;
   color: #acacac !important;
 }
+
 .close-btn:hover {
   transform: rotate(180deg);
   color: #7c7c7c !important;
 }
+
 @media (max-width: 400px) {
   .hamburger {
-    display: block; /* Show hamburger */
+    display: block;
+    /* Show hamburger */
   }
 
   .navbar-container {
     display: none;
   }
+
   a.top-link {
     width: 50px;
     z-index: 1001;
   }
+
   .logo {
     position: relative;
     z-index: 1001;
