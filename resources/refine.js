@@ -122,7 +122,10 @@ function runAlgorithm() {
         outputCode = refineJsCode(inputCode, platform);
     } else if (language === "C") {
         outputCode = refineCCode(inputCode, platform);
-    } else {
+    }else if(language=="SQL"){
+        outputCode=refineSqlCode(inputCode)
+    }
+    else {
         outputCode = "Unsupported language selected.";
     }
 
@@ -130,7 +133,7 @@ function runAlgorithm() {
 }
 
 // Refine Python Code
-function refinePythonCode(inputCode, platform) {
+function refinePythonCode(inputCode) {
     let lines = inputCode.split('\n');
     let outputCode = "";
     let inTripleQuotes = false;
@@ -158,7 +161,7 @@ function refinePythonCode(inputCode, platform) {
 }
 
 // Refine C++ Code
-function refineCppCode(inputCode, platform) {
+function refineCppCode(inputCode) {
     let lines = inputCode.split('\n');
     let outputCode = "";
     let inClass = false;
@@ -236,7 +239,7 @@ int main() {
 }
 
 // Refine Java Code
-function refineJavaCode(inputCode, platform) {
+function refineJavaCode(inputCode) {
     let lines = inputCode.split('\n');
     let outputCode = "";
     let inClass = false;
@@ -303,7 +306,7 @@ public class Main {
 }
 
 // Refine JavaScript Code
-function refineJsCode(inputCode, platform) {
+function refineJsCode(inputCode) {
     let lines = inputCode.split('\n');
     let outputCode = "";
     let functionName = "";
@@ -343,7 +346,7 @@ function refineJsCode(inputCode, platform) {
 }
 
 // Refine C Code
-function refineCCode(inputCode, platform) {
+function refineCCode(inputCode) {
     let lines = inputCode.split('\n');
     let outputCode = "";
     let functionName = "";
@@ -400,8 +403,34 @@ int main() {
 
     return outputCode;
 }
+// New function for SQL
 
-function copyCode() {
+
+function refineSqlCode(inputCode) {
+    let outputCode = inputCode.trim();
+    
+    // Attempt to complete partial queries
+    if (!outputCode.toLowerCase().includes('select')) {
+        outputCode = `SELECT *\nFROM (${outputCode}) AS subquery`;
+    }
+    
+    // Add common table expressions if not present
+    if (!outputCode.toLowerCase().includes('with')) {
+        outputCode = `WITH cte AS (\n  ${outputCode.replace(/\n/g, '\n  ')}\n)\nSELECT *\nFROM cte`;
+    }
+    
+    // Add comments and formatting
+    outputCode = `-- SQL Query\n-- \n${outputCode}`;
+    
+    // Add explain plan
+    outputCode += '\n\n-- Explain Plan\nEXPLAIN ANALYZE\n' + outputCode;
+    
+    // Add index suggestion comment
+    outputCode += '\n\n-- Consider adding indexes on frequently used columns in WHERE and JOIN conditions';
+  
+    return outputCode;
+}
+ function copyCode() {
     const outputCode = document.getElementById('output_code').value;
     copyToClipboard(outputCode, 'copy');
 }
