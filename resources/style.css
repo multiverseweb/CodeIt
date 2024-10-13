@@ -121,7 +121,7 @@ td a {
 }
 
 /* Dark mode styles */
-.dark-mode .navbar {
+.dark-mode .navbar {    
   background-color: #ededed;
   /* Change navbar background color for dark mode */
 }
