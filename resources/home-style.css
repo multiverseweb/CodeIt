@@ -286,23 +286,26 @@ body{
 footer {
     display: flex;
     flex-direction: column;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 .left_last{
     display: flex;
     flex-direction: row;
+    margin: 2px;
+    background-color: #000;
+    
 }
 #last_link{
-    background-color: #00000000;
+    background-color: #1f1d1d00;
     margin-top:16px;
     margin-left: 150px;
 }
 form {
-    background-color: #4c4c4c2a;
+    background-color: #0808082a;
     backdrop-filter: blur(7px);
     width: 30vw;
-    margin-left: 5vw;
+    margin-left: 14vw;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
@@ -311,7 +314,7 @@ form {
 
 input {
     padding-left: 10px;
-    color: white;
+    color: rgb(241, 234, 234);
     background-color: #76767639;
     border: 0.1px solid rgba(255, 255, 255, 0.193);
     width: calc(100% - 10px);
@@ -384,7 +387,7 @@ a{
     flex-direction: row ;
     width: 90% ;
     padding : 2%;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .lic-left{
@@ -392,20 +395,31 @@ a{
     flex-direction : column ;
     padding : 2%;
     justify-content: space-between;
+    
+}
+.licBtn
+{
+    margin-left: 4px;
 }
 
 .lic-right{
     display : flex ;
     flex-direction : column  ;
-    padding : 2%;
+   
+    margin-left: 130px;
 }
 
 .lic-right-vals{
     display : flex ;
     flex-direction : row;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-right: 15px;
 }
-
+.lic-con
+{
+    justify-content: space-around;
+    margin-left:80px;
+}
 #map {
     width: 45vw;
     margin-left: 30px;
