@@ -25,3 +25,31 @@
     width: 40vw; /* Adjust the percentage or set a fixed width */
     height: 70vh; /* Fixed height */
 }
+
+.alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .alert-content {
+    margin-bottom: 20px;
+  }
+  
+  .alert-content h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .alert-content p {
+    font-size: 14px;
+    color: #666;
+  }
