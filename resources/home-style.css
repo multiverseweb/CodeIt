@@ -228,7 +228,8 @@ body{
     margin-left: 100px;
     background-color: #00000000;
     border: 1px solid white;
-    border-radius: 2px;
+    border-radius: 10px;
+    /* border-radius: 2px; */
     color: white;
     font-size: 20px;
     font-family: consolas;
@@ -242,10 +243,11 @@ body{
     margin-top: -3px;
     filter: invert(1);
     transition-duration: 0.3s;
+
 }
 
 .contributeBtn:hover , .licBtn:hover{
-    background-color: white;
+    background-color: rgb(146, 133, 133);
     color: black;
 }
 .contributeBtn:hover #github , .licBtn:hover #lic-logo{
