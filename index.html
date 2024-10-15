@@ -226,10 +226,16 @@
       </div>
 
       <div class="right_last">
-        <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback" onsubmit="return validateFeedback()">
-          <p>Let Us Know Your Thoughts!</p>
-          <input type="text" name="Name" placeholder="Your Name" required />
-          <input type="email" name="Email" placeholder="Your Email ID" required />
+        <!-- New "Let Us Know Your Thoughts!" form -->  
+<div class="feedback-form">  
+  <h2>Share Your Thoughts</h2>  
+  <p>We value your opinion and would love to hear your thoughts on CodeIt!</p>  
+    
+   <input type="text" id="name" name="Name" placeholder="Your Name" required>  
+      
+   <input type="email" id="email" name="Email" placeholder="Your Email ID" required>  
+      
+          
           <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)" required oninput="checkFeedbackLength(this)" />
           <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters long.</span>
           <button type="submit" id="send">Send</button>
