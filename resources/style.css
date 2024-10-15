@@ -50,13 +50,33 @@ i:hover {
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+  position: relative;
+   /* Add mask for fade effect */
+   -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+.navbar-container::after {
+  display: none;
 }
 
 /* Table for the navbar */
 #navbar_table {
   margin-top: 15px;
   border: 1px solid rgba(124, 124, 124);
-  border-radius: 20px;
+  border-radius: 0px; 
   display: inline-table;
   min-width: 100%;
 }
@@ -69,7 +89,7 @@ i:hover {
 
 /* Highlight effect */
 .highlight {
-  position: absolute;
+  position: fixed;
   height: 28px;
   margin-top: 16px;
   width: 0;
