@@ -219,7 +219,8 @@
           <a class="subheading" href="index.html" id="last_link">CodeIt</a>
         </div>
         <h3 style="margin-left: 50px;margin-top: 80px;">Our Social Media Handles</h3>
-        <div style="font-size: 35px;width: 200px; margin-left: 80px;margin-top: 30px;display: flex; justify-content: space-between;">
+        <div
+          style="font-size: 35px;width: 200px; margin-left: 80px;margin-top: 30px;display: flex; justify-content: space-between;">
           <a href="https://github.com/multiverseweb/CodeIt"><i class="fa-brands fa-github"></i></a>
           <a href="https://discord.gg/nhvyaxHU"><i class="fa-brands fa-discord"></i></a>
           <a href="mailto:multiverse.letter@gmail.com"><i class="fa-solid fa-envelope"></i></a>
@@ -227,17 +228,20 @@
       </div>
 
       <div class="right_last">
-        <form name="CodeIt Reviews" action="POST" data-netlify="true" onsubmit="return validateFeedback()">
+        <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback"
+          onsubmit="return validateFeedback()">
           <p>Let Us Know Your Thoughts!</p>
           <input type="text" name="Name" placeholder="Your Name" required />
           <input type="email" name="Email" placeholder="Your Email ID" required />
-          <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)" required oninput="checkFeedbackLength(this)" />
-          <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters long.</span>
+          <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)" required
+            oninput="checkFeedbackLength(this)" />
+          <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters
+            long.</span>
           <button type="submit" id="send">Send</button>
         </form>
       </div>
 
-      </div>
+    </div>
   </footer>
 
   <div class="license" id="licenseSection">
@@ -251,7 +255,8 @@
         <h4>This is a super flexible license, allowing you to freely use, modify, and share the project.</h4>
         <br>
         <p>To know more :- </p>
-        <a class="licBtn" href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">Click<img src="./images/license.png" id="lic-logo"></a>
+        <a class="licBtn" href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">Click<img
+            src="./images/license.png" id="lic-logo"></a>
       </div>
     </div>
 
@@ -259,13 +264,13 @@
       <div class="lic-right-vals">
         <div class="lic-per">
           <h3 class="subheading">Permissions</h3>
-          <br> 
+          <br>
           <br>
           <h4><i class="fa fa-check"></i> Commercial use</h4>
           <br>
           <h4><i class="fa fa-check"></i> Modification</h4>
           <br>
-          <h4><i class="fa fa-check" ></i> Distribution</h4>
+          <h4><i class="fa fa-check"></i> Distribution</h4>
           <br>
           <h4><i class="fa fa-check"></i> Private use</h4>
         </div>
@@ -273,9 +278,9 @@
           <h3 class="subheading">Limitations</h3>
           <br>
           <br>
-          <h4><i class="fa fa-times" ></i> Liability</h4>
+          <h4><i class="fa fa-times"></i> Liability</h4>
           <br>
-          <h4><i class="fa fa-times" ></i> Warranty</h4>
+          <h4><i class="fa fa-times"></i> Warranty</h4>
         </div>
       </div>
 
@@ -288,7 +293,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="last">
     <p>
       Designed & Developed by Tejas Gupta<br /><a
@@ -300,7 +305,6 @@
       </button>
       <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"><img
           src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2" /></a>
-
     </div>
     <script src="resources/homeScript.js"></script>
     <script src="resources/common_functions.js"></script>
@@ -315,13 +319,15 @@
           input.setCustomValidity('');
         }
       }
-      
+
       function validateFeedback() {
         var feedback = document.forms["CodeIt Reviews"]["Feedback"];
         checkFeedbackLength(feedback);
         return feedback.value.length >= 10;
       }
     </script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/10/13/06/20241013063603-2RD31DW1.js"></script>
 </body>
 
 </html>
