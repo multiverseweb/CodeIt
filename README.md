@@ -29,7 +29,9 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/multiverseweb/CodeIt?style=for-the-badge)
 
 ### Table of Contents
+
 | [About CodeIt](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Use CodeIt](#use-codeit) | [Contribute](#contribute) |
+|:--:|:--:|:--:|:--:|:--:|:--:|
 
 ## About
 **CodeIt** is a software solution tool designed to enhance the coding experience for developers. It addresses common challenges faced on coding platforms like LeetCode and offers features to improve code management, security, and performance analysis.
