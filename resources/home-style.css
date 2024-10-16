@@ -90,6 +90,8 @@ body{
 #top{
     opacity: 0;
     transition-duration: 0.3s;
+    bottom: 90px;
+    right: 27px;
 }
 .top img{
     height: 20px;
