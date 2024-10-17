@@ -38,6 +38,8 @@
     </a>
     <nav class="navbar">
       <div class="navbar-container">
+        <div class="fade-wrapper-left"></div>
+        <div class="fade-wrapper-right"></div>
         <table id="navbar_table">
           <tr>
             <td class="nav-item" id="current">
@@ -57,7 +59,7 @@
             </td>
             <td class="nav-item"><a href="#feedback">Give Feedback!</a></td>
             <td class="nav-item">
-              <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">License</a>
+              <a href="#licenseSection">License</a>
             </td>
             <div class="highlight"></div>
           </tr>
@@ -206,6 +208,7 @@
           src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png" id="github"></a>
     </div>
   </div>
+  <div id="feedback"></div>
 
   <div class="design_line"></div>
   <footer>
@@ -217,14 +220,14 @@
         </div>
         <h3 style="margin-left: 50px;margin-top: 80px;">Our Social Media Handles</h3>
         <div style="font-size: 35px;width: 200px; margin-left: 80px;margin-top: 30px;display: flex; justify-content: space-between;">
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-discord"></i></a>
-          <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://github.com/multiverseweb/CodeIt"><i class="fa-brands fa-github"></i></a>
+          <a href="https://discord.gg/nhvyaxHU"><i class="fa-brands fa-discord"></i></a>
+          <a href="mailto:multiverse.letter@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
 
       <div class="right_last">
-        <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback">
+        <form name="CodeIt Reviews" action="POST" data-netlify="true" onsubmit="return validateFeedback()">
           <p>Let Us Know Your Thoughts!</p>
           <div class="form">
           <div class="user">
@@ -237,13 +240,65 @@
           </div>
           <div class="feed-back">
           <i class="fa-solid fa-comment"></i>
-          <input name="Feedback" placeholder="Your Feedback" required></input>
+          <input name="Feedback" placeholder="Your Feedback (minimum 10 characters) required oninput="checkFeedbackLength(this)" />
+          <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters long.</span>></input>
           </div>
           <button type="submit" id="send">Send</button>
         </form>
 </div>
+
       </div>
   </footer>
+
+  <div class="license" id="licenseSection">
+    <div class="lic-left">
+      <div class="lic-heading">
+        <h2 class="heading">License</h2>
+      </div>
+      <div class="lic-content">
+        <br>
+        <h4>CodeIt is licensed under the MIT License.</h4>
+        <h4>This is a super flexible license, allowing you to freely use, modify, and share the project.</h4>
+        <br>
+        <p>To know more :- </p>
+        <a class="licBtn" href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">Click<img src="./images/license.png" id="lic-logo"></a>
+      </div>
+    </div>
+
+    <div class="lic-right">
+      <div class="lic-right-vals">
+        <div class="lic-per">
+          <h3 class="subheading">Permissions</h3>
+          <br> 
+          <br>
+          <h4><i class="fa fa-check"></i> Commercial use</h4>
+          <br>
+          <h4><i class="fa fa-check"></i> Modification</h4>
+          <br>
+          <h4><i class="fa fa-check" ></i> Distribution</h4>
+          <br>
+          <h4><i class="fa fa-check"></i> Private use</h4>
+        </div>
+        <div class="lic-lim">
+          <h3 class="subheading">Limitations</h3>
+          <br>
+          <br>
+          <h4><i class="fa fa-times" ></i> Liability</h4>
+          <br>
+          <h4><i class="fa fa-times" ></i> Warranty</h4>
+        </div>
+      </div>
+
+      <div class="lic-con">
+        <br>
+        <h3 class="subheading">Condition</h3>
+        <br>
+        <br>
+        <p>Keep the original copyright notice and license in any copies or modified versions</p>
+      </div>
+    </div>
+  </div>
+  
   <div class="last">
     <p>
       Designed & Developed by Tejas Gupta<br /><a
@@ -259,6 +314,36 @@
     </div>
     <script src="resources/homeScript.js"></script>
     <script src="resources/common_functions.js"></script>
+    <script>
+      function checkFeedbackLength(input) {
+        var errorSpan = document.getElementById('feedbackError');
+        if (input.value.length < 10) {
+          errorSpan.style.display = 'block';
+          input.setCustomValidity('Feedback must be at least 10 characters long.');
+        } else {
+          errorSpan.style.display = 'none';
+          input.setCustomValidity('');
+        }
+      }
+      
+      function validateFeedback() {
+        var feedback = document.forms["CodeIt Reviews"]["Feedback"];
+        checkFeedbackLength(feedback);
+        return feedback.value.length >= 10;
+      }
+    </script>
+    <script>
+      window.embeddedChatbotConfig = {
+      chatbotId: "pevr_-Kc8RpvaFvi07iVN",
+      domain: "www.chatbase.co"
+      }
+      </script>
+      <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="pevr_-Kc8RpvaFvi07iVN"
+      domain="www.chatbase.co"
+      defer>
+      </script>
 </body>
 
 </html>
