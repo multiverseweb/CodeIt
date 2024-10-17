@@ -604,3 +604,23 @@ footer {
     z-index: 1001;
   }
 }
+
+div.form div{
+  position:relative;
+
+}
+
+div .form div i{
+  position:absolute;
+  left:10px;
+  top:70%;
+  transform:translateY(-50%);
+  color:#999;
+}
+
+div.form div input{
+  padding-left:35px;
+  height:30px;
+  width:100%;
+  box-sizing: border-box;
+}
