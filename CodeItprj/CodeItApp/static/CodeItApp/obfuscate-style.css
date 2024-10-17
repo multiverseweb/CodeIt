@@ -1,0 +1,60 @@
+.codes {
+    font-size: 1rem;
+    resize: horizontal;
+    min-height: 70vh;
+    margin: 10px;
+    background-color: #00000000;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+    box-sizing: border-box;
+}
+
+#normal_code {
+    color: rgba(255, 170, 0, 0.756);
+    width: 50vw;
+}
+
+#obfuscated_code {
+    color: rgba(0, 255, 204, 0.619);
+    resize: none;
+}
+
+.ObfuscateButtons{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#obfuscateButton:hover {
+    outline: 1px solid gold;
+    box-shadow: 0px 0px 20px gold;
+    animation: hue;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#deobfuscateButton:hover {
+    outline: 1px solid gold;
+    box-shadow: 0px 0px 20px gold;
+    animation: hue;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.note{
+    margin-top: 5px;
+    margin-left: 12px;
+    color: rgb(124, 124, 124);
+}

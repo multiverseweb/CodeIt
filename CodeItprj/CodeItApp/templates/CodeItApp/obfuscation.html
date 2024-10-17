@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeIt</title>
+    <link rel="stylesheet" href="{% static 'CodeItApp/obfuscate-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'CodeItApp/style.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'CodeItApp/images/Nomenclature.png' %}"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body id="body">
+    <button type="button" class="theme" id="darkThemeBtn" style="display: none">
+      <img src="{% static 'CodeItApp/images/moon.png' %}" class="themeLogo" />
+    </button>
+    <button type="button" class="theme" id="lightThemeBtn">
+      <img src="{% static 'CodeItApp/images/sun.png' %}" class="themeLogo" />
+    </button>
+
+    <div class="top-elements">
+      <a href="CodeItApp/index.html" class="top-link"
+        ><img
+          src="{% static 'CodeItApp/images/Nomenclature.png'%}"
+          alt="logo"
+          class="logo"
+          id="logo"
+        />
+        <p class="codeit">CodeIt</p>
+      </a>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <table id="navbar_table">
+            <tr>
+              <td class="nav-item">
+                <a href="{% url 'index' %}" class="home">Home</a>
+              </td>
+              <td class="nav-item">
+                <a href="{% url 'refiner' %}" class="competitive">Code Refiner</a>
+              </td>
+              <td class="nav-item" id="current">
+                <a href="{% url 'obfuscate' %}" class="obfuscation"
+                  >Code Obfuscator</a
+                >
+              </td>
+              <td class="nav-item">
+                <a href="{% url 'timecomplexity' %}" class="time"
+                  >Time Complexity Analyser</a
+                >
+              </td>
+              <td class="nav-item">
+                <a href="{% url 'index' %}#contributeSection">Contribute!</a>
+              </td>
+              <td class="nav-item">
+                <a href="{% url 'index' %}#feedback">Give Feedback!</a>
+              </td>
+              <td class="nav-item">
+                <a
+                  href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
+                  >License</a
+                >
+              </td>
+              <div class="highlight"></div>
+            </tr>
+          </table>
+        </div>
+      </nav>
+      <!-- Hamburger for smaller screens -->
+      <div class="hamburger" onclick="toggleSidebar()">
+        <span class="material-symbols-outlined"> unfold_more </span>
+      </div>
+      <!-- Sidebar structure -->
+      <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <a href="CodeItApp/index.html" class="home">Home</a>
+        <a href="CodeItApp/refine.html" class="competitive">Code Refiner</a>
+        <a href="CodeItApp/obfuscation.html" class="obfuscation">Code Obfuscator</a>
+        <a href="CodeItApp/timeComplexity.html" class="time">Time Complexity Analyser</a>
+        <a href="../index.html#contributeSection">Contribute!</a>
+        <a href="../index.html#feedback">Give Feedback!</a>
+        <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
+          >License</a
+        >
+      </div>
+
+      <div class="gap"></div>
+    </div>
+    <div class="ObfuscateButtons">
+      <button id="obfuscateButton" class="btn">Obfuscate</button>
+      <button id="deobfuscateButton" class="btn">Deobfuscate</button>
+      <button type="button" id="copyNormal" class="btn">
+        Copy Normal Code
+      </button>
+      <button type="button" id="copyObfuscated" class="btn">
+        Copy Obfuscated Code
+      </button>
+      <button onclick="clearText()" class="btn">Clear Code</button>
+    </div>
+    <div class="note">
+      <font style="color: rgb(255, 68, 68)">IMPORTANT: </font><br />- Avoid
+      using
+      <font style="background-color: rgba(255, 191, 0, 0.836); color: black"
+        >'eval'</font
+      >
+      with untrusted content, as it can be a security risk.<br />-
+      <font style="background-color: rgba(255, 191, 0, 0.836); color: black"
+        >Do not</font
+      >
+      alter the obfuscated code.
+    </div>
+
+    <div class="code">
+      <textarea
+        id="normal_code"
+        class="codes"
+        placeholder="Deobfuscated code goes here..."
+        spellcheck="false"
+      ></textarea>
+      <textarea
+        id="obfuscated_code"
+        class="codes"
+        placeholder="Obfuscated code goes here..."
+        spellcheck="false"
+      ></textarea>
+    </div>
+
+    <footer>
+      <p class="mistakes">
+        CodeIt can make mistakes. Check the code before implementing it.
+      </p>
+      <div class="links">
+        <button class="footer_logo" onclick="copylink()" id="link">
+          <img
+            src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png"
+            alt=""
+          />
+        </button>
+        <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"
+          ><img src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2"
+        /></a>
+      </div>
+    </footer>
+    <script src="{% static 'CodeItApp/resources/obfuscate-script.js'%}" defer></script>
+    <script src="{% static 'CodeItApp/resources/common_functions.js'%}"></script>
+  </body>
+</html>
