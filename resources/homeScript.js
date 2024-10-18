@@ -1,5 +1,5 @@
-// List of cities
-var cities = ["Pune", "Moradabad", "Dehradun", "Ujjain", "Vijayawada", "Rampur", "Sydney", "Aligarh", "New Delhi", "Coimbatore", "Dibrugarh", "Varanasi"];
+//list of cities
+var cities = ["Pune", "Moradabad", "Dehradun","Ujjain","Vijaywada","Rampur","Sydney","Aligarh","Delhi","Coimbatore","Dibrugarh","Varanasi","New Delhi","Chennai"];
 
 // Scroll to the top of the page
 function topFunction() {
