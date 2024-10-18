@@ -294,6 +294,7 @@ footer {
 .left_last{
     display: flex;
     flex-direction: row;
+    justify-content: right;
 }
 #last_link{
     background-color: #00000000;
@@ -303,12 +304,16 @@ footer {
 form {
     background-color: #4c4c4c2a;
     backdrop-filter: blur(7px);
-    width: 30vw;
+    width: 25vw;
     margin-left: 5vw;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0px 0px 10px black;
+    transition: all 0.4s ease;
+}
+.right_last form:hover{
+    transform: scale(0.99);
 }
 
 input {
