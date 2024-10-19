@@ -26,10 +26,10 @@
     <img src="images/top.png" alt="" />
   </button>
   <button type="button" class="theme" id="darkThemeBtn" style="display: none;">
-    <img src="./images/moon.png" class="themeLogo" />
+    <img src="/images/moon.png" class="themeLogo" />
   </button>
   <button type="button" class="theme" id="lightThemeBtn">
-    <img src="./images/sun.png" class="themeLogo" />
+    <img src="/images/sun.png" class="themeLogo" />
   </button>
 
   <div class="top-elements">
@@ -303,7 +303,7 @@
   <div class="last">
     <p>
       Designed & Developed by Tejas Gupta<br /><a
-        href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; 2024 Tejas Gupta</a>
+        href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; <span id="copyright">2000</span> Tejas Gupta</a>
     </p>
     <div class="links">
       <button class="footer_logo" onclick="copylink()" id="link">
@@ -344,6 +344,9 @@
       chatbotId="pevr_-Kc8RpvaFvi07iVN"
       domain="www.chatbase.co"
       defer>
+      </script>
+      <script>
+        document.getElementById("copyright").textContent = new Date().getFullYear();
       </script>
 </body>
 
