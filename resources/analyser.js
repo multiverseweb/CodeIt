@@ -161,10 +161,27 @@ function analyzeTimeComplexity() {
     "result"
   ).innerText = `Estimated Time Complexity: ${result}`;
   highlightComplexityLine(complexityType); // Highlight the selected line
-}
+   // Create a custom alert message
+   const alertBox = document.createElement("div");
+   alertBox.classList.add("alert-box");
+   alertBox.innerHTML = `
+     <div class="alert-content">
+       <h2>Time Complexity Analysis</h2>
+       <p>Result: ${result}</p>
+     </div>
+   `;
+   document.body.appendChild(alertBox);
+ 
+   // Add a timeout to remove the alert message after 3 seconds
+   setTimeout(() => {
+     alertBox.remove();
+   }, 3300);
+ }
+
 
 // Initialize the chart on page load
 document.addEventListener("DOMContentLoaded", function () {
   // Your analyser.js logic goes here
   initializeComplexityChart();
 });
+
