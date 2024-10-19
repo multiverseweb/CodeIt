@@ -115,3 +115,27 @@ function feedbackVerify() {
 
 // Call the feedbackVerify function to set up the event listener
 feedbackVerify();
+
+function checkFeedbackLength(input) {
+    var errorSpan = document.getElementById('feedbackError');
+    if (input.value.length < 10) {
+      errorSpan.style.display = 'block';
+      input.setCustomValidity('Feedback must be at least 10 characters long.');
+    } else {
+      errorSpan.style.display = 'none';
+      input.setCustomValidity('');
+    }
+  }
+
+  function validateFeedback() {
+    var feedback = document.forms["CodeIt Reviews"]["Feedback"];
+    checkFeedbackLength(feedback);
+    return feedback.value.length >= 10;
+  }
+
+  window.embeddedChatbotConfig = {
+    chatbotId: "pevr_-Kc8RpvaFvi07iVN",
+    domain: "www.chatbase.co"
+  }
+  
+  document.getElementById("copyright").textContent = new Date().getFullYear();
