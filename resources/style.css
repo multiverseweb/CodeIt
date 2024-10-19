@@ -677,3 +677,30 @@ footer {
     z-index: 1001;
   }
 }
+div.form div{
+  position:relative;
+}
+
+  div.form div i{
+    position:absolute;
+    left:10px;
+    top:70%;
+    transform:translateY(-50%);
+    color:#999;
+  }
+  
+  
+  div.form input{
+    padding-left:35px;
+    height:30px;
+    height:40px;
+    width:100%;
+    box-sizing: border-box;
+  }
+  div div.feed-back i{
+    position:absolute;
+    left:10px;
+    top:40px;
+    transform:translateY(-50%);
+    color:#999;
+  }
