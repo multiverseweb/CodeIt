@@ -526,3 +526,71 @@ a{
         margin-top: 10px;
     }
 }
+/* Container Styling */
+.right_last {
+  
+    padding: 20px;
+    border-radius: 8px; /* Smooth rounded edges */
+    box-shadow: 0 4px 8px rgba(177, 165, 165, 0.1); /* Subtle shadow for depth */
+}
+
+/* Text Styling */
+.right_last p {
+    color: #fcfafa; /* Dark color for contrast in light mode */
+    font-size: 18px; /* Slightly larger font */
+    font-weight: bold; /* Emphasize the header */
+    margin-bottom: 15px; /* Add spacing below the text */
+}
+
+/* Input Field Styling */
+.right_last input[type="text"],
+.right_last input[type="email"],
+.right_last input[name="Feedback"] {
+    width: 30%/* Full width inputs */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-size: 10px;
+    color: #837777; /* Ensure text is visible */
+    background-color: #fff;
+}
+
+/* Input Focus Styling */
+.right_last input[type="text"]:focus,
+.right_last input[type="email"]:focus,
+.right_last input[name="Feedback"]:focus {
+    border-color: #007bff; /* Highlight input on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Error Message Styling */
+#feedbackError {
+    color: #ff5457;
+    font-size: 12px;
+    display: none; /* Displayed conditionally via JavaScript */
+}
+
+/* Button Styling */
+#send {
+    background-color: #83c9e9; /* Primary blue button */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button Hover Effect */
+#send:hover {
+    background-color: #f3f5f7; /* Darker shade on hover */
+}
+
+.contact h3 {
+    color: var(--text-color); /* Ensure it uses the text color variable */
+    font-weight: bold; /* Make it more prominent */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle shadow for better visibility */
+  }
+  
