@@ -272,7 +272,7 @@ body{
 
 .design_line {
     height: 1px;
-    width: 50vw;
+    width: 80vw;
     margin-left: calc(50vw + 15px);
     transform: translate(-50%);
     margin-bottom: 20px;
@@ -290,18 +290,18 @@ footer {
 .left_last{
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: flex-end;
 }
 #last_link{
     background-color: #00000000;
     margin-top:16px;
-    margin-left: 150px;
+    margin-left: 200px;
 }
 form {
     background-color: #4c4c4c2a;
     backdrop-filter: blur(7px);
     width: 25vw;
-    margin-left: 5vw;
+    margin-left:5vh ;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
@@ -351,7 +351,7 @@ input {
     position: absolute;
     height: 40px;
     margin-top: 13px;
-    margin-left: 100px;
+    margin-left: 150px;
 }
 
 .name {
