@@ -1,0 +1,83 @@
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#error-text{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+}
+
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.error-number {
+  font-size: 15rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.error-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 40%;
+  margin: 0 3rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  transform: scale(1.26);
+}
+
+.go-back-btn {
+  background-color: #787878af;
+  box-shadow: 0 0 10px black;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.go-back-btn:hover {
+  background-color: #1d1d1d;
+}
+
+@media (max-width: 768px) {
+  .error-number {
+    font-size: 8rem;
+  }
+
+  .error-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 1rem;
+  }
+}

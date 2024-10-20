@@ -11,12 +11,46 @@ Read the description below and start contributing now! If you like the project, 
 CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="images/Nomenclature.png" height=40px align=right></a>
 Developing for the Developers
 
+![Github](https://img.shields.io/github/license/multiverseweb/CodeIt?style=for-the-badge)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb/CodeIt%20&countColor=%2523263759&style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/multiverseweb/CodeIt?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/multiverseweb/CodeIt?style=for-the-badge)
 
-Featured In
-<table> <tr> <th>Event Logo</th> <th>Event Name</th> <th>Event Description</th> </tr> <tr> <td><img src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png#gh-dark-mode-only" width="200" height="auto" loading="lazy" alt="GSSoC Ext 24"/></td> <td>GirlScript Summer of Code Ext 2024</td> <td>GSSoC Ext is a one-month-long open-source program by the GirlScript Foundation that runs from October 1 to November 10, 2024.</td> </tr> <tr> <td><img src="https://cdn.prod.website-files.com/63bc83b29094ec80844b6dd5/66fc35d92c74c4e4103f3673_Flyte-at-Hacktoberfest-2024.png" width="200" height="auto" loading="lazy" alt="Hacktoberfest 24"/></td> <td>Hacktoberfest 2024</td> <td>Hacktoberfest is an annual celebration of open-source software development. It's a month-long event encouraging developers to contribute to open-source projects.</td> </tr> </table>
-Table of Contents
-About CodeIt	Key Features	Preview	Benefits	Use CodeIt	Contribute
-About
+
+
+## Featured In
+
+<table>
+<tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+    </tr>
+    <tr>
+        <td><img src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png#gh-dark-mode-only" width="200" height="auto" loading="lazy" alt="GSSoC Ext 24"/></td>
+        <td>GirlScript Summer of Code Ext 2024</td>
+        <td>GSSOC Ext is a one-month-long open-source program by the GirlScript Foundation that runs from October 1 to November 10, 2024</td> 
+    </tr>
+   <tr>
+        <td><img src="https://cdn.prod.website-files.com/63bc83b29094ec80844b6dd5/66fc35d92c74c4e4103f3673_Flyte-at-Hacktoberfest-2024.png" width="200" height="auto" loading="lazy" alt="Hacktoberfest 24"/></td>
+        <td>Hacktoberfest 2024</td>
+        <td>Hacktober Fest is an annual celebration of open-source software development. It's a month-long event encouraging developers to contribute to open-source projects.</td> 
+    </tr>
+</table>
+
+### Table of Contents
+
+| [About CodeIt](#about) | [Key Features](#key-features) | [Preview](#preview) | [Benefits](#benefits) | [Use CodeIt](#use-codeit) | [Contribute](#contribute) |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+
+## About
 CodeIt is a software solution tool designed to streamline and enhance the coding experience for developers. It addresses several common challenges faced when working with coding platforms, such as LeetCode, and offers a range of features to improve code management, security, and performance analysis.
 
 Key Features

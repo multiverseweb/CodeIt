@@ -111,7 +111,98 @@ function highlightComplexityLine(complexityType) {
   window.complexityChart.update(); // Update the chart to apply changes
 }
 
+// Function to analyze time complexity and display symbolic O(n^x)
+function analyzeTimeComplexity() {
+  const code = document.getElementById("time_code").value;
+  const codeLines = code.split("\n");
+
+  const loopPattern = /\b(for|while)\b/;
+  const recursivePattern = /\bfunction\s+(\w+)\s*\(.*\)\s*{[^}]*\1\s*\(/;
+  const sortingPattern = /\bsort\(|sorted\(/;
+  const logarithmicPattern = /\bbinary_search\(|Math\.log\b/;
+
+  let loopCount = 0;
+  let recursiveCount = 0;
+  let sortingCount = 0;
+  let logarithmicCount = 0;
+  let nestedLoopDepth = 0;
+
+  let currentDepth = 0;
+
+  for (let line of codeLines) {
+    line = line.trim();
+
+    if (recursivePattern.test(code)) {
+      recursiveCount++;
+    }
+
+    if (sortingPattern.test(line)) {
+      sortingCount++;
+    }
+
+    if (logarithmicPattern.test(line)) {
+      logarithmicCount++;
+    }
+
+    if (loopPattern.test(line)) {
+      loopCount++;
+      currentDepth++;
+      nestedLoopDepth = Math.max(nestedLoopDepth, currentDepth);
+    } else if (line === "") {
+      currentDepth = 0;
+    }
+  }
+
+  let result;
+  let complexityType = "O(1)"; // Default complexity type
+
+  if (recursiveCount > 0) {
+    result = "O(2^n) or O(n!) due to recursion";
+    complexityType = "O(2^n)";
+  } else if (sortingCount > 0 && loopCount === 1) {
+    result = "O(n log n) due to sorting";
+    complexityType = "O(n log n)";
+  } else if (logarithmicCount > 0) {
+    result = "O(log n) due to logarithmic operations";
+    complexityType = "O(log n)";
+  } else if (nestedLoopDepth === 1) {
+    result = "O(n) due to a single loop";
+    complexityType = "O(n)";
+  } else if (nestedLoopDepth === 2) {
+    result = "O(n^2) due to nested loops";
+    complexityType = "O(n^2)";
+  } else if (nestedLoopDepth > 2) {
+    result = `O(n^x) where x = ${nestedLoopDepth} due to deeply nested loops`;
+    complexityType = "O(n^x)"; // Symbolic representation
+  } else {
+    result =
+      "O(1) - No significant loops, recursion, or complex operations detected";
+  }
+
+  document.getElementById(
+    "result"
+  ).innerText = `Estimated Time Complexity: ${result}`;
+  highlightComplexityLine(complexityType); // Highlight the selected line
+   // Create a custom alert message
+   const alertBox = document.createElement("div");
+   alertBox.classList.add("alert-box");
+   alertBox.innerHTML = `
+     <div class="alert-content">
+       <h2>Time Complexity Analysis</h2>
+       <p>Result: ${result}</p>
+     </div>
+   `;
+   document.body.appendChild(alertBox);
+ 
+   // Add a timeout to remove the alert message after 3 seconds
+   setTimeout(() => {
+     alertBox.remove();
+   }, 3300);
+ }
+
+
 // Initialize the chart on page load
 document.addEventListener("DOMContentLoaded", function () {
   initializeComplexityChart();
 });
+
