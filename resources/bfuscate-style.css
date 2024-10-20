@@ -3,20 +3,31 @@
     resize: horizontal;
     min-height: 70vh;
     margin: 10px;
-    background-color: #00000000;
-    border: none;
+    background-color: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px black;
     box-sizing: border-box;
+    color: #e0e0e0;
 }
 
 #normal_code {
-    color: rgba(255, 170, 0, 0.756);
+    color: rgba(255, 193, 7, 0.8);
     width: 50vw;
 }
 
 #obfuscated_code {
-    color: rgba(0, 255, 204, 0.619);
+    color: rgba(0, 255, 204, 0.8);
     resize: none;
 }
+.ObfuscateButtons {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+#obfuscateButton:hover, #deobfuscateButton:hover {
+    outline: 1px solid #FFD700; /* Gold */
+    box-shadow: 0px 0px 20px #FFD700;
+  }
+  

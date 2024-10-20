@@ -6,22 +6,23 @@
 body {
   overflow-x: hidden;
   font-family: "Sometype Mono", monospace;
-  background-color: rgba(0, 0, 0, 0.888);
-  transition-duration: 0.5s;
+  background-color: #121212;
+  color: #e0e0e0;
+  transition-duration: background-color 0.5s ease-in-out, color 0.5s ease-in-out;;
 }
 
 .top-elements {
-  background-color: #00000000;
-  backdrop-filter: blur(100px);
+  background-color: rgba(30, 30, 30, 0.9);;
+  backdrop-filter: blur(15px);
   position: sticky;
   top: 0px;
-  width: calc(100vw - 100px);
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  box-shadow: 0 0 10px black;
-  width: 100vw;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   z-index: 100;
+  transition: background-color 0.3s;
 }
 
 .gap {
@@ -32,8 +33,9 @@ i:hover{
 }
 .top-link {
   display: flex;
-  color: rgba(124, 124, 124);
+  color: rgba(220, 220, 220, 0.8);
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .top-link p {
@@ -84,7 +86,7 @@ i:hover{
 }
 
 td {
-  color: rgb(124, 124, 124);
+  color: #7c7c7c;
   padding: 5px 20px 5px 20px;
   transition-duration: 0.5s;
   border-radius: 20px;
@@ -92,7 +94,7 @@ td {
 
 td a {
   text-decoration: none;
-  color: rgb(121, 121, 121);
+  color: #797979;
 }
 
 #current {
@@ -109,7 +111,7 @@ td a {
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
   height: 4px;
 }
 
@@ -119,7 +121,7 @@ td a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(96, 96, 96, 0.693);
+  background: rgba(150, 150, 150, 0.6);
   border-radius: 10px;
 }
 
@@ -242,7 +244,7 @@ input:focus {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #4ecdc4;
+  border-color: #ff9800;
 }
 
 #language:hover {
@@ -334,6 +336,10 @@ option {
 }
 
 footer {
+  background-color: #1f1f1f;
+  color: #999;
+  padding: 20px;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -493,6 +499,10 @@ footer {
   }
 
   footer {
+    background-color: #1f1f1f;
+    color: #999;
+    padding: 20px;
+    text-align: center;
     flex-direction: column;
   }
 
@@ -510,6 +520,7 @@ footer {
   position: fixed;
   top: 15px;
   left: 130px;
+  color: #ebebeb;
 }
 .hamburger:hover {
   cursor: pointer;
@@ -533,6 +544,7 @@ footer {
 }
 /* Sidebar styling */
 .sidebar {
+  background-color: #111;
   top: -100%;
   height: 100vh !important;
   width: 0;
@@ -563,8 +575,8 @@ footer {
   padding-bottom: 20px;
 }
 .sidebar.light a:hover {
-  color: #020202;
-  background: rgba(0, 0, 0, 0.1);
+  color: #f1f1f1;
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 8px;
 }
