@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        /* Same styles as login page */
+        .toggle-password {
+            position: absolute;
+            top: 38px;
+            right: 10px;
+            cursor: pointer;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .success-message {
+            text-align: center;
+            margin-top: 10px;
+            color: green;
+            display: none;
+        }
+
+        .error-message {
+            text-align: center;
+            margin-top: 10px;
+            color: red;
+            display: none;
+        }
+
+        .switch-link {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .switch-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .switch-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Eye icon styling */
+        .toggle-password {
+            position: absolute;
+            top: 38px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" placeholder="Enter a password" required>
+                <span class="toggle-password" onclick="togglePassword('newPassword')">👁️</span>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</span>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <p id="signupErrorMessage" class="error-message"></p>
+            <p id="signupSuccessMessage" class="success-message"></p>
+            <div class="switch-link">
+                <p>Already have an account? <a href="login.html">Log In</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Fake database to store user email and password
+        let usersDatabase = JSON.parse(localStorage.getItem('usersDatabase')) || [];
+
+        // Sign-Up Form
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const signupErrorMessage = document.getElementById('signupErrorMessage');
+            const signupSuccessMessage = document.getElementById('signupSuccessMessage');
+
+            signupErrorMessage.style.display = 'none';
+            signupSuccessMessage.style.display = 'none';
+
+            // Validation
+            if (password !== confirmPassword) {
+                signupErrorMessage.textContent = 'Passwords do not match!';
+                signupErrorMessage.style.display = 'block';
+                return;
+            }
+
+            if (password.length < 6) {
+                signupErrorMessage.textContent = 'Password must be at least 6 characters long!';
+                signupErrorMessage.style.display = 'block';
+                return;
+            }
+
+            // Check if the email already exists
+            const userExists = usersDatabase.some(user => user.email === email);
+            if (userExists) {
+                signupErrorMessage.textContent = 'Email is already registered!';
+                signupErrorMessage.style.display = 'block';
+            } else {
+                // Add the new user to the fake database
+                usersDatabase.push({ email: email, password: password });
+                localStorage.setItem('usersDatabase', JSON.stringify(usersDatabase));
+                signupSuccessMessage.textContent = 'Sign up successful!';
+                signupSuccessMessage.style.display = 'block';
+                // Redirect to login after 1 second
+                setTimeout(() => {
+                    window.location.href = 'login.html'; 
+                }, 1000);
+            }
+        });
+
+        // Function to toggle password visibility
+        function togglePassword(fieldId) {
+            const passwordField = document.getElementById(fieldId);
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>
