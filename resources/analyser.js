@@ -72,7 +72,29 @@ function initializeComplexityChart() {
   });
 }
 
-// Function to highlight the selected line and display the result
+// Function to send code for complexity analysis and handle the result
+function analyzeTimeComplexity() {
+  const code = document.getElementById("time_code").value;
+
+  fetch('http://localhost:5000/analyze', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ code: code }),  // Send code to the server
+  })
+  .then(response => response.json())
+  .then(data => {
+      // Display the result from the backend
+      document.getElementById("result").innerText = `Estimated Time Complexity: ${data.complexity}`;
+      highlightComplexityLine(data.complexity); // Highlight the line in the chart
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+}
+
+// Highlight the correct complexity line on the chart
 function highlightComplexityLine(complexityType) {
   const datasets = window.complexityChart.data.datasets;
   datasets.forEach((dataset) => {
@@ -89,82 +111,7 @@ function highlightComplexityLine(complexityType) {
   window.complexityChart.update(); // Update the chart to apply changes
 }
 
-// Function to analyze time complexity and display symbolic O(n^x)
-function analyzeTimeComplexity() {
-  const code = document.getElementById("time_code").value;
-  const codeLines = code.split("\n");
-
-  const loopPattern = /\b(for|while)\b/;
-  const recursivePattern = /\bfunction\s+(\w+)\s*\(.*\)\s*{[^}]*\1\s*\(/;
-  const sortingPattern = /\bsort\(|sorted\(/;
-  const logarithmicPattern = /\bbinary_search\(|Math\.log\b/;
-
-  let loopCount = 0;
-  let recursiveCount = 0;
-  let sortingCount = 0;
-  let logarithmicCount = 0;
-  let nestedLoopDepth = 0;
-
-  let currentDepth = 0;
-
-  for (let line of codeLines) {
-    line = line.trim();
-
-    if (recursivePattern.test(code)) {
-      recursiveCount++;
-    }
-
-    if (sortingPattern.test(line)) {
-      sortingCount++;
-    }
-
-    if (logarithmicPattern.test(line)) {
-      logarithmicCount++;
-    }
-
-    if (loopPattern.test(line)) {
-      loopCount++;
-      currentDepth++;
-      nestedLoopDepth = Math.max(nestedLoopDepth, currentDepth);
-    } else if (line === "") {
-      currentDepth = 0;
-    }
-  }
-
-  let result;
-  let complexityType = "O(1)"; // Default complexity type
-
-  if (recursiveCount > 0) {
-    result = "O(2^n) or O(n!) due to recursion";
-    complexityType = "O(2^n)";
-  } else if (sortingCount > 0 && loopCount === 1) {
-    result = "O(n log n) due to sorting";
-    complexityType = "O(n log n)";
-  } else if (logarithmicCount > 0) {
-    result = "O(log n) due to logarithmic operations";
-    complexityType = "O(log n)";
-  } else if (nestedLoopDepth === 1) {
-    result = "O(n) due to a single loop";
-    complexityType = "O(n)";
-  } else if (nestedLoopDepth === 2) {
-    result = "O(n^2) due to nested loops";
-    complexityType = "O(n^2)";
-  } else if (nestedLoopDepth > 2) {
-    result = `O(n^x) where x = ${nestedLoopDepth} due to deeply nested loops`;
-    complexityType = "O(n^x)"; // Symbolic representation
-  } else {
-    result =
-      "O(1) - No significant loops, recursion, or complex operations detected";
-  }
-
-  document.getElementById(
-    "result"
-  ).innerText = `Estimated Time Complexity: ${result}`;
-  highlightComplexityLine(complexityType); // Highlight the selected line
-}
-
 // Initialize the chart on page load
 document.addEventListener("DOMContentLoaded", function () {
-  // Your analyser.js logic goes here
   initializeComplexityChart();
 });
