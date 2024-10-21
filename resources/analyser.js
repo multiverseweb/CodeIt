@@ -20,8 +20,10 @@ function initializeComplexityChart() {
     borderWidth: 1,
     fill: false,
     pointRadius: 0, // Hide the markers
+    hidden: false, // Show all lines initially
   }));
 
+  // Create the chart instance
   window.complexityChart = new Chart(ctx, {
     type: "line",
     data: {
@@ -72,24 +74,7 @@ function initializeComplexityChart() {
   });
 }
 
-// Function to highlight the selected line and display the result
-function highlightComplexityLine(complexityType) {
-  const datasets = window.complexityChart.data.datasets;
-  datasets.forEach((dataset) => {
-    dataset.borderColor = "white"; // Reset all lines to white
-    dataset.borderWidth = 1; // Reset all lines to normal width
-    dataset.pointRadius = 0; // Hide markers
-
-    if (dataset.label === complexityType) {
-      dataset.borderColor = "rgba(255, 170, 0, 0.756)"; // Highlight selected line
-      dataset.borderWidth = 2; // Make the highlighted line thicker
-    }
-  });
-
-  window.complexityChart.update(); // Update the chart to apply changes
-}
-
-// Function to analyze time complexity and display symbolic O(n^x)
+// Function to analyze time complexity and display only the corresponding graph
 function analyzeTimeComplexity() {
   const code = document.getElementById("time_code").value;
   const codeLines = code.split("\n");
@@ -151,37 +136,40 @@ function analyzeTimeComplexity() {
     complexityType = "O(n^2)";
   } else if (nestedLoopDepth > 2) {
     result = `O(n^x) where x = ${nestedLoopDepth} due to deeply nested loops`;
-    complexityType = "O(n^x)"; // Symbolic representation
+    complexityType = "O(n^x)";
   } else {
-    result =
-      "O(1) - No significant loops, recursion, or complex operations detected";
+    result = "O(1) - No significant loops, recursion, or complex operations detected";
   }
 
-  document.getElementById(
-    "result"
-  ).innerText = `Estimated Time Complexity: ${result}`;
-  highlightComplexityLine(complexityType); // Highlight the selected line
-   // Create a custom alert message
-   const alertBox = document.createElement("div");
-   alertBox.classList.add("alert-box");
-   alertBox.innerHTML = `
-     <div class="alert-content">
-       <h2>Time Complexity Analysis</h2>
-       <p>Result: ${result}</p>
-     </div>
-   `;
-   document.body.appendChild(alertBox);
- 
-   // Add a timeout to remove the alert message after 3 seconds
-   setTimeout(() => {
-     alertBox.remove();
-   }, 3300);
- }
+  // Update the chart to only display the selected time complexity
+  const datasets = window.complexityChart.data.datasets;
+  datasets.forEach((dataset) => {
+    dataset.hidden = dataset.label !== complexityType;
+  });
 
+  window.complexityChart.update(); // Update the chart to reflect changes
+
+  // Display the result in the 'result' paragraph element
+  document.getElementById("result").innerText = `Estimated Time Complexity: ${result}`;
+
+  // Create a custom alert message
+  const alertBox = document.createElement("div");
+  alertBox.classList.add("alert-box");
+  alertBox.innerHTML = `
+    <div class="alert-content">
+      <h2>Time Complexity Analysis</h2>
+      <p>Result: ${result}</p>
+    </div>
+  `;
+  document.body.appendChild(alertBox);
+
+  // Add a timeout to remove the alert message after 3 seconds
+  setTimeout(() => {
+    alertBox.remove();
+  }, 3300);
+}
 
 // Initialize the chart on page load
 document.addEventListener("DOMContentLoaded", function () {
-  // Your analyser.js logic goes here
   initializeComplexityChart();
 });
-
