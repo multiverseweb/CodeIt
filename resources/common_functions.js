@@ -50,8 +50,12 @@ function enableLightTheme() {
     document.getElementById("shadow").style.backgroundImage =
       "linear-gradient(115deg, #00000000,rgb(220, 220, 220),#00000000)";
   }
+  const lastLink = document.getElementById('last_link');
+  if (lastLink) {
+    lastLink.style.color = "black";
+  }
   document.getElementById("link").style.filter = "invert(1)";
-  document.getElementById("link2").style.filter = "invert(0)";
+  document.getElementById("link").style.filter = "invert(1)";
   
   document.getElementById("githubIcon").style.filter = "invert(1)";
   document.getElementById("discordIcon").style.filter = "invert(1)";
@@ -117,12 +121,13 @@ function enableDarkTheme() {
     document.getElementById("shadow").style.backgroundImage =
       "linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000)";
   }
-  const lastLink = document.querySelector('.last_link');
+
+  const lastLink = document.getElementById('last_link');
   if (lastLink) {
-    lastLink.style.color = "white";
+    lastLink.style.color = " white";
   }
 
-  document.getElementById("link").style.filter = "invert(0)";
+    document.getElementById("link").style.filter = "invert(0)";
   document.getElementById("link2").style.filter = "invert(1)";
 
   document.getElementById("githubIcon").style.filter = "invert(0)";
