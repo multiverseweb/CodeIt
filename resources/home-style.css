@@ -274,6 +274,10 @@ body{
     filter: invert(1); /* White icon on hover for light mode */
 }
 
+/* [data-theme="light"] .last_link{
+    color: black;
+} */
+
 .design_line {
     height: 1px;
     width: 50vw;
@@ -300,6 +304,14 @@ footer {
     margin-top:16px;
     margin-left: 150px;
 }
+.last_link {
+    transition: color 2s ease-out;
+}
+
+.last {
+    transition: color 2s ease;
+}
+
 form {
     background-color: #4c4c4c2a;
     backdrop-filter: blur(7px);

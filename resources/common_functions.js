@@ -52,6 +52,16 @@ function enableLightTheme() {
   }
   document.getElementById("link").style.filter = "invert(1)";
   document.getElementById("link2").style.filter = "invert(0)";
+  
+  document.getElementById("githubIcon").style.filter = "invert(1)";
+  document.getElementById("discordIcon").style.filter = "invert(1)";
+  document.getElementById("envelopeIcon").style.filter = "invert(1)";
+
+  const button = document.querySelector("#send");
+  button.style.color = "#000000";
+  button.style.backgroundColor = "#rgba(0, 198, 228, 0.463)"; 
+
+
   document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
   const sidebar = document.getElementById("sidebar");
   document
@@ -107,8 +117,23 @@ function enableDarkTheme() {
     document.getElementById("shadow").style.backgroundImage =
       "linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000)";
   }
+  const lastLink = document.querySelector('.last_link');
+  if (lastLink) {
+    lastLink.style.color = "white";
+  }
+
   document.getElementById("link").style.filter = "invert(0)";
   document.getElementById("link2").style.filter = "invert(1)";
+
+  document.getElementById("githubIcon").style.filter = "invert(0)";
+  document.getElementById("discordIcon").style.filter = "invert(0)";
+  document.getElementById("envelopeIcon").style.filter = "invert(0)";
+  
+  const button = document.querySelector("#send");
+  button.style.color = "#fff"; // Button text color
+  button.style.backgroundColor = "rgba(0, 198, 228, 0.463)";
+
+
   document.getElementById("body").style.backgroundColor =
     "rgba(0, 0, 0, 0.888)";
 
