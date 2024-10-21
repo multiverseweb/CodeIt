@@ -276,7 +276,7 @@ body{
 
 .design_line {
     height: 1px;
-    width: 80vw;
+    width: 80vh;
     margin-left: calc(50vw + 15px);
     transform: translate(-50%);
     margin-bottom: 20px;
