@@ -54,18 +54,22 @@ function enableLightTheme() {
   if (lastLink) {
     lastLink.style.color = "black";
   }
-  document.getElementById("link").style.filter = "invert(1)";
-  document.getElementById("link").style.filter = "invert(1)";
+  const copyright = document.getElementById('last_link_copyright');
+  if (copyright) {
+    copyright.style.color = "black";
+  }
   
   document.getElementById("githubIcon").style.filter = "invert(1)";
   document.getElementById("discordIcon").style.filter = "invert(1)";
   document.getElementById("envelopeIcon").style.filter = "invert(1)";
-
+  
   const button = document.querySelector("#send");
   button.style.color = "#000000";
   button.style.backgroundColor = "#rgba(0, 198, 228, 0.463)"; 
-
-
+  
+  
+  document.getElementById("link").style.filter = "invert(1)";
+  document.getElementById("link2").style.filter = "invert(0)";
   document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
   const sidebar = document.getElementById("sidebar");
   document
@@ -126,10 +130,12 @@ function enableDarkTheme() {
   if (lastLink) {
     lastLink.style.color = " white";
   }
+  const copyright = document.getElementById('last_link_copyright');
+  if (copyright) {
+    copyright.style.color = "white";
+  }
 
-    document.getElementById("link").style.filter = "invert(0)";
-  document.getElementById("link2").style.filter = "invert(1)";
-
+  
   document.getElementById("githubIcon").style.filter = "invert(0)";
   document.getElementById("discordIcon").style.filter = "invert(0)";
   document.getElementById("envelopeIcon").style.filter = "invert(0)";
@@ -137,8 +143,10 @@ function enableDarkTheme() {
   const button = document.querySelector("#send");
   button.style.color = "#fff"; // Button text color
   button.style.backgroundColor = "rgba(0, 198, 228, 0.463)";
-
-
+  
+  
+  document.getElementById("link").style.filter = "invert(0)";
+  document.getElementById("link2").style.filter = "invert(1)";
   document.getElementById("body").style.backgroundColor =
     "rgba(0, 0, 0, 0.888)";
 
