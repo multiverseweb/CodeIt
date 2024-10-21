@@ -1,4 +1,4 @@
-// Initialize the chart with all lines displayed and markers hidden
+// Initialize the chart with all lines hidden
 function initializeComplexityChart() {
   const ctx = document.getElementById("complexityChart").getContext("2d");
 
@@ -13,14 +13,24 @@ function initializeComplexityChart() {
     "O(n^x)": n.map(() => null), // Symbolic complexity, no actual values
   };
 
+  const colors = {
+    "O(1)": "rgba(255, 99, 132, 1)", // Red
+    "O(log n)": "rgba(54, 162, 235, 1)", // Blue
+    "O(n)": "rgba(75, 192, 192, 1)", // Green
+    "O(n log n)": "rgba(153, 102, 255, 1)", // Purple
+    "O(n^2)": "rgba(255, 159, 64, 1)", // Orange
+    "O(2^n)": "rgba(255, 206, 86, 1)", // Yellow
+    "O(n^x)": "rgba(231, 233, 237, 1)", // Light gray
+  };
+
   const datasets = Object.keys(complexities).map((key) => ({
     label: key,
     data: complexities[key],
-    borderColor: "white", // All lines set to white initially
-    borderWidth: 1,
+    borderColor: colors[key],
+    borderWidth: 2,
     fill: false,
     pointRadius: 0, // Hide the markers
-    hidden: false, // Show all lines initially
+    hidden: true, // Initially hide all lines
   }));
 
   // Create the chart instance
@@ -74,8 +84,20 @@ function initializeComplexityChart() {
   });
 }
 
+// Function to reset the chart to show only the analyzed complexity
+function resetChart() {
+  const datasets = window.complexityChart.data.datasets;
+  datasets.forEach((dataset) => {
+    dataset.hidden = true; // Hide all lines
+  });
+  window.complexityChart.update(); // Update the chart to apply changes
+}
+
 // Function to analyze time complexity and display only the corresponding graph
 function analyzeTimeComplexity() {
+  // Reset the chart to hide all graphs and clear previous history
+  resetChart();
+
   const code = document.getElementById("time_code").value;
   const codeLines = code.split("\n");
 
@@ -144,7 +166,7 @@ function analyzeTimeComplexity() {
   // Update the chart to only display the selected time complexity
   const datasets = window.complexityChart.data.datasets;
   datasets.forEach((dataset) => {
-    dataset.hidden = dataset.label !== complexityType;
+    dataset.hidden = dataset.label !== complexityType; // Show only the selected line
   });
 
   window.complexityChart.update(); // Update the chart to reflect changes
@@ -173,3 +195,4 @@ function analyzeTimeComplexity() {
 document.addEventListener("DOMContentLoaded", function () {
   initializeComplexityChart();
 });
+
