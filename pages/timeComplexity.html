@@ -81,12 +81,17 @@
         </div>
       </nav>
       <!-- Hamburger for smaller screens -->
-      <div class="hamburger" onclick="toggleSidebar()">
+      <div class="hamburger" onclick="toggleSidebar('sidebar')">
         <span class="material-symbols-outlined"> unfold_more </span>
+      </div>
+      <div class="hamburger2" onclick="toggleSidebar('sidebar2')">
+        <span class="material-symbols-outlined">
+          account_circle
+          </span>
       </div>
       <!-- Sidebar structure -->
       <div id="sidebar" class="sidebar">
-        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <span class="close-btn" onclick="toggleSidebar('sidebar')">&times;</span>
         <a href="../index.html" class="home">Home</a>
         <a href="refine.html" class="competitive">Code Refiner</a>
         <a href="obfuscation.html" class="obfuscation">Code Obfuscator</a>
@@ -96,6 +101,11 @@
         <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
           >License</a
         >
+      </div>
+      <div id="sidebar2" class="sidebar2">
+        <span class="close-btn" onclick="toggleSidebar('sidebar2')">&times;</span>
+        <a href="pages/Signup.html" class="obfuscation">SignUp</a>
+        <a href="pages/Login.html" class="obfuscation">LogIn</a>
       </div>
       <div class="gap"></div>
     </div>

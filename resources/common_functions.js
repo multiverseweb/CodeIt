@@ -205,10 +205,13 @@ function clearText() {
   }
 }
 
-let sidebarOpen = false;
 
-function toggleSidebar() {
-  const sidebar = document.getElementById("sidebar");
+
+let sidebarOpen = false;
+let currentSidebar = null;
+
+function toggleSidebar(sidebarId) {
+  const sidebar = document.getElementById(sidebarId);
   const navbar = document.querySelector(".navbar");
 
   if (!sidebar) {
@@ -221,19 +224,31 @@ function toggleSidebar() {
     return;
   }
 
+  // Close any currently open sidebar
+  if (currentSidebar && currentSidebar !== sidebar) {
+    currentSidebar.style.width = "0";
+    currentSidebar.classList.remove("show");
+  }
+
   sidebarOpen = !sidebarOpen;
   if (sidebarOpen) {
     sidebar.classList.add("show");
     sidebar.style.width = "250px";
     navbar.style.display = "none";
     document.querySelector(".hamburger").style.display = "none";
+    document.querySelector(".hamburger2").style.display = "none";
   } else {
     sidebar.style.width = "0";
     navbar.style.display = "block";
     document.querySelector(".hamburger").style.display = "block";
+    document.querySelector(".hamburger2").style.display = "block";
     sidebar.classList.remove("show");
   }
+
+  // Store the currently active sidebar
+  currentSidebar = sidebar;
 }
+
 
 const sidebarLinks = document.querySelectorAll("#sidebar a");
 sidebarLinks.forEach((link) => {

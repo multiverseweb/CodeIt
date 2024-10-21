@@ -69,20 +69,32 @@
       </div>
     </nav>
     <!-- Hamburger for smaller screens -->
-    <div class="hamburger" onclick="toggleSidebar()">
-      <span class="material-symbols-outlined"> unfold_more </span>
+    <div class="hamburger" onclick="toggleSidebar('sidebar')">
+      <span class="material-symbols-outlined">unfold_more</span>
     </div>
+    <div class="hamburger2" onclick="toggleSidebar('sidebar2')">
+      <span class="material-symbols-outlined">
+        account_circle
+        </span>
+    </div>
+    
     <!-- Sidebar structure -->
     <div id="sidebar" class="sidebar">
-      <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+      <span class="close-btn" onclick="toggleSidebar('sidebar')">&times;</span>
       <a href="" class="home">Home</a>
       <a href="pages/refine.html" class="competitive">Code Refiner</a>
       <a href="pages/obfuscation.html" class="obfuscation">Code Obfuscator</a>
       <a href="pages/timeComplexity.html" class="time">Time Complexity Analyser</a>
-      <a href="../index.html#contributeSection">Contribute!</a>
-      <a href="../index.html#feedback">Give Feedback!</a>
+      <a href="#contributeSection">Contribute!</a>
+      <a href="#feedback">Give Feedback!</a>
       <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">License</a>
     </div>
+ <!-- Second Sidebar structure -->
+<div id="sidebar2" class="sidebar2">
+  <span class="close-btn" onclick="toggleSidebar('sidebar2')">&times;</span>
+  <a href="pages/Signup.html" class="obfuscation">SignUp</a>
+  <a href="pages/Login.html" class="obfuscation">LogIn</a>
+</div>
     <div class="gap"></div>
   </div>
 
@@ -136,6 +148,7 @@
     <div class="left" id="zoom">
       <img src="images/obfuscation.png" class="preview" id="obfuscatePreview" />
     </div>
+    
     <div class="right">
       <p class="subheading">Code Obfuscation</p>
       <p class="text">
@@ -198,6 +211,11 @@
     <div class="left">
       <img src="images/working.png" class="preview" />
     </div>
+    <div class="hamburger2" onclick="toggleSidebar('sidebar2')">
+      <span class="material-symbols-outlined">
+        account_circle
+        </span>
+    </div>
     <div class="right">
       <p class="heading">Want to contribute to this Project?</p>
       <p class="text">
@@ -210,7 +228,9 @@
           src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png" id="github"></a>
     </div>
   </div>
-  <div id="feedback"></div>
+  <div id="feedback">
+    
+  </div>
 
   <div class="design_line"></div>
   <footer>
@@ -230,6 +250,11 @@
       </div>
 
       <div class="right_last">
+        <div class="hamburger2" onclick="toggleSidebar('sidebar2')">
+          <span class="material-symbols-outlined">
+            account_circle
+            </span>
+        </div>
         <form name="CodeIt Reviews" action="POST" data-netlify="true" onsubmit="return validateFeedback()">
           <p>Let Us Know Your Thoughts!</p>
           <input type="text" name="Name" placeholder="Your Name" required />
