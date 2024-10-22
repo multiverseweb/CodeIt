@@ -3,255 +3,133 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>CodeIt</title>
+  
+  <!-- External Stylesheets -->
   <link rel="stylesheet" href="resources/home-style.css" />
   <link rel="stylesheet" href="resources/style.css" />
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- Leaflet for Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  
+  <!-- Favicon -->
   <link rel="shortcut icon" href="images/Nomenclature.png" type="image/x-icon" />
 </head>
 
 <body id="body">
-  <button class="top" id="top" onclick="topFunction()">
-    <img src="images/top.png" alt="" />
-  </button>
-  <button type="button" class="theme" id="darkThemeBtn" style="display: none;">
-    <img src="/images/moon.png" class="themeLogo" />
-  </button>
-  <button type="button" class="theme" id="lightThemeBtn">
-    <img src="/images/sun.png" class="themeLogo" />
-  </button>
 
-  <div class="top-elements">
-    <a href="index.html" class="top-link"><img src="images/Nomenclature.png" alt="logo" class="logo" id="logo" />
-      <p class="codeit">CodeIt</p>
-    </a>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <div class="fade-wrapper-left"></div>
-        <div class="fade-wrapper-right"></div>
-        <table id="navbar_table">
-          <tr>
-            <td class="nav-item" id="current">
-              <a href="" class="home">Home</a>
-            </td>
-            <td class="nav-item">
-              <a href="pages/refine.html" class="competitive">Code Refiner</a>
-            </td>
-            <td class="nav-item">
-              <a href="pages/obfuscation.html" class="obfuscation">Code Obfuscator</a>
-            </td>
-            <td class="nav-item">
-              <a href="pages/timeComplexity.html" class="time">Time Complexity Analyser</a>
-            </td>
-            <td class="nav-item">
-              <a href="#contributeSection">Contribute!</a>
-            </td>
-            <td class="nav-item"><a href="#feedback">Give Feedback!</a></td>
-            <td class="nav-item">
-              <a href="#licenseSection">License</a>
-            </td>
-            <div class="highlight"></div>
-          </tr>
-        </table>
+  <!-- Top Navigation & Logo -->
+  <header>
+    <div class="top-elements">
+      <a href="index.html" class="top-link">
+        <img src="images/Nomenclature.png" alt="CodeIt Logo" class="logo" id="logo" />
+        <p class="codeit">CodeIt</p>
+      </a>
+      <nav class="navbar">
+        <ul class="navbar-container">
+          <li class="nav-item" id="current"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="pages/refine.html">Code Refiner</a></li>
+          <li class="nav-item"><a href="pages/obfuscation.html">Code Obfuscator</a></li>
+          <li class="nav-item"><a href="pages/timeComplexity.html">Time Complexity Analyser</a></li>
+          <li class="nav-item"><a href="#contributeSection">Contribute!</a></li>
+          <li class="nav-item"><a href="#feedback">Give Feedback!</a></li>
+          <li class="nav-item"><a href="#licenseSection">License</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger for Mobile -->
+      <button class="hamburger" onclick="toggleSidebar()">
+        <span class="material-symbols-outlined"> unfold_more </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Sidebar for Mobile Navigation -->
+  <aside id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+    <a href="#">Home</a>
+    <a href="pages/refine.html">Code Refiner</a>
+    <a href="pages/obfuscation.html">Code Obfuscator</a>
+    <a href="pages/timeComplexity.html">Time Complexity Analyser</a>
+    <a href="#contributeSection">Contribute!</a>
+    <a href="#feedback">Give Feedback!</a>
+    <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">License</a>
+  </aside>
+
+  <!-- Main Sections -->
+  <main>
+    <!-- Introduction Section -->
+    <section id="intro" class="section-l">
+      <div class="left">
+        <h1 class="top_codeit"><span id="code">Code</span>It</h1>
+        <div class="typewriter">
+          <p>Developing for the Developers.</p>
+        </div>
+        <p class="text">CodeIt helps developers like you write, analyze, and protect your code—all in one place.</p>
+        <p class="text">The adjoining map shows people who are using or contributing to CodeIt.</p>
       </div>
-    </nav>
-    <!-- Hamburger for smaller screens -->
-    <div class="hamburger" onclick="toggleSidebar()">
-      <span class="material-symbols-outlined"> unfold_more </span>
-    </div>
-    <!-- Sidebar structure -->
-    <div id="sidebar" class="sidebar">
-      <span class="close-btn" onclick="toggleSidebar()">&times;</span>
-      <a href="" class="home">Home</a>
-      <a href="pages/refine.html" class="competitive">Code Refiner</a>
-      <a href="pages/obfuscation.html" class="obfuscation">Code Obfuscator</a>
-      <a href="pages/timeComplexity.html" class="time">Time Complexity Analyser</a>
-      <a href="../index.html#contributeSection">Contribute!</a>
-      <a href="../index.html#feedback">Give Feedback!</a>
-      <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">License</a>
-    </div>
-    <div class="gap"></div>
-  </div>
-
-  <div class="section-l" id="intro">
-    <div class="left">
-      <div class="top_codeit">
-        <p id="code">Code</p>
-        <p>It</p>
+      <div class="right">
+        <div id="map"></div>
       </div>
-      <div class="typewriter">
-        <p>Developing for the Developers.</p>
+      <div class="scroll_icon" id="scroll_icon">SCROLL TO KNOW MORE</div>
+    </section>
+
+    <!-- Features Sections -->
+    <section id="refine" class="section-r">
+      <div class="left">
+        <h2 class="heading">Key Features</h2>
+        <h3 class="subheading">Code Refinement</h3>
+        <p class="text">Convert your default code into executable code with one click! Save time and reduce errors.</p>
       </div>
-      <br />
-      <p class="text">
-        CodeIt helps developers like you write, analyze, and protect your
-        code—all in one place. Whether you're just starting out or a pro,
-        CodeIt makes coding easy, fast, and secure.
-      </p>
-      <br />
-      <p class="text">
-        The adjoining map shows people who are using or contributing to
-        CodeIt.
-      </p>
-    </div>
+      <div class="right">
+        <img src="images/coedit.png" alt="Code Refinement Preview" class="preview" />
+      </div>
+    </section>
 
-    <div class="right">
-      <div id="map"></div>
-    </div>
-    <div class="scroll_icon" id="scroll_icon">
-      SCROLL TO KNOW MORE
-      <div class="shadow" id="shadow"></div>
-      <div class="scroll_animation"></div>
-    </div>
-  </div>
-  <div class="section-r" id="refine">
-    <div class="left">
-      <p class="heading" id="heading">Key Features</p>
-      <p class="subheading">Code Refinement</p>
-      <p class="text">
-        Quickly convert your default / boilerplate code to a more useful and
-        executable code in one click! <br /><br />It reduces repetitive tasks,
-        manual mistakes and saves time.
-        <br />
-      </p>
-    </div>
-    <div class="right">
-      <img src="images/coedit.png" class="preview" />
-    </div>
-  </div>
-  <div class="section-l" id="obfuscate">
-    <div class="left" id="zoom">
-      <img src="images/obfuscation.png" class="preview" id="obfuscatePreview" />
-    </div>
-    <div class="right">
-      <p class="subheading">Code Obfuscation</p>
-      <p class="text">
-        Make your code harder to read and understand but still executable. It
-        adds an extra layer of security, protecting your code from plagiarism.
-        <br /><br />This feature is of great importance when you're working on
-        innovative projects.
-      </p>
-    </div>
-  </div>
-  <div class="section-r" id="nomenclature">
-    <div class="left">
-      <p class="subheading">Smart File Naming</p>
-      <p class="text">
-        Follow a fixed file naming convention, which helps reducing the
-        overhead of manual file management. <br /><br />It is useful for the
-        developers working on large and collaborative projects.
-        <br />
-      </p>
-    </div>
-    <div class="right">
-      <img src="images/naming.png" class="preview" />
-    </div>
-  </div>
-  <div class="section-l" id="complexity">
-    <div class="left">
-      <img src="images/complexity.png" class="preview" />
-    </div>
-    <div class="right">
-      <p class="subheading">Time Complexity Analysis</p>
-      <p class="text">
-        Understand how fast your code runs and optimize it for better
-        performance. CodeIt also visualises the time complexity on a
-        line-chart for better understanding.
-      </p>
-    </div>
-  </div>
+    <section id="obfuscate" class="section-l">
+      <div class="left">
+        <img src="images/obfuscation.png" alt="Code Obfuscation Preview" class="preview" />
+      </div>
+      <div class="right">
+        <h3 class="subheading">Code Obfuscation</h3>
+        <p class="text">Make your code harder to read while keeping it executable. Adds an extra layer of security.</p>
+      </div>
+    </section>
 
-  <div class="section-r" id="working">
-    <div class="left">
-      <p class="heading">How CodeIt Works?</p>
-      <p class="subheading">I. Choose Your Task...</p>
-      <p class="text">
-        Select from code conversion, obfuscation, file naming, or analysis.
-      </p>
-      <br />
-      <p class="subheading">II. Upload Your Code...</p>
-      <p class="text">Paste your code into the tool.</p>
-      <br />
-      <p class="subheading">III. Get Instant Results!</p>
-      <p class="text">See the results immediately and copy them if needed.</p>
-      <br />
-    </div>
-    <div class="right">
-      <img src="images/flowChart.png" class="preview" id="flowchart" />
-    </div>
-  </div>
+    <!-- More feature sections... -->
 
-  <div class="faq-section" id="faq">
-    <p class="heading">Frequently Asked Questions</p>
-    
-    <details class="faq-item">
-        <summary class="faq-question">Q1: What is CodeIt?</summary>
-        <p class="faq-answer">A: CodeIt is a software solution tool designed to streamline and enhance the coding experience for developers.</p>
-    </details>
+    <!-- Contribution Section -->
+    <section id="contributeSection" class="section-l">
+      <div class="left">
+        <img src="images/working.png" alt="Contribution Preview" class="preview" />
+      </div>
+      <div class="right">
+        <h2>Want to contribute to this Project?</h2>
+        <p>As this is an open-source software, contributions are always welcome. Visit our GitHub page to start.</p>
+        <a class="contributeBtn" href="https://github.com/multiverseweb/CodeIt">
+          Contribute <img src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png" alt="GitHub" />
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <details class="faq-item">
-        <summary class="faq-question">Q2: Can CodeIt integrate with coding platforms like LeetCode?</summary>
-        <p class="faq-answer">A: Yes, CodeIt is designed to work seamlessly with coding platforms like LeetCode. It converts the default code templates provided by these platforms into fully functional code, allowing developers to jump right into algorithm development and testing.</p>
-    </details>
-
-    <details class="faq-item">
-        <summary class="faq-question">Q3: Does CodeIt support multiple programming languages?</summary>
-        <p class="faq-answer">A: Yes, CodeIt supports multiple popular programming languages, including Python, Java, and C++, ensuring flexibility for developers working across different languages.</p>
-    </details>
-
-    <details class="faq-item">
-        <summary class="faq-question">Q4: Is CodeIt suitable for beginners?</summary>
-        <p class="faq-answer">A: Absolutely! CodeIt has a clean, user-friendly interface that makes it easy to navigate, even for those new to coding platforms.</p>
-    </details>
-
-    <details class="faq-item">
-        <summary class="faq-question">Q5: Does CodeIt require any specific setup or installation?</summary>
-        <p class="faq-answer">A: No special setup is required to start using CodeIt. The tool is designed to be user-friendly and easy to integrate into existing workflows, making it accessible to developers at any skill level.</p>
-    </details>
-</div>
-
-
-
-  <div class="section-l" id="contributeSection">
-    <div class="left">
-      <img src="images/working.png" class="preview" />
-    </div>
-    <div class="right">
-      <p class="heading">Want to contribute to this Project?</p>
-      <p class="text">
-        As this is an Open-Source Software, contributions are always welcome. Whether you're interested in adding new
-        features, fixing bugs, or improving documentation, your contributions are valuable. You can contribute to the
-        project by visiting the link to the GitHub repository provided below. Join me in making CodeIt even better for
-        everyone!
-      </p>
-      <a class="contributeBtn" href="https://github.com/multiverseweb/CodeIt">Contribute<img
-          src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png" id="github"></a>
-    </div>
-  </div>
-  <div id="feedback"></div>
-
-  <div class="design_line"></div>
+  <!-- Footer Section -->
   <footer>
     <div class="left_last">
       <div class="contact">
-        <div class="name">
-          <img src="images/Nomenclature.png" alt="" class="end-logo" />
-          <a class="subheading" href="index.html" id="last_link">CodeIt</a>
-        </div>
-        <h3 style="margin-left: 50px;margin-top: 80px;">Our Social Media Handles</h3>
-        <div
-          style="font-size: 35px;width: 200px; margin-left: 80px;margin-top: 30px;display: flex; justify-content: space-between;">
+        <img src="images/Nomenclature.png" alt="End Logo" class="end-logo" />
+        <a class="subheading" href="index.html">CodeIt</a>
+        <h3>Our Social Media Handles</h3>
+        <div class="social-icons">
           <a href="https://github.com/multiverseweb/CodeIt"><i class="fa-brands fa-github"></i></a>
           <a href="pages/404.html"><i class="fa-brands fa-discord"></i></a>
           <a href="mailto:multiverse.letter@gmail.com"><i class="fa-solid fa-envelope"></i></a>
@@ -259,88 +137,34 @@
       </div>
 
       <div class="right_last">
-        <form name="CodeIt Reviews" action="POST" data-netlify="true" onsubmit="return validateFeedback()">
+        <form name="CodeIt Reviews" method="POST" data-netlify="true" onsubmit="return validateFeedback()">
           <p>Let Us Know Your Thoughts!</p>
           <input type="text" name="Name" placeholder="Your Name" required />
-          <input type="email" name="Email" placeholder="Your Email ID" required />
-          <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)" required
-            oninput="checkFeedbackLength(this)" />
-          <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters
-            long.</span>
+          <input type="email" name="Email" placeholder="Your Email" required />
+          <textarea name="Feedback" placeholder="Your Feedback (minimum 10 characters)" required oninput="checkFeedbackLength(this)"></textarea>
+          <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters long.</span>
           <button type="submit" id="send">Send</button>
         </form>
       </div>
-
     </div>
   </footer>
 
-  <div class="license" id="licenseSection">
-    <div class="lic-left">
-      <div class="lic-heading">
-        <h2 class="heading">License</h2>
-      </div>
-      <div class="lic-content">
-        <br>
-        <h4>CodeIt is licensed under the MIT License.</h4>
-        <h4>This is a super flexible license, allowing you to freely use, modify, and share the project.</h4>
-        <br>
-        <p>To know more :- </p>
-        <a class="licBtn" href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">Click<img
-            src="./images/license.png" id="lic-logo"></a>
-      </div>
-    </div>
+  <!-- License Section -->
+  <section id="licenseSection">
+    <h2>License</h2>
+    <p>CodeIt is licensed under the MIT License. This allows you to freely use, modify, and share the project.</p>
+    <a class="licBtn" href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">Click for details</a>
+  </section>
 
-    <div class="lic-right">
-      <div class="lic-right-vals">
-        <div class="lic-per">
-          <h3 class="subheading">Permissions</h3>
-          <br>
-          <br>
-          <h4><i class="fa fa-check"></i> Commercial use</h4>
-          <br>
-          <h4><i class="fa fa-check"></i> Modification</h4>
-          <br>
-          <h4><i class="fa fa-check"></i> Distribution</h4>
-          <br>
-          <h4><i class="fa fa-check"></i> Private use</h4>
-        </div>
-        <div class="lic-lim">
-          <h3 class="subheading">Limitations</h3>
-          <br>
-          <br>
-          <h4><i class="fa fa-times"></i> Liability</h4>
-          <br>
-          <h4><i class="fa fa-times"></i> Warranty</h4>
-        </div>
-      </div>
-
-      <div class="lic-con">
-        <br>
-        <h3 class="subheading">Condition</h3>
-        <br>
-        <br>
-        <p>Keep the original copyright notice and license in any copies or modified versions</p>
-      </div>
-    </div>
-  </div>
   <div class="design_line"></div>
   <div class="last">
-    <p>
-      Designed & Developed by Tejas Gupta<br /><a
-        href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; <span id="copyright">2000</span> Tejas
-        Gupta</a>
-    </p>
-    <div class="links">
-      <button class="footer_logo" onclick="copylink()" id="link">
-        <img src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt="" />
-      </button>
-      <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"><img
-          src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2" /></a>
+    <p>Designed & Developed by Tejas Gupta<br>&copy; <span id="copyright">2024</span> Tejas Gupta</p>
+  </div>
 
-    </div>
-    <script src="resources/homeScript.js"></script>
-    <script src="resources/common_functions.js"></script>
-    <script src="https://www.chatbase.co/embed.min.js" chatbotId="pevr_-Kc8RpvaFvi07iVN" domain="www.chatbase.co" defer></script>
+  <!-- Scripts -->
+  <script src="resources/homeScript.js" defer></script>
+  <script src="resources/commonScript.js" async></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
 </body>
 
 </html>
