@@ -300,6 +300,18 @@ footer {
     margin-top:16px;
     margin-left: 150px;
 }
+/* .last_link {
+    transition: color 2s ease-out;
+}
+
+.last {
+    transition: color 2s ease;
+} */
+
+#last_link, #send, #githubIcon, #discordIcon, #envelopeIcon, #last_link_copyright {
+    transition: color 0.6s ease, filter 0.6s ease;
+  }
+  
 form {
     background-color: #4c4c4c2a;
     backdrop-filter: blur(7px);
