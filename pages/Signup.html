@@ -118,7 +118,31 @@
             right: 10px;
             cursor: pointer;
         }
+        .home-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.home-btn a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home-btn a:hover {
+    background-color: #218838;
+}
+
     </style>
+
+    <!-- Include Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
 
@@ -132,12 +156,16 @@
             <div class="input-group">
                 <label for="newPassword">Password</label>
                 <input type="password" id="newPassword" placeholder="Enter a password" required>
-                <span class="toggle-password" onclick="togglePassword('newPassword')">👁️</span>
+                <span class="toggle-password" onclick="togglePassword('newPassword', this)">
+                    <i class="fas fa-eye"></i>
+                </span>
             </div>
             <div class="input-group">
                 <label for="confirmPassword">Confirm Password</label>
                 <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
-                <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</span>
+                <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">
+                    <i class="fas fa-eye"></i>
+                </span>
             </div>
             <button type="submit" class="btn">Sign Up</button>
             <p id="signupErrorMessage" class="error-message"></p>
@@ -146,6 +174,10 @@
                 <p>Already have an account? <a href="login.html">Log In</a></p>
             </div>
         </form>
+         <!-- Back to Home Button -->
+         <div class="home-btn">
+            <a href="../index.html">Back to Home</a>
+        </div>
     </div>
 
     <script>
@@ -196,13 +228,18 @@
             }
         });
 
-        // Function to toggle password visibility
-        function togglePassword(fieldId) {
+        // Function to toggle password visibility and icon
+        function togglePassword(fieldId, iconElement) {
             const passwordField = document.getElementById(fieldId);
+            const icon = iconElement.querySelector('i');
             if (passwordField.type === "password") {
                 passwordField.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
             } else {
                 passwordField.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
             }
         }
     </script>

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -104,13 +108,36 @@
             text-decoration: underline;
         }
 
-        /* Eye icon styling */
+        /* Font Awesome Eye icon styling */
         .toggle-password {
             position: absolute;
             top: 38px;
             right: 10px;
             cursor: pointer;
+            font-size: 18px;
+            color: #555;
         }
+
+        .home-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.home-btn a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home-btn a:hover {
+    background-color: #218838;
+}
+
     </style>
 </head>
 <body>
@@ -125,7 +152,9 @@
             <div class="input-group">
                 <label for="loginPassword">Password</label>
                 <input type="password" id="loginPassword" placeholder="Enter your password" required>
-                <span class="toggle-password" onclick="togglePassword('loginPassword')">👁️</span>
+                <span class="toggle-password" onclick="togglePassword('loginPassword')">
+                    <i class="fas fa-eye"></i>
+                </span>
             </div>
             <button type="submit" class="btn">Login</button>
             <p id="loginSuccessMessage" class="success-message">Login successful!</p>
@@ -134,13 +163,16 @@
                 <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
             </div>
         </form>
+        
+        <!-- Back to Home Button -->
+        <div class="home-btn">
+            <a href="../index.html">Back to Home</a>
+        </div>
     </div>
 
     <script>
-        // Fake database to store user email and password
         let usersDatabase = JSON.parse(localStorage.getItem('usersDatabase')) || [];
 
-        // Login Form
         document.getElementById('loginForm').addEventListener('submit', function (event) {
             event.preventDefault();
 
@@ -152,25 +184,27 @@
             loginErrorMessage.style.display = 'none';
             loginSuccessMessage.style.display = 'none';
 
-            // Check if the user exists
             const user = usersDatabase.find(user => user.email === email && user.password === password);
             if (user) {
-                loginSuccessMessage.style.display = 'block';  // Show success message
-
-              
+                loginSuccessMessage.style.display = 'block';
             } else {
                 loginErrorMessage.textContent = 'Invalid email or password!';
                 loginErrorMessage.style.display = 'block';
             }
         });
 
-        // Function to toggle password visibility
         function togglePassword(fieldId) {
             const passwordField = document.getElementById(fieldId);
+            const toggleIcon = passwordField.nextElementSibling.querySelector('i');
+
             if (passwordField.type === "password") {
                 passwordField.type = "text";
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
             } else {
                 passwordField.type = "password";
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
             }
         }
     </script>
