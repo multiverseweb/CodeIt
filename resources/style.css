@@ -8,7 +8,7 @@ body {
   font-family: "Sometype Mono", monospace;
   background-color: #121212;
   color: #e0e0e0;
-  transition-duration: background-color 0.5s ease-in-out, color 0.5s ease-in-out;;
+  transition-duration: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .top-elements {
@@ -29,7 +29,7 @@ body {
   width: 80px;
 }
 i:hover{
-  color: #7c7c7c;
+  color: rgba(220, 220, 220, 0.8);
 }
 .top-link {
   display: flex;
@@ -87,14 +87,14 @@ i:hover{
 
 td {
   color: #7c7c7c;
-  padding: 5px 20px 5px 20px;
-  transition-duration: 0.5s;
+  padding: 5px 20px;
+  transition-duration: background-color 0.3s, color 0.3s;
   border-radius: 20px;
 }
 
 td a {
   text-decoration: none;
-  color: #797979;
+  color: #7c7c7c;
 }
 
 #current {
@@ -102,7 +102,7 @@ td a {
 }
 
 .navbar-container:hover #current {
-  background-color: #00000000;
+  background-color: transparent;
 }
 
 .options {
@@ -137,7 +137,7 @@ td a {
 }
 
 .names {
-  background-color: #00000000;
+  background-color: transparent;
   border: none;
   box-shadow: 0px 0px 10px black;
   border-radius: 3px;
@@ -154,7 +154,7 @@ td a {
 }
 
 select {
-  background-color: #00000000;
+  background-color: transparent;
   color: grey;
   border: none;
   box-shadow: 0px 0px 10px black;
@@ -167,8 +167,8 @@ select {
 }
 
 .btn {
-  background-color: #00000000;
-  color: grey;
+  background-color: transparent;
+  color: #ffffff;
   border: none;
   box-shadow: 0px 0px 10px black;
   border-radius: 3px;
@@ -176,7 +176,7 @@ select {
   font-size: 1rem;
   padding: 5px;
   cursor: pointer;
-  transition-duration: 0.2s;
+  transition-duration: background-color 0.3s ease, color 0.3s ease;
 }
 
 .code {
@@ -190,7 +190,7 @@ select {
   resize: horizontal;
   min-height: 70vh;
   margin: 10px;
-  background-color: #00000000;
+  background-color: transparent;
   border: none;
   border-radius: 10px;
   padding: 20px;
@@ -220,6 +220,7 @@ select {
 textarea {
   font-family: "Sometype Mono", monospace;
   color: rgba(255, 255, 255, 0.866);
+  width: calc(100vw - 20px);
 }
 
 input:focus {
@@ -253,6 +254,8 @@ textarea:focus {
 
 .btn:hover {
   box-shadow: 0px 0px 0px black;
+  background-color: rgba(220, 220, 220, 0.8); 
+  color: #ffffff; 
 }
 
 textarea:focus {
@@ -425,7 +428,7 @@ footer {
 
 @media screen and (max-width: 830px) {
   .top-elements {
-    width: calc(100vw - 0px);
+    width: 100vw;
     flex-direction: column;
   }
 
@@ -554,7 +557,6 @@ footer {
   transition: top 0.3s ease;
   z-index: 1000;
   padding-top: 90px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 .sidebar.light {
   background-color: #ffffff;
@@ -566,6 +568,7 @@ footer {
   top: 0;
 }
 .sidebar a {
+  top: 0;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 19px;
