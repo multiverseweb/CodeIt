@@ -11,15 +11,17 @@ const darkThemeBtn = document.getElementById('darkThemeBtn');
       darkThemeBtn.addEventListener('click', () => {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
+        body.style.color='white';
         darkThemeBtn.style.display = 'none';
         lightThemeBtn.style.display = 'block';
         errorText.style.color = 'white'; // Change text color to white
-        errorNumbers.forEach(number => number.style.color = 'white'); // Change both numbers to white
+        errorNumbers.forEach(number => number.style.color = '#e74c3c'); // Change both numbers to white
       });
 
       lightThemeBtn.addEventListener('click', () => {
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
+        body.style.color='black';
         lightThemeBtn.style.display = 'none';
         darkThemeBtn.style.display = 'block';
         errorText.style.color = 'black'; // Change text color to black

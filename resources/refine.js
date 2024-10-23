@@ -80,7 +80,11 @@ function generateFileName(directory, name, language) {
         "JavaScript": ".js",
         "SQL": ".sql",
         "Java": ".java",
-        "C": ".c"
+        "C": ".c",
+        "Typescript":".ts",
+        "PHP":".php",
+        "Go": ".go",
+        "C#":".cs",
     };
 
     sanitizedName += extensions[language] || ".txt";
@@ -124,6 +128,14 @@ function runAlgorithm() {
         outputCode = refineCCode(inputCode, platform);
     }else if(language=="SQL"){
         outputCode=refineSqlCode(inputCode)
+    }else if(language=="Typescript"){
+        outputCode = refineTypeScriptCode(inputCode);
+    }else if (language === "PHP") {
+        outputCode = refinePhpCode(inputCode);
+    } else if (language === "Go") {
+        outputCode = refineGoCode(inputCode);
+    } else if (language === "C#") {
+        outputCode = refineCSharpCode(inputCode);
     }
     else {
         outputCode = "Unsupported language selected.";
@@ -428,6 +440,277 @@ function refineSqlCode(inputCode) {
     // Add index suggestion comment
     outputCode += '\n\n-- Consider adding indexes on frequently used columns in WHERE and JOIN conditions';
   
+    return outputCode;
+}
+// Refine TypeScript Code
+function refineTypeScriptCode(inputCode) {
+    let lines = inputCode.split('\n');
+    let outputCode = "";
+    let functionName = "";
+    let functionParams = "";
+    let className = "";
+
+    for (let line of lines) {
+        // Remove comments
+        if (line.trim().startsWith('//') || line.trim().startsWith('/*') || line.trim().startsWith('*')) {
+            continue;
+        }
+
+        // Capture class name
+        if (line.trim().startsWith('class')) {
+            let match = line.trim().match(/class\s+(\w+)/);
+            if (match) {
+                className = match[1];
+            }
+        }
+
+        // Capture function name and parameters
+        if (line.trim().startsWith('function') || (line.includes('(') && line.includes(')') && line.includes('{'))) {
+            let match = line.trim().match(/function\s+(\w+)\s*\(([^)]*)\)\s*\{/);
+            if (!match) {
+                match = line.trim().match(/(\w+)\s*\(([^)]*)\)\s*:\s*\w+\s*\{/);
+            }
+            if (match) {
+                functionName = match[1];
+                functionParams = match[2];
+            }
+        }
+
+        outputCode += line + "\n";
+    }
+
+    // Generate test code
+    let paramNames = [];
+    if (functionParams) {
+        paramNames = functionParams.split(',').map(param => param.trim().split(':')[0].trim());
+    }
+
+    outputCode += `
+    // Paste test case here
+    `;
+
+    // Declare variables for parameters
+    paramNames.forEach(paramName => {
+        outputCode += `// TODO: Initialize ${paramName}\n`;
+    });
+
+    if (className) {
+        outputCode += `const obj = new ${className}();\n`;
+        outputCode += `const result = obj.${functionName}(`;
+    } else {
+        outputCode += `const result = ${functionName}(`;
+    }
+
+    outputCode += paramNames.join(', ');
+    outputCode += `);\n// Print result\nconsole.log(result);\n`;
+
+    return outputCode;
+}
+//Refine PHP Code
+function refinePhpCode(inputCode) {
+    let lines = inputCode.split('\n');
+    let outputCode = "";
+    let functionName = "";
+    let functionParams = "";
+    let className = "";
+    let inClass = false;
+
+    for (let line of lines) {
+        // Remove comments
+        if (line.trim().startsWith('//') || line.trim().startsWith('#') || line.trim().startsWith('/*') || line.trim().startsWith('*')) {
+            continue;
+        }
+
+        // Capture class name
+        if (line.trim().startsWith('class')) {
+            let match = line.trim().match(/class\s+(\w+)/);
+            if (match) {
+                className = match[1];
+                inClass = true;
+            }
+        }
+
+        // Capture function name and parameters
+        if (line.trim().includes('function') && line.trim().includes('(') && line.trim().includes(')')) {
+            let match = line.trim().match(/function\s+(\w+)\s*\(([^)]*)\)/);
+            if (match) {
+                functionName = match[1];
+                functionParams = match[2];
+            }
+        }
+
+        outputCode += line + "\n";
+    }
+
+    // Generate test code
+    let paramNames = [];
+    if (functionParams) {
+        paramNames = functionParams.split(',').map(param => param.trim().replace('$', ''));
+    }
+
+    outputCode += `
+    // Paste test case here
+    `;
+
+    // Declare variables for parameters
+    paramNames.forEach(paramName => {
+        outputCode += `// TODO: Initialize $${paramName}\n`;
+    });
+
+    if (className) {
+        outputCode += `$obj = new ${className}();\n`;
+        outputCode += `$result = $obj->${functionName}(`;
+    } else {
+        outputCode += `$result = ${functionName}(`;
+    }
+
+    outputCode += paramNames.map(param => `$${param}`).join(', ');
+    outputCode += `);\n// Print result\necho $result;\n`;
+
+    return outputCode;
+}
+// Refine GoLang Code
+function refineGoCode(inputCode) {
+    let lines = inputCode.split('\n');
+    let outputCode = "";
+    let functionName = "";
+    let functionParams = "";
+    let packageDeclared = false;
+    let importsDeclared = false;
+
+    for (let line of lines) {
+        // Remove comments
+        if (line.trim().startsWith('//') || line.trim().startsWith('/*') || line.trim().startsWith('*')) {
+            continue;
+        }
+
+        // Ensure package main is declared
+        if (!packageDeclared && line.trim().startsWith('package')) {
+            packageDeclared = true;
+        }
+
+        // Ensure imports are declared
+        if (!importsDeclared && line.trim().startsWith('import')) {
+            importsDeclared = true;
+        }
+
+        // Capture function name and parameters
+        if (line.trim().startsWith('func') && line.includes('(') && line.includes(')')) {
+            let match = line.trim().match(/func\s+(\w+)\s*\(([^)]*)\)/);
+            if (match) {
+                functionName = match[1];
+                functionParams = match[2];
+            }
+        }
+
+        outputCode += line + "\n";
+    }
+
+    // Add package main if not present
+    if (!packageDeclared) {
+        outputCode = 'package main\n\n' + outputCode;
+    }
+
+    // Add imports if not present
+    if (!importsDeclared) {
+        outputCode = 'import "fmt"\n' + outputCode;
+    }
+
+    // Generate test code in main function
+    let paramNames = [];
+    if (functionParams) {
+        let paramsArray = functionParams.split(',');
+        paramsArray.forEach(param => {
+            let paramParts = param.trim().split(' ');
+            let paramName = paramParts[0];
+            paramNames.push(paramName);
+        });
+    }
+
+    outputCode += `
+func main() {
+    // Paste test case here
+`;
+
+    // Declare variables for parameters
+    paramNames.forEach(paramName => {
+        outputCode += `    // TODO: Initialize ${paramName}\n`;
+    });
+
+    outputCode += `    result := ${functionName}(`;
+    outputCode += paramNames.join(', ');
+    outputCode += `)\n    // Print result\n    fmt.Println(result)\n}\n`;
+
+    return outputCode;
+}
+
+// Refine C# Code
+function refineCSharpCode(inputCode) {
+    let lines = inputCode.split('\n');
+    let outputCode = "";
+    let inClass = false;
+    let functionName = "";
+    let functionParams = "";
+    let className = "Solution";
+    let usings = "";
+
+    for (let line of lines) {
+        if (line.trim().startsWith("using")) {
+            usings += line + "\n";
+            continue;
+        }
+        if (line.trim().startsWith("namespace")) {
+            continue;
+        }
+        if (line.trim().startsWith("class")) {
+            let match = line.trim().match(/class\s+(\w+)/);
+            if (match) {
+                className = match[1];
+            }
+            inClass = true;
+        }
+        if (inClass && line.includes('(') && line.includes(')') && line.includes('{') && (line.includes("public") || line.includes("private") || line.includes("protected"))) {
+            let match = line.trim().match(/\w+\s+(\w+)\s*\(([^)]*)\)\s*\{/);
+            if (match) {
+                functionName = match[1];
+                functionParams = match[2];
+            }
+        }
+        if (line.trim() === '}') {
+            inClass = false;
+        }
+        outputCode += line + "\n";
+    }
+
+    outputCode = usings + "\n" + outputCode;
+
+    // Generate test code in Main method
+    let paramNames = [];
+    if (functionParams) {
+        let paramsArray = functionParams.split(',');
+        paramsArray.forEach(param => {
+            let paramParts = param.trim().split(' ');
+            let paramName = paramParts[paramParts.length - 1];
+            paramNames.push(paramName);
+        });
+    }
+
+    outputCode += `
+public class Program {
+    public static void Main(string[] args) {
+        // Paste test case here
+`;
+
+    // Declare variables for parameters
+    paramNames.forEach(paramName => {
+        outputCode += `        // TODO: Initialize ${paramName}\n`;
+    });
+
+    outputCode += `        ${className} obj = new ${className}();\n`;
+    outputCode += `        var result = obj.${functionName}(`;
+    outputCode += paramNames.join(', ');
+    outputCode += `);\n        // Print result\n        Console.WriteLine(result);\n    }\n}\n`;
+
     return outputCode;
 }
  function copyCode() {

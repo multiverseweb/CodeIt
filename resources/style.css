@@ -9,6 +9,20 @@ body {
   background-color: rgba(0, 0, 0, 0.888);
   transition-duration: 0.5s;
 }
+#fileInput {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #1c1c1c;
+  color: white;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#fileInput:hover {
+  background-color: #202020;
+}
 
 .top-elements {
   background-color: #00000000;
@@ -47,9 +61,10 @@ i:hover{
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-  position: relative;
+  position: 
    /* Add mask for fade effect */
    -webkit-mask-image: linear-gradient(
+
     to right,
     transparent 0%,
     black 15%,
@@ -515,11 +530,13 @@ footer {
 
   td {
     white-space: nowrap;
+
   }
 
   #name {
     width: calc(50vw - 0px);
   }
+
 
   #directory {
     width: calc(100vw - 40px);
@@ -674,10 +691,7 @@ footer {
   }
   .logo {
     position: relative;
-    z-index: 1001;
-  }
-}
-
+    z-index: 1001;}
 
 
 div.form div{
@@ -704,7 +718,5 @@ div.form div input{
   div.form div input{
       padding-left:50px;
   }
-
-
-  
 }
+
