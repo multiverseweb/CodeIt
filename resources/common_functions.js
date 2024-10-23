@@ -189,6 +189,11 @@ function copied(elementId) {
 }
 
 function clearText() {
+  const input_code = document.getElementById("input_code");
+  if (input_code) {
+    input_code.value = "";
+    output_code.value = "";
+  }
   const normal_code = document.getElementById("normal_code");
   if (normal_code) {
     normal_code.value = "";
