@@ -244,12 +244,14 @@ details[open] .faq-answer {
     display: block;
     max-width: fit-content;
     padding: 2px 5px 0px 5px;
+    font-weight:900;
 }
 .subheading{
     background-color: rgba(0, 198, 228, 0.463);
     display: inline-block;
     font-size: x-large;
     margin-top: 10px;
+    font-weight: 600;
 }
 .text{
     margin-top: 10px;
