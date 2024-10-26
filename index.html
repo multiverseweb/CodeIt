@@ -26,10 +26,10 @@
     <img src="images/top.png" alt="" />
   </button>
   <button type="button" class="theme" id="darkThemeBtn" style="display: none;">
-    <img src="./images/moon.png" class="themeLogo" />
+    <img src="/images/moon.png" class="themeLogo" />
   </button>
   <button type="button" class="theme" id="lightThemeBtn">
-    <img src="./images/sun.png" class="themeLogo" />
+    <img src="/images/sun.png" class="themeLogo" />
   </button>
 
   <div class="top-elements">
@@ -192,6 +192,37 @@
     </div>
   </div>
 
+  <div class="faq-section" id="faq">
+    <p class="heading">Frequently Asked Questions</p>
+    
+    <details class="faq-item">
+        <summary class="faq-question">Q1: What is CodeIt?</summary>
+        <p class="faq-answer">A: CodeIt is a software solution tool designed to streamline and enhance the coding experience for developers.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-question">Q2: Can CodeIt integrate with coding platforms like LeetCode?</summary>
+        <p class="faq-answer">A: Yes, CodeIt is designed to work seamlessly with coding platforms like LeetCode. It converts the default code templates provided by these platforms into fully functional code, allowing developers to jump right into algorithm development and testing.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-question">Q3: Does CodeIt support multiple programming languages?</summary>
+        <p class="faq-answer">A: Yes, CodeIt supports multiple popular programming languages, including Python, Java, and C++, ensuring flexibility for developers working across different languages.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-question">Q4: Is CodeIt suitable for beginners?</summary>
+        <p class="faq-answer">A: Absolutely! CodeIt has a clean, user-friendly interface that makes it easy to navigate, even for those new to coding platforms.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary class="faq-question">Q5: Does CodeIt require any specific setup or installation?</summary>
+        <p class="faq-answer">A: No special setup is required to start using CodeIt. The tool is designed to be user-friendly and easy to integrate into existing workflows, making it accessible to developers at any skill level.</p>
+    </details>
+</div>
+
+
+
   <div class="section-l" id="contributeSection">
     <div class="left">
       <img src="images/working.png" class="preview" />
@@ -208,6 +239,7 @@
           src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png" id="github"></a>
     </div>
   </div>
+  <div id="feedback"></div>
 
   <div class="design_line"></div>
   <footer>
@@ -217,26 +249,30 @@
           <img src="images/Nomenclature.png" alt="" class="end-logo" style="margin-left: 240px;"/>
           <a class="subheading" href="index.html" id="last_link" style="margin-left: 280px; margin-top: 20px;">CodeIt</a>
         </div>
-        <h3 style="margin-left: 200px;margin-top: 80px;">Our Social Media Handles</h3>
-        <div style="font-size: 35px;width: 200px; margin-left: 220px;margin-top: 30px;display: flex; justify-content: space-between;">
+
+       <h3 style="text-align: center; margin-top: 80px;">Our Social Media Handles</h3>
+<div style="font-size: 35px; width: 300px; margin: 30px auto; display: flex; justify-content: space-between;">
+
           <a href="https://github.com/multiverseweb/CodeIt"><i class="fa-brands fa-github"></i></a>
-          <a href="https://discord.gg/nhvyaxHU"><i class="fa-brands fa-discord"></i></a>
+          <a href="pages/404.html"><i class="fa-brands fa-discord"></i></a>
           <a href="mailto:multiverse.letter@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
 
       <div class="right_last">
-        <form name="CodeIt Reviews" action="POST" data-netlify="true" id="feedback" onsubmit="return validateFeedback()">
+        <form name="CodeIt Reviews" action="POST" data-netlify="true" onsubmit="return validateFeedback()">
           <p>Let Us Know Your Thoughts!</p>
           <input type="text" name="Name" placeholder="Your Name" required />
           <input type="email" name="Email" placeholder="Your Email ID" required />
-          <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)" required oninput="checkFeedbackLength(this)" />
-          <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters long.</span>
+          <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)" required
+            oninput="checkFeedbackLength(this)" />
+          <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters
+            long.</span>
           <button type="submit" id="send">Send</button>
         </form>
       </div>
 
-      </div>
+    </div>
   </footer>
 
   <div class="design_line"></div>
@@ -251,7 +287,8 @@
         <h4>This is a super flexible license, allowing you to freely use, modify, and share the project.</h4>
         <br>
         <p>To know more :- </p>
-        <a class="licBtn" href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">Click<img src="./images/license.png" id="lic-logo"></a>
+        <a class="licBtn" href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">Click<img
+            src="./images/license.png" id="lic-logo"></a>
       </div>
     </div>
 
@@ -259,13 +296,13 @@
       <div class="lic-right-vals">
         <div class="lic-per">
           <h3 class="subheading">Permissions</h3>
-          <br> 
+          <br>
           <br>
           <h4><i class="fa fa-check"></i> Commercial use</h4>
           <br>
           <h4><i class="fa fa-check"></i> Modification</h4>
           <br>
-          <h4><i class="fa fa-check" ></i> Distribution</h4>
+          <h4><i class="fa fa-check"></i> Distribution</h4>
           <br>
           <h4><i class="fa fa-check"></i> Private use</h4>
         </div>
@@ -273,9 +310,9 @@
           <h3 class="subheading">Limitations</h3>
           <br>
           <br>
-          <h4><i class="fa fa-times" ></i> Liability</h4>
+          <h4><i class="fa fa-times"></i> Liability</h4>
           <br>
-          <h4><i class="fa fa-times" ></i> Warranty</h4>
+          <h4><i class="fa fa-times"></i> Warranty</h4>
         </div>
       </div>
 
@@ -288,11 +325,12 @@
       </div>
     </div>
   </div>
-  
+  <div class="design_line"></div>
   <div class="last">
     <p>
       Designed & Developed by Tejas Gupta<br /><a
-        href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; 2024 Tejas Gupta</a>
+        href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; <span id="copyright">2000</span> Tejas
+        Gupta</a>
     </p>
     <div class="links">
       <button class="footer_logo" onclick="copylink()" id="link">
@@ -304,24 +342,7 @@
     </div>
     <script src="resources/homeScript.js"></script>
     <script src="resources/common_functions.js"></script>
-    <script>
-      function checkFeedbackLength(input) {
-        var errorSpan = document.getElementById('feedbackError');
-        if (input.value.length < 10) {
-          errorSpan.style.display = 'block';
-          input.setCustomValidity('Feedback must be at least 10 characters long.');
-        } else {
-          errorSpan.style.display = 'none';
-          input.setCustomValidity('');
-        }
-      }
-      
-      function validateFeedback() {
-        var feedback = document.forms["CodeIt Reviews"]["Feedback"];
-        checkFeedbackLength(feedback);
-        return feedback.value.length >= 10;
-      }
-    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="pevr_-Kc8RpvaFvi07iVN" domain="www.chatbase.co" defer></script>
 </body>
 
 </html>
