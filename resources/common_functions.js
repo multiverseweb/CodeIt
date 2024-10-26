@@ -28,43 +28,86 @@ function enableLightTheme() {
   console.log("in light");
   saveTheme("light");
 
-  const input_code = document.getElementById("input_code");
-  if (input_code) {
-    input_code.style.color = "#0b6100";
-    document.getElementById("output_code").style.color = "#002d8f";
-    document.getElementById("submit").style.filter = "invert(1)";
-  } else {
-    const normal_code = document.getElementById("normal_code");
-    if (normal_code) {
-      normal_code.style.color = "#0b6100";
-      document.getElementById("obfuscated_code").style.color = "#002d8f";
+  const sidebar = document.getElementById("sidebar");
+  const sidebar2 = document.getElementById("sidebar2");
+  const mainBody = document.body;  // Main body reference
+
+  // Update icons for light theme
+  document
+    .querySelectorAll(".material-symbols-outlined")
+    .forEach((icon) => icon.classList.add("light-theme"));
+
+  // Update sidebar
+  if (sidebar) {
+    sidebar.classList.remove("dark");
+    sidebar.classList.add("light");
+    const closeButton = sidebar.querySelector(".close-btn");
+    if (closeButton) {
+      closeButton.style.color = "#000000";
     }
   }
-  const time_code = document.getElementById("time_code");
-  if (time_code) {
-    time_code.style.color = "#0b6100";
+
+  // Update second sidebar
+  if (sidebar2) {
+    sidebar2.classList.remove("dark");
+    sidebar2.classList.add("light");
+    const closeButton2 = sidebar2.querySelector(".close-btn");
+    if (closeButton2) {
+      closeButton2.style.color = "#000000";
+    }
   }
-  const heading = document.getElementById("heading");
-  if (heading) {
-    document.getElementById("body").style.color = "rgba(0,0,0, 0.866)";
-    document.getElementById("shadow").style.backgroundImage =
-      "linear-gradient(115deg, #00000000,rgb(220, 220, 220),#00000000)";
+
+  // Update the main body background and text colors
+  if (mainBody) {
+    mainBody.style.backgroundColor = "#ffffff";  // Light background
+    mainBody.style.color = "#000000";            // Dark text
   }
-  document.getElementById("link").style.filter = "invert(1)";
-  document.getElementById("link2").style.filter = "invert(0)";
-  document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
-  const sidebar = document.getElementById("sidebar");
-  document
-    .querySelector(".material-symbols-outlined")
-    .classList.add("light-theme");
-  sidebar.classList.remove("dark");
-  sidebar.classList.add("light");
-  const closeButton = sidebar.querySelector(".close-btn");
-  if (closeButton) {
-    closeButton.style.color = "#000000";
-  }
+
   toggleThemeBtn("light");
   updateChartColors(false);
+}
+
+function enableDarkTheme() {
+  console.log("inDark");
+  saveTheme("dark");
+
+  const sidebar = document.getElementById("sidebar");
+  const sidebar2 = document.getElementById("sidebar2");
+  const mainBody = document.body;  // Main body reference
+
+  // Update icons for dark theme
+  document
+    .querySelectorAll(".material-symbols-outlined")
+    .forEach((icon) => icon.classList.remove("light-theme"));
+
+  // Update sidebar
+  if (sidebar) {
+    sidebar.classList.remove("light");
+    sidebar.classList.add("dark");
+    const closeButton = sidebar.querySelector(".close-btn");
+    if (closeButton) {
+      closeButton.style.color = "#ffffff";
+    }
+  }
+
+  // Update second sidebar
+  if (sidebar2) {
+    sidebar2.classList.remove("light");
+    sidebar2.classList.add("dark");
+    const closeButton2 = sidebar2.querySelector(".close-btn");
+    if (closeButton2) {
+      closeButton2.style.color = "#ffffff";
+    }
+  }
+
+  // Update the main body background and text colors
+  if (mainBody) {
+    mainBody.style.backgroundColor = "#000000";  // Dark background
+    mainBody.style.color = "#ffffff";            // Light text
+  }
+
+  toggleThemeBtn("dark");
+  updateChartColors(true);
 }
 
 function toggleThemeBtn(currentTheme) {
@@ -78,53 +121,6 @@ function toggleThemeBtn(currentTheme) {
     darkThemeBtn.style.display = "block";
     lightThemeBtn.style.display = "none";
   }
-}
-
-function enableDarkTheme() {
-  console.log("inDark");
-  saveTheme("dark");
-
-  const input_code = document.getElementById("input_code");
-  if (input_code) {
-    input_code.style.color = "rgba(255, 170, 0, 0.756)";
-    document.getElementById("output_code").style.color = "rgba(0,0,0,1)";
-    document.getElementById("submit").style.filter = "invert(0)";
-  } else {
-    const normal_code = document.getElementById("normal_code");
-    if (normal_code) {
-      normal_code.style.color = "rgba(255, 170, 0, 0.756)";
-      document.getElementById("obfuscated_code").style.color =
-        "rgba(0, 255, 204, 0.619)";
-    }
-  }
-  const time_code = document.getElementById("time_code");
-  if (time_code) {
-    time_code.style.color = "rgba(255, 170, 0, 0.756)";
-  }
-  const heading = document.getElementById("heading");
-  if (heading) {
-    document.getElementById("body").style.color = "rgba(255, 255, 255, 0.866)";
-    document.getElementById("shadow").style.backgroundImage =
-      "linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000)";
-  }
-  document.getElementById("link").style.filter = "invert(0)";
-  document.getElementById("link2").style.filter = "invert(1)";
-  document.getElementById("body").style.backgroundColor =
-    "rgba(0, 0, 0, 0.888)";
-
-  document
-    .querySelector(".material-symbols-outlined")
-    .classList.remove("light-theme");
-  const sidebar = document.getElementById("sidebar");
-  sidebar.classList.remove("light");
-  sidebar.classList.add("dark");
-  const closeButton = sidebar.querySelector(".close-btn");
-  if (closeButton) {
-    closeButton.style.color = "#ffffff";
-  }
-
-  toggleThemeBtn("dark");
-  updateChartColors(true);
 }
 
 function saveTheme(theme) {
@@ -144,6 +140,8 @@ function applyTheme() {
     }
   }
 }
+
+window.onload = applyTheme;
 
 function updateChartColors(isDark) {
   if (typeof Chart !== "undefined" && Chart.instances[0]) {

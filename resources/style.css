@@ -712,7 +712,7 @@ footer {
   background-color: #ffffff;
 }
 .sidebar2 {
-  background-color: #efeded;
+  background-color: #0d0d0d;
 }
 .sidebar2.show {
   top: 0;
@@ -741,7 +741,7 @@ footer {
 .sidebar2 .close-btn {
   position: absolute;
   top: 10px;
-  left: 20px;
+right: 40px;
   font-size: 36px;
   cursor: pointer;
   transition: transform 0.3s;
