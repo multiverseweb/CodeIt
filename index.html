@@ -26,10 +26,10 @@
     <img src="images/top.png" alt="" />
   </button>
   <button type="button" class="theme" id="darkThemeBtn" style="display: none;">
-    <img src="/images/moon.png" class="themeLogo" />
+    <img src="./images/moon.png" class="themeLogo" />
   </button>
   <button type="button" class="theme" id="lightThemeBtn">
-    <img src="/images/sun.png" class="themeLogo" />
+    <img src="./images/sun.png" class="themeLogo" />
   </button>
 
   <div class="top-elements">
@@ -288,17 +288,28 @@
         </div>
         <form name="CodeIt Reviews" action="POST" data-netlify="true" onsubmit="return validateFeedback()">
           <p>Let Us Know Your Thoughts!</p>
-          <input type="text" name="Name" placeholder="Your Name" required />
-          <input type="email" name="Email" placeholder="Your Email ID" required />
-          <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)" required
-            oninput="checkFeedbackLength(this)" />
-          <span id="feedbackError" style="color: #ff5457; display: none;">Feedback must be at least 10 characters
-            long.</span>
-          <button type="submit" id="send">Send</button>
-        </form>
-      </div>
 
-    </div>
+        <div class="form">
+            <div class="user">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="Name" placeholder="Your Name" required />
+            </div>
+            <div class="email">
+              <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="Email" placeholder="Your Email ID" required />
+            </div>
+            <div class="feed-back">
+            <i class="fa-solid fa-comment"></i>
+  
+           <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)"required oninput="checkFeedbackLength(this)"></input>
+          <span id="feedbackError"style="color:#ff5457"display="none">Feedback must be at least 10 characters long.</span>  
+          </div>
+            <button type="submit" id="send">Send</button>
+        </div>
+          </form>
+        </div>
+
+
   </footer>
 
   <div class="license" id="licenseSection">
@@ -353,21 +364,53 @@
   <div class="design_line"></div>
   <div class="last">
     <p>
-      Designed & Developed by Tejas Gupta<br /><a
-        href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; <span id="copyright">2000</span> Tejas
-        Gupta</a>
+      Designed & Developed by Tejas Gupta<br />
+      <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; 2024 Tejas Gupta</a>
     </p>
     <div class="links">
       <button class="footer_logo" onclick="copylink()" id="link">
         <img src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt="" />
       </button>
-      <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo"><img
-          src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2" /></a>
+      <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo">
+      
+      <img src="https://pngimg.com/d/github_PNG83.png" alt="" id="link2" /></a>
 
     </div>
     <script src="resources/homeScript.js"></script>
     <script src="resources/common_functions.js"></script>
-    <script src="https://www.chatbase.co/embed.min.js" chatbotId="pevr_-Kc8RpvaFvi07iVN" domain="www.chatbase.co" defer></script>
+
+    <script>
+      function checkFeedbackLength(input) {
+        var errorSpan = document.getElementById('feedbackError');
+        if (input.value.length < 10) {
+          errorSpan.style.display = 'block';
+          input.setCustomValidity('Feedback must be at least 10 characters long.');
+        } else {
+          errorSpan.style.display = 'none';
+          input.setCustomValidity('');
+        }
+      }
+      
+      function validateFeedback() {
+        var feedback = document.forms["CodeIt Reviews"]["Feedback"];
+        checkFeedbackLength(feedback);
+        return feedback.value.length >= 10;
+      }
+    </script>
+    <script>
+      window.embeddedChatbotConfig = {
+      chatbotId: "pevr_-Kc8RpvaFvi07iVN",
+      domain: "www.chatbase.co"
+      }
+      </script>
+      <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="pevr_-Kc8RpvaFvi07iVN"
+      domain="www.chatbase.co"
+      defer>
+      </script>
+
+ 
 </body>
 
 </html>
