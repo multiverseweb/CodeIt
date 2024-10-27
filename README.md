@@ -137,25 +137,20 @@ Deployed on
 ### Our Valuable Contributors ❤️✨
 
 [![Contributors](https://contrib.rocks/image?repo=multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/graphs/contributors)
- 
-<sup><a href="#codeit--tool" align="right">Back to top</a></sup>
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-## Stargazers ❤️
+### Stargazers ❤️
 
 <div align='left'>
 
 [![Stargazers repo roster for @multiverseweb/CodeIt](https://reporoster.com/stars/dark/multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/stargazers)
 
-
 </div>
 
-## Forkers ❤️
+### Forkers ❤️
 
 [![Forkers repo roster for @multiverseweb/CodeIt](https://reporoster.com/forks/dark/multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/network/members)
 
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+<sup><a href="#codeit--tool" align="right">Back to top</a></sup>
 
 
