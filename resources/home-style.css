@@ -177,8 +177,9 @@ body{
 .faq-question {
     font-weight:100;
     cursor: pointer;
-    color: white;
+    color: #000000;
     font-size: 23px;
+    background-color: rgba(0, 198, 228, 0.463);
 }
 
 .faq-answer {
@@ -188,6 +189,7 @@ body{
     background-color: rgba(29, 28, 28, 0.888);
     display: none; 
     font-size: 20px;
+    color: white;
 }
 
 details[open] .faq-answer {
@@ -565,3 +567,4 @@ a{
         margin-top: 10px;
     }
 }
+
