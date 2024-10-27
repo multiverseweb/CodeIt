@@ -9,6 +9,7 @@ body {
   background-color: rgba(0, 0, 0, 0.888);
   transition-duration: 0.5s;
 }
+
 #fileInput {
   margin-left: 10px;
   padding: 10px;
@@ -23,6 +24,7 @@ body {
 #fileInput:hover {
   background-color: #202020;
 }
+
 
 
 .top-elements {
@@ -63,8 +65,10 @@ i:hover{
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   position: relative;
-  /* Add mask for fade effect */
-  -webkit-mask-image: linear-gradient(
+
+   /* Add mask for fade effect */
+   -webkit-mask-image: linear-gradient(
+
     to right,
     transparent 0%,
     black 15%,
@@ -570,6 +574,7 @@ footer {
 
   #complexityChart {
     width: calc(100% - 20px);
+
   }
 
   #ouput_code {
@@ -690,6 +695,34 @@ footer {
   .logo {
     position: relative;
     z-index: 1001;
+  }
+}
+
+
+
+div.form div{
+  position:relative;
+
+}
+div.form div i{
+  position:absolute;
+  top:35px;
+  left:22px;
+  transform: translateY(-50%);
+}
+div.form div input{
+  padding-left:50px;
+  height:30px;
+  width:85%;
+}
+
+@media(max-width:600px){
+ 
+ div.form div i{
+  padding-left:0px;
+ }
+  div.form div input{
+      padding-left:50px;
   }
 }
 
