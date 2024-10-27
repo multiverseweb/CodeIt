@@ -124,7 +124,7 @@ Deployed on
 
 **💻 Want to solve issues?**
 
-- Star the Repository.
+- Star the Repository ⭐
 - Go to [issues](https://github.com/multiverseweb/CodeIt/issues), find an issue that you can solve or create a new issue.
 - Fork the repository.
 - Create a new branch (`git checkout -b feature-branch`).
