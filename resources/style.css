@@ -303,14 +303,19 @@ select {
 }
 
 #output_code {
-  color: rgba(0, 255, 204, 0.619);
+  color: rgba(0, 255, 204, 0.619) ! important;
   resize: none;
+  font-family: "Sometype Mono", monospace; 
 }
-
-textarea {
-  font-family: "Sometype Mono", monospace;
+textarea:not(#output_code) {
   color: rgba(255, 255, 255, 0.866);
 }
+
+
+/* textarea {
+  font-family: "Sometype Mono", monospace;
+  color: rgba(255, 255, 255, 0.866);
+} */
 
 input:focus {
   outline: none;
