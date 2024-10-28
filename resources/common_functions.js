@@ -50,8 +50,6 @@ function enableLightTheme() {
     document.getElementById("shadow").style.backgroundImage =
       "linear-gradient(115deg, #00000000,rgb(220, 220, 220),#00000000)";
   }
-  document.getElementById("link").style.filter = "invert(1)";
-  document.getElementById("link2").style.filter = "invert(0)";
   document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
   const sidebar = document.getElementById("sidebar");
   document
@@ -107,8 +105,6 @@ function enableDarkTheme() {
     document.getElementById("shadow").style.backgroundImage =
       "linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000)";
   }
-  document.getElementById("link").style.filter = "invert(0)";
-  document.getElementById("link2").style.filter = "invert(1)";
   document.getElementById("body").style.backgroundColor =
     "rgba(0, 0, 0, 0.888)";
 

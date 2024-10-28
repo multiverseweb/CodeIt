@@ -18,7 +18,7 @@ body{
 }
 
 #code {
-    background: linear-gradient(to right, goldenrod, rgb(0, 141, 141));
+    background: linear-gradient(to right, #5c01a6,#9c179e,#cc4778,#ed7953,#fdb42f);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation-name: hue;
