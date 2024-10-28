@@ -461,8 +461,8 @@ a{
 
 #map {
     width: 45vw;
-    margin-left: 30px;
-    margin-top: -30px;
+    margin-left: 780px;
+    margin-top: -360px;
     height: 70vh;
     transition: 0.5s ease;
     filter: invert(1) hue-rotate(180deg) brightness(1.5);
