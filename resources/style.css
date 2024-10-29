@@ -13,6 +13,7 @@ body {
 
 
 
+
 #fileInput {
   margin-left: 10px;
   padding: 10px;
@@ -27,6 +28,7 @@ body {
 #fileInput:hover {
   background-color: #202020;
 }
+
 
 
 .top-elements {
@@ -67,8 +69,10 @@ i:hover{
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   position: relative;
-  /* Add mask for fade effect */
-  -webkit-mask-image: linear-gradient(
+
+   /* Add mask for fade effect */
+   -webkit-mask-image: linear-gradient(
+
     to right,
     transparent 0%,
     black 15%,
@@ -574,6 +578,7 @@ footer {
 
   #complexityChart {
     width: calc(100% - 20px);
+
   }
 
   #ouput_code {
@@ -775,4 +780,3 @@ footer {
     z-index: 1001;
   }
 }
-

@@ -146,6 +146,55 @@ body{
     margin-left: 100px;
     margin-right: 100px;
 }
+.faq-section {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    padding-top: 100px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+@media screen and (max-width: 768px) {
+    .faq-section {
+        padding-top: 50px;  
+        margin-left: 20px;  
+        margin-right: 20px; 
+    }
+
+    .faq-answer {
+        padding: 10px; 
+    }
+
+    .faq-question {
+        font-size: 1em; 
+    }
+}
+.faq-item {
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.faq-question {
+    font-weight:100;
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+}
+
+.faq-answer {
+    margin-left: 15px;
+    padding: 20px 0;
+    border-left: 2px solid rgb(0, 141, 141);
+    background-color: rgba(29, 28, 28, 0.888);
+    display: none; 
+    font-size: 20px;
+}
+
+details[open] .faq-answer {
+    display: block; 
+    padding: 10px 20px;
+}
+
 #intro{
     margin-top: 100px;
 }
@@ -195,12 +244,14 @@ body{
     display: block;
     max-width: fit-content;
     padding: 2px 5px 0px 5px;
+    font-weight:900;
 }
 .subheading{
     background-color: rgba(0, 198, 228, 0.463);
     display: inline-block;
     font-size: x-large;
     margin-top: 10px;
+    font-weight: 600;
 }
 .text{
     margin-top: 10px;
