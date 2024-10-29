@@ -1,22 +1,36 @@
-lines = []
-while True:
-    line = input()
-    if line.strip() == "":
-        break
-    lines.append(line)
+def main():
+    lines = []
+    print("Enter your code (press Enter twice to finish):")
+    
+    # Read lines of input until a blank line is encountered
+    while True:
+        line = input()
+        if line.strip() == "":
+            break
+        lines.append(line)
 
-for i in lines:
-    if 'def' in i:
-        definition=i.strip()[4:-1]
-definition=definition.replace("self, ","")
+    # Extract function name
+    function_name = None
+    for line in lines:
+        if 'def ' in line:
+            # Use partition for cleaner extraction of function name
+            definition = line.partition('def ')[2].strip()
+            function_name = definition.split('(')[0]  # Get the function name
+            break
 
-output_code=""
-for i in lines:
-    output_code+=i
-    output_code+="\n"
-    if 'def' in i:
-        break
+    # Check if a function definition was found
+    if function_name is None:
+        print("No function definition found.")
+        return
 
-output_code+="\t\t\n\t\t\n\t\t\n\t\t\n"
-output_code+="#testCase\n\nobj=Solution()\nprint(obj.{})".format(definition)
-print(output_code)
+    # Create output code
+    output_code = "\n".join(lines) + "\n\n"
+    output_code += "\t\t\n\t\t\n\t\t\n\t\t\n"  # Indentation for readability
+    output_code += "#testCase\n\n"
+    output_code += f"obj = Solution()\nprint(obj.{function_name}())"  # Add parentheses for function call
+
+    # Print the output code
+    print(output_code)
+
+if __name__ == "__main__":
+    main()
