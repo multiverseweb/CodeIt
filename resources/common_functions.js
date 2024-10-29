@@ -12,9 +12,8 @@ document
 navItems.forEach((item) => {
   item.addEventListener("mouseover", function () {
     const itemRect = item.getBoundingClientRect();
-    const tableRect = item.closest("table").getBoundingClientRect(); // Get the table's bounding box
+    const tableRect = item.closest("table").getBoundingClientRect();
 
-    // Adjust the highlight position and width based on the table's position
     highlight.style.width = `${itemRect.width}px`;
     highlight.style.left = `${itemRect.left}px`;
     highlight.style.top = `${itemRect.top - tableRect.top}px`;
@@ -24,44 +23,51 @@ navItems.forEach((item) => {
 document.querySelector(".navbar").addEventListener("mouseleave", () => {
   highlight.style.width = "0";
 });
+
+function applyThemeToSidebar(sidebarId, theme) {
+  const sidebar = document.getElementById(sidebarId);
+  if (!sidebar) return;
+
+  sidebar.classList.remove("dark", "light");
+  sidebar.classList.add(theme);
+
+  const closeButton = sidebar.querySelector(".close-btn");
+  if (closeButton) {
+    closeButton.style.color = theme === "dark" ? "#ffffff" : "#000000";
+  }
+}
+
 function enableLightTheme() {
   console.log("in light");
   saveTheme("light");
 
-  const sidebar = document.getElementById("sidebar");
-  const sidebar2 = document.getElementById("sidebar2");
-  const mainBody = document.body;  // Main body reference
-
-  // Update icons for light theme
-  document
-    .querySelectorAll(".material-symbols-outlined")
-    .forEach((icon) => icon.classList.add("light-theme"));
-
-  // Update sidebar
-  if (sidebar) {
-    sidebar.classList.remove("dark");
-    sidebar.classList.add("light");
-    const closeButton = sidebar.querySelector(".close-btn");
-    if (closeButton) {
-      closeButton.style.color = "#000000";
+  const input_code = document.getElementById("input_code");
+  if (input_code) {
+    input_code.style.color = "#0b6100";
+    document.getElementById("output_code").style.color = "#002d8f";
+    document.getElementById("submit").style.filter = "invert(1)";
+  } else {
+    const normal_code = document.getElementById("normal_code");
+    if (normal_code) {
+      normal_code.style.color = "#0b6100";
+      document.getElementById("obfuscated_code").style.color = "#002d8f";
     }
   }
-
-  // Update second sidebar
-  if (sidebar2) {
-    sidebar2.classList.remove("dark");
-    sidebar2.classList.add("light");
-    const closeButton2 = sidebar2.querySelector(".close-btn");
-    if (closeButton2) {
-      closeButton2.style.color = "#000000";
-    }
+  const time_code = document.getElementById("time_code");
+  if (time_code) {
+    time_code.style.color = "#0b6100";
   }
-
-  // Update the main body background and text colors
-  if (mainBody) {
-    mainBody.style.backgroundColor = "#ffffff";  // Light background
-    mainBody.style.color = "#000000";            // Dark text
+  const heading = document.getElementById("heading");
+  if (heading) {
+    document.getElementById("body").style.color = "rgba(0,0,0, 0.866)";
+    document.getElementById("shadow").style.backgroundImage =
+      "linear-gradient(115deg, #00000000,rgb(220, 220, 220),#00000000)";
   }
+  document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
+
+  // Apply light theme to both sidebars
+  applyThemeToSidebar("sidebar", "light");
+  applyThemeToSidebar("sidebar2", "light");
 
   toggleThemeBtn("light");
   updateChartColors(false);
@@ -71,40 +77,35 @@ function enableDarkTheme() {
   console.log("inDark");
   saveTheme("dark");
 
-  const sidebar = document.getElementById("sidebar");
-  const sidebar2 = document.getElementById("sidebar2");
-  const mainBody = document.body;  // Main body reference
-
-  // Update icons for dark theme
-  document
-    .querySelectorAll(".material-symbols-outlined")
-    .forEach((icon) => icon.classList.remove("light-theme"));
-
-  // Update sidebar
-  if (sidebar) {
-    sidebar.classList.remove("light");
-    sidebar.classList.add("dark");
-    const closeButton = sidebar.querySelector(".close-btn");
-    if (closeButton) {
-      closeButton.style.color = "#ffffff";
+  const input_code = document.getElementById("input_code");
+  if (input_code) {
+    input_code.style.color = "rgba(255, 170, 0, 0.756)";
+    document.getElementById("output_code").style.color = "rgba(0,0,0,1)";
+    document.getElementById("submit").style.filter = "invert(0)";
+  } else {
+    const normal_code = document.getElementById("normal_code");
+    if (normal_code) {
+      normal_code.style.color = "rgba(255, 170, 0, 0.756)";
+      document.getElementById("obfuscated_code").style.color =
+        "rgba(0, 255, 204, 0.619)";
     }
   }
-
-  // Update second sidebar
-  if (sidebar2) {
-    sidebar2.classList.remove("light");
-    sidebar2.classList.add("dark");
-    const closeButton2 = sidebar2.querySelector(".close-btn");
-    if (closeButton2) {
-      closeButton2.style.color = "#ffffff";
-    }
+  const time_code = document.getElementById("time_code");
+  if (time_code) {
+    time_code.style.color = "rgba(255, 170, 0, 0.756)";
   }
-
-  // Update the main body background and text colors
-  if (mainBody) {
-    mainBody.style.backgroundColor = "#000000";  // Dark background
-    mainBody.style.color = "#ffffff";            // Light text
+  const heading = document.getElementById("heading");
+  if (heading) {
+    document.getElementById("body").style.color = "rgba(255, 255, 255, 0.866)";
+    document.getElementById("shadow").style.backgroundImage =
+      "linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000)";
   }
+  document.getElementById("body").style.backgroundColor =
+    "rgba(0, 0, 0, 0.888)";
+
+  // Apply dark theme to both sidebars
+  applyThemeToSidebar("sidebar", "dark");
+  applyThemeToSidebar("sidebar2", "dark");
 
   toggleThemeBtn("dark");
   updateChartColors(true);
@@ -141,8 +142,6 @@ function applyTheme() {
   }
 }
 
-window.onload = applyTheme;
-
 function updateChartColors(isDark) {
   if (typeof Chart !== "undefined" && Chart.instances[0]) {
     const chart = Chart.instances[0];
@@ -163,10 +162,8 @@ function copylink() {
     .then(() => {
       const linkElement = document.getElementById("link");
 
-      // Temporarily change the content to the checkmark ✓
       linkElement.innerHTML = "✓&nbsp;&nbsp;";
 
-      // After 2 seconds, change it back to the original image
       setTimeout(() => {
         linkElement.innerHTML = `<img src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt="">`;
       }, 2000);
@@ -203,49 +200,63 @@ function clearText() {
   }
 }
 
-
-
 let sidebarOpen = false;
-let currentSidebar = null;
+let sidebarOpen2 = false;
+
 
 function toggleSidebar(sidebarId) {
   const sidebar = document.getElementById(sidebarId);
   const navbar = document.querySelector(".navbar");
+  const hamburger = document.querySelector(".hamburger");
 
   if (!sidebar) {
-    console.error("Sidebar element not found.");
-    return;
+      console.error("Sidebar element not found.");
+      return;
   }
 
-  if (!navbar) {
-    console.error("Navbar element not found.");
-    return;
+  // Toggle each sidebar independently
+  if (sidebarId === 'sidebar') {
+      if (sidebarOpen) {
+          // Close sidebar1
+          sidebar.style.width = "0";
+          sidebarOpen = false;
+          navbar.style.display = "block";
+          hamburger.style.display = "block";
+      } else {
+          // Open sidebar1
+          sidebar.style.width = "250px";
+          sidebarOpen = true;
+          navbar.style.display = "none";
+          hamburger.style.display = "none";
+          if (sidebarOpen2) {
+              // Close sidebar2 if it's open
+              document.getElementById('sidebar2').style.width = "0";
+              sidebarOpen2 = false;
+          }
+      }
+  } else if (sidebarId === 'sidebar2') {
+      if (sidebarOpen2) {
+          // Close sidebar2
+          sidebar.style.width = "0";
+          sidebarOpen2 = false;
+          navbar.style.display = "block";
+          hamburger.style.display = "block";
+      } else {
+          // Open sidebar2
+          sidebar.style.width = "250px";
+          sidebarOpen2 = true;
+          navbar.style.display = "none";
+          hamburger.style.display = "none";
+          if (sidebarOpen) {
+              // Close sidebar1 if it's open
+              document.getElementById('sidebar').style.width = "0";
+              sidebarOpen = false;
+          }
+      }
   }
-
-  // Close any currently open sidebar
-  if (currentSidebar && currentSidebar !== sidebar) {
-    currentSidebar.style.width = "0";
-    currentSidebar.classList.remove("show");
-  }
-
-  sidebarOpen = !sidebarOpen;
-  if (sidebarOpen) {
-    sidebar.classList.add("show");
-    sidebar.style.width = "250px";
-    navbar.style.display = "none";
-    document.querySelector(".hamburger").style.display = "none";
-    document.querySelector(".hamburger2").style.display = "none";
-  } else {
-    sidebar.style.width = "0";
-    navbar.style.display = "block";
-    document.querySelector(".hamburger").style.display = "block";
-    document.querySelector(".hamburger2").style.display = "block";
-    sidebar.classList.remove("show");
-  }
-
-  // Store the currently active sidebar
-  currentSidebar = sidebar;
 }
+
+
 
 
 const sidebarLinks = document.querySelectorAll("#sidebar a");
@@ -256,14 +267,18 @@ sidebarLinks.forEach((link) => {
     document.querySelector(".hamburger").style.display = "block";
   });
 });
+
 function checkScreenSize() {
-  const sidebar = document.getElementById("sidebar");
   if (window.innerWidth > 400) {
-    sidebar.style.width = "0";
+    // Close any open sidebar on larger screens
+    document.getElementById('sidebar1').style.width = "0";
+    document.getElementById('sidebar2').style.width = "0";
     sidebarOpen = false;
+    sidebarOpen2 = false;
     document.querySelector(".navbar").style.display = "block";
     document.querySelector(".hamburger").style.display = "none";
   } else {
+    // Show the hamburger icon on smaller screens
     document.querySelector(".hamburger").style.display = "block";
   }
 }

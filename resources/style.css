@@ -3,12 +3,16 @@
   padding: 0;
 }
 
+
 body {
   overflow-x: hidden;
   font-family: "Sometype Mono", monospace;
   background-color: rgba(0, 0, 0, 0.888);
   transition-duration: 0.5s;
 }
+
+
+
 #fileInput {
   margin-left: 10px;
   padding: 10px;
@@ -624,16 +628,15 @@ footer {
 }
 /* Sidebar styling */
 .sidebar {
-  top: -100%;
-  height: 100vh !important;
   width: 0;
+  height: 100vh; /* Full height */
   position: fixed;
+  top: 0;
   left: 0;
-  overflow-x: hidden;
-  transition: top 0.3s ease;
-  z-index: 1000;
-  padding-top: 90px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #333; /* Adjust based on your theme */
+  color: #ffffff;
+  overflow-x: hidden; /* Hide horizontal scroll */
+  padding-top: 20px; /* Space from top */
 }
 .sidebar.light {
   background-color: #ffffff;
@@ -643,6 +646,9 @@ footer {
 }
 .sidebar.show {
   top: 0;
+}
+.sidebar-content {
+  padding-top: 60px; /* Space between close button and first link */
 }
 .sidebar a {
   padding: 8px 8px 8px 32px;
@@ -668,11 +674,12 @@ footer {
 .sidebar .close-btn {
   position: absolute;
   top: 10px;
-  right: 20px;
-  font-size: 36px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
   cursor: pointer;
-  transition: transform 0.3s;
-  color: #acacac !important;
+  color: inherit; /* This will adapt based on the theme */
 }
 .close-btn:hover {
   transform: rotate(180deg);
@@ -697,16 +704,15 @@ footer {
 }
 /* Sidebar 2 styling */
 .sidebar2 {
-  top: -100%;
-  height: 100vh !important;
   width: 0;
+  height: 100vh; /* Full height */
   position: fixed;
+  top: 0;
   right: 0;
-  overflow-x: hidden;
-  transition: top 0.3s ease;
-  z-index: 1000;
-  padding-top: 90px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #333; /* Adjust based on your theme */
+  color: #ffffff;
+  overflow-x: hidden; /* Hide horizontal scroll */
+  padding-top: 20px; /* Space from top */
 }
 .sidebar2.light {
   background-color: #ffffff;
@@ -740,12 +746,13 @@ footer {
 }
 .sidebar2 .close-btn {
   position: absolute;
-  top: 10px;
-right: 40px;
-  font-size: 36px;
+  top: 12px;
+  right: 40px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
   cursor: pointer;
-  transition: transform 0.3s;
-  color: #acacac !important;
+  color: inherit; /* This will adapt based on the theme */
 }
 .close-btn:hover {
   transform: rotate(180deg);
@@ -768,3 +775,4 @@ right: 40px;
     z-index: 1001;
   }
 }
+
