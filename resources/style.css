@@ -427,7 +427,9 @@ option {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-evenly;
+  align-items: center;
+  flex-direction: row;
   padding: 10px;
 }
 
@@ -536,9 +538,7 @@ footer {
     white-space: nowrap;
   }
 
-  #name {
-    width: calc(50vw - 0px);
-  }
+
 
   #directory {
     width: calc(100vw - 40px);
