@@ -351,6 +351,11 @@ footer {
     margin-top:16px;
     margin-left: 150px;
 }
+
+.social-header{
+    margin-left:50px;
+    margin-top: 80px;
+}
 .social-links{
     font-size: 35px;
     width: 200px;
