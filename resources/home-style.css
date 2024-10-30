@@ -401,6 +401,16 @@ input {
     margin-top: 20px;
     border-radius: 5px;
 }
+.fa-user{
+    margin: 2px 10px;
+}
+.fa-envelope{
+    margin: 2px 10px;
+}
+
+.fa-comment{
+    margin: 2px 10px;
+}
 
 #send {
     padding: 5px 10px 5px 10px;
