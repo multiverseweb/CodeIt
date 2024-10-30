@@ -351,6 +351,35 @@ footer {
     margin-top:16px;
     margin-left: 150px;
 }
+
+.github{
+    color: #040204;
+    transition: border-radius 0.8s;
+}
+.github:hover{
+ background-color:    #040204;
+ 
+ border-radius: 20px;
+}
+
+.discord{
+    color: 	#7289da;
+    transition: border-radius 0.8s;
+}
+.discord:hover{
+    background-color:#7289da;
+    border-radius: 15px;
+}
+
+.mail{
+    color: #ff8282;
+    transition: border-radius 0.8s;
+}
+.mail:hover{
+    background-color:  #ff8282;
+    border-radius: 15px;
+}
+
 form {
     background-color: #4c4c4c2a;
     backdrop-filter: blur(7px);
