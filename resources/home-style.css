@@ -394,9 +394,7 @@ footer {
    
   }
 
-  .fa-envelope{
-    color: #e03f4f;
-  }
+   
   .social-links a:hover::after {
     top: 0;
     
