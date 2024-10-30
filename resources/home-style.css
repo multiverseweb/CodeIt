@@ -351,19 +351,27 @@ footer {
     margin-top:16px;
     margin-left: 150px;
 }
+.social-links{
+    font-size: 35px;
+    width: 200px;
+     margin-left: 80px;
+     margin-top: 30px;
+     display: flex;
+    justify-content: space-between;;
+
+}
+
 
 .social-links a {
-    /* width: 80px;
-    height: 80px; */
-    /* text-align: center;
-    text-decoration: none; */
+  
     color: #000;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
-    /* margin: 0 30px; */
+ 
     border-radius: 50%;
     position: relative;
     overflow: hidden;
     transition: transform 0.5s;
+   
   }
   
   .social-links a .fab {
