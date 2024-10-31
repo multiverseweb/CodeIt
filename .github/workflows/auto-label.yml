@@ -42,7 +42,7 @@ jobs:
                   repo: context.repo.repo,
                   name: label,
                   color: color,
-                  description: `Automatically added label for issue review`
+                  description: `Waiting for the CodeIt's Maintainer to review this issue.`
                 });
               }
             };
