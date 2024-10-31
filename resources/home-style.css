@@ -18,7 +18,7 @@ body{
 }
 
 #code {
-    background: linear-gradient(to right, #5c01a6,#9c179e,#cc4778,#ed7953,#fdb42f);
+    background: linear-gradient(to right, goldenrod, rgb(0, 141, 141));
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation-name: hue;
@@ -132,7 +132,6 @@ body{
 }
 #zoom:hover img{
     scale:3;
-    padding-right: 250px;
 }
 .section-l{
     display: flex;
@@ -147,6 +146,7 @@ body{
     margin-right: 100px;
 }
 .faq-section {
+    max-width: fit-content;
     margin: 20px 0;
     padding: 10px;
     border-radius: 5px;
@@ -175,6 +175,9 @@ body{
 }
 
 .faq-question {
+    padding: 2px;
+    padding-left: 5px;
+    max-width: fit-content;
     font-weight:100;
     cursor: pointer;
     font-size: 23px;
@@ -182,9 +185,9 @@ body{
 }
 
 .faq-answer {
+    transition-duration: 0.5s;
     margin-left: 15px;
     padding: 20px 0;
-    border: 2px solid rgb(0, 141, 141);
     border-top: 0;
     display: none; 
     font-size: 20px;
@@ -219,7 +222,7 @@ details[open] .faq-answer {
 .shadow{
     height: 20px;
     width: 180px;
-    background-image: linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000);
+    background-image: linear-gradient(115deg, #00000000,#191919,#00000000);
     position: absolute;
     margin-top: -20px;
     animation-name: wave;

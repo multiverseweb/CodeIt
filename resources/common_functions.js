@@ -18,6 +18,7 @@ navItems.forEach((item) => {
     highlight.style.width = `${itemRect.width}px`;
     highlight.style.left = `${itemRect.left}px`;
     highlight.style.top = `${itemRect.top - tableRect.top}px`;
+    highlight.style.backgroundColor="white";
   });
 });
 
@@ -27,6 +28,8 @@ document.querySelector(".navbar").addEventListener("mouseleave", () => {
 function enableLightTheme() {
   console.log("in light");
   saveTheme("light");
+  document.querySelector(".top-elements").style.filter="invert(1)";
+  document.querySelector(".logo").style.filter="invert(1)";
 
   const input_code = document.getElementById("input_code");
   if (input_code) {
@@ -81,6 +84,8 @@ function toggleThemeBtn(currentTheme) {
 function enableDarkTheme() {
   console.log("inDark");
   saveTheme("dark");
+  document.querySelector(".top-elements").style.filter="invert(0)";
+  document.querySelector(".logo").style.filter="invert(0)";
 
   const input_code = document.getElementById("input_code");
   if (input_code) {
@@ -103,10 +108,9 @@ function enableDarkTheme() {
   if (heading) {
     document.getElementById("body").style.color = "rgba(255, 255, 255, 0.866)";
     document.getElementById("shadow").style.backgroundImage =
-      "linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000)";
+      "linear-gradient(115deg, #00000000,#191919,#00000000)";
   }
-  document.getElementById("body").style.backgroundColor =
-    "rgba(0, 0, 0, 0.888)";
+  document.getElementById("body").style.backgroundColor ="rgba(0, 0, 0, 0.90)";
 
   document
     .querySelector(".material-symbols-outlined")

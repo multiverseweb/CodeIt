@@ -6,7 +6,7 @@
 body {
   overflow-x: hidden;
   font-family: "Sometype Mono", monospace;
-  background-color: rgba(0, 0, 0, 0.888);
+  background-color: rgba(0, 0, 0, 0.90);
   transition-duration: 0.5s;
 }
 
@@ -28,7 +28,7 @@ body {
 
 
 .top-elements {
-  background-color: #00000000;
+  background-color: rgb(24, 24, 24);
   backdrop-filter: blur(100px);
   position: sticky;
   top: 0px;
@@ -44,12 +44,15 @@ body {
 .gap {
   width: 80px;
 }
+i{
+  transition-duration: 0.3s;
+}
 i:hover{
-  color: #7c7c7c;
+  color: #6a6a6a;
 }
 .top-link {
   display: flex;
-  color: rgba(124, 124, 124);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
 }
 
@@ -130,8 +133,11 @@ i:hover{
 } 
 
 #navbar_table {
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 5px;
   margin-top: 15px;
-  border: 1px solid rgba(124, 124, 124);
+  border: 1px solid rgba(255, 255, 255,0.70);
   border-radius: 0px; 
   display: inline-table;
   min-width: 100%;
@@ -160,11 +166,11 @@ i:hover{
 }
 
 .nav-item a {
-  mix-blend-mode: difference;
+  mix-blend-mode:difference;
 }
 
 td {
-  color: rgb(124, 124, 124);
+  color: rgba(255, 255, 255,0.7);
   padding: 5px 20px 5px 20px;
   transition-duration: 0.5s;
   border-radius: 20px;
@@ -172,12 +178,12 @@ td {
 
 td a {
   text-decoration: none;
-  color: rgb(121, 121, 121);
+  color: rgba(255, 255, 255,0.7);
   
 }
 
 #current {
-  background-color: #787878;
+  background-color: #ffffff;
 }
 
 .navbar-container:hover #current {
@@ -702,8 +708,6 @@ footer {
     z-index: 1001;
   }
 }
-
-
 
 div.form div{
   position:relative;
