@@ -180,7 +180,7 @@ body{
     max-width: fit-content;
     font-weight:100;
     cursor: pointer;
-    font-size: 23px;
+    font-size: large;
     background-color: rgba(0, 198, 228, 0.463);
 }
 
@@ -190,7 +190,7 @@ body{
     padding: 20px 0;
     border-top: 0;
     display: none; 
-    font-size: 20px;
+    font-size: 15px;
 }
 
 details[open] .faq-answer {
