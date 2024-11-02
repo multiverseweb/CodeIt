@@ -108,7 +108,11 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
   - Save Time: Eliminate the repetitive task of manually converting code templates, freeing up more time to focus on solving the problem at hand.
   - Increase Accuracy: Reduce the risk of errors that can occur during manual code adjustments.
   - Enhance Productivity: Speed up your coding process with streamlined workflows and intuitive tools.
- 
+
+## ✨ Project Structure
+
+Check the project structure here [Project Structure](PROJECT_STRUCTURE.md)
+
 ## Use CodeIt
 Deployed on
 
