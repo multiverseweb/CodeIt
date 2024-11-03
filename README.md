@@ -15,7 +15,7 @@
 
 <!--![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb/CodeIt%20&countColor=%2523263759&style=for-the-badge)-->
 
-![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb2%2Dataverse%20&countColor=%23263759&style=flat&initial=5767)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb2%2CodeIt%20&countColor=%23263759&style=flat&initial=5767)
   ![Github](https://img.shields.io/github/license/multiverseweb/CodeIt)
   ![GitHub Repo stars](https://img.shields.io/github/stars/multiverseweb/CodeIt)
   ![GitHub contributors](https://img.shields.io/github/contributors/multiverseweb/CodeIt)
