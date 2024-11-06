@@ -299,9 +299,22 @@
             <div class="feed-back">
             <i class="fa-solid fa-comment"></i>
   
-           <input name="Feedback" placeholder="Your Feedback (minimum 10 characters)"required oninput="checkFeedbackLength(this)"></input>
+           <input name="Feedback" class="feedback" placeholder="Your Feedback (minimum 10 characters)"required oninput="checkFeedbackLength(this)"></input>
           <span id="feedbackError"style="color:#ff5457"display="none">Feedback must be at least 10 characters long.</span>  
           </div>
+
+          <div class="star-rating" style="text-align: center; margin: 10px;">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5" title="5 star">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4" title="4 stars">&#9733;</label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3" title="3 stars">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2" title="2 stars">&#9733;</label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1" title="1 stars">&#9733;</label>
+        </div>  
             <button type="submit" id="send">Send</button>
         </div>
           </form>
@@ -393,6 +406,14 @@
         checkFeedbackLength(feedback);
         return feedback.value.length >= 10;
       }
+      function validateForm() {
+                const rating = document.querySelector('input[name="rating"]:checked');
+                if (!rating) {
+                    alert("Please select a rating.");
+                    return false; // Prevent form submission
+                }
+                return true; // Allow form submission
+            }
     </script>
     <script>
       window.embeddedChatbotConfig = {

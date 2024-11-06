@@ -375,7 +375,16 @@ input {
     margin-top: 20px;
     border-radius: 5px;
 }
-
+input.feedback{
+    padding-left: 10px;
+    color: white;
+    background-color: #76767639;
+    border: 0.1px solid rgba(255, 255, 255, 0.193);
+    width: calc(100% - 10px);
+    height: 70px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
 #send {
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
