@@ -8,6 +8,10 @@
 ![DSA](https://img.shields.io/badge/Data_Structures_&_Algorithms-000000?style=for-the-badge) 
 
 #### Read the description below and [start contributing](#contribute) now! If you like the project, show some love ❤️ and star the repo! ⭐
+
+> [!IMPORTANT]
+> Look for issues labeled with <img src="https://github.com/user-attachments/assets/a7217478-f5f8-4174-a521-99df72095e28" height="20px"> and ask for assignment if you can solve them.
+
 ---
 
 # CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="../images/Nomenclature.png" height=40px align=right></a>
