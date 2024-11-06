@@ -114,7 +114,7 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 
 ## ✨ Project Structure
 
-Check the project structure here [Project Structure](Documentation/PROJECT_STRUCTURE.md)
+Check the project structure here [Project Structure](../Documentation/PROJECT_STRUCTURE.md)
 
 ## Use CodeIt
 Deployed on
