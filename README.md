@@ -14,7 +14,7 @@
 
 ---
 
-# CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="../images/Nomenclature.png" height=40px align=right></a>
+# CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="images/Nomenclature.png" height=40px align=right></a>
 #### Developing for the Developers
 
 
@@ -100,14 +100,14 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 ## Preview
 
 #### Code Refiner
-![](../images/coedit.png)
+![](images/coedit.png)
 <details> 
  <summary align=left><H4>View More</H4></summary><br>
   
 #### Time Complexity Analyser
-![](../images/complexity.png)
+![](images/complexity.png)
 #### Code Obfuscator
-![](../images/obfuscation.png)
+![](images/obfuscation.png)
 </details>
 
 ## Benefits
