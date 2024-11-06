@@ -2,12 +2,12 @@
 
 <!-- START_STRUCTURE -->
 ```
-├── 404.html
-├── CONTRIBUTION.md
+├── Documentation/
+│   ├── CONTRIBUTION.md
+│   ├── PROJECT_STRUCTURE.md
+│   └── repo_structure.txt
 ├── LICENSE
-├── PROJECT_STRUCTURE.md
 ├── README.md
-├── code_of_conduct.md
 ├── images/
 │   ├── Nomenclature.png
 │   ├── coedit.png
@@ -21,14 +21,11 @@
 │   ├── top.png
 │   └── working.png
 ├── index.html
-├── package-lock.json
-├── package.json
 ├── pages/
 │   ├── contributorsSection.html
 │   ├── obfuscation.html
 │   ├── refine.html
 │   └── timeComplexity.html
-├── repo_structure.txt
 └── resources/
     ├── algo.py
     ├── analyser-style.css
