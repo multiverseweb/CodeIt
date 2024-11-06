@@ -12,7 +12,8 @@
 
 # CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="images/Nomenclature.png" height=40px align=right></a>
 #### Developing for the Developers
-
+
+
 <!--![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb/CodeIt%20&countColor=%2523263759&style=for-the-badge)-->
 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb2%2CodeIt%20&countColor=%23263759&style=flat&initial=5767)
@@ -113,7 +114,7 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 
 ## ✨ Project Structure
 
-Check the project structure here [Project Structure](PROJECT_STRUCTURE.md)
+Check the project structure here [Project Structure](Documentation/PROJECT_STRUCTURE.md)
 
 ## Use CodeIt
 Deployed on
