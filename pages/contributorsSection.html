@@ -1,46 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeIt Contributors</title>
-    <link rel="stylesheet" href="../resources/contributorsSection.css">
-    <link rel="shortcut icon" href="../images/Nomenclature.png" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contributors</title>
+  <link rel="stylesheet" href="../resources/contributorsSection.css">
+  <link rel="icon" href="../image/ml-fusion-lab-logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-        <div class="containerr">
+    <div class="home-nav">
+        <a href="/">Go to Home</a>
+    </div>
 
-            <!-- Stats Section -->
-            <section class="stats">
-                <h2>CodeIt's Contributors Statistics</h2>
-                <div class="stats-grid" id="statsGrid">
-                    <!-- Stats will be dynamically inserted here -->
-                </div>
-            </section>
+  <section class="contributor-stats">
+    <h2>Project Statistics</h2>
+    <div class="contributor-stats-grid" id="statsGrid">
+      <!-- Dynamic Stats will be added by JavaScript -->
+    </div>
+  </section>
 
-            <!-- Contributors Grid -->
-            <section class="contributors">
-                <h2>Meet Our Contributors</h2>
-                <div class="contributors-grid" id="contributorsGrid">
-                    <!-- Contributors will be dynamically inserted here -->
-                </div>
-                <div id="loading" class="loading">
-                    <div class="spinner"></div>
-                </div>
-            </section>
+  <div class="container">
+    <h1 class="title">Our Contributors</h1>
+  </div>
+  <div id="contributors" class="contributors-grid"></div>
+  <style>
+    @property --angle{
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
 
-            <!-- Call to Action -->
-            <section id="contribute" class="cta">
-                <h2>Ready to Make an Impact?</h2>
-                <p>Join our community and help shape the future of CodeIt.</p>
-                <form id="subscribeForm" onsubmit="event.preventDefault(); window.location.href='https://github.com/multiverseweb/CodeIt';">
-                    <button type="submit" class="btn btn-secondary">Join Community</button>
-                </form>
-                <div id="notification" class="notification hidden"></div>
-            </section>
-        </div>
-        <a href="../index.html"><button class="goBack">Go To Home</button></a>
+    .contributor-card::after, .contributor-card::before{
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      padding: 4px;
+      top: -1.5%;
+      border-radius: 10px;
+    }
+    .contributor-card:hover::before,
+    .contributor-card:hover::after {
+      animation: spin 0.75s linear infinite;
+      background-image: conic-gradient(from var(--angle),#00a5e3,#93d8d5,#ecbeed,#fe9bba,#00cdac,#ffddac,#00a5e3)
+    }
+    
+    .contributor-card::before{
+      filter: blur(3rem);
+      opacity: 0.5;
+    }
+    
+    @keyframes spin{
+      from{
+        --angle:0deg;
+      }
+      to{
+        --angle:360deg;
+      }
+    }
+  </style>
 
-    <script src="../resources/contributorsSection.js"></script>
+  <script src="../resources/contributorsSection.js"></script>
 </body>
 </html>
