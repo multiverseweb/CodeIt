@@ -132,7 +132,6 @@ body{
 }
 #zoom:hover img{
     scale:3;
-    padding-right: 250px;
 }
 .section-l{
     display: flex;
@@ -147,6 +146,7 @@ body{
     margin-right: 100px;
 }
 .faq-section {
+    max-width: fit-content;
     margin: 20px 0;
     padding: 10px;
     border-radius: 5px;
@@ -175,19 +175,22 @@ body{
 }
 
 .faq-question {
+    padding: 2px;
+    padding-left: 5px;
+    max-width: fit-content;
     font-weight:100;
     cursor: pointer;
-    color: white;
-    font-size: 23px;
+    font-size: large;
+    background-color: rgba(0, 198, 228, 0.463);
 }
 
 .faq-answer {
+    transition-duration: 0.5s;
     margin-left: 15px;
     padding: 20px 0;
-    border-left: 2px solid rgb(0, 141, 141);
-    background-color: rgba(29, 28, 28, 0.888);
+    border-top: 0;
     display: none; 
-    font-size: 20px;
+    font-size: 15px;
 }
 
 details[open] .faq-answer {
@@ -219,7 +222,7 @@ details[open] .faq-answer {
 .shadow{
     height: 20px;
     width: 180px;
-    background-image: linear-gradient(115deg, #00000000,rgba(30,30,30, 0.888),rgba(30,30,30, 0.888),#00000000);
+    background-image: linear-gradient(115deg, #00000000,#191919,#00000000);
     position: absolute;
     margin-top: -20px;
     animation-name: wave;
@@ -372,7 +375,16 @@ input {
     margin-top: 20px;
     border-radius: 5px;
 }
-
+input.feedback{
+    padding-left: 10px;
+    color: white;
+    background-color: #76767639;
+    border: 0.1px solid rgba(255, 255, 255, 0.193);
+    width: calc(100% - 10px);
+    height: 70px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
 #send {
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
