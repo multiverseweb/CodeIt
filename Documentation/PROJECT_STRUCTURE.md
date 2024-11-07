@@ -43,6 +43,7 @@
 │   ├── obfuscate-style.css
 │   ├── refine.js
 │   └── style.css
+├── robots.txt
 └── sitemap.xml
 ```
 <!-- END_STRUCTURE -->
