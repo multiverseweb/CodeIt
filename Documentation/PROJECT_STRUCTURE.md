@@ -22,6 +22,8 @@
 │   └── working.png
 ├── index.html
 ├── pages/
+│   ├── Login.html
+│   ├── Signup.html
 │   ├── contributorsSection.html
 │   ├── obfuscation.html
 │   ├── refine.html
