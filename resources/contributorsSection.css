@@ -29,6 +29,26 @@ body {
   margin: 0 auto;
 }
 
+/* Styling the progress bar */
+.progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  height: 8px;
+}
+
+.progress-bar{
+  border: none;
+  border-radius: 2rem;
+  height: 100%;
+  width:0%;
+  background:linear-gradient(90deg, #b6dbf9, #1694DB,#5C6BC0,#2751BD);
+  box-shadow: 0 0 5px #BBDEFB, 0 0 15px #2751BD, 0 0 21px #2d04d1;
+}
+
+
 /* Hero Section */
 .hero {
   background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2850&q=80');

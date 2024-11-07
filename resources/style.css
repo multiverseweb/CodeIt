@@ -6,7 +6,7 @@
 body {
   overflow-x: hidden;
   font-family: "Sometype Mono", monospace;
-  background-color: rgba(0, 0, 0, 0.90);
+  background-color: rgba(0, 0, 0, 0.9);
   transition-duration: 0.5s;
 }
 
@@ -44,13 +44,13 @@ body {
   cursor: pointer;
 }
 
-.star-rating input:checked~label {
+.star-rating input:checked ~ label {
   color: gold;
   /* Gold color for selected stars */
 }
 
 .star-rating label:hover,
-.star-rating label:hover~label {
+.star-rating label:hover ~ label {
   color: gold;
   /* Change color on hover */
 }
@@ -72,10 +72,10 @@ body {
 .gap {
   width: 80px;
 }
-i{
+i {
   transition-duration: 0.3s;
 }
-i:hover{
+i:hover {
   color: #6a6a6a;
 }
 .top-link {
@@ -91,15 +91,34 @@ i:hover{
   margin-right: 30px;
 }
 
+/* Styling the progress bar */
+.progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  height: 8px;
+}
+
+.progress-bar{
+  border: none;
+  border-radius: 2rem;
+  height: 100%;
+  width:0%;
+  background:linear-gradient(90deg, #b6dbf9, #1694DB,#5C6BC0,#2751BD);
+ box-shadow: 0 0 5px #BBDEFB, 0 0 15px #2751BD, 0 0 21px #2d04d1;
+}
+
+
 .navbar-container {
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   position: relative;
 
-   /* Add mask for fade effect */
-   -webkit-mask-image: linear-gradient(
-
+  /* Add mask for fade effect */
+  -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
     black 15%,
@@ -132,7 +151,6 @@ i:hover{
     rgba(28, 28, 28, 0),
     rgba(28, 28, 28, 0.7) 75%,
     rgba(28, 28, 28, 1) 100%
-    
   );
   z-index: 1;
   transition: right 0.2s ease;
@@ -158,15 +176,15 @@ i:hover{
 
 .navbar-container.show-fade::after {
   opacity: 1;
-} 
+}
 
 #navbar_table {
   padding-left: 60px;
   padding-right: 60px;
   margin-bottom: 5px;
   margin-top: 15px;
-  border: 1px solid rgba(255, 255, 255,0.70);
-  border-radius: 0px; 
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0px;
   display: inline-table;
   min-width: 100%;
 }
@@ -194,11 +212,11 @@ i:hover{
 }
 
 .nav-item a {
-  mix-blend-mode:difference;
+  mix-blend-mode: difference;
 }
 
 td {
-  color: rgba(255, 255, 255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   padding: 5px 20px 5px 20px;
   transition-duration: 0.5s;
   border-radius: 20px;
@@ -206,8 +224,7 @@ td {
 
 td a {
   text-decoration: none;
-  color: rgba(255, 255, 255,0.7);
-  
+  color: rgba(255, 255, 255, 0.7);
 }
 
 #current {
@@ -337,14 +354,13 @@ select {
 }
 
 #output_code {
-  color: rgba(0, 255, 204, 0.619) ! important;
+  color: rgba(0, 255, 204, 0.619) !important;
   resize: none;
-  font-family: "Sometype Mono", monospace; 
+  font-family: "Sometype Mono", monospace;
 }
 textarea:not(#output_code) {
   color: rgba(255, 255, 255, 0.866);
 }
-
 
 /* textarea {
   font-family: "Sometype Mono", monospace;
@@ -412,10 +428,10 @@ option {
   height: 30px;
 }
 
-#darkThemeBtn img{
+#darkThemeBtn img {
   filter: invert(0);
 }
-#lightThemeBtn img{
+#lightThemeBtn img {
   filter: invert(1);
 }
 .container {
@@ -466,7 +482,7 @@ option {
 
 footer {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   padding: 10px;
@@ -577,8 +593,6 @@ footer {
     white-space: nowrap;
   }
 
-
-
   #directory {
     width: calc(100vw - 40px);
   }
@@ -613,7 +627,6 @@ footer {
 
   #complexityChart {
     width: calc(100% - 20px);
-
   }
 
   #ouput_code {
@@ -737,29 +750,26 @@ footer {
   }
 }
 
-div.form div{
-  position:relative;
-
+div.form div {
+  position: relative;
 }
-div.form div i{
-  position:absolute;
-  top:35px;
-  left:22px;
+div.form div i {
+  position: absolute;
+  top: 35px;
+  left: 22px;
   transform: translateY(-50%);
 }
-div.form div input{
-  padding-left:50px;
-  height:30px;
-  width:85%;
+div.form div input {
+  padding-left: 50px;
+  height: 30px;
+  width: 85%;
 }
 
-@media(max-width:600px){
- 
- div.form div i{
-  padding-left:0px;
- }
-  div.form div input{
-      padding-left:50px;
+@media (max-width: 600px) {
+  div.form div i {
+    padding-left: 0px;
+  }
+  div.form div input {
+    padding-left: 50px;
   }
 }
-
