@@ -26,22 +26,23 @@
 │   ├── obfuscation.html
 │   ├── refine.html
 │   └── timeComplexity.html
-└── resources/
-    ├── algo.py
-    ├── analyser-style.css
-    ├── analyser.js
-    ├── bfuscate-style.css
-    ├── common_functions.js
-    ├── contributorsSection.css
-    ├── contributorsSection.js
-    ├── error404.css
-    ├── error404.js
-    ├── home-style.css
-    ├── homeScript.js
-    ├── navbar.js
-    ├── obfuscate-script.js
-    ├── obfuscate-style.css
-    ├── refine.js
-    └── style.css
+├── resources/
+│   ├── algo.py
+│   ├── analyser-style.css
+│   ├── analyser.js
+│   ├── bfuscate-style.css
+│   ├── common_functions.js
+│   ├── contributorsSection.css
+│   ├── contributorsSection.js
+│   ├── error404.css
+│   ├── error404.js
+│   ├── home-style.css
+│   ├── homeScript.js
+│   ├── navbar.js
+│   ├── obfuscate-script.js
+│   ├── obfuscate-style.css
+│   ├── refine.js
+│   └── style.css
+└── sitemap.xml
 ```
 <!-- END_STRUCTURE -->
