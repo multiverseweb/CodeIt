@@ -443,6 +443,19 @@ a{
     text-decoration: none;
     color: white;
 }
+.last p a{
+    text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.7),
+    0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 15px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(12, 12, 12, 0.8),
+    0 0 0px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 5px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    color: white;
+}
 
 .license{
     display: flex ;
@@ -470,7 +483,11 @@ a{
     flex-direction : row;
     justify-content: space-between;
 }
-
+#link2
+{
+    background-color: rgb(255, 252, 252);
+    border-radius: 50%;
+}
 #map {
     width: 45vw;
     margin-left: 30px;
@@ -575,5 +592,10 @@ a{
     }
     .links{
         margin-top: 10px;
+    }
+    #link2
+    {
+        background-color: rgb(255, 252, 252);
+        border-radius: 50%;
     }
 }
