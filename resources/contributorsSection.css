@@ -61,7 +61,7 @@
   padding: 16px;
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
   text-decoration: none;
-  color: inherit;
+  color: #fff;
   /* margin-bottom: 16px;  */
   word-wrap: wrap;
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;

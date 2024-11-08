@@ -48,6 +48,35 @@
       position: absolute;
       inset: 2px;
       border-radius: 8px;
+      background-color: rgba(23,23,23,0.7);
+    }
+
+    .contributor-card p,
+    .contributor-card a {
+      position: relative;
+      z-index: 1;         
+      color: #ddd;        
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+    }
+
+    .contributor-card a {
+      color: #aaa;        
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .contributor-card img {
+      border-radius: 50%; 
+      margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+      filter: brightness(1.2); 
+      z-index: 1; 
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .contributor-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.4); 
     }
   </style>
   <script src="../resources/contributorsSection.js"></script>

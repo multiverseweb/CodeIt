@@ -32,7 +32,7 @@ async function fetchContributorData() {
     // Display each contributor's data (avatar, username, and contributions)
     const contributorsContainer = document.getElementById("contributors");
     contributorsContainer.innerHTML = contributors.map(({ login, contributions, avatar_url, html_url }) => `
-      <div class="contributor-card" style="--clr:rgba(255,255,255,0.08)">
+      <div class="contributor-card" style="--clr:rgba(255,255,255,0.26)">
         <img src="${avatar_url}" alt="${login}'s avatar">
         <p><strong>${login}</strong></p>
         <p>Contributions: ${contributions}</p>
