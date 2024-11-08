@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 html {
     scroll-behavior: smooth;
@@ -278,28 +279,28 @@ details[open] .faq-answer {
     margin-top: 100px;
 }
 .contributeBtn , .licBtn{
-    text-decoration: none;
-    width:min-content;
-    margin-top: 30px;
-    margin-left: 100px;
-    background-color: #00000000;
-    border: 1px solid white;
-    border-radius: 10px;
-    /* border-radius: 2px; */
-    color: white;
-    font-size: 20px;
-    font-family: consolas;
-    display: flex;
-    padding: 12px 10px 5px 10px;
-    transition-duration: 0.3s;
+  text-decoration: none;
+  width: fit-content;
+  margin-top: 30px;
+  margin-left: 100px;
+  background-color: #00000000;
+  border: 1px solid white;
+  border-radius: 10px;
+  /* border-radius: 2px; */
+  color: white;
+  font-size: 20px;
+  font-family: consolas;
+  display: flex;
+  flex-direction: row;
+  padding: 12px 10px 5px 10px;
+  transition-duration: 0.3s;
 }
 #github , #lic-logo{
-    height: 28px;
-    margin: 5px;
-    margin-top: -3px;
-    filter: invert(1);
-    transition-duration: 0.3s;
-
+  height: 28px;
+  margin: 5px 0px 5px 5px;
+  margin-top: -3px;
+  filter: invert(1);
+  transition-duration: 0.3s;
 }
 
 .contributeBtn:hover , .licBtn:hover{
@@ -374,6 +375,12 @@ input {
     height: 30px;
     margin-top: 20px;
     border-radius: 5px;
+}
+.inputclass {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
 }
 input.feedback{
     padding-left: 10px;
