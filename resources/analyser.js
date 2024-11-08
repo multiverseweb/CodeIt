@@ -48,7 +48,7 @@ function initializeComplexityChart() {
           type: "linear",
           beginAtZero: true,
           grid: {
-            color: "rgba(255, 255, 255, 0.1)",
+            color: "rgba(255, 255, 255, 0.2)",
           },
           ticks: {
             color: "white",
@@ -61,7 +61,7 @@ function initializeComplexityChart() {
             color: "white",
           },
           grid: {
-            color: "rgba(255, 255, 255, 0.1)",
+            color: "rgba(255, 255, 255, 0.2)",
           },
           ticks: {
             color: "white",

@@ -72,11 +72,15 @@ body {
 .gap {
   width: 80px;
 }
+.ezis{
+  border-radius: 10px;
+  padding: 10px;
+}
 i{
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
 }
 i:hover{
-  color: #6a6a6a;
+  color: #000000;
 }
 .top-link {
   display: flex;

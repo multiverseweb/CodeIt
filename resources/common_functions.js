@@ -18,7 +18,7 @@ navItems.forEach((item) => {
     highlight.style.width = `${itemRect.width}px`;
     highlight.style.left = `${itemRect.left}px`;
     highlight.style.top = `${itemRect.top - tableRect.top}px`;
-    highlight.style.backgroundColor="white";
+    highlight.style.backgroundColor = "white";
   });
 });
 
@@ -28,8 +28,8 @@ document.querySelector(".navbar").addEventListener("mouseleave", () => {
 function enableLightTheme() {
   console.log("in light");
   saveTheme("light");
-  document.querySelector(".top-elements").style.filter="invert(1)";
-  document.querySelector(".logo").style.filter="invert(1)";
+  document.querySelector(".top-elements").style.filter = "invert(1)";
+  document.querySelector(".logo").style.filter = "invert(1)";
 
   const input_code = document.getElementById("input_code");
   if (input_code) {
@@ -54,6 +54,54 @@ function enableLightTheme() {
       "linear-gradient(115deg, #00000000,rgb(220, 220, 220),#00000000)";
   }
   document.getElementById("body").style.backgroundColor = "rgb(220, 220, 220)";
+
+
+
+
+
+
+  document.getElementById("git").style.color = "black";
+  document.getElementById("discord").style.color = "black"; 
+  document.getElementById("mail").style.color = "black";
+  const gitIcon = document.getElementById("git");
+  const discordIcon = document.getElementById("discord")
+  const mailIcon = document.getElementById("mail")
+
+  // Change color to black on hover
+  gitIcon.onmouseover = function () {
+    gitIcon.style.color = "white";
+    gitIcon.style.backgroundColor = "black";
+  };
+  // Reset color on mouse out
+  gitIcon.onmouseout = function () {
+    gitIcon.style.color = "black"; // or specify the original color
+    gitIcon.style.backgroundColor = "";
+  };
+  // Change color to white on hover
+  discordIcon.onmouseover = function () {
+    discordIcon.style.color = "white";
+    discordIcon.style.backgroundColor = "rgb(0, 136, 255)";
+  };
+  // Reset color on mouse out
+  discordIcon.onmouseout = function () {
+    discordIcon.style.color = "black"; // or specify the original color
+    discordIcon.style.backgroundColor = "";
+  };
+  // Change color to white on hover
+  mailIcon.onmouseover = function () {
+    mailIcon.style.color = "white";
+    mailIcon.style.backgroundColor = "rgb(237, 67, 169)";
+  };
+  // Reset color on mouse out
+  mailIcon.onmouseout = function () {
+    mailIcon.style.color = "black"; // or specify the original color
+    mailIcon.style.backgroundColor = "";
+  };
+
+
+
+
+
   const sidebar = document.getElementById("sidebar");
   document
     .querySelector(".material-symbols-outlined")
@@ -84,8 +132,8 @@ function toggleThemeBtn(currentTheme) {
 function enableDarkTheme() {
   console.log("inDark");
   saveTheme("dark");
-  document.querySelector(".top-elements").style.filter="invert(0)";
-  document.querySelector(".logo").style.filter="invert(0)";
+  document.querySelector(".top-elements").style.filter = "invert(0)";
+  document.querySelector(".logo").style.filter = "invert(0)";
 
   const input_code = document.getElementById("input_code");
   if (input_code) {
@@ -110,7 +158,50 @@ function enableDarkTheme() {
     document.getElementById("shadow").style.backgroundImage =
       "linear-gradient(115deg, #00000000,#191919,#00000000)";
   }
-  document.getElementById("body").style.backgroundColor ="rgba(0, 0, 0, 0.90)";
+  document.getElementById("body").style.backgroundColor = "rgba(0, 0, 0, 0.90)";
+
+
+
+  document.getElementById("git").style.color = "white";
+  document.getElementById("discord").style.color = "white"; 
+  document.getElementById("mail").style.color = "white";
+  const gitIcon = document.getElementById("git");
+  const discordIcon = document.getElementById("discord")
+  const mailIcon = document.getElementById("mail")
+
+  // Change color to black on hover
+  gitIcon.onmouseover = function () {
+    gitIcon.style.color = "black";
+    gitIcon.style.backgroundColor = "white";
+  };
+  // Reset color on mouse out
+  gitIcon.onmouseout = function () {
+    gitIcon.style.color = "white"; // or specify the original color
+    gitIcon.style.backgroundColor = "";
+  };
+  // Change color to white on hover
+  discordIcon.onmouseover = function () {
+    discordIcon.style.color = "black";
+    discordIcon.style.backgroundColor = "rgb(0, 136, 255)";
+  };
+  // Reset color on mouse out
+  discordIcon.onmouseout = function () {
+    discordIcon.style.color = "white"; // or specify the original color
+    discordIcon.style.backgroundColor = "";
+  };
+  // Change color to white on hover
+  mailIcon.onmouseover = function () {
+    mailIcon.style.color = "black";
+    mailIcon.style.backgroundColor = "rgb(237, 67, 169)";
+  };
+  // Reset color on mouse out
+  mailIcon.onmouseout = function () {
+    mailIcon.style.color = "white"; // or specify the original color
+    mailIcon.style.backgroundColor = "";
+  };
+
+
+
 
   document
     .querySelector(".material-symbols-outlined")
@@ -148,7 +239,7 @@ function applyTheme() {
 function updateChartColors(isDark) {
   if (typeof Chart !== "undefined" && Chart.instances[0]) {
     const chart = Chart.instances[0];
-    const textColor = isDark ? "white" : "black";
+    const textColor = "white";
 
     chart.options.scales.x.ticks.color = textColor;
     chart.options.scales.y.ticks.color = textColor;
