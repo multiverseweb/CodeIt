@@ -98,7 +98,7 @@ i:hover {
   left: 0;
   width: 100%;
   z-index: 99999;
-  height: 8px;
+  height: 3.5px;
 }
 
 .progress-bar{
@@ -106,8 +106,8 @@ i:hover {
   border-radius: 2rem;
   height: 100%;
   width:0%;
-  background:linear-gradient(90deg, #b6dbf9, #1694DB,#5C6BC0,#2751BD);
- box-shadow: 0 0 5px #BBDEFB, 0 0 15px #2751BD, 0 0 21px #2d04d1;
+  background:linear-gradient(90deg, #CCA226,#189081);
+ box-shadow: 0 0 8px  #CCA226, 0 0 18px #189081, 0 0 25px #137469;
 }
 
 
