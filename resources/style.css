@@ -483,6 +483,25 @@ footer {
   filter: invert(1);
 }
 
+  /* Style for the visitor counter container */
+  #visitor-counter-container {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px; /* Adjust font size if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+    padding: 8px 12px;
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  #visitor-counter-container a {
+    color: white; /* White color for the link */
+    text-decoration: none; /* Remove underline from the link */
+  }
+  
+  #visitor-counter-container a:hover {
+    text-decoration: underline; /* Underline link on hover */
+  }
+  
 #link {
   color: white;
   font-size: 20px;
