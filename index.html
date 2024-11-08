@@ -297,20 +297,20 @@
           <p>Let Us Know Your Thoughts!</p>
 
         <div class="form reveal">
-            <div class="user">
+            <div class="user inputclass">
             <i class="fa-solid fa-user"></i>
             <input type="text" name="Name" placeholder="Your Name" required />
             </div>
-            <div class="email">
+            <div class="email inputclass">
               <i class="fa-solid fa-envelope"></i>
             <input type="email" name="Email" placeholder="Your Email ID" required />
             </div>
-            <div class="feed-back">
+            <div class="feed-back inputclass">
             <i class="fa-solid fa-comment"></i>
   
-           <input name="Feedback" class="feedback" placeholder="Your Feedback (minimum 10 characters)"required oninput="checkFeedbackLength(this)"></input>
+           <input name="Feedback" class="feedback" placeholder="Your Feedback (minimum 10 characters)"required oninput="checkFeedbackLength(this)"></input></div>
           <span id="feedbackError"style="color:#ff5457"display="none">Feedback must be at least 10 characters long.</span>  
-          </div>
+        
 
           <div class="star-rating" style="text-align: center; margin: 10px;">
             <input type="radio" id="star5" name="rating" value="5" />
@@ -327,7 +327,7 @@
             <button type="submit" id="send">Send</button>
         </div>
           </form>
-        </div>
+      </div>
 
   </footer>
 
