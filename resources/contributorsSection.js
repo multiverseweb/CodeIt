@@ -24,11 +24,17 @@ async function fetchData() {
 }
 
 // Render stats
-function renderStats(repoStats, contributorsCount) {
+function renderStats(repoStats, contributors) {
+
   const statsGrid = document.getElementById('statsGrid');
+  
+  
+  // Calculate total contributions from the fetched contributors data
+  const totalContributions = contributors.reduce((sum, contributor) => sum + contributor.contributions, 0);
+
   const stats = [
-    { label: 'Contributors', value: contributorsCount, icon: 'users' },
-    { label: 'Total Contributions', value: repoStats.contributors?.reduce((sum, contributor) => sum + contributor.contributions, 0) || 0, icon: 'git-commit' },
+    { label: 'Contributors', value: contributors.length, icon: 'users' },
+    { label: 'Total Contributions', value: totalContributions, icon: 'git-commit' },
     { label: 'GitHub Stars', value: repoStats.stargazers_count || 0, icon: 'star' },
     { label: 'Forks', value: repoStats.forks_count || 0, icon: 'git-branch' }
   ];
@@ -77,6 +83,7 @@ function getIcon(name) {
 
 // Initialize the page
 async function init() {
+
   const loading = document.getElementById('loading');
   const contributorsGrid = document.getElementById('contributorsGrid');
 
@@ -85,12 +92,15 @@ async function init() {
 
   const { contributors, repoStats } = await fetchData();
 
-  renderStats(repoStats, contributors.length);
+  // Pass both the repoStats and contributors array to renderStats
+  renderStats(repoStats, contributors);
   renderContributors(contributors);
 
   loading.style.display = 'none';
   contributorsGrid.style.display = 'grid';
+
 }
+
 
 // Handle form submission
 document.getElementById('subscribeForm').addEventListener('submit', function(e) {
