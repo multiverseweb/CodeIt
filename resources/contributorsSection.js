@@ -32,17 +32,36 @@ async function fetchContributorData() {
     // Display each contributor's data (avatar, username, and contributions)
     const contributorsContainer = document.getElementById("contributors");
     contributorsContainer.innerHTML = contributors.map(({ login, contributions, avatar_url, html_url }) => `
-      <div class="contributor-card">
+      <div class="contributor-card" style="--clr:rgba(255,255,255,0.08)">
         <img src="${avatar_url}" alt="${login}'s avatar">
         <p><strong>${login}</strong></p>
         <p>Contributions: ${contributions}</p>
         <a href="${html_url}" target="_blank">GitHub Profile</a>
       </div>
     `).join('');
+
+    // Apply the mouse effect to each contributor card
+    applyMouseEffectToCards();
+
   } catch (error) {
     // Handle any errors that occur during the fetch
     console.error("Error fetching data:", error);
   }
+}
+
+// Function to apply the mouse effect to the contributor cards
+function applyMouseEffectToCards() {
+  const cards = document.querySelectorAll('.contributor-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', function(e) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty('--x', x + 'px');
+      card.style.setProperty('--y', y + 'px');
+    });
+  });
 }
 
 // Call the function to fetch and display data

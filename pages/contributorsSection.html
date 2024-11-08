@@ -24,44 +24,32 @@
     <h1 class="title">Our Contributors</h1>
   </div>
   <div id="contributors" class="contributors-grid"></div>
+
   <style>
-    @property --angle{
-      syntax: "<angle>";
-      initial-value: 0deg;
-      inherits: false;
+    .contributor-card::before{
+    content: '';
+    position: absolute;
+    background: radial-gradient(var(--clr),transparent,transparent);
+    height: 500px;
+    width: 500px;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.5s, top 0s,left 0s;
     }
 
-    .contributor-card::after, .contributor-card::before{
+    .contributor-card:hover::before{
+      opacity: 1;
+    }
+
+    .contributor-card::after{
       content: '';
       position: absolute;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-      padding: 4px;
-      top: -1.5%;
-      border-radius: 10px;
-    }
-    .contributor-card:hover::before,
-    .contributor-card:hover::after {
-      animation: spin 0.75s linear infinite;
-      background-image: conic-gradient(from var(--angle),#00a5e3,#93d8d5,#ecbeed,#fe9bba,#00cdac,#ffddac,#00a5e3)
-    }
-    
-    .contributor-card::before{
-      filter: blur(3rem);
-      opacity: 0.5;
-    }
-    
-    @keyframes spin{
-      from{
-        --angle:0deg;
-      }
-      to{
-        --angle:360deg;
-      }
+      inset: 2px;
+      border-radius: 8px;
     }
   </style>
-
   <script src="../resources/contributorsSection.js"></script>
 </body>
 </html>
