@@ -337,6 +337,9 @@ details[open] .faq-answer {
     margin-top: 50px;
     background-image: linear-gradient(to right,rgba(0, 0, 0, 0),rgb(255, 255, 255),rgba(0, 0, 0, 0));
 }
+[data-theme="light"] .design_line {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0)); /* Light mode gradient */
+}
 
 
 footer {
@@ -349,6 +352,33 @@ footer {
     display: flex;
     flex-direction: row;
 }
+.icon-links {
+    font-size: 35px;
+    width: 200px;
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-links a {
+    color: white; /* Default color for dark mode */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+[data-theme="light"] .icon-links a {
+    color: black; /* Icon color for light mode */
+}
+
+.icon-links a:hover {
+    color: #888888; /* Hover color in dark mode */
+}
+
+[data-theme="light"] .icon-links a:hover {
+    color: #555555; /* Hover color in light mode */
+}
+
 #last_link{
     background-color: #00000000;
     margin-top:16px;
@@ -419,6 +449,9 @@ input.feedback{
 .name {
     display: flex;
 }
+[data-theme="light"] .subheading {
+    color: black; /* Icon color for light mode */
+}
 
 .links {
     background-color: #12121200;
@@ -432,6 +465,16 @@ input.feedback{
 .links p {
     color: rgba(255, 255, 255, 0.433);
 }
+[data-theme="light"] .footer_logo img {
+    filter: none; /* Reset any color adjustment */
+  }
+  
+  /* On hover for light mode */
+[data-theme="light"] .footer_logo:hover img {
+    transform: scale(1.1);
+    filter: brightness(0) invert(1); /* For inverted logo on hover */
+}
+
 .last{
     padding: 10px;
 }
@@ -439,10 +482,19 @@ input.feedback{
     text-align: center;
     margin-top: 30px;
 }
+
 a{
     text-decoration: none;
     color: white;
 }
+[data-theme="light"] .last p {
+    color: black; /* Text color for light mode */
+}
+
+[data-theme="light"] .last p a {
+    color: black; /* Link color for light mode */
+}
+
 
 .license{
     display: flex ;
