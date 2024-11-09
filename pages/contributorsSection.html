@@ -1,15 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contributors</title>
   <link rel="stylesheet" href="../resources/contributorsSection.css">
   <link rel="icon" href="../image/ml-fusion-lab-logo.png">
+  <link rel="stylesheet" href="../resources/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="shortcut icon"
+      href="../images/Nomenclature.png"
+      type="image/x-icon"
+    />
   <link rel="shortcut icon" href="../images/Nomenclature.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
+  <button type="button" class="theme" id="darkThemeBtn" style="display: none">
+    <img src="../images/moon.png" class="themeLogo" />
+  </button>
+  <button type="button" class="theme" id="lightThemeBtn">
+    <img src="../images/sun.png" class="themeLogo" />
+  </button>
+
+  <div class="top-elements">
+    <a href="../index.html" class="top-link"
+      ><img
+        src="../images/Nomenclature.png"
+        alt="logo"
+        class="logo"
+        id="logo"
+      />
+      <p class="codeit">CodeIt</p>
+    </a>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <table id="navbar_table">
+          <tr>
+            <td class="nav-item">
+              <a href="../index.html" class="home">Home</a>
+            </td>
+            <td class="nav-item">
+              <a href="refine.html" class="competitive">Code Refiner</a>
+            </td>
+            <td class="nav-item">
+              <a href="obfuscation.html" class="obfuscation"
+                >Code Obfuscator</a
+              >
+            </td>
+            <td class="nav-item">
+              <a href="timeComplexity.html" class="time"
+                >Time Complexity Analyser</a
+              >
+            </td>
+            <td class="nav-item">
+              <a href="../index.html#contributeSection">Contribute!</a>
+            </td>
+            <td class="nav-item" id="current">
+              <a href="contributorsSection.html">Our Contributors!</a>
+            </td>
+            <td class="nav-item">
+              <a href="../index.html#feedback">Give Feedback!</a>
+            </td>
+            <td class="nav-item">
+              <a
+                href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
+                >License</a
+              >
+            </td>
+            <div class="highlight"></div>
+          </tr>
+        </table>
+      </div>
+    </nav>
+    <!-- Hamburger for smaller screens -->
+    <div class="hamburger" onclick="toggleSidebar()">
+      <span class="material-symbols-outlined"> unfold_more </span>
+    </div>
+    <!-- Sidebar structure -->
+    <div id="sidebar" class="sidebar">
+      <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+      <a href="../index.html" class="home">Home</a>
+      <a href="refine.html" class="competitive">Code Refiner</a>
+      <a href="obfuscation.html" class="obfuscation">Code Obfuscator</a>
+      <a href="timeComplexity.html" class="time">Time Complexity Analyser</a>
+      <a href="../index.html#contributeSection">Contribute!</a>
+      <a href="contributorsSection.html">Our Contributors!</a>
+      <a href="../index.html#feedback">Give Feedback!</a>
+      <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
+        >License</a
+      >
+    </div>
+
+    <div class="gap"></div>
+  </div>
   <a href="../index.html"><button class="goBack">Go To Home</button></a>
 
   <section class="contributor-stats">
@@ -26,5 +122,18 @@
   <div id="contributors" class="contributors-grid"></div>
 
   <script src="../resources/contributorsSection.js"></script>
+  <script src="../resources/refine.js"></script>
+    <script>
+      window.embeddedChatbotConfig = {
+      chatbotId: "DBi2wppZwMgjgoS8dKAXE",
+      domain: "www.chatbase.co"
+      }
+      </script>
+      <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="DBi2wppZwMgjgoS8dKAXE"
+      domain="www.chatbase.co"
+      defer>
+      </script>
 </body>
 </html>

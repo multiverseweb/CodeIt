@@ -207,7 +207,7 @@ footer {
     position: absolute;
     inset: 2px;
     border-radius: 8px;
-    background-color: rgba(23,23,23,0.7);
+    background-color: rgb(42 41 41 / 70%)
   }
 
   .contributor-card p,
@@ -568,7 +568,7 @@ flex-wrap: wrap;
 justify-content: center;
 }
 
-a{
+.contributor-card a{
   text-decoration: none;
   color: white;
   margin-top: 20px;
