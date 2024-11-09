@@ -8,35 +8,23 @@
   <link rel="stylesheet" href="../resources/contributorsSection.css">
   <link rel="icon" href="../image/ml-fusion-lab-logo.png">
   <link rel="stylesheet" href="../resources/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-    <link
-      rel="shortcut icon"
-      href="../images/Nomenclature.png"
-      type="image/x-icon"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="shortcut icon" href="../images/Nomenclature.png" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="../images/Nomenclature.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
   <div class="top-elements">
-    <a href="../index.html" class="top-link"
-      ><img
-        src="../images/Nomenclature.png"
-        alt="logo"
-        class="logo"
-        id="logo"
-      />
+    <a href="../index.html" class="top-link"><img src="../images/Nomenclature.png" alt="logo" class="logo" id="logo" />
       <p class="codeit">CodeIt</p>
     </a>
     <nav class="navbar">
@@ -50,14 +38,10 @@
               <a href="refine.html" class="competitive">Code Refiner</a>
             </td>
             <td class="nav-item">
-              <a href="obfuscation.html" class="obfuscation"
-                >Code Obfuscator</a
-              >
+              <a href="obfuscation.html" class="obfuscation">Code Obfuscator</a>
             </td>
             <td class="nav-item">
-              <a href="timeComplexity.html" class="time"
-                >Time Complexity Analyser</a
-              >
+              <a href="timeComplexity.html" class="time">Time Complexity Analyser</a>
             </td>
             <td class="nav-item">
               <a href="../index.html#contributeSection">Contribute!</a>
@@ -69,10 +53,7 @@
               <a href="../index.html#feedback">Give Feedback!</a>
             </td>
             <td class="nav-item">
-              <a
-                href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
-                >License</a
-              >
+              <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">License</a>
             </td>
             <div class="highlight"></div>
           </tr>
@@ -93,9 +74,7 @@
       <a href="../index.html#contributeSection">Contribute!</a>
       <a href="contributorsSection.html">Our Contributors!</a>
       <a href="../index.html#feedback">Give Feedback!</a>
-      <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3"
-        >License</a
-      >
+      <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE#L3">License</a>
     </div>
 
     <div class="gap"></div>
@@ -104,29 +83,57 @@
 
   <section class="contributor-stats">
     <p class="title">Project Statistics</p>
-    <div class="contributor-stats-grid" id="statsGrid"> </div>
+    <div class="contributor-stats-grid" id="statsGrid">
+      <!-- Dynamic Stats will be added by JavaScript -->
+    </div>
   </section>
   <div class="scrollBar" id="progress_bar"></div> <!--PROGRESS BAR-->
+
   <div id="container">
     <p class="title">Our Contributors</p>
   </div>
   <div id="contributors" class="contributors-grid"></div>
 
   <script src="../resources/contributorsSection.js"></script>
-  
-  <script src="../resources/common_functions.js" defer></script>
-  
-    <script>
-      window.embeddedChatbotConfig = {
+  <!-- <script src="../resources/common_functions.js" defer></script> -->
+  <script>
+    window.embeddedChatbotConfig = {
       chatbotId: "DBi2wppZwMgjgoS8dKAXE",
       domain: "www.chatbase.co"
+    }
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="DBi2wppZwMgjgoS8dKAXE" domain="www.chatbase.co" defer>
+  </script>
+  <script>
+    let sidebarOpen = false;
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const navbar = document.querySelector(".navbar");
+
+      if (!sidebar) {
+        console.error("Sidebar element not found.");
+        return;
       }
-      </script>
-      <script
-      src="https://www.chatbase.co/embed.min.js"
-      chatbotId="DBi2wppZwMgjgoS8dKAXE"
-      domain="www.chatbase.co"
-      defer>
-      </script>
+
+      if (!navbar) {
+        console.error("Navbar element not found.");
+        return;
+      }
+
+      sidebarOpen = !sidebarOpen;
+      if (sidebarOpen) {
+        sidebar.classList.add("show");
+        sidebar.style.width = "250px";
+        navbar.style.display = "none";
+        document.querySelector(".hamburger").style.display = "none";
+      } else {
+        sidebar.style.width = "0";
+        navbar.style.display = "block";
+        document.querySelector(".hamburger").style.display = "block";
+        sidebar.classList.remove("show");
+      }
+    }
+  </script>
 </body>
+
 </html>
