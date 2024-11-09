@@ -14,6 +14,7 @@ var cities = [
   "Varanasi",
   "New Delhi",
   "Chennai",
+  "Riyadh",
 ];
 
 // Scroll to the top of the page
