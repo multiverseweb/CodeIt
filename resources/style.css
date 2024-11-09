@@ -9,6 +9,16 @@ body {
   background-color: rgba(0, 0, 0, 0.90);
   transition-duration: 0.5s;
 }
+.scrollBar {
+  position: fixed;
+  z-index: 90;
+  top: 59px;
+  left: 0;
+  height: 4px;
+  width: 0vw;
+  background-image: linear-gradient(to right,#00bea8, #ffd000);
+  transition: width 200ms linear;
+}
 
 #fileInput {
   margin-left: 10px;
