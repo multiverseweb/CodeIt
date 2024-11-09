@@ -1,46 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeIt Contributors</title>
-    <link rel="stylesheet" href="../resources/contributorsSection.css">
-    <link rel="shortcut icon" href="../images/Nomenclature.png" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contributors</title>
+  <link rel="stylesheet" href="../resources/contributorsSection.css">
+  <link rel="icon" href="../image/ml-fusion-lab-logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-        <div class="containerr">
+  <button class="goBack">Go To Home</button>
 
-            <!-- Stats Section -->
-            <section class="stats">
-                <h2>CodeIt's Contributors Statistics</h2>
-                <div class="stats-grid" id="statsGrid">
-                    <!-- Stats will be dynamically inserted here -->
-                </div>
-            </section>
+  <section class="contributor-stats">
+    <h2>Project Statistics</h2>
+    <div class="contributor-stats-grid" id="statsGrid">
+      <!-- Dynamic Stats will be added by JavaScript -->
+    </div>
+  </section>
 
-            <!-- Contributors Grid -->
-            <section class="contributors">
-                <h2>Meet Our Contributors</h2>
-                <div class="contributors-grid" id="contributorsGrid">
-                    <!-- Contributors will be dynamically inserted here -->
-                </div>
-                <div id="loading" class="loading">
-                    <div class="spinner"></div>
-                </div>
-            </section>
+  <div class="container">
+    <h1 class="title">Our Contributors</h1>
+  </div>
+  <div id="contributors" class="contributors-grid"></div>
 
-            <!-- Call to Action -->
-            <section id="contribute" class="cta">
-                <h2>Ready to Make an Impact?</h2>
-                <p>Join our community and help shape the future of CodeIt.</p>
-                <form id="subscribeForm" onsubmit="event.preventDefault(); window.location.href='https://github.com/multiverseweb/CodeIt';">
-                    <button type="submit" class="btn btn-secondary">Join Community</button>
-                </form>
-                <div id="notification" class="notification hidden"></div>
-            </section>
-        </div>
-        <a href="../index.html"><button class="goBack">Go To Home</button></a>
+  <style>
+    .contributor-card::before{
+    content: '';
+    position: absolute;
+    background: radial-gradient(var(--clr),transparent,transparent);
+    height: 500px;
+    width: 500px;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.5s, top 0s,left 0s;
+    }
 
-    <script src="../resources/contributorsSection.js"></script>
+    .contributor-card:hover::before{
+      opacity: 1;
+    }
+
+    .contributor-card::after{
+      content: '';
+      position: absolute;
+      inset: 2px;
+      border-radius: 8px;
+      background-color: rgba(23,23,23,0.7);
+    }
+
+    .contributor-card p,
+    .contributor-card a {
+      position: relative;
+      z-index: 1;         
+      color: #ddd;        
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+    }
+
+    .contributor-card a {
+      color: #aaa;        
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .contributor-card img {
+      border-radius: 50%; 
+      margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+      filter: brightness(1.2); 
+      z-index: 1; 
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .contributor-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.4); 
+    }
+  </style>
+  <script src="../resources/contributorsSection.js"></script>
 </body>
 </html>
