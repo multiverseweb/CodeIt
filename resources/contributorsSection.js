@@ -48,7 +48,7 @@ async function fetchContributorData() {
         <img src="${avatar_url}" alt="${login}'s avatar">
         <p><strong>${login}</strong></p>
         <p>Contributions: ${contributions}</p>
-        <a href="${html_url}" target="_blank">GitHub Profile</a>
+        <a href="${html_url}" target="_blank">GitHub Profile 🡥</a>
       </div>
     `).join('');
 

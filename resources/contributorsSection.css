@@ -115,14 +115,10 @@
 }
 
 .contributor-card:hover h2 {
-  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255),
-    0 0 0.8em rgb(255, 255, 255);
   color: white;
 }
 
 .contributor-card:hover p {
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.715), 0 0 0.2em rgb(255, 255, 255),
-    0 0 0.3em rgb(255, 255, 255);
   color: white;
 
   /* font-weight: 400; */
@@ -184,6 +180,62 @@ footer {
   margin: auto;
   padding: 0 20px;
 }
+
+.contributor-card{
+  margin: 10px;
+}
+
+.contributor-card::before{
+  content: '';
+  position: absolute;
+  background: radial-gradient(var(--clr),transparent,transparent);
+  height: 500px;
+  width: 500px;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: 0.5s, top 0s,left 0s;
+  }
+
+  .contributor-card:hover::before{
+    opacity: 1;
+  }
+
+  .contributor-card::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background-color: rgba(23,23,23,0.7);
+  }
+
+  .contributor-card p,
+  .contributor-card a {
+    position: relative;
+    z-index: 1;         
+    color: #ddd;        
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+  }
+
+  .contributor-card a {
+    color: #aaa;       
+    text-decoration: underline;
+  }
+
+  .contributor-card img {
+    border-radius: 50%; 
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    filter: brightness(1.2); 
+    z-index: 1; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .contributor-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.4); 
+  }
 
 @media (max-width: 900px) {
   header {
