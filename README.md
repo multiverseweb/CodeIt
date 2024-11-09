@@ -161,7 +161,10 @@ Deployed on
 
 [![Forkers repo roster for @multiverseweb/CodeIt](https://reporoster.com/forks/dark/multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/network/members)
 
-
-<sup><a href="#codeit--tool" align="right">Back to top</a></sup>
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
+    </a>
+</div>
 
 
