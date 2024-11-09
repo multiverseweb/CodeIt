@@ -305,7 +305,7 @@
             <i class="fa-solid fa-comment"></i>
   
            <input name="Feedback" class="feedback" placeholder="Your Feedback (minimum 10 characters)"required oninput="checkFeedbackLength(this)"></input></div>
-          <span id="feedbackError"style="color:#ff5457; white-space: normal"display="none">Feedback must be at least 10 characters long.</span>  
+          <span id="feedbackError"style="color:#ff5457; white-space: normal; opacity: 0%; transition: opacity 0.4s ease " display="none">Feedback must be at least 10 characters long.</span>  
         
 
           <div class="star-rating" style="text-align: center; margin: 10px;">
@@ -395,22 +395,14 @@
     <script src="resources/common_functions.js"></script>
 
     <script>
-      function checkFeedbackLength(input) {
-        var errorSpan = document.getElementById('feedbackError');
-        if (input.value.length < 10) {
-          errorSpan.style.display = 'block';
-          input.setCustomValidity('Feedback must be at least 10 characters long.');
-        } else {
-          errorSpan.style.display = 'none';
-          input.setCustomValidity('');
-        }
-      }
+      // Detect changes the selection of the Feedback input field to show the feedback error accordingly
+      document.forms["CodeIt Reviews"]["Feedback"].addEventListener('blur', event => {
+          document.getElementById('feedbackError').style.opacity = '0%';
+      })
+      document.forms["CodeIt Reviews"]["Feedback"].addEventListener('focus', event => {
+        checkFeedbackLength(document.forms["CodeIt Reviews"]["Feedback"]);
+      })
       
-      function validateFeedback() {
-        var feedback = document.forms["CodeIt Reviews"]["Feedback"];
-        checkFeedbackLength(feedback);
-        return feedback.value.length >= 10;
-      }
       function validateForm() {
                 const rating = document.querySelector('input[name="rating"]:checked');
                 if (!rating) {
