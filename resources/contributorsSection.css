@@ -8,9 +8,22 @@
   text-align: center;
 }
 
+.scrollBar {
+  position: fixed;
+  z-index: 90;
+  top: 0px;
+  left: 0;
+  height: 4px;
+  width: 0vw;
+  
+  background-image: linear-gradient(to right,#00bea8, #ffd000);
+  transition: width 200ms linear;
+}
+
 .title {
   display: inline-block;
-  font-size: 3em;
+  font-size: 2.5rem;
+  font-weight: 500;
   margin-bottom: 20px;
   padding: 10px;
   color: #fffdff;
@@ -102,14 +115,14 @@
 }
 
 .contributor-card:hover h2 {
-  text-shadow: 1px 1px 2px rgb(0, 108, 108), 0 0 0.2em rgb(0, 14, 108),
-    0 0 0.8em rgb(0, 14, 108);
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255),
+    0 0 0.8em rgb(255, 255, 255);
   color: white;
 }
 
 .contributor-card:hover p {
-  text-shadow: 1px 1px 2px rgba(4, 0, 127, 0.715), 0 0 0.2em rgb(5, 18, 168),
-    0 0 0.3em rgb(134, 136, 250);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.715), 0 0 0.2em rgb(255, 255, 255),
+    0 0 0.3em rgb(255, 255, 255);
   color: white;
 
   /* font-weight: 400; */
@@ -544,6 +557,7 @@ a{
 }
 
 .goBack {
+  cursor: pointer;
   position: fixed;
   bottom: 20px;
   left: 20px;

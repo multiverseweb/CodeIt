@@ -78,3 +78,13 @@ function applyMouseEffectToCards() {
 
 // Call the function to fetch and display data
 fetchContributorData();
+
+let lastScroll = 0;
+function progress() {
+  var scroll = this.scrollY;
+  var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var percent = Math.round((scroll / scrollHeight) * 100);
+  document.getElementById("progress_bar").style.width = percent + 'vw';
+};
+
+window.addEventListener("scroll", progress);

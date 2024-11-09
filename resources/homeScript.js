@@ -15,6 +15,16 @@ function changeCss() {
     (this.scrollY > 0) ? scroll_icon.style.opacity = 0 : scroll_icon.style.opacity = 1;
 }
 
+let lastScroll = 0;
+function progress() {
+  var scroll = this.scrollY;
+  var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var percent = Math.round((scroll / scrollHeight) * 100);
+  document.getElementById("progress_bar").style.width = percent + 'vw';
+};
+
+window.addEventListener("scroll", progress);
+
 // Attach scroll event listener
 window.addEventListener("scroll", changeCss, false);
 

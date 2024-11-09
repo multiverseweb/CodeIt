@@ -9,17 +9,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <button class="goBack">Go To Home</button>
+  <a href="../index.html"><button class="goBack">Go To Home</button></a>
 
   <section class="contributor-stats">
-    <h2>Project Statistics</h2>
+    <p class="title">Project Statistics</p>
     <div class="contributor-stats-grid" id="statsGrid">
       <!-- Dynamic Stats will be added by JavaScript -->
     </div>
   </section>
+  <div class="scrollBar" id="progress_bar"></div> <!--PROGRESS BAR-->
 
   <div class="container">
-    <h1 class="title">Our Contributors</h1>
+    <p class="title">Our Contributors</p>
   </div>
   <div id="contributors" class="contributors-grid"></div>
 
@@ -58,8 +59,7 @@
     }
 
     .contributor-card a {
-      color: #aaa;        
-      font-weight: bold;
+      color: #aaa;       
       text-decoration: underline;
     }
 
