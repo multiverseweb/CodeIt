@@ -542,3 +542,16 @@ a{
     gap: 1rem;
   }
 }
+
+.goBack {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: #d0d0d032;
+  backdrop-filter: blur(7px);
+  color: rgb(105, 105, 105);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 5px black;
+}
