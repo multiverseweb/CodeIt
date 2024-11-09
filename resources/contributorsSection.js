@@ -1,23 +1,3 @@
-
-//for the on scroll progressbar
-(function () {
-  const handleScroll = () => {
-    const totalHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPosition = window.pageYOffset;
-    const scrollPercentage = (scrollPosition / totalHeight) * 100;
-    document.getElementById(
-      "progress-bar-con"
-    ).style.width = `${scrollPercentage}%`;
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-})();
-
-// Fetch data from GitHub API
 const repoOwner = "multiverseweb";  // Repository owner for CodeIt
 const repoName = "CodeIt";          // Repository name for CodeIt
 
@@ -98,5 +78,3 @@ function applyMouseEffectToCards() {
 
 // Call the function to fetch and display data
 fetchContributorData();
-
-
