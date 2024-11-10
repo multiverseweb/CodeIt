@@ -149,7 +149,9 @@ function updateChartColors(isDark) {
   if (typeof Chart !== "undefined" && Chart.instances[0]) {
     const chart = Chart.instances[0];
     const textColor = isDark ? "white" : "black";
-
+    const gridColor=isDark ? "rgba(255, 255, 255, 0.1)" : "black";
+    chart.options.scales.x.grid.color = gridColor;
+    chart.options.scales.y.grid.color = gridColor
     chart.options.scales.x.ticks.color = textColor;
     chart.options.scales.y.ticks.color = textColor;
     chart.options.plugins.legend.labels.color = textColor;
