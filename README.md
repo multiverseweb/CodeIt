@@ -156,7 +156,7 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 
 
 ### Use CodeIt
-|<a href="https://codeittool.netlify.app/"><img src="Documentation/images/netlify.svg"></a>|[Visit Dataverse's Website](https://multiverse-dataverse.netlify.app/)|
+|<a href="https://codeittool.netlify.app/"><img src="Documentation/images/netlify.svg"></a>|[Visit CodeIt's Website](https://codeittool.netlify.app/)|
 |-|-|
 
 <div align="center">
