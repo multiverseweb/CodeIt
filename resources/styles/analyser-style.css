@@ -1,0 +1,55 @@
+.analyseButtons{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+#analyse:hover {
+    outline: 1px solid gold;
+    box-shadow: 0px 0px 20px gold;
+    animation: hue;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+#complexityChart {
+    width: 40vw; /* Adjust the percentage or set a fixed width */
+    height: 70vh; /* Fixed height */
+}
+
+.alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .alert-content {
+    margin-bottom: 20px;
+  }
+  
+  .alert-content h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .alert-content p {
+    font-size: 14px;
+    color: #666;
+  }
