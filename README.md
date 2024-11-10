@@ -1,19 +1,3 @@
-# GSSoc'24  <a href="https://codeittool.netlify.app">Extended<img src="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png" height=40px align=right></a>
-
-## Tech Stack
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) 
-![DSA](https://img.shields.io/badge/Data_Structures_&_Algorithms-000000?style=for-the-badge) 
-
-#### Read the description below and [start contributing](#contribute) now! If you like the project, show some love ❤️ and star the repo! ⭐
-
-> [!IMPORTANT]
-> Look for issues labeled with <img src="https://github.com/user-attachments/assets/a7217478-f5f8-4174-a521-99df72095e28" height="20px"> and ask for assignment if you can solve them.
-
----
-
 # CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="images/Nomenclature.png" height=40px align=right></a>
 #### Developing for the Developers
 
@@ -41,17 +25,14 @@
 <tr>
       <th>Event Logo</th>
       <th>Event Name</th>
-      <th>Event Description</th>
     </tr>
     <tr>
         <td><img src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png#gh-dark-mode-only" width="200" height="auto" loading="lazy" alt="GSSoC Ext 24"/></td>
-        <td>GirlScript Summer of Code Ext 2024</td>
-        <td><a href="https://gssoc.girlscript.tech/">GSSOC Ext</a> is a one-month-long open-source program by the GirlScript Foundation that's running from October 1 to November 10, 2024 and encourages participants to contribute to various open source projects.</td> 
+        <td><a href="https://gssoc.girlscript.tech/">GirlScript Summer of Code Ext (GSSoC'24) </a>2024</td>
     </tr>
    <tr>
         <td><img src="https://cdn.prod.website-files.com/63bc83b29094ec80844b6dd5/66fc35d92c74c4e4103f3673_Flyte-at-Hacktoberfest-2024.png" width="200" height="auto" loading="lazy" alt="Hacktoberfest 24"/></td>
-        <td>Hacktoberfest 2024</td>
-        <td><a href="https://hacktoberfest.com/">Hacktober Fest</a> is an annual celebration of open-source software development. It's a month-long event encouraging developers to contribute to open-source projects.</td> 
+        <td><a href="https://hacktoberfest.com/">Hacktober Fest</a> 2024</td>
     </tr>
 </table>
 
