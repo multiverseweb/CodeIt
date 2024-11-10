@@ -22,6 +22,7 @@
 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb2%2CodeIt%20&countColor=%23263759&style=flat&initial=5767)
   ![Github](https://img.shields.io/github/license/multiverseweb/CodeIt)
+  ![Languages](https://img.shields.io/github/languages/count/multiverseweb/CodeIt?color=20B2AA)
   ![GitHub Repo stars](https://img.shields.io/github/stars/multiverseweb/CodeIt)
   ![GitHub contributors](https://img.shields.io/github/contributors/multiverseweb/CodeIt)
   ![GitHub issues](https://img.shields.io/github/issues/multiverseweb/CodeIt)
@@ -119,6 +120,28 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 ## Repository Structure
 
 📂 [Repository Structure](/Documentation/PROJECT_STRUCTURE.md)
+
+### Star History
+
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="
+      https://api.star-history.com/svg?repos=multiverseweb/CodeIt&type=Date&theme=dark
+    "
+  />
+  
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="
+      https://api.star-history.com/svg?repos=multiverseweb/CodeIt&type=Date
+    "
+  />
+  <img
+    alt="Star History Chart"
+    src="https://api.star-history.com/svg?repos=multiverseweb/CodeIt&type=Date&theme=dark"
+  />
+</picture>
 
 ## Contribute
 **💬 Got ideas?**
