@@ -2,6 +2,7 @@
 
 <!-- START_STRUCTURE -->
 ```
+├── 404.html
 ├── Documentation/
 │   ├── CONTRIBUTION.md
 │   ├── PROJECT_STRUCTURE.md
