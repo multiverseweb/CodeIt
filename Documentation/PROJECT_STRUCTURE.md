@@ -5,6 +5,8 @@
 ├── Documentation/
 │   ├── CONTRIBUTION.md
 │   ├── PROJECT_STRUCTURE.md
+│   ├── images/
+│   │   └── netlify.svg
 │   └── repo_structure.txt
 ├── LICENSE
 ├── README.md
