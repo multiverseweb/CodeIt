@@ -38,14 +38,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 var redIcon = L.icon({
   iconUrl: 'https://img1.picmix.com/output/stamp/normal/2/5/4/3/873452_376bb.png',
-  iconSize: [25, 25],
+  iconSize: [20, 20],
   iconAnchor: [12, 12],
   popupAnchor: [1, -34],
   shadowSize: [41, 41]
 });
 
 // Your OpenCage API Key here
-const OPENCAGE_API_KEY = '075664edaea44abba250b8adbd714bd0';
+const OPENCAGE_API_KEY = '3f55c6e93c2c4b19ae45f1fd5db12cfc';
 
 // Function to get coordinates for a city and add a marker using OpenCage API
 async function addMarker(city) {
@@ -81,7 +81,6 @@ async function addMarkersWithDelay(cities) {
 
 // Call the function to add markers
 addMarkersWithDelay(cities);
-
 
 // Scroll to the top of the page
 function topFunction() {

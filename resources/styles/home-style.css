@@ -169,6 +169,10 @@ body{
     .faq-question {
         font-size: 1em; 
     }
+    
+.visitor-widget{
+    margin-top: -5px;
+}
 }
 .faq-item {
     margin-bottom: 15px;
