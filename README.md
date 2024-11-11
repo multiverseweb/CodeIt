@@ -62,7 +62,8 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 > It is useful for the developers working on large and collaborative projects.
 
 ```python
-directoryName/questionNumber-question-title.extention```
+directoryName/questionNumber-question-title.extention
+```
 
 - Time Complexity Analyzer:
 > Understand how fast your code runs and optimize it for better performance. CodeIt also visualises the time complexity on a line-chart for better understanding.
