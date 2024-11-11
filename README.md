@@ -47,18 +47,24 @@ CodeIt is a software solution tool designed to streamline and enhance the coding
 ## Key Features
 
 - Code Conversion and Integration:
-> Efficient Code Conversion: Transforms default code templates provided by coding platforms into fully functional code. Developers can quickly adapt boilerplate code into their projects, allowing them to concentrate on algorithm development and testing.
+> Quickly convert the default / boilerplate code provided by `coding platforms like Leetcode` to a more useful and executable code in one click! 
+
+> It reduces repetitive tasks, manual mistakes and saves time. 
 
 - Code Obfuscation:
-> Robust Security: Provides code obfuscation to safeguard against unauthorized access and reverse engineering. Ideal for developers needing to protect their intellectual property or work in secure environments.
+> Make your code harder to read and understand but still executable. It adds an extra layer of security, protecting your code from plagiarism.
+
+> This feature is of great importance when you're working on innovative projects.
 
 - File Naming with Extensions:
-> Organized File Management: Automates file naming and extension assignment, ensuring proper file organization and reducing errors in project management.
+> Follow a fixed file naming convention, which helps reducing the overhead of manual file management.
+
+> It is useful for the developers working on large and collaborative projects.
 > 
 >  `directoryName/questionNumber-question-title.extention`
 
 - Time Complexity Analyzer:
-> Performance Evaluation: Analyzes the time complexity of algorithms to help developers optimize performance and make informed decisions about algorithmic efficiency.
+> Understand how fast your code runs and optimize it for better performance. CodeIt also visualises the time complexity on a line-chart for better understanding.
 
 - User-Friendly Interface
 > With a clean and straightforward UI, CodeIt ensures even beginners can navigate and utilize the tool effectively.
