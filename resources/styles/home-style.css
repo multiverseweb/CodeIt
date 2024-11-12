@@ -417,24 +417,29 @@ input {
   display: flex;
   align-items: center;
 }
-input.feedback{
-    padding-left: 10px;
+textarea.feedback{
+    padding-left: 50px;
     color: white;
     background-color: #76767639;
     border: 0.1px solid rgba(255, 255, 255, 0.193);
-    width: calc(100% - 10px);
+    width: 94.5%;
     height: 70px;
     margin-top: 20px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 #send {
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     border: none;
-    margin-left: 100%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
-    transform: translate(calc(-100% - 0px));
+    margin-bottom: 10px;
+    /* transform: translate(calc(-100% - 0px)); */
     width: min-content;
+    width: 80px;
+    height: 30px;
     background-color: #248e87;
     cursor: pointer;
     color:rgba(255, 255, 255, 0.63);
