@@ -386,6 +386,11 @@ textarea:focus {
   border-color: #4ecdc4;
 }
 
+#feedback {
+  resize: none;
+  width: 348px 
+}
+
 #language:hover {
   box-shadow: 0px 0px 0px black;
 }
