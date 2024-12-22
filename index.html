@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, user-scalable=no" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 />
 
    <!-- Primary Meta Tags -->
   <title>CodeIt</title>
@@ -13,14 +13,14 @@
   <meta name="author" content="Tejas Gupta" />
   
   <!-- Open Graph / Facebook Meta Tags -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="website" />g
   <meta property="og:title" content="CodeIt - Developer Tools for Code Refinement, Obfuscation & Analysis" />
   <meta property="og:description" content="Enhance your coding with CodeIt's powerful tools for code refinement, obfuscation, and performance analysis." />
   <meta property="og:url" content="https://codeittool.netlify.app" />
   <meta property="og:site_name" content="CodeIt" />
 <!--   <meta property="og:image" content="images/Nomenclature.png" /> 
 
-  <!-- Twitter Meta Tags -->
+ <! -- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CodeIt - Developed for the Developers" />
   <meta name="twitter:description" content="Refine, obfuscate, and analyze your code with CodeIt to optimize development processes." />
@@ -47,14 +47,14 @@
 </head>
 
 <body id="body">
-  <button class="top" id="top" onclick="topFunction()">
-    <img src="images/top.png" alt="" />
+  <button type="button"  class="top" id="top" onclick="topFunction()" aria-label="Go to top">
+    <img src="images/top.png" alt="Go to top" />
   </button>
-  <button type="button" class="theme" id="darkThemeBtn" style="display: none;">
-    <img src="./images/moon.png" class="themeLogo" />
+  <button type="button" class="theme" id="darkThemeBtn" style="display: none;" aria-label="Enable dark theme">
+    <img src="./images/moon.png" class="themeLogo" alt="Dark Theme" />
   </button>
-  <button type="button" class="theme" id="lightThemeBtn">
-    <img src="./images/sun.png" class="themeLogo" />
+  <button type="button" class="theme" id="lightThemeBtn" aria-label="Enable light theme">
+    <img src="./images/sun.png" class="themeLogo" alt="" />
   </button>
   <div class="scrollBar" id="progress_bar"></div> <!--PROGRESS BAR-->
   <div class="top-elements">
@@ -174,12 +174,12 @@
       </p>
     </div>
     <div class="right reveal">
-      <img src="images/coedit.png" class="preview" />
+      <img src="images/coedit.png" class="preview" alt=""/>
     </div>
   </div>
   <div class="section-l reveal" id="obfuscate">
     <div class="left" id="zoom">
-      <img src="images/obfuscation.png" class="preview" id="obfuscatePreview" />
+      <img src="images/obfuscation.png" class="preview" id="obfuscatePreview" alt=""/>
     </div>
     <div class="right">
       <p class="subheading reveal">Code Obfuscation</p>
@@ -202,12 +202,12 @@
       </p>
     </div>
     <div class="right reveal">
-      <img src="images/naming.png" class="preview" />
+      <img src="images/naming.png" class="preview" alt=""/>
     </div>
   </div>
   <div class="section-l reveal" id="complexity">
     <div class="left">
-      <img src="images/complexity.png" class="preview" />
+      <img src="images/complexity.png" class="preview" alt=""/>
     </div>
     <div class="right reveal">
       <p class="subheading reveal">Time Complexity Analysis</p>
@@ -235,7 +235,7 @@
       <br />
     </div>
     <div class="right reveal">
-      <img src="images/flowChart.png" class="preview" id="flowchart" />
+      <img src="images/flowChart.png" class="preview" id="flowchart" alt=""/>
     </div>
   </div>
 
@@ -272,7 +272,7 @@
 
   <div class="section-l reveal" id="contributeSection">
     <div class="left">
-      <img src="images/working.png" class="preview" />
+      <img src="images/working.png" class="preview" alt=""/>
     </div>
     <div class="right reveal">
       <p class="heading reveal">Want to contribute to this Project?</p>
@@ -282,8 +282,8 @@
         project by visiting the link to the GitHub repository provided below. Join me in making CodeIt even better for
         everyone!
       </p>
-      <a class="contributeBtn" href="https://github.com/multiverseweb/CodeIt">Contribute<img
-          src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png" id="github"></a>
+      <a class="contributeBtn" href="https://github.com/multiverseweb/CodeIt">Contribute
+        <img src="https://static-00.iconduck.com/assets.00/github-icon-2048x1999-d37ckpm6.png" id="github" alt=""></a>
     </div>
   </div>
   <div id="feedback" reveal></div>
@@ -350,7 +350,7 @@
       <a href="https://github.com/multiverseweb/CodeIt/blob/main/LICENSE">&copy; 2024 Tejas Gupta</a>
     </p>
     <div class="links">
-      <button class="footer_logo" onclick="copylink()" id="link">
+      <button class="footer_logo" onclick="copylink()" id="link" aria-label="Footer Logo">
         <img src="https://icons.veryicon.com/png/o/miscellaneous/foundation-icon-5/link-86.png" alt="" />
       </button>
       <a href="https://github.com/multiverseweb/CodeIt" class="footer_logo">
