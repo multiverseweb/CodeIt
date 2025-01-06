@@ -26,7 +26,6 @@ document.querySelector(".navbar").addEventListener("mouseleave", () => {
   highlight.style.width = "0";
 });
 function enableLightTheme() {
-  console.log("in light");
   saveTheme("light");
   document.querySelector(".top-elements").style.filter="invert(1)";
   document.querySelector(".logo").style.filter="invert(1)";
@@ -82,7 +81,6 @@ function toggleThemeBtn(currentTheme) {
 }
 
 function enableDarkTheme() {
-  console.log("inDark");
   saveTheme("dark");
   document.querySelector(".top-elements").style.filter="invert(0)";
   document.querySelector(".logo").style.filter="invert(0)";
@@ -134,7 +132,6 @@ function saveTheme(theme) {
 
 function applyTheme() {
   const savedTheme = localStorage.getItem("theme");
-  console.log(savedTheme);
   if (savedTheme) {
     document.documentElement.setAttribute("data-theme", savedTheme);
     if (savedTheme === "dark") {

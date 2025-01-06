@@ -6,7 +6,7 @@
 body {
   overflow-x: hidden;
   font-family: "Sometype Mono", monospace;
-  background-color: rgba(0, 0, 0, 0.90);
+  background-color: rgba(0, 0, 0,0.9);
   transition-duration: 0.5s;
 }
 .scrollBar {
