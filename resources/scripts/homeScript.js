@@ -1,29 +1,12 @@
 //list of cities
 var cities = [
-  "Pune",
-  "Moradabad",
-  "Dehradun",
-  "Ujjain",
-  "Vijaywada",
-  "Rampur",
-  "Sydney",
-  "Aligarh",
-  "Delhi",
-  "Coimbatore",
-  "Dibrugarh",
-  "Varanasi",
-  "New Delhi",
-  "Chennai",
-  "Riyadh",
-  "Kolkata",
-  "Mumbai",
-  "Bauria",
-  "Kochi",
-  "Nagpur",
-  "Ranchi",
-  "Rohtak"
-];
-
+  "Ahmedabad", "Aligarh", "Arrah", "Bauria", "Bengalore", "Berlin", "Bhilai", 
+  "Bhopal", "Chennai", "Coimbatore", "Dehradun", "Delhi", "Dhamtari", 
+  "Dibrugarh", "Gorakhpur", "Jorhat", "Kanpur", "Kochi", "Kolkata", 
+  "Lucknow", "Ludhiana", "Moradabad", "Mumbai", "Nagpur", "New Delhi", "New York",
+  "Panaji", "Pune", "Rampur", "Ranchi", "Riyadh", "Rohtak", 
+  "Secunderabad", "Sydney", "Ujjain", "Varanasi", "Vijaywada"
+]
 
 var map = L.map('map', {
   center: [22.7937, 77.9629],

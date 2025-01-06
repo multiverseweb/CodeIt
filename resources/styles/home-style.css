@@ -548,7 +548,7 @@ a{
     width: 45vw;
     margin-left: 30px;
     margin-top: -30px;
-    height: 70vh;
+    height: 65vh;
     transition: 0.5s ease;
     filter: invert(1) hue-rotate(180deg) brightness(1.5);
     border-radius: 7px;
@@ -563,7 +563,7 @@ a{
     #map{
         margin-left: 0px;
         width: calc(100vw - 40px);
-        height: 30vh;
+        height: 25vh;
         margin-top: 20px;
     }
     .section-r{
