@@ -9,7 +9,7 @@
 │   ├── images/
 │   │   └── netlify.svg
 │   └── repo_structure.txt
-├── LICENSE
+├── LICENSE.md
 ├── README.md
 ├── images/
 │   ├── Nomenclature.png
