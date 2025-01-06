@@ -351,9 +351,6 @@ select {
   resize: none;
   font-family: "Sometype Mono", monospace; 
 }
-textarea:not(#output_code) {
-  color: rgba(255, 255, 255, 0.866);
-}
 
 
 /* textarea {
@@ -388,7 +385,6 @@ textarea:focus {
 
 #feedback {
   resize: none;
-  width: 348px 
 }
 
 #language:hover {

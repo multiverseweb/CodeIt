@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
 }
-
+body{
+  overflow-x: hidden;
+}
 .container {
   text-align: center;
 }
@@ -55,7 +57,7 @@
 
   width: 100vw;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 10px;
   padding: 20px;
   display: flex;
 }
@@ -71,14 +73,14 @@
   align-items: center;
   background-color:rgba(23,23,23,1);
   border-radius: 8px;
-  padding: 16px;
+  padding: 10px;
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
   text-decoration: none;
   color: #fff;
   /* margin-bottom: 16px;  */
   word-wrap: wrap;
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
-  width:14%;
+  width:18%;
   overflow: hidden;
 }
 
@@ -563,7 +565,6 @@ color: #ffffff;
 }
 
 div#contributors{
-gap: 2rem 7rem;
 flex-wrap: wrap;
 justify-content: center;
 }
@@ -620,7 +621,7 @@ a{
 
 @media (max-width: 600px) {
   .contributor-card {
-    width: 90%;
+    width: 90vw;
     margin: 10px auto;
   }
   .contributors-grid {

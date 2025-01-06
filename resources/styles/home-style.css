@@ -122,17 +122,21 @@ body{
 }
 
 #zoom{
-    max-width: calc(50vw - 80px);
-    max-height: 330px;
+    max-width: calc(50vw - 150px);
+    max-height: 320px;
     overflow: hidden;
     border-radius: 10px;
     transition-duration: 0.5s;
+    margin-left: 40px;
+}
+#zoom img{
+    margin-left: 0px;
 }
 #zoom:hover{
     box-shadow: 0 0 10px black;
 }
 #zoom:hover img{
-    scale:3;
+    scale:2;
 }
 .section-l{
     display: flex;
@@ -309,7 +313,7 @@ details[open] .faq-answer {
 }
 
 .contributeBtn:hover , .licBtn:hover{
-    background-color: rgb(146, 133, 133);
+    background-color: rgb(255, 255, 255);
     color: black;
 }
 .contributeBtn:hover #github , .licBtn:hover #lic-logo{
@@ -422,7 +426,7 @@ textarea.feedback{
     color: white;
     background-color: #76767639;
     border: 0.1px solid rgba(255, 255, 255, 0.193);
-    width: 94.5%;
+    width: calc(100% - 80px);
     height: 70px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -598,6 +602,7 @@ a{
     }
     #zoom{
         margin-top: 30px;
+        margin-left: 0px;
         max-width: calc(100vw - 40px);
     }
     #intro{
