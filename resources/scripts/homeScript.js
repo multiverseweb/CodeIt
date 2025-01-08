@@ -158,3 +158,41 @@ window.embeddedChatbotConfig = {
 };
 
 document.getElementById("copyright").textContent = new Date().getFullYear();
+
+
+const scrollContent = document.getElementById("scroll-content");
+
+    const feedbackData = [
+      { name: "Yuvraj Sinha", feedback: "This website is really<br> useful for me.", rating: 5 },
+      { name: "Aditya", feedback: "Very good very very.", rating: 4 },
+      { name: "Biresh", feedback: "Starting out, it is a pretty site.", rating: 5 },
+      { name: "Randi Khanbasha", feedback: "Good tool.", rating: 4 },
+      { name: "Aditi", feedback: "Now that's innovative! CodeIt is <br>quite helpful for organising and <br>securing my code. Wonderful tool.", rating: 5 },
+    ];
+
+    function createFeedbackCard(user) {
+      const card = document.createElement("div");
+      card.className = "feedback-card";
+
+      card.innerHTML = `
+        <h4>${user.name}</h4>
+        <hr>
+        <p>${user.feedback}</p>
+        <div class="stars">${"★".repeat(user.rating)}${"☆".repeat(5 - user.rating)}</div>
+      `;
+      return card;
+    }
+
+    function loadFeedback() {
+      feedbackData.forEach((user) => {
+        const card = createFeedbackCard(user);
+        scrollContent.appendChild(card);
+      });
+
+      feedbackData.forEach((user) => {
+        const card = createFeedbackCard(user);
+        scrollContent.appendChild(card.cloneNode(true));
+      });
+    }
+
+    loadFeedback();
