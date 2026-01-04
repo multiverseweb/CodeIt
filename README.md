@@ -1,4 +1,4 @@
-# CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="images/Nomenclature.png" height=40px align=right></a>
+# CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="https://raw.githubusercontent.com/multiverseweb/CodeIt/main/images/Nomenclature.png" height=40px align=right></a>
 #### Developing for the Developers
 
 
@@ -91,14 +91,14 @@ directoryName/questionNumber-question-title.extention
 ## Preview
 
 #### Code Refiner
-![](images/coedit.png)
+![](https://raw.githubusercontent.com/multiverseweb/CodeIt/main/images/coedit.png)
 <details> 
  <summary align=left><H4>View More</H4></summary><br>
   
 #### Time Complexity Analyser
-![](images/complexity.png)
+![](https://raw.githubusercontent.com/multiverseweb/CodeIt/main/images/complexity.png)
 #### Code Obfuscator
-![](images/obfuscation.png)
+![](https://raw.githubusercontent.com/multiverseweb/CodeIt/main/images/obfuscation.png)
 </details>
 
 ## Benefits
@@ -169,7 +169,7 @@ directoryName/questionNumber-question-title.extention
 
 
 ### Use CodeIt
-|<a href="https://codeittool.netlify.app/"><img src="Documentation/images/netlify.svg"></a>|[Visit CodeIt's Website](https://codeittool.netlify.app/)|
+|<a href="https://codeittool.netlify.app/"><img src="https://raw.githubusercontent.com/multiverseweb/CodeIt/main/Documentation/images/netlify.svg"></a>|[Visit CodeIt's Website](https://codeittool.netlify.app/)|
 |-|-|
 
 <div align="center">
