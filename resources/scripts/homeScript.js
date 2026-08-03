@@ -27,8 +27,8 @@ var redIcon = L.icon({
   shadowSize: [41, 41]
 });
 
-// Your OpenCage API Key here
-const OPENCAGE_API_KEY = '3f55c6e93c2c4b19ae45f1fd5db12cfc';
+// Set your OpenCage API key via environment configuration (do not hardcode)
+const OPENCAGE_API_KEY = '';
 
 // Function to get coordinates for a city and add a marker using OpenCage API
 async function addMarker(city) {
