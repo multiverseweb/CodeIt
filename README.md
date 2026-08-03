@@ -88,6 +88,64 @@ directoryName/questionNumber-question-title.extention
 >[!NOTE]
 > As of now, This tool generates code according to [LeetCode](https://leetcode.com/) only. I'll be adding more coding platforms to it soon.
 
+## System Architecture
+
+```mermaid
+flowchart TD
+    subgraph Raw Input
+        Boilerplate[Platform Code / LeetCode Solution]
+    end
+
+    subgraph CodeIt Processing Engine
+        Parser[Code Parser & AST Scanner]
+        Refiner[Code Refinement Module]
+        Obfuscator[Code Security Obfuscator]
+        Complexity[Complexity Analyzer Module]
+        Nomenclature[File Nomenclature Generator]
+    end
+
+    subgraph Output Deliverables
+        Executable[Clean Executable Script]
+        Secured[Obfuscated Anti-Plagiarism Code]
+        Chart[Complexity Line Chart Visualization]
+        NamedFile[Standardized File Output]
+    end
+
+    Boilerplate --> Parser
+    Parser --> Refiner
+    Parser --> Obfuscator
+    Parser --> Complexity
+    Parser --> Nomenclature
+
+    Refiner --> Executable
+    Obfuscator --> Secured
+    Complexity --> Chart
+    Nomenclature --> NamedFile
+```
+
+## Installation & Local Setup
+
+### Live Web App
+CodeIt is accessible online without any installation at [codeittool.netlify.app](https://codeittool.netlify.app/).
+
+### Running Locally
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/multiverseweb/CodeIt.git
+   cd CodeIt
+   ```
+2. **Serve the Application:**
+   Open `index.html` directly in any web browser, or start a local HTTP server:
+   ```bash
+   npx live-server .
+   # OR
+   python -m http.server 8000
+   ```
+3. **Python Complexity Backend (Optional):**
+   ```bash
+   python resources/algo.py
+   ```
+
 ## Preview
 
 #### Code Refiner
