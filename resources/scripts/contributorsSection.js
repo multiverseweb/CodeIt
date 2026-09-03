@@ -1,4 +1,4 @@
-const repoOwner = "multiverseweb";  // Repository owner for CodeIt
+const repoOwner = "tjiuce";  // Repository owner for CodeIt
 const repoName = "CodeIt";          // Repository name for CodeIt
 
 // URLs to fetch data

@@ -1,22 +1,22 @@
-# CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="https://raw.githubusercontent.com/multiverseweb/CodeIt/main/images/Nomenclature.png" height=40px align=right id="project-logo"></a>
+# CodeIt | <a href="https://codeittool.netlify.app">Tool<img src="https://raw.githubusercontent.com/tjiuce/CodeIt/main/images/Nomenclature.png" height=40px align=right id="project-logo"></a>
 #### Developing for the Developers
 
 
-<!--![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb/CodeIt%20&countColor=%2523263759&style=for-the-badge)-->
+<!--![Visitors](https://api.visitorbadge.io/api/visitors?path=tjiuce/CodeIt%20&countColor=%2523263759&style=for-the-badge)-->
 
-![Visitors](https://api.visitorbadge.io/api/visitors?path=multiverseweb2%2CodeIt%20&countColor=%23263759&style=flat&initial=5767)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=tjiuce2%2CodeIt%20&countColor=%23263759&style=flat&initial=5767)
   ![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-4e3eb5)
-  ![Languages](https://img.shields.io/github/languages/count/multiverseweb/CodeIt?color=20B2AA)
-  ![GitHub Repo stars](https://img.shields.io/github/stars/multiverseweb/CodeIt)
-  ![GitHub contributors](https://img.shields.io/github/contributors/multiverseweb/CodeIt)
-  ![GitHub issues](https://img.shields.io/github/issues/multiverseweb/CodeIt)
-  ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/multiverseweb/CodeIt)
-  ![GitHub forks](https://img.shields.io/github/forks/multiverseweb/CodeIt)
-  ![GitHub pull requests](https://img.shields.io/github/issues-pr/multiverseweb/CodeIt)
-  ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/multiverseweb/CodeIt)
-  ![GitHub last commit](https://img.shields.io/github/last-commit/multiverseweb/CodeIt)
-  ![GitHub repo size](https://img.shields.io/github/repo-size/multiverseweb/CodeIt)
-  ![GitHub total lines](https://sloc.xyz/github/multiverseweb/CodeIt)
+  ![Languages](https://img.shields.io/github/languages/count/tjiuce/CodeIt?color=20B2AA)
+  ![GitHub Repo stars](https://img.shields.io/github/stars/tjiuce/CodeIt)
+  ![GitHub contributors](https://img.shields.io/github/contributors/tjiuce/CodeIt)
+  ![GitHub issues](https://img.shields.io/github/issues/tjiuce/CodeIt)
+  ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/tjiuce/CodeIt)
+  ![GitHub forks](https://img.shields.io/github/forks/tjiuce/CodeIt)
+  ![GitHub pull requests](https://img.shields.io/github/issues-pr/tjiuce/CodeIt)
+  ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/tjiuce/CodeIt)
+  ![GitHub last commit](https://img.shields.io/github/last-commit/tjiuce/CodeIt)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/tjiuce/CodeIt)
+  ![GitHub total lines](https://sloc.xyz/github/tjiuce/CodeIt)
   <a href="https://codeittool.netlify.app/"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fcodeittool.netlify.app/%2F&up_message=awake&up_color=%2300d18f&down_message=asleep&down_color=red&style=flat"></a>
 
 
@@ -131,7 +131,7 @@ CodeIt is accessible online without any installation at [codeittool.netlify.app]
 ### Running Locally
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/multiverseweb/CodeIt.git
+   git clone https://github.com/tjiuce/CodeIt.git
    cd CodeIt
    ```
 2. **Serve the Application:**
@@ -149,14 +149,14 @@ CodeIt is accessible online without any installation at [codeittool.netlify.app]
 ## Preview
 
 #### Code Refiner
-![](https://raw.githubusercontent.com/multiverseweb/CodeIt/main/images/coedit.png)
+![](https://raw.githubusercontent.com/tjiuce/CodeIt/main/images/coedit.png)
 <details> 
  <summary align=left><H4>View More</H4></summary><br>
   
 #### Time Complexity Analyser
-![](https://raw.githubusercontent.com/multiverseweb/CodeIt/main/images/complexity.png)
+![](https://raw.githubusercontent.com/tjiuce/CodeIt/main/images/complexity.png)
 #### Code Obfuscator
-![](https://raw.githubusercontent.com/multiverseweb/CodeIt/main/images/obfuscation.png)
+![](https://raw.githubusercontent.com/tjiuce/CodeIt/main/images/obfuscation.png)
 </details>
 
 ## Benefits
@@ -175,35 +175,35 @@ CodeIt is accessible online without any installation at [codeittool.netlify.app]
   <source
     media="(prefers-color-scheme: dark)"
     srcset="
-      https://api.star-history.com/svg?repos=multiverseweb/CodeIt&type=Date&theme=dark
+      https://api.star-history.com/svg?repos=tjiuce/CodeIt&type=Date&theme=dark
     "
   />
   
   <source
     media="(prefers-color-scheme: light)"
     srcset="
-      https://api.star-history.com/svg?repos=multiverseweb/CodeIt&type=Date
+      https://api.star-history.com/svg?repos=tjiuce/CodeIt&type=Date
     "
   />
   <img
     alt="Star History Chart"
-    src="https://api.star-history.com/svg?repos=multiverseweb/CodeIt&type=Date&theme=dark"
+    src="https://api.star-history.com/svg?repos=tjiuce/CodeIt&type=Date&theme=dark"
   />
 </picture>
 
 ## Contribute
 **💬 Got ideas?**
 
-- Get involved! We’d love to hear your ideas. Drop your feature suggestions in the [Discussions](https://github.com/multiverseweb/CodeIt/discussions).
-- You can also use [Discussions](https://github.com/multiverseweb/CodeIt/discussions) to look for answers to your doubts regarding any feature of this project.
+- Get involved! We’d love to hear your ideas. Drop your feature suggestions in the [Discussions](https://github.com/tjiuce/CodeIt/discussions).
+- You can also use [Discussions](https://github.com/tjiuce/CodeIt/discussions) to look for answers to your doubts regarding any feature of this project.
 
 **💻 Want to solve issues?**
 
 - Star the Repository ⭐
-- Go to [issues](https://github.com/multiverseweb/CodeIt/issues), find an issue that you can solve or create a new issue.
+- Go to [issues](https://github.com/tjiuce/CodeIt/issues), find an issue that you can solve or create a new issue.
 - Fork the repository.
 - Create a new branch (`git checkout -b feature-branch`).
-- Go to [`line no. 1` in homeScript.js](https://github.com/multiverseweb/CodeIt/blob/main/resources/homeScript.js#L1-L2) and append the name of your city to the `cities` array. (optional)
+- Go to [`line no. 1` in homeScript.js](https://github.com/tjiuce/CodeIt/blob/main/resources/homeScript.js#L1-L2) and append the name of your city to the `cities` array. (optional)
 - Make your contributions and commit them (`git commit -m 'Add feature'`).
 - Push to the branch (`git push origin feature-branch`).
 - Create a Pull Request, so I can review and merge it.
@@ -211,23 +211,23 @@ CodeIt is accessible online without any installation at [codeittool.netlify.app]
 
 ### Our Valuable Contributors ❤️✨
 
-[![Contributors](https://contrib.rocks/image?repo=multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=tjiuce/CodeIt)](https://github.com/tjiuce/CodeIt/graphs/contributors)
 
 ### Stargazers ❤️
 
 <div align='left'>
 
-[![Stargazers repo roster for @multiverseweb/CodeIt](https://reporoster.com/stars/dark/multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/stargazers)
+[![Stargazers repo roster for @tjiuce/CodeIt](https://reporoster.com/stars/dark/tjiuce/CodeIt)](https://github.com/tjiuce/CodeIt/stargazers)
 
 </div>
 
 ### Forkers ❤️
 
-[![Forkers repo roster for @multiverseweb/CodeIt](https://reporoster.com/forks/dark/multiverseweb/CodeIt)](https://github.com/multiverseweb/CodeIt/network/members)
+[![Forkers repo roster for @tjiuce/CodeIt](https://reporoster.com/forks/dark/tjiuce/CodeIt)](https://github.com/tjiuce/CodeIt/network/members)
 
 
 ### Use CodeIt
-|<a href="https://codeittool.netlify.app/"><img src="https://raw.githubusercontent.com/multiverseweb/CodeIt/main/Documentation/images/netlify.svg"></a>|[Visit CodeIt's Website](https://codeittool.netlify.app/)|
+|<a href="https://codeittool.netlify.app/"><img src="https://raw.githubusercontent.com/tjiuce/CodeIt/main/Documentation/images/netlify.svg"></a>|[Visit CodeIt's Website](https://codeittool.netlify.app/)|
 |-|-|
 
 <div align="center">
